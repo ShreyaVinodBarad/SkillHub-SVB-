@@ -30,7 +30,7 @@ For NoSQL, there are many DataBases but mostly used is:-
 ==> But nowadays no one is doing this much of coding for designing the Websites, so there come FrameWork in Picture.
 FrameWork is a tool which has made the work easy for most of the developers by reducing the work of writing long code...
 Example:-       
-                         FrameWork
+                         FrameWork(Frontend)
        |_1) Google       Angular
        |_2) FaceBook     React
 For different Languages there are different FrameWorks!
