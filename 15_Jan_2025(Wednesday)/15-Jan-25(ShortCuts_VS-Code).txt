@@ -1,0 +1,44 @@
+1) Ctrl + b ==> Opens or Closes Explorer
+-------------------------------------------
+2) Windows + Left or Right Arrow ==> Takes the VS Code's Windows to Left or Right according to the Arrow Pressed.
+-------------------------------------------
+3) Ctrl + s ==> To Save a File
+-------------------------------------------
+4) Shift + Alt + Down Arrow ==> Repeats the Upwards Data and copy's it to the down line 
+i.e. Duplicates
+-------------------------------------------
+5) Shift + Del ==> Delets the data on the line where the cursor is!
+-------------------------------------------
+6) lorem + Enter ==> Gives a Dummy Para
+-------------------------------------------
+7) Ctrl + a ==> Selectes the Whole data which is there in the file.
+-------------------------------------------
+8) Alt + z ==> Wrap i.e Removing Scroll Bar and Unwrapping i.e. Bringing back the Scroll Bar
+-------------------------------------------
+9) lorem10 + Enter ==> Creates Para of 10 Words 
+-------------------------------------------
+10) Ctrl + d ==> Multiple Cursor 
+You have to keep the cursor on the words starting and then click Ctrl + d
+-------------------------------------------
+11) Esc ==> You can get rid of Multi Cursor or you can click any where to get rid of Multi Cursor!
+-------------------------------------------
+12) Ctrl + Shift + l ==> Where you can directly Multi Select the words just by keeping cursor on the words starting point.
+-------------------------------------------
+13) Chrome and Firefox
+Usage Priority in Industry is:-
+1) Chrome
+2) Firefox 
+-------------------------------------------
+14) Ctrl + , ==>  And check the option
+" Format on Save ".
+- When you give Space and take a word to certain distance then you can take it to the starting point of the line just by pressing Ctrl + s. 
+-------------------------------------------
+15) h1*6 ==> It creats 6 h1 Tags i.e. Heading Tags. 
+-------------------------------------------
+16) h$*6 ==> It creats all 6 Heading Tags.
+-------------------------------------------
+17) h${What you want to Write?}*6 ==> You can add Data to the created 6 Heading Tags.
+-------------------------------------------
+18) h${What you want to Write>}$*6 ==> You can add Data to the created 6 Heading Tags with assigning numbers.
+-> Here $ assigns Numbers!
+-------------------------------------------

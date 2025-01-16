@@ -1,0 +1,7 @@
+==> Tags:-
+Tags are places inside < , >.
+----------------------------------------------
+==> Heading Tags:-
+<h1> ==> h1 here is Tag.
+There 6 Heading tags <h1>, <h2>, <h3>, <h4>, <h5> and <h6>.
+----------------------------------------------

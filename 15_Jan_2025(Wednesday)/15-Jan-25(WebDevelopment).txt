@@ -1,0 +1,43 @@
+==> There are 2 Parts in Web Development:-
+1) Frontend
+       |_1) HTML
+       |_2) CSS
+       |_3) JS
+2) Backend
+Here Backend has:-
+       |_1) DataBase
+-------------------------------------------
+==> For DataBase to connect with Frontend we need:-
+       |_1) Server Side Language
+Here Server Side Language helps to connect Frontend with Backend.
+That means if Frontend want to display a image which is stored in Database at that time Server Side Language heps to pass the Frontend instruction i.e. to give image from DataBase and then Server Side Language give image from DataBase to Frontend.
+That's how Server Side Language helps to connect Frontend with Backend i.e. DataBase.
+There are many Server Side Languages they are:-
+       |_1) Java
+       |_2) Python
+       |_3) PHP
+       |_4) Node.Js
+-------------------------------------------
+==> Here, there are 2 types of DataBases and they are:-
+       |_1) SQL
+       |_2) NoSQL
+For SQL, there are many DataBases but mostly used are:-
+       |_1) mySQL 
+       |_2) postgresSQL
+For NoSQL, there are many DataBases but mostly used is:-
+       |_1) MongoDB 
+-------------------------------------------
+==> But nowadays no one is doing this much of coding for designing the Websites, so there come FrameWork in Picture.
+FrameWork is a tool which has made the work easy for most of the developers by reducing the work of writing long code...
+Example:-       
+                         FrameWork
+       |_1) Google       Angular
+       |_2) FaceBook     React
+For different Languages there are different FrameWorks!
+Example:-      
+                         FrameWork
+       |_1) Java         Springboot
+       |_2) Python       django
+       |_3) PHP          Laravel
+       |_4) Node         Express
+-------------------------------------------
