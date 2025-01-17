@@ -14,3 +14,15 @@ According to him, you need to have knowledge in your chosen field in order to en
 - Additionally, he provided a brief overview of tags and heading tags!
 - He created a one-month goal 🎯 for our group and assigned homework, which consists of things that we need to review and return to the following day!
 That concludes today! 🤞
+-----------------------------------------------------------------------------------------------------------------------------------
+--> 16 Jan 2025, Thursday
+First, Sir began by reviewing the VS Code shortcuts and then provided a few additional.
+He then went on to describe a few HTML topics, which include:
+1) Heading Tags
+2) Tag for the table
+3) The image tag
+4) HTML Lists
+5) Anchor Tag
+Lastly, Sir assigned us homework, which consists of items we need to review at home before attending class the next day! 👍
+-----------------------------------------------------------------------------------------------------------------------------------
+--> 17 Jan 2025, Friday
