@@ -1,7 +1,7 @@
 Hi there! This is Shreya. I joined SkillHub, which is owned and operated by Akash Sir, on Wednesday, January 15, 2025.
 I'm going to provide a brief update on what I've learned each day here. 👍
 Let's get started! 😉
---> January 15, 2025, Wednesday
+                                 --> January 15, 2025, Wednesday
 I met my Sir on my first day at the Institute! who, despite failing three times in 12th grade, never gave up, completed his graduation and post-graduation with honors, and then created an internship application where he discovered that the knowledge he had gained in just six months had not even been covered in his six years of graduation and post-graduation education!
 According to his statement, there are three things occurring in every college across India:-
 1) Attendance
