@@ -26,3 +26,29 @@ He then went on to describe a few HTML topics, which include:
 Lastly, Sir assigned us homework, which consists of items we need to review at home before attending class the next day! 👍
 -----------------------------------------------------------------------------------------------------------------------------------
 --> 17 Jan 2025, Friday
+Sir took the lesson today, claiming to have finished all of the HTML!
+He began by giving us a job in which he explained some additional table tag features, such as colspan and rowspan.
+We then completed a few tasks related to it and concluded the table tag topic.
+Sir then discussed a few topics, which included:
+1) HTML Forms
+   - input Tag
+   - textarea Tag
+   - Dropdown Menu
+   - Radio Button
+   - CheckBox
+   - Upload File from PC
+   - Select Date
+   - Pick Color
+   - Enter Password
+   - input Area for only Number!
+   - Select Time
+   - Select Range
+   - button Tag
+   - Button's using input Tag
+   - Line Break Tag <br>
+2) How to view YouTube video on Our Web Page?
+3) How to view Google Map on our Web Page?
+At last, he did not assign homework for today! 😎
+However, stated that CSS would begin tomorrow, Saturday, January 18, 2025!🤞
+-----------------------------------------------------------------------------------------------------------------------------------
+--> 18 Jan 2025, Saturday
