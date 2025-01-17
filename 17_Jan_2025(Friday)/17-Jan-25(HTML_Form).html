@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!--  
+👆
+The <!DOCTYPE html> tag tells the browser that the document is written in HTML5, which is the latest version of HTML. It ensures the web page is displayed correctly by modern web browsers.
+-->
+<html lang="en">
+<!--  
+👆
+This tag defines the root element of an HTML document and specifies the language of the document's content.
+1) <html>: 
+Marks the start of an HTML document.
+2) lang="en": 
+Indicates the language is English, which helps search engines and screen readers understand the content better.
+-->
+<head>
+    <meta charset="UTF-8">
+    <!--  
+    👆
+    This tag tells the browser that the webpage uses the UTF-8 character encoding.
+    This encoding supports most characters and symbols from all languages, ensuring text like emojis , special symbols, or non-English letters display correctly.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  
+    👆 
+    ==> The <meta name="viewport" content="width=device-width, initial-scale=1.0"> tag tells the browser how to display the webpage on different devices, especially mobile.
+    1) width=device-width: 
+    Makes the page width match the device's screen width.
+    2) initial-scale=1.0: 
+    Sets the zoom level to 100% when the page first loads.
+    ==> This ensures your webpage looks good and fits properly on all screen sizes.
+    -->
+    <title>17 Jan 25(Friday) - HTML Form</title>
+</head>
+<body>
+    <h3>
+        input Tag
+    </h3>
+    <input type="text">
+    <!-- 
+    👆  
+    This tag creates a box where users can type in text, like their name or email. It's a basic text input field used in forms.
+    -->
+    <hr>
+    <!--
+    👆 
+    This tag in HTML defines a horizontal rule or line. It is used to create a separation between sections of content on a webpage, often indicating a change of topic. By default, it displays as a horizontal line across the page.
+    -->
+    <h3>
+        textarea Tag
+    </h3>
+    <textarea name="" id=""></textarea>
+    <!--  
+    👆
+    The <textarea> HTML tag is used to create a text box where users can type multiple lines of text. It is commonly used in forms for input like comments, feedback, or messages.
+    -->
+    <hr>
+    <h3>
+        Dropdown Menu
+    </h3>
+    <!--  
+    👇
+    The <select> HTML tag creates a drop-down menu that lets users choose one or more options. It works with <option> tags inside it to define the choices.
+    -->
+    <select name="" id="">
+        <option value="">
+            Choose City
+        </option>
+        <option value="">
+            Hyderbad
+        </option>
+        <option value="">
+            Nizambad
+        </option>
+        <option value="">
+            Armoor
+        </option>
+        <option value="">
+            Adilabad
+        </option>
+    </select>
+    <hr>
+    <!--  
+    - If we want to select only one Radio Button then we have to write any Text but it should be same in name Attribute!
+    - If we want to select any Radio Button just by clicking on the Text then we have to write any Text but it should be same in id and for Attribute!  
+    But the name for id and for Attribute will be different for different input and label tag!
+    👇
+    -->
+    <h3>
+        Radio Button
+    </h3>
+    <input type="radio" name="Gender" id="Male">
+    <label for="Male">
+        Male
+    </label>
+    <input type="radio" name="Gender" id="Female">
+    <label for="Female">
+        Female
+    </label>
+    <hr>
+    <!--  
+    If we want to select any Checkbox just by clicking on the Text then we have to write any Text but it should be same in id and for Attribute!  
+    But the name for id and for Attribute will be different for different input and label tag!
+    👇
+    -->
+    <h3>
+        Checkbox
+    </h3>
+    <input type="checkbox" name="" id="HTML">
+    <label for="HTML">
+        HTML
+    </label>
+    <input type="checkbox" name="" id="CSS">
+    <label for="CSS">
+        CSS
+    </label>
+    <input type="checkbox" name="" id="JS">
+    <label for="JS">
+        JavaScript
+    </label>
+    <hr>
+    <h3>
+        Upload File from PC!
+    </h3>
+    <input type="file" name="" id="">
+    <!--  
+    Can Upload Files from PC 👆
+    -->
+    <hr>
+    <h3>
+        Select Date
+    </h3>
+    <input type="date" name="" id="">
+    <!--  
+    Shows Calender 👆
+    -->
+    <hr>
+    <h3>
+        Pick Color
+    </h3>
+    <input type="color" name="" id="">
+    <!--  
+    Known as Color Picker 👆
+    -->
+    <hr>
+    <h3>
+        Enter Password
+    </h3>
+    <input type="password" name="" id="">
+    <!--  
+    When we write password it will be in Black Disk Format !👆
+    -->
+    <hr>
+    <h3>
+        Enter Number Only!
+    </h3>
+    <input type="number" name="" id="">
+    <!--  
+    Only takes number and e alphabet for exponential! 👆
+    -->
+    <hr>
+    <h3>
+        Select Time
+    </h3>
+    <input type="time" name="" id="">
+    <!--  
+    Time Picker 👆
+    -->
+    <hr>
+    <h3>
+        Select Range
+    </h3>
+    <input type="range" name="" id="">
+    <!--  
+    Range Picker 👆
+    -->
+    <hr>
+    <h3>
+        button Tag
+    </h3>
+    <button>
+        Save
+    </button>
+    <!--  
+    Using this Tag we can design Button! 👆   
+    -->
+    <hr>
+    <!--  
+    Special Buttons using input Tag:-👇
+    -->
+    <h3>
+        Button's using input Tag  
+    </h3>
+    <input type="reset" name="" id="">
+    <input type="submit" name="" id="">
+    <!--  
+        Paired Tag - Which have Opening Tag and Closing Tag!
+        Empty Tag - Which does not have Opening Tag and Closing Tag!
+    -->
+    <!--  
+        When to use Radio Button and Checkbox?
+        - When you have multiple options but have to choose only one then have to use Radio Button!
+        - When you have multiple options and have to choose multiple one from then then have to use Checkbox!
+    -->
+    <!--  
+        <br> Tag:-
+        The <br> HTML tag is used to create a line break in the text. It moves the content after the tag to a new line, similar to pressing Enter on a keyboard. It doesn't create extra space like a paragraph does; it simply breaks the line.
+        ==> Example:-
+        👇
+    -->
+    <hr>
+    <h3>
+        Using Line Break Tag
+    </h3>
+    This is the first line.<br>This is the second line.
+</body>
+</html>
