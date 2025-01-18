@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18-Jan-25(HTML-Form_Validation)</title>
+</head>
+<body>
+    <!--  
+    ==> HTML - Form Validation
+    - HTML form validation is a process of ensuring that the data entered into a form is correct and meets certain criteria before it is submitted to a server. You can use HTML attributes for client-side validation. 
+    - For validation to work in HTML form Tag is Mandatory!
+    -->
+    <form action="DataSending.py">
+        <!--  
+        👆
+        ==> action Attribute:-
+        action Attribute of form Tag is responsible of sending data to Database!
+        -->
+        <h2>
+            Validation for input type - text
+        </h2>
+        <input type="text" required minlength="5" maxlength="10">
+        <!--  
+        👆
+        1) Validation Attributes for text type are:-
+        - required
+        - minlength
+        - maxlength
+        -->
+        <br>
+        <h2>
+            Validation for input type - number
+        </h2>
+        <input type="number" min="5" max="15">
+        <!--  
+        👆
+        1) Validation Attributes for number type are:-
+        - min ==> Here we have to take number above the given min value.
+        - max ==> Here it will take numbers below the given max value
+        -->
+        <br>
+        <h2>
+            Validation for input type - date
+        </h2>
+        <input type="date" min="2025-01-18" max="2025-01-28">
+        <br>
+        <br>
+        <input type="date" min="2000-01-18" max="2007-01-18">
+        <!--  
+        👆
+        1) Validation Attributes for date type are:-
+        - min ==> Year - Month - Date
+        - max ==> Year - Month - Date
+        👆
+        Way of writing the date's Attribute Format!
+        -->
+        <br>
+        <h2>
+            placeholder Attribute
+        </h2>
+        <input type="text" placeholder="Enter Name...">
+        <!--  
+        👆
+        Shows some random hint of what to be filled in the input 
+        -->
+        <br>
+        <h2>
+            value Attribute
+        </h2>
+        <input type="text" value="Shreya">
+        <!--  
+        👆
+        This will be the default text in the input field and when we write some text it gets continue to write with the text present in it!
+        -->
+        <br>
+        <h2>
+            Save Button
+        </h2>
+        <button>
+            Save
+        </button>
+        <!--  
+        👆
+        The button Tag is always in the input type as submit because of which when we click on it, gives some action!
+        -->
+        <br>
+        <h2>
+            input type - reset 
+        </h2>
+        <input type="reset">
+        <!--  
+        👆
+        As the name Specifies it Resets the while Form!
+        -->
+    </form>
+</body>
+</html>
+<!--  
+1) Alt + Down Arrow
+- To take the content downward from where the cursor is!
+-->

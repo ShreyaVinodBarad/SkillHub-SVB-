@@ -1,0 +1,2 @@
+Here while giving path " ./FileName.extension " specifies that we are in current directory!
+When you want to get out of current directory then you have to use " ./../FileName.extension ".
