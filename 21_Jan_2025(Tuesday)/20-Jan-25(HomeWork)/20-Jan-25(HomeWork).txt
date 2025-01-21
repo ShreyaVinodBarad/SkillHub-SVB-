@@ -1,0 +1,124 @@
+1) What is text-transform in CSS?
+==> In CSS, text-transform is a property used to control the capitalization of text. 
+==> It changes how the text is displayed, without altering the actual content. 
+==> Here are the common values:
+1) uppercase:-
+Converts all letters to uppercase.
+2) lowercase:- 
+Converts all letters to lowercase.
+3) capitalize:- 
+Capitalizes the first letter of each word.
+4) none:- 
+Keeps the text as it is (default).
+==> Example:-
+p {
+  text-transform: uppercase;
+}
+-----------------------------------------------------------------
+2) What is text-align in CSS?
+==> text-align in CSS is a property used to set the horizontal alignment of text within an element.
+==> Options:- 
+1) left:- 
+Aligns text to the left.
+2) right:-  
+Aligns text to the right.
+3) center:- 
+Centers the text.
+4) justify:- 
+Spreads text so it fills the entire width.
+==> Example:-
+p {
+  text-align: center;
+}
+-----------------------------------------------------------------
+3) What is height in CSS?
+==> In CSS, height is a property used to set how tall an element is. 
+==> It defines the vertical space an element takes up. 
+==> You can use values like:
+1) Pixels (px):-
+- Eg => height: 200px;
+2) Percentages (%):-
+-Eg => height: 50%; 
+(relative to the parent element's height)
+3) Auto:- 
+- Lets the browser calculate the height automatically based on the content.
+4) Viewport units (vh):- 
+- Eg => height: 50vh; 
+(relative to the height of the screen).
+==> If no height is set, the element's height adjusts automatically to fit its content.
+-----------------------------------------------------------------
+4) What is Width in CSS?
+==> In CSS, width is a property used to set how wide an element should be. 
+==> It defines the horizontal space an element will take up, excluding padding, borders, and margins. 
+==> You can set it in units like pixels (px), percentages (%), or other values (e.g., em(element-is a relative unit of measurement),rem(root em), vw(Viewport width)).
+==> Example:- 
+width: 200px; 
+(makes an element 200 pixels wide.)
+==> If not set, an element’s width often depends on its content or parent container.
+-----------------------------------------------------------------
+5) What is Flex Box in CSS?
+==> Flexbox, short for Flexible Box Layout, is a CSS layout system that makes it easy to arrange and align items within a container.
+==> It helps create flexible and responsive designs without needing complex code.
+==> Key points about flexbox:  
+1) Parent container:-
+Set display: flex; on a container to use flexbox.  
+2) Alignment:- 
+Items can be easily aligned horizontally (justify-content) and vertically (align-items).  
+3) Direction:-
+Items can be arranged in rows or columns (flex-direction).  
+4) Spacing:- 
+Adjust the space between, around, or within items.  
+5) Flexibility:- 
+Items can grow, shrink, or stay fixed based on available space (flex-grow, flex-shrink, and flex-basis).
+==> Example:-  
+.container {
+  display: flex;
+  justify-content: center; /* Aligns items horizontally */
+  align-items: center;    /* Aligns items vertically */
+}
+==> This makes it great for building modern, responsive layouts!
+-----------------------------------------------------------------
+6) What is border-radius in CSS?
+==> The border-radius property in CSS is used to make the corners of an element rounded. 
+==> You can control how round the corners are by setting values like pixels (px), percentages (%), or other units.
+==> Examples:-
+1) border-radius: 10px; 
+Makes the corners slightly rounded.
+2) border-radius: 50%; 
+Makes the element look like a circle (if it's a square). 
+==> It applies to borders, background, and content within the element.
+-----------------------------------------------------------------
+7) What is the purpose of DOCTYPE in HTML?
+==> The DOCTYPE in HTML tells the web browser what version of HTML the page is written in. 
+==> I.e.;
+<!DOCTYPE html>
+==> It indicates the page uses HTML5.
+-----------------------------------------------------------------
+8) What is Semantic in HTML?
+==> Semantic HTML refers to using HTML elements that clearly describe their meaning in the content. 
+==> Instead of using generic elements like <div> or <span>, semantic tags such as <article>, <section>, <header>, and <footer> give more meaning to the structure of a webpage. 
+==> This makes the content easier to read and understand for both humans and search engines, improving accessibility and SEO. ==> For example, instead of using a <div> to create a navigation bar, you would use <nav>, which specifically indicates that the section is for navigation links.
+-----------------------------------------------------------------
+9) What is difference between div element and span element?
+==> The main difference between the <div> and <span> elements is how they behave in a webpage layout:
+1) <div>:- 
+It's a block-level element. This means it takes up the whole width of its container and pushes other elements below it. It's used to group content and create sections on the page.
+2) <span>:-  
+It's an inline element. This means it only takes up as much width as its content and doesn't push other elements down. It's used to style small pieces of content within a line, like a word or a phrase.
+==> So, use <div> when you want to create sections or large groupings, and use <span> when you need to style or target small parts of text within a block.
+-----------------------------------------------------------------
+10) What is the difference between <b> and <strong> tags in HTML?
+==> The <b> and <strong> tags in HTML both make text bold, but they are used for different purposes:-
+1) <b>:- 
+This is just for styling. It makes text bold without adding any special meaning. It’s purely for visual appearance.
+2) <strong>:- 
+This also makes text bold, but it has a special meaning. It indicates that the text is important or has strong emphasis. It’s used for accessibility and SEO, signaling that the text carries more weight or significance.
+==> So, use <b> for simple bolding and <strong> when the text is important or needs to stand out for meaning.
+-----------------------------------------------------------------
+11) What is the purpose of the alt attribute in HTML?
+==> The alt attribute in HTML is used to provide a text description for images. 
+==> This helps people who cannot see the image, like those using screen readers, to understand what the image is about. It also shows up if the image fails to load. 
+For example:-
+<img src="dog.jpg" alt="A cute brown dog playing in the park">
+==> In this case, if the image can't load, the text "A cute brown dog playing in the park" will appear instead.
+-----------------------------------------------------------------
