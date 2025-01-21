@@ -103,7 +103,6 @@ h1{
         brown     -      Value
         ;         -      Semi Colon
 ==> We use style Tag to write CSS in HTML File!     
-----------------------------------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx------------------------------------------------
 2) CSS Box Model - Border, Padding and Margin all together is known as Box Model!
 ==> The CSS Box Model is a way of describing how elements on a webpage are structured. Each element is treated as a box that consists of four parts:
 a. Content:- 
@@ -178,10 +177,8 @@ d. Margin:-
                      300px - Bottom
                      50px - Left
                   It just goes Clockwise Top, Right, Bottom, and Left.
-----------------------------------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx------------------------------------------------
 3) CSS background-color Property:-
 ==> The background-color property in CSS changes the color behind an element, like a box or a section. It makes the element stand out or match the design of the page. You can pick any color using names, hex codes, or other color values.
-----------------------------------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx------------------------------------------------
 4) CSS background-image Property:-
 ==> The CSS `background-image` property is used to set an image as the background of an element, like a webpage, button, or box. Instead of a solid color, it allows you to display a picture, pattern, or gradient behind the content of that element.
 ==> With background-image Property we use background-color in rgba Format wherein we keep a value i.e. Alpha 0 for full Transparency or 0.5 for just See - through!
@@ -194,7 +191,6 @@ b) 0.5
 ==> Here 0.5 means it's 50% see-through.
 c) 1
 ==> Here 1 means Completely opaque means not see-through at all. You cannot see anything behind the color—it fully covers what's underneath. The 1 means it is fully solid with no transparency.
-----------------------------------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx------------------------------------------------
 5) CSS Color:-
 ==> background-color: red;
            👆 Known as Solid Colors!
@@ -204,7 +200,6 @@ c) 1
                      - g => Green
                      - b => Blue
 ==> The Range of rgb is from 0 - 255!
-----------------------------------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx------------------------------------------------
 ==> The session was finally concluded by Akash Sir, who gave us some homework!
 I.e., to go through certain Topics they are:-
 1) text-transform
