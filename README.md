@@ -80,8 +80,8 @@ After that, we reviewed the Validation Attributes of the Form.
 3) Validation Attributes for date type are:-
    - min ==> Year - Month - Date
    - max ==> Year - Month - Date
-   👆
-   Way of writing the date's Attribute Format!
+     👆
+     Way of writing the date's Attribute Format!
 4) Placeholder Attribute:-
    Shows some random hint of what to be filled in the input
 5) value Attribute:-
@@ -253,8 +253,8 @@ CSS Color:-
 ==> background-color: rgb(0, 255, 0);
 👆
 
-| r | Red        |
-| - | ---------- |
+| r | Red             |
+| - | --------------- |
 | g | **Green** |
 | b | **Blue**  |
 
