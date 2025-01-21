@@ -88,9 +88,7 @@ We then dug into the subject of Form Validation.
 
      👆
      Way of writing the date's Attribute Format!
-=======
-   👆
-   Way of writing the date's Attribute Format!
+
 
 4) Placeholder Attribute:-
    Shows some random hint of what to be filled in the input
