@@ -92,7 +92,6 @@ We then dug into the subject of Form Validation.
    👆
    Way of writing the date's Attribute Format!
 
->>>>>>> 6e58d70ab146f634882b4e0fe0b2050a5b5cc042
 4) Placeholder Attribute:-
    Shows some random hint of what to be filled in the input
 
