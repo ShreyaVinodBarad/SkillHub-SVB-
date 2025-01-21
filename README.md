@@ -202,11 +202,10 @@ The outermost space around the border, creating distance between the element and
    ==> If we use only padding Porperty then the Padding will apply on 4 sides of the Box!
    But we also have option  of applying Padding to one side of the box!
    I.e.,:-
-
-- padding-top
-- padding-bottom
-- padding-left
-- padding-right
+- padding - top
+- padding - bottom
+- padding - left
+- padding - right
   ==> But we can write Padding by grouping the sides accroding to our requirement!
 - padding: 50px 500px 200px;
 
@@ -231,23 +230,25 @@ The outermost space around the border, creating distance between the element and
 
 It just goes Clockwise Top, Right, Bottom, and Left.
 
-6) CSS background-color Property:-
+4) CSS background-color Property:-
    ==> The background-color property in CSS changes the color behind an element, like a box or a section. It makes the element stand out or match the design of the page. You can pick any color using names, hex codes, or other color values.
-7) CSS background-image Property:-
+5) CSS background-image Property:-
    ==> The CSS `background-image` property is used to set an image as the background of an element, like a webpage, button, or box. Instead of a solid color, it allows you to display a picture, pattern, or gradient behind the content of that element.
    ==> With background-image Property we use background-color in rgba Format wherein we keep a value i.e. Alpha 0 for full Transparency or 0.5 for just See - through!
    background-color: rgba(255,0,0,0.5);
-
 Here in rgba a is known as Alpha which is used for Transparency!
 Whose range is from 0 to 1.
+
 a) 0
 ==> Here 0 means Completely Transparent means you can see through it fully, like glass!
+
 b) 0.5
 ==> Here 0.5 means it's 50% see-through.
+
 c) 1
 ==> Here 1 means Completely opaque means not see-through at all. You cannot see anything behind the color—it fully covers what's underneath. The 1 means it is fully solid with no transparency.
 
-CSS Color:-
+6) CSS Color:-
 ==> background-color: red;
 👆 Known as Solid Colors!
 ==> background-color: rgb(0, 255, 0);
