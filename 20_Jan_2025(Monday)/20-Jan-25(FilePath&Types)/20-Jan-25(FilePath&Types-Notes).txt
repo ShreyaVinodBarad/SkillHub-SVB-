@@ -1,0 +1,29 @@
+==> What is HTML File Path? 
+- HTML file paths specify the location of files or resources that a webpage needs to access, such as images, videos, scripts, or other HTML documents. These paths tell the web browser where to find the files required to display the content correctly or to execute scripts as intended.
+------------------------------------------
+==> Example to understand what is Path?
+ ________________________________________
+|                                        |
+|<a href="./../about.html">              |
+|    👆 The data given in href is known  |
+|as Path!                                |
+|👆 Anchor Tag is used for Navigation!   |
+|   <h2>                                 |
+|       About Page                       |
+|    </h2>                               |
+|</a>                                    |
+|________________________________________|
+==> There are two types of HTML File Path that we can write in href Attribute:-
+1) Absolute File Paths
+2) Relative File Paths
+------------------------------------------
+==> Absolute File Paths:-
+- Point directly to a resource’s location on the internet and include the full URL, which consists of the protocol (http:// or https://), domain, and path to the resource.
+- Best for resources that are hosted externally. The browser knows exactly where to find them regardless of the current document’s location.
+------------------------------------------
+==> Relative File Paths:-
+- A relative path points to a file (like an image or webpage) based on where the current HTML file is located.
+- It is best for linking files within the same website.
+- If you move your website to a new domain (like from example.com to newsite.com), the links using relative paths will still work because they don’t depend on the domain name.
+- In short, relative paths make it easier to manage links within your website.
+------------------------------------------
