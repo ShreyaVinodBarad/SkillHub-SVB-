@@ -85,7 +85,7 @@ We then dug into the subject of Form Validation.
 3) Validation Attributes for date type are:-
    - min ==> Year - Month - Date
    - max ==> Year - Month - Date
-<<<<<<< HEAD
+
      👆
      Way of writing the date's Attribute Format!
 =======
