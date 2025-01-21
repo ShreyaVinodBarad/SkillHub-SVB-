@@ -38,6 +38,7 @@ He then went on to describe a few HTML topics, which include:
 ---
 
 --> 17 Jan 2025, Friday
+
 ==> Sir took the lesson today, claiming to have finished all of the HTML!
 He began by giving us a job in which he explained some additional table tag features, such as colspan and rowspan.
 We then completed a few tasks related to it and concluded the table tag topic.
