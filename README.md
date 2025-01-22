@@ -93,34 +93,55 @@ We then dug into the subject of Form Validation.
 - minlength
 - maxlength
 
-2) Validation Attributes for number type are:-
 
-   - min ==> Here we have to take number above the given min value.
-   - max ==> Here it will take numbers below the given max value
-3) Validation Attributes for date type are:-
+Validation Attributes for number type are:-
 
-   - min ==> Year - Month - Date
-   - max ==> Year - Month - Date
+- min ==> Here we have to take number above the given min value.
+- max ==> Here it will take numbers below the given max value
 
-     👆
-     Way of writing the date's Attribute Format!
-4) Placeholder Attribute:-
-   => Shows some random hint of what to be filled in the input
-5) value Attribute:-
-   => This will be the default text in the input field and when we write some text it gets continue to write with the text present in it!
-6) The button Tag is always in the input type as submit because of which when we click on it, gives some action!
-7) As the name Specifies it Resets the while Form!
-8) action Attribute:-
-   => action Attribute of form Tag is responsible of sending data to Database!
 
-   ==> Next, we learned what Block and Inline level Tags are and a few of their HTML tags!. We began by discussing how to create a folder and a file simultaneously in Visual Studio Code.
+Validation Attributes for date type are:-
 
-   ==> Finally, we wrapped up our session by discussing the concept of navigation, or how to move between web pages while our files are stored in different folders.
-   This is accomplished by providing the right file location in the href attribute of the Anchor Tag!
+- min ==> Year - Month - Date
+- max ==> Year - Month - Date
 
-   ***==> Homework:***
-   According to Sir, he will begin CSS the following week!
-   Very excited! 🤞
+  👆
+  Way of writing the date's Attribute Format!
+
+
+Placeholder Attribute:-
+
+
+=> Shows some random hint of what to be filled in the input
+
+
+value Attribute:-
+
+
+=> This will be the default text in the input field and when we write some text it gets continue to write with the text present in it!
+
+
+The button Tag is always in the input type as submit because of which when we click on it, gives some action!
+
+
+As the name Specifies it Resets the while Form!
+
+
+action Attribute:-
+
+
+=> action Attribute of form Tag is responsible of sending data to Database!
+
+==> Next, we learned what Block and Inline level Tags are and a few of their HTML tags!. We began by discussing how to create a folder and a file simultaneously in Visual Studio Code.
+
+==> Finally, we wrapped up our session by discussing the concept of navigation, or how to move between web pages while our files are stored in different folders.
+This is accomplished by providing the right file location in the href attribute of the Anchor Tag!
+
+***==> Homework:***
+
+According to Sir, he will begin CSS the following week!
+
+Very excited! 🤞
 
 ---
 
@@ -311,9 +332,14 @@ Whose range is from 0 to 1.
 | g | **Green** |
 | b | **Blue**  |
 
+
+
 ==> The Range of rgb is from 0 - 255!
+
+
 ==> The session was finally concluded by Akash Sir, who gave us some homework!
 I.e., to go through certain Topics they are:-
+
 
 | text-transform |
 | -------------- |
@@ -335,13 +361,11 @@ Can not wait to find out more tomorrow!✍
 
 => Firstly, I have started by completing 20 Jan 2025 i.e; Monday's Homework, which was Successfully Done by me!✍
 
-
 ***2)  Colors Hex Code:-***
 
 => Then at SkillHub Akash Sir, has begun our class by Colors Hex code! Wherein we have learned it's Format that was "#RRGGBB".
 
 => Examples:-
-
 
 | Sr.No | Hex Code Format | Color |
 | :---: | :-------------: | ----- |
@@ -351,14 +375,13 @@ Can not wait to find out more tomorrow!✍
 |   4   |     #000000     | Black |
 |   5   |     #FFFFFF     | White |
 
-***3) Then we learned height and width Property in CSS!***                                                                    
+***3) Then we learned height and width Property in CSS!***
 
 *1) width:-*
 
 => This sets the exact width of an element.
 
 => For example:-
-
 
 width: 300px; makes an element 300 pixels wide.
 
@@ -372,7 +395,7 @@ width: 300px; makes an element 300 pixels wide.
 
 max-width: 500px; means the element will never be wider than 500 pixels, but it can shrink if needed to fit smaller screens or content.
 
-=> Key Difference:-                                                                                                                            
+=> Key Difference:-
 
 width is fixed, while max-width allows flexibility by capping the size.
 
@@ -380,13 +403,12 @@ width is fixed, while max-width allows flexibility by capping the size.
 
 => The height property in CSS is used to set how tall an element is. It controls the vertical space an element takes up.
 
-***4) Then next, we came to div Tag;***                                                                                                                     
+***4) Then next, we came to div Tag;***
 
 => The  tag in HTML is a container used to group content together. It doesn't have any specific styling or meaning on its own.
 
 => Instead, you use it along with CSS to style or organize sections of a
 webpage.
-
 
 => For example, you can use a  to:
 
@@ -399,20 +421,15 @@ Think of  as a blank box you can customize with CSS.
 
 ***5) CSS Icons:-***
 
-==> *Proceducre to Use Bootstrap Icons*:-                                              				
+==> *Proceducre to Use Bootstrap Icons*:-
 
 1) First go to Bootstrap Website.
-
 2) Then click on Icons.
-
 3) Go down of the Icons Web Page.
-
 4) Go to Install Option and You will get CDN Option there you will get a link copy that and paste it into Tag.
-
 5) Then you can select which ever Icon you want and copy it's Tag, which also contains a class from - bootstrap-icons.min.css.
-
 6) You can modify your Icon by providing CSS to another class and
-then providing that class to class attribute of the Tag!
+   then providing that class to class attribute of the Tag!
 
 ***6) CSS Selectors:-***
 
@@ -420,13 +437,13 @@ then providing that class to class attribute of the Tag!
 
 Selectors in CSS are like Instructions that tell the browser which parts of a webpage to change. They help you choose specific elements (like text, buttons, or images) and apply styles to them.
 
-=> For example:- 
+=> For example:-
 
-    1. If you want to change all paragraphs, you use a selector for paragraphs.
+   1. If you want to change all paragraphs, you use a selector for paragraphs.
 
 2. If you want to change just a specific button, you use a selector for that button.
 
-=> Think of selectors as a way to point to the exact parts of a webpage and tell the browser how they should look!													
+=> Think of selectors as a way to point to the exact parts of a webpage and tell the browser how they should look!
 
 ==> *Types of CSS Selectors:-*
 
@@ -436,11 +453,13 @@ Selectors in CSS are like Instructions that tell the browser which parts of a we
 
 => Example:-
 *{
-color: red;																}																
+color: red;																}
 
 => makes all text red.
 
 *2) Type Selector (Element Selector)*:-
+
+
 => Targets elements by their tag name.
 
 => Example:-
@@ -459,77 +478,62 @@ font-size: 16px;
 padding: 10px;
 }
 
-=> styles all elements with the class button.																				
+=> styles all elements with the class button.
 
 *4) ID Selector (#):-*
 
-
 => Targets an element with a specific id attribute (unique per page).
-
 
 => Example:-
 #header{
 background-color: blue;
 }
 
-
 => styles the element with id header.
 
-***7) CSS Specificity:***-														
+***7) CSS Specificity:***-
 
-==> *What is CSS Specificity?*	
+==> *What is CSS Specificity?*
 
 CSS specificity determines which styles are applied when multiple rules target the same element. It works by giving a weight to different types of selectors:-
 
 *1) Inline styles:-*
 
-
 => Example:-
-
 
 | style='color: red;' | have the highest specificity |
 | ------------------- | ---------------------------- |
 
 *2) IDs:-*
 
-
 => Example:-
-
 
 | #header | have the 2nd highest Specificity |
 | ------- | -------------------------------- |
 
 *3) Class's:-*
 
-
 => Example:-
-
 
 | .Test | have the 3rd highest Specificity |
 | ----- | -------------------------------- |
-
 
 *4) Element or Tag Selector:-*
 
 => Example:-
 
-
 | h1 | have the 4th or lowest Specificity |
 | -- | ---------------------------------- |
 
-
-
 ==> The more specific a selector is, the higher its weight and the more likely it is to apply the style.
-
 
 ==> If two rules have the same specificity, the one that appears last in the CSS will be applied.
 
 ***8) CSS text-align Property:-***
 
-==> Aligns the Text according to the given value to the text-align Property.  
+==> Aligns the Text according to the given value to the text-align Property.
 
 ==>*Examples:-*
-
 
 | Sr.No | Syntax              | Meaning                                                                                                                                                                                                                                                                              |
 | ----- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -542,11 +546,9 @@ CSS specificity determines which styles are applied when multiple rules target t
 
 ==>*What is text-decoration*?
 
-
-=> text-decoration in CSS is a property used to style the appearance of text. It can add effects like underlines, strikethroughs, or overlines.							
+=> text-decoration in CSS is a property used to style the appearance of text. It can add effects like underlines, strikethroughs, or overlines.
 
 => *Example:*-
-
 
 | Sr.No | Syntax                         | Meaning                                                    |
 | ----- | ------------------------------ | ---------------------------------------------------------- |
@@ -555,39 +557,35 @@ CSS specificity determines which styles are applied when multiple rules target t
 | 3     | text-decoration: line-through; | Adds a line through the text -<br />like a strikethrough. |
 | 4     | text-decoration: none;         | Removes any decoration -<br />like underlines or lines.  |
 
-***10) CSS text-Transform:-***	
+***10) CSS text-Transform:-***
 
-*==>* *What is text-transform Property in CSS?*                                                               
+*==>* *What is text-transform Property in CSS?*
 
-=> text-transform in CSS is a property that changes the case of text. You can use it to make text uppercase, lowercase, or capitalize the first letter of each word.                                      
+=> text-transform in CSS is a property that changes the case of text. You can use it to make text uppercase, lowercase, or capitalize the first letter of each word.
 
 => *Example:*-
 
+| Sr.No | Syntax                      | Meaning                                               |
+| ----- | --------------------------- | ----------------------------------------------------- |
+| 1     | text-transform: capitalize; | Makes the first letter of each word<br />capitalized. |
+| 2     | text-transform: uppercase;  | Makes all letters capital letters.                    |
+| 3     | text-transform: lowercase;  | Makes all letters small letters.                      |
 
-| Sr.No | Syntax                      | Meaning                                                |
-| ----- | --------------------------- | ------------------------------------------------------ |
-| 1     | text-transform: capitalize; | Makes the first letter of each word <br />capitalized. |
-| 2     | text-transform: uppercase;  | Makes all letters capital letters.                     |
-| 3     | text-transform: lowercase;  | Makes all letters small letters.                       |
-
-***11) Ways of Applying CSS:-***                                                                                  									
+***11) Ways of Applying CSS:-***
 
 ==> Ways to Apply CSS are:-
 
 1) Internal CSS
-
 2) External CSS
-
 3) Inline CSS
 
 ==> Among the Ways to Apply CSS which will Apply to the Web Page is based on Sequence!
 
-==> *Which one applies first (CSS Priority)?*                                    				
+==> *Which one applies first (CSS Priority)?*
 
 *1)* Inline CSS has the highest priority.
 
 2) Internal CSS comes next.
-
 3) External CSS has the lowest priority.
 
 ==> *Example :-*
@@ -610,7 +608,7 @@ p {
 => In this case, the paragraph will be red because - !important gives
 that rule the highest priority.
 
-**12) HomeWork:-** 
+**12) HomeWork:-**
 
 ==> Homework for 21 Jan 2025 was:-
 
