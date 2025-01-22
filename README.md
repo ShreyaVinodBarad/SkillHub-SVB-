@@ -93,14 +93,12 @@ We then dug into the subject of Form Validation.
 - minlength
 - maxlength
 
-
-Validation Attributes for number type are:-
+2. Validation Attributes for number type are:-
 
 - min ==> Here we have to take number above the given min value.
 - max ==> Here it will take numbers below the given max value
 
-
-Validation Attributes for date type are:-
+3. Validation Attributes for date type are:-
 
 - min ==> Year - Month - Date
 - max ==> Year - Month - Date
@@ -108,27 +106,19 @@ Validation Attributes for date type are:-
   👆
   Way of writing the date's Attribute Format!
 
-
-Placeholder Attribute:-
-
+4. Placeholder Attribute:-
 
 => Shows some random hint of what to be filled in the input
 
-
-value Attribute:-
-
+5. value Attribute:-
 
 => This will be the default text in the input field and when we write some text it gets continue to write with the text present in it!
 
-
 The button Tag is always in the input type as submit because of which when we click on it, gives some action!
-
 
 As the name Specifies it Resets the while Form!
 
-
-action Attribute:-
-
+6. action Attribute:-
 
 => action Attribute of form Tag is responsible of sending data to Database!
 
@@ -332,14 +322,10 @@ Whose range is from 0 to 1.
 | g | **Green** |
 | b | **Blue**  |
 
-
-
 ==> The Range of rgb is from 0 - 255!
-
 
 ==> The session was finally concluded by Akash Sir, who gave us some homework!
 I.e., to go through certain Topics they are:-
-
 
 | text-transform |
 | -------------- |
@@ -439,8 +425,7 @@ Selectors in CSS are like Instructions that tell the browser which parts of a we
 
 => For example:-
 
-   1. If you want to change all paragraphs, you use a selector for paragraphs.
-
+1. If you want to change all paragraphs, you use a selector for paragraphs.
 2. If you want to change just a specific button, you use a selector for that button.
 
 => Think of selectors as a way to point to the exact parts of a webpage and tell the browser how they should look!
@@ -458,7 +443,6 @@ color: red;																}
 => makes all text red.
 
 *2) Type Selector (Element Selector)*:-
-
 
 => Targets elements by their tag name.
 
@@ -583,9 +567,10 @@ CSS specificity determines which styles are applied when multiple rules target t
 
 ==> *Which one applies first (CSS Priority)?*
 
-*1)* Inline CSS has the highest priority.
+1) Inline CSS has the highest priority.
 
 2) Internal CSS comes next.
+
 3) External CSS has the lowest priority.
 
 ==> *Example :-*
