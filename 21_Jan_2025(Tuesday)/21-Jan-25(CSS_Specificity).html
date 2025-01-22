@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        21 Jan 25 - CSS Specificity
+    </title>
+    <style>
+        #IdSpecificity{
+            background-color: burlywood;
+        }
+        .ClassSpecificity{
+            background-color: cornsilk;
+        }
+        h1{
+            background-color: darksalmon;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="ClassSpecificity" id="IdSpecificity">
+        Hello World!
+    </h1>
+</body>
+</html>
+<!--  
+👆
+Here, Specificity means the Priority that is given to CSS's Selectors i.e.;
+1) Id Selector
+2) Class Selector
+3) Tag Selector
+So, if we give a same CSS to this Selectors then the 1st Priority is given to Id Selector, 2nd is given to Class Selector and 3rd Priority is given to Tag Selector. 
+-----------------------------------------------------------------
+==> What is Specificity in CSS?
+=> CSS specificity determines which styles are applied when multiple rules target the same element. It works by giving a weight to different types of selectors:-
+1) Inline styles:- 
+=> Example:-
+(style='color: red;') -> have the highest specificity.
+-----------------------------------------------------------------
+2) IDs:-
+=> Example:- 
+#header -> have the 2nd highest Specificity
+-----------------------------------------------------------------
+3) Class's:-
+=> Example:-
+.Test -> have the 3rd highest Specificity
+-----------------------------------------------------------------
+4) Element or Tag Selector:-
+=> Example:-
+h1 -> have the 4th or lowest Specificity
+-----------------------------------------------------------------
+==> The more specific a selector is, the higher its weight and the more likely it is to apply the style. 
+==> If two rules have the same specificity, the one that appears last in the CSS will be applied.
+-->

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        21 Jan 25 - CSS text-decoration
+    </title>
+    <style>
+        /*  
+        👇
+        ==> What is text-decoration?
+        => text-decoration in CSS is a property used to style the appearance of text. It can add effects like underlines, strikethroughs, or overlines. 
+        */
+        h1{
+            /* 
+            text-decoration: underline; 
+            👆
+            Adds a line under the text.
+            */
+
+            /* 
+            text-decoration: overline; 
+            👆
+            Adds a line over the text.
+            */
+
+            /* 
+            text-decoration: line-through; 
+            👆
+            Adds a line through the text - like a strikethrough
+            */
+
+            text-decoration: underline;
+        }
+        
+        a{
+            text-decoration: none;
+            /*  
+            👆
+            Removes any decoration - like underlines or lines
+            */
+            /*
+            👆
+            ==> The text-decoration: none; property is used in an anchor <a> tag to remove the underline that usually appears by default on links. 
+            ==>Without it, links will show up as underlined text, but using text-decoration: none; removes that underline, making the link look like regular text.
+            */
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit optio nulla assumenda saepe voluptatibus quo?
+    </h1>
+    <a href="https://www.google.com">
+        Google
+    </a>
+    <!--  
+    👆
+    ==> text-decoration:none; This makes the link appear without the typical underline.
+    -->
+</body>
+</html>

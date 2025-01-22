@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        21 Jan 25 - Ways to Apply CSS
+    </title>
+    <!-- 
+    Internal CSS 
+    👇
+    -->
+    <style>
+        h1{
+            background-color: burlywood;
+        }
+    </style>
+    <!--  
+    External CSS 
+    👇  
+    -->
+    <link rel="stylesheet" href="./21-Jan-25(TypesOf-CSS).css">
+</head>
+<body>
+    <h1 style="background-color: darkkhaki;">
+        <!--  
+        👆
+        Inline CSS
+        -->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea, alias amet impedit molestiae quia.
+    </h1>
+</body>
+</html>
+<!-- 
+==> Ways to Apply CSS are:-
+1) Internal CSS
+2) External CSS
+3) Inline CSS
+==> Among the Ways to Apply CSS which will Apply to the Web Page is based on Sequence!
+==> If Internal CSS is applied below External CSS the Web Page will aquire the External CSS.
+==> But, if Internal CSS is below External CSS the Web Page will aquire the Internal CSS.
+==> If we are Applying Inline CSS it will always aquire Inline CSS! As it is below and applied inside <body> Tag.
+==> Whereas the Internal and External CSS are applied inside <head> Tag. We can only regulate which CSS to apply to Web Page Internal or External CSS as they are place in the same Tag i.e. <head> Tag and most importantly we can change it's Sequence!
+-----------------------------------------------------------------
+==> What is !important which is applied in CSS's Property's value?
+=> In CSS, !important is a rule added to a property value to make sure it overrides any other styles, no matter where they come from (inline, internal, or external stylesheets). 
+=> For example:-
+p {
+  color: red !important; 
+}
+p {
+  color: blue;
+}
+=> In this case, the paragraph will be red because - !important gives that rule the highest priority. 
+-->

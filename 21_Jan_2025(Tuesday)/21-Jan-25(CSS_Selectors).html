@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        21 Jan 25 - CSS Selectors
+    </title>
+    <style>
+        .ClassSelector{
+            background-color:  burlywood;
+        }
+        #IdSelector{
+            background-color: cadetblue;
+        }
+        .Padding-ClassSelector{
+            padding: 50px;
+        }
+        .m-50{
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="ClassSelector Padding-ClassSelector m-50">
+        hello
+    </h1>
+    <h1 id="IdSelector" class="m-50">
+        hello
+    </h1>
+</body>
+</html>
+<!--  
+==> We don't use id while using CSS!
+We only use class in CSS!
+==> We can have same class on n number of Tags.
+==> We can apply n number of Classes to same Class Attribute of the Tag!
+==> In one Tag we can use both id and class Attribute!
+-----------------------------------------------------------------
+==> What are Selectors in CSS?
+=>  Selectors in CSS are like Instructions that tell the browser which parts of a webpage to change. They help you choose specific elements (like text, buttons, or images) and apply styles to them.
+=> For example:-
+1) If you want to change all paragraphs, you use a selector for paragraphs.
+2) If you want to change just a specific button, you use a selector for that button.
+=> Think of selectors as a way to point to the exact parts of a webpage and tell the browser how they should look!
+=================================================================
+==> Types of Selectors in CSS:-
+1) Universal Selector (*):-
+=> Targets all elements on a page.
+=> Example:-  
+*{
+color: red;
+}  
+=> makes all text red.
+-----------------------------------------------------------------
+2) Type Selector (Element Selector):-
+=> Targets elements by their tag name.
+=> Example:- 
+p{ 
+font-size: 16px; 
+} 
+=> styles all <p> tags.
+-----------------------------------------------------------------
+3) Class Selector (.):-
+=> Targets elements with a specific class attribute.
+=> Example:- 
+.button{ 
+padding: 10px; 
+} 
+=> styles all elements with the class button.
+-----------------------------------------------------------------
+4) ID Selector (#):-
+=> Targets an element with a specific id attribute (unique per page).
+=> Example:- 
+#header{ 
+background-color: blue; 
+} 
+=> styles the element with id header.
+-----------------------------------------------------------------
+-->

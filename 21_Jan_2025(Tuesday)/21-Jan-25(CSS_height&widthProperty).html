@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        21 Jan 25 - CSS height and width Property
+    </title>
+    <style>
+        div{
+            border: 20px solid red;
+            width: 100px;
+            height: 50px;
+            /*
+            👆
+            The height property in CSS is used to set how tall an element is. It controls the vertical space an element takes up.  
+            */
+        }
+        h1{
+            border: 20px solid red;
+            width: 2000px;
+            /*  
+            👆
+            It brings Scroll Bar and takes the space until it fills full width of 2000px! 
+            */
+        }
+        h2{
+            border: 20px solid red;
+            max-width: 2000px;
+            /*  
+            👆
+            It does not brings the Scroll bar and takes the space according to the space available in the screen!
+            */
+        }
+    </style>
+    <!--  
+    👆
+    What is width and max-width Property in CSS?
+    ==> In CSS:
+    1) width:-
+    => This sets the exact width of an element. 
+    => For example:- 
+    width: 300px; makes an element 300 pixels wide. It doesn’t adjust based on the screen size or content.
+    2) max-width:-  
+    => This sets the maximum width an element can have. 
+    => For example:- 
+    max-width: 500px; means the element will never be wider than 500 pixels, but it can shrink if needed to fit smaller screens or content.
+    3) Key Difference:-  
+    => width is fixed, while max-width allows flexibility by capping the size.  
+    -->
+</head>
+<body>
+    <div>
+        Hello
+    </div>
+    <div>
+        World!
+    </div>
+    <!--  
+    👆
+    What is <div> Tag in CSS?
+    ==> The <div> tag in HTML is a container used to group content together. It doesn't have any specific styling or meaning on its own. Instead, you use it along with CSS to style or organize sections of a webpage. 
+    ==> For example, you can use a <div> to:
+    1) Apply styles (like colors, borders, or layouts) to a group of elements.
+    2) Divide a webpage into sections, like header, main content, or footer.
+    ==> Think of <div> as a blank box you can customize with CSS.
+    -->
+    <!--  
+    👆
+    It is a Block Level Element! We can change it's Width but it cannot be taken into one line, it will remain one below another as a block!
+    -->
+    <h1>
+        lorem
+    </h1>
+    <h2>
+        lorem
+    </h2>
+</body>
+</html>
