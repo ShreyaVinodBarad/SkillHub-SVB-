@@ -1,0 +1,377 @@
+⭐ 22 Jan 25, Wednesday - Homework ⭐
+=====================⭐Flex Box - Started⭐====================
+📌 Flex Box  
+🌞 Completed on 21 Jan 25, Tuesday
+=====================⭐Flex Box - Completed⭐==================
+
+=====================⭐ CSS Units - Started⭐==================
+📌 CSS Units 
+1) What are CSS Units?
+- In CSS, units are used to define the size of elements, spacing, and various styles like font size, width, height, padding, and margins. 
+- There are two main categories of units:- 
+🌞 a) Absolute Units:-
+- These units have a fixed size and do not depend on any other element. They are consistent across different screens and devices.
+1) px (pixels):-
+- The most common unit in CSS. One pixel is a tiny dot on the screen. It’s a fixed size and does not change with screen size or zoom level.
+- Example:-
+width: 200px;
+2) cm (centimeters):-
+- Real-world measurement, used rarely.
+- Example:- 
+width: 10cm;
+3) mm (millimeters):-
+- Smaller than a centimeter, also used rarely.
+- Example:- 
+width: 5mm;
+4) in (inches):-
+- Measurement in inches, typically for print layouts.
+- Example:- 
+width: 2in;
+5) pt (points):-
+- 1 point = 1/72 of an inch, mainly used in print design.
+- Example:- 
+font-size: 12pt;
+6) pc (picas):-
+- 1 pica = 12 points. Rarely used in web design.
+- Example: 
+font-size: 1pc;
+---------------------------------------------------------------- 
+🌞 b) Relative Units:-
+- These units adjust based on the size of other elements or the screen. They are flexible and commonly used for responsive design.
+1) em:-
+- Relative to the font size of the parent element.
+- Example:-
+If the parent font size is 16px, 
+⭐ 1em = 16px
+- 2em = 32px.
+- 0.5em = 8px.
+2) rem (root em):-
+- Similar to em, but relative to the root (HTML) font size, not the parent element.
+- Example:-
+If the root font size is 16px, 
+⭐ 1rem = 16px.
+2rem = 32px.
+3) % (percentage):-
+- Relative to the size of the parent element or the container.
+- Example:-
+a) width: 50%; 
+- sets the element's width to half of the parent’s width.
+b) font-size: 120%; 
+- makes the font size 120% of the parent font size.
+4) vw (viewport width):-
+- A percentage of the browser window’s width.
+- Example:-
+⭐ 100vw = full browser width.
+⭐ 50vw = half the browser width.
+5) vh (viewport height):- 
+- A percentage of the browser window’s height.
+- Example:-
+⭐ 100vh = full browser height.
+⭐ 50vh = half the browser height.
+6) vmin and vmax:-
+a) vmin:- 
+- The smaller of vw and vh.
+b) vmax:- 
+- The larger of vw and vh.
+- Example:-
+width: 50vmin; takes 50% of the smaller dimension (width or height).
+7) ch:-
+- Relative to the width of the 0 character in the current font. Useful for text layouts.
+- Example:- 
+width: 10ch;
+8) ex:-
+- Relative to the height of the lowercase letter x. Rarely used.
+- Example:- 
+line-height: 2ex;
+---------------------------------------------------------------- 
+🌞 Choosing the Right Unit:-
+- Use relative units (em, rem, %, vw, vh) for responsive designs that adapt to different screen sizes.
+- Use absolute units (px) for fixed layouts where precision is important.
+---------------------------------------------------------------- 
+🌞 Summary
+- Absolute Units are fixed:- 
+        - px 
+        - cm 
+        - mm
+        - in 
+        - pt 
+        - pc
+- Relative Units are flexible:- 
+        - em
+        - rem
+        - %
+        - vw
+        - vh
+        - vmin
+        - vmax
+        - ch
+        - ex
+- Relative units are generally more modern and better for creating designs that look good on all devices.
+=====================⭐ CSS Units - Completed⭐=================
+
+=====================⭐ CSS Fonts - Started⭐===================
+📌 CSS Fonts
+🌞 What are CSS Fonts?
+- Fonts in CSS are used to style the text on a webpage. CSS provides several ways to control how the text looks, including its size, style, weight, and family.
+1) Font-Family
+- What it does? 
+Specifies the typeface (the overall design of the text).
+- Example:- 
+font-family: Arial, sans-serif;
+2) Font-Size
+- What it does? 
+Sets how big or small the text is.
+- Example:- 
+font-size: 16px;
+- Units:- 
+a) Pixels (px):- 
+Fixed size, doesn’t change with screen size.
+b) Em:- 
+Relative to the parent element's font size.
+c) Rem:- 
+Relative to the root element's font size.
+d) Percentage (%):- 
+Relative to the parent element's font size.
+3) Font-Weight
+- What it does? 
+Controls how bold the text appears.
+- Example:- 
+font-weight: bold;
+- Options:- 
+a) Keywords:- 
+- normal, bold, lighter, etc.
+b) Numeric values:- 
+- 100 (thin) to 900 (extra-bold).
+4) Font-Style
+- What it does?
+Changes the style of the font, like making it italic.
+- Example:- 
+font-style: italic;
+- Options:-
+normal (default), italic, or oblique.
+5) Line-Height
+- What it does? 
+Adjusts the spacing between lines of text.
+- Example:- 
+line-height: 1.5;
+- Why it's important? 
+Improves readability.
+6) Text Transformations
+- text-transform:- 
+Changes the case of text.
+a) uppercase:- 
+- All letters capitalized.
+b) lowercase:- 
+- All letters small.
+c) capitalize:- 
+- First letter of each word capitalized.
+7) Font Import:-
+- Using Web Fonts:- 
+You can use fonts not installed on a user’s device by importing them.
+- Example:- 
+Importing Google Fonts: 
+-----------------------------------------------------------------
+🌞 Shorthand Property:-
+- You can combine font properties into one line:-
+- Syntax:-
+font: italic bold 16px/1.5 'Arial', sans-serif;
+- Order:-
+        1) font-style 
+        2) font-weight 
+        3) font-size/line-height 
+        4) font-family.
+-----------------------------------------------------------------
+🌞  Importing Fonts from Google Fonts:-
+- Here are the simple steps to import fonts from Google Fonts:
+1) Go to Google Fonts
+2) Choose a Font:-
+- Browse and select the font you want.
+- Click on the font to see its styles (e.g., bold, italic).
+3) Copy the Import Link:-
+- Under the "Embed" section, copy the @import code for CSS.
+- Example:- 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+4) Paste in Your CSS:-
+- Paste the @import code at the top of your CSS file.
+5) Use the Font in CSS:-
+- Apply the font using the font-family property.
+- Example:-
+body {
+  font-family: 'Roboto', sans-serif;
+}
+-----------------------------------------------------------------
+🌞 Summary:-
+- CSS Fonts control the typography of text on webpages, offering customization for size, style, weight, and typeface. 
+- Key properties include:
+1) Font-Family:- 
+- Specifies the typeface (e.g., `font-family: Arial, sans-serif;`).
+2) Font-Size:-
+- Sets text size using units like pixels (px), em, rem, and percentage.
+- Example:- 
+font-size: 16px;
+3) Font-Weight:- 
+- Adjusts text boldness with options from keywords (normal, bold) to numeric values (100 to 900).
+- Example:- 
+font-weight: bold;
+4) Font-Style:- 
+- Changes the style of the font, such as italic.
+- Example:-
+font-style: italic;
+5) Line-Height:- 
+- Modifies spacing between lines to enhance readability.
+- Example:- 
+line-height: 1.5;
+6) Text Transformations:- 
+- Alters the case of text
+- Options include uppercase, lowercase, and capitalize.
+7) Font Importing:- 
+- Enables the use of web fonts by importing them from sources like Google Fonts.
+- Example:-  
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+8) Shorthand Property:- 
+- Font properties can be combined into a single line.
+- Example Syntax:- 
+font: italic bold 16px/1.5 'Arial', sans-serif;
+- Order of properties:- 
+font-style, font-weight, font-size/line-height, font-family.
+=====================⭐ CSS Fonts - Completed⭐=================
+
+================⭐ CSS Media Query - Started⭐==================
+📌 CSS Media Query
+🌞 What is meant by Media Query?
+- A Media Query in CSS is a tool that allows your website to adapt and respond to different screen sizes, resolutions, or device types. 
+- It helps you make your website look good on all devices like desktops, tablets, and smartphones.
+----------------------------------------------------------------
+🌞 How it Works?
+- Media Queries check the features of the user’s device (like screen width, height, orientation, etc.).
+- Based on these checks, they apply specific CSS rules.
+----------------------------------------------------------------
+🌞 Basic Syntax:-
+@media (condition) 
+{
+  /* CSS rules */
+}
+----------------------------------------------------------------
+🌞 Key Points:-
+1) Conditions:- 
+Media queries use conditions like:-
+a) max-width:- 
+- Targets devices with a width less than or equal to the value.
+b) min-width:- 
+- Targets devices with a width greater than or equal to the value.
+c) orientation:- 
+- Targets landscape or portrait modes.
+d) resolution:- 
+- Targets screen resolutions like high-DPI (retina screens).
+2) Mobile-First Approach:- 
+- A common strategy is to design for smaller screens first and then add styles for larger screens using min-width.
+3) Multiple Conditions:- 
+- You can combine multiple conditions using and or create alternatives using , (comma for "or").
+- Example:-
+@media (min-width: 600px) and (max-width: 800px) 
+{
+  /* CSS for screens between 600px and 800px wide */
+}
+----------------------------------------------------------------
+🌞 Why Use Media Queries?
+- To make your website responsive.
+- To improve the user experience across devices.
+- To reduce unnecessary CSS for specific devices.
+----------------------------------------------------------------
+🌞 Summary:-
+1) What is a Media Query?
+A Media Query in CSS helps make your website look good on various devices, like desktops, tablets, and smartphones, by adapting to different screen sizes and resolutions.
+2) How it Works?
+Media Queries check the features of a user's device, such as its screen width, height, and orientation, and apply specific CSS styles based on these conditions.
+3) Basic Syntax:-
+@media (condition) 
+{
+  /* CSS rules */
+}
+4) Key Points:-
+1) Conditions:- 
+a) max-width:- 
+- Targets devices with a width less than or equal to a specific value.
+b) min-width:- 
+- Targets devices with a width greater than or equal to a specific value.
+c) orientation:- 
+- Targets device orientations (portrait or landscape).
+d) resolution:- 
+- Targets specific screen resolutions.
+2) Mobile-First Approach:- 
+- It's common to design for smaller screens first and then add styles for larger screens using min-width.
+3) Multiple Conditions:- 
+- You can combine conditions using "and" or use a comma (",") to create alternatives.
+- Example:- 
+@media (min-width: 600px) and (max-width: 800px) 
+{
+    /* CSS for screens between 600px and 800px wide */
+}
+5) Why Use Media Queries?
+- To ensure your website is responsive.
+- To enhance user experience across various devices.
+- To minimize unnecessary CSS for specific devices.
+================⭐ CSS Media Query - Completed ⭐===============
+
+========⭐ Akash Sir's Whatsapp Study Work - Started ⭐=========
+1) What is the purpose of the <noscript> tag in HTML?
+==> The <noscript> tag in HTML is used to provide content for users whose browsers do not support JavaScript or have JavaScript disabled. 
+- It acts as a fallback, ensuring that important information or alternative functionality is still available when JavaScript cannot be executed.
+📌 The term "fallback" in this context refers to a secondary solution that provides an alternative way to access or interact with a website or application when the primary solution is not available or fails to work as expected.
+- Example:-
+<noscript>
+    <p>
+        JavaScript is disabled in your browser. Please enable it for the best experience.
+    </p>
+</noscript>
+-----------------------------------------------------------------
+2) What is the difference between HTML tag and HTML element?📌
+==> An HTML tag is the building block used to define the start or end of an element. 
+- Example:- 
+<p> and </p> are tags.  
+==> An HTML element is the combination of the start tag, its content, and the end tag. 
+Example:-  
+<p>
+    This is a paragraph.
+</p>
+- Here, the element is everything: the <p> tag, the content "This is a paragraph.", and the closing </p> tag.  
+- So, tags are parts of an element.
+-----------------------------------------------------------------
+3) What will happen if we don't put <!Doctype HTML> tag?
+==> If you don't include the <!DOCTYPE html> tag at the beginning of your HTML document, the browser may switch to quirks mode instead of standards mode. 
+- In quirks mode, the browser tries to behave like older browsers to support outdated web pages, which can lead to inconsistent rendering of your design. This might result in layout issues, unexpected behavior, or styling problems.
+- Including <!DOCTYPE html> ensures the browser follows modern standards and renders your page consistently.
+-----------------------------------------------------------------
+4) What is the use of "target" attribute in HTML?
+==> The target attribute in HTML is used in <a> (anchor) tags or <form> elements to specify where the linked document or form result should open. 
+- Here are its common values:-
+1) _self(default):- 
+- Opens the link in the same tab or window.
+- Example:- 
+<a href="page.html" target="_self">
+    Open in the same tab
+</a>
+2) _blank:-  
+- Opens the link in a new tab or window.
+- Example:-
+<a href="page.html" target="_blank">
+    Open in a new tab
+</a>
+3)_parent:- 
+- Opens the link in the parent frame (used in nested frames).
+4) _top:- 
+- It opens the linked document in the full body of the window, breaking out of any frames.
+5) Custom Name:-  
+- Opens the link in a specific named window or tab, which can be reused.
+- Example:-  
+<a href="page.html" target="myWindow">
+    Open in named window
+</a>
+==> In short, the target attribute controls where the result of a link or form submission appears.
+-----------------------------------------------------------------
+5) What is the purpose of <header> tag?
+==> The `<header>` tag is used to define the top section of a webpage or a part of a page, usually containing introductory content. 
+- It typically includes things like a website logo, navigation menu, or a title. 
+- It helps structure the page and makes it clear where the header section starts, improving both accessibility and SEO.
+-----------------------------------------------------------------
+========⭐ Akash Sir's Whatsapp Study Work - Completed ⭐=========

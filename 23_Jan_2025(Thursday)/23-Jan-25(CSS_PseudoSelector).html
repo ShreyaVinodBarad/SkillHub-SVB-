@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        23  Jan 25 - CSS Pseudo Selector 
+    </title>
+    <style>
+        /*  
+        Initial State
+        👇
+        */
+        .box{
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            transition: 2s;
+            background-color: brown;
+        }
+        /*  
+        Hover State
+        👇
+        */
+        .box:hover
+        {
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    </div>
+</body>
+</html>
+<!--  
+1) What are Pseudo-selectors in CSS?
+==> Pseudo-selectors in CSS are special words that let you change how elements look based on their state or place on the page, rather than what they are named. This means you can style them without adding extra classes or IDs in your HTML.
+==> Common examples include:-
+a) :hover 
+- Styles an element when the mouse is over it.
+b) :focus
+- Styles an element when selected or active e.g., an input box.
+- The :focus in CSS styles an element when it is selected or active, like during a click or keyboard navigation. It highlights the element to indicate readiness for interaction, often by changing its border color or background.
+c) :first-child 
+- Selects the first child of a parent element.
+d) :nth-child(n)
+- Selects children based on their order within a parent.
+- Here n defines which order of child which you want to select within the Parent.
+-->

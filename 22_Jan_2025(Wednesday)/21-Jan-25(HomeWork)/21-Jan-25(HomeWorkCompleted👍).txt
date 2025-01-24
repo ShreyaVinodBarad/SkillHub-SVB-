@@ -1,0 +1,250 @@
+⭐ 21 Jan 25, Tuesday - Homework ⭐
+=====================⭐Flex Box - Started⭐==================
+📌 Flexbox Overview
+1) What is Flexbox?
+- Flexbox, short for Flexible Box Layout, is a CSS layout system designed for easier arrangement and alignment of elements within a container, facilitating the creation of flexible and responsive designs.
+-----------------------------------------------------------------
+2) Key Features of Flexbox
+1) Parent-Child Relationship:-
+- A flex container (the parent) holds flex items (the children).
+2) One Direction Layout:-
+- Items are arranged in either a horizontal (row) or vertical (column) direction.
+3) Dynamic Resizing:-
+- Items can grow, shrink, or remain fixed in size depending on the available space.
+4) Easy Alignment:-
+- Align items along the main axis (horizontal or vertical) or cross axis (perpendicular to the main axis) using simple properties.
+-----------------------------------------------------------------
+3) How Flexbox Works?
+1) Enable Flexbox:-
+- Use display: flex; on the container to activate Flexbox.
+2) Main Axis vs Cross Axis:-
+a) Main Axis:- 
+- The primary direction of arrangement (horizontal or vertical).
+b) Cross Axis:- 
+The perpendicular direction used to align items.
+-----------------------------------------------------------------
+4) Important Flexbox Properties:-
+⭐ a) For the Container:-
+1) display: flex;
+- Activates Flexbox layout.
+2) flex-direction:-
+- Sets the direction of items within the container.
+- Values include:- 
+      1) row (default):- 
+        - Horizontal left to right.
+      2) column:- 
+        - Vertical top to bottom.
+      3) row-reverse:- 
+        - Horizontal right to left.
+      4) column-reverse:-
+        - Vertical bottom to top.
+3) justify-content:
+- Aligns items along the main axis(X-Axis):-
+      1) flex-start:- 
+        - Items aligned at the start.
+      2) flex-end:- 
+        - Items aligned at the end.
+      3) center:- 
+        - Items centered.
+      4) space-between:- 
+        - Equal space between items.
+      5) space-around:- 
+        - Equal space around items.
+      6) space-evenly:- 
+        - Equal space between and around items.
+4) align-items:
+- Aligns items on the cross axis(Y-Axis):
+      1) stretch:- 
+        - Default, items fill the container.
+      2) flex-start:- 
+        - Aligned to the top (or left).
+      3) flex-end:- 
+        - Aligned to the bottom (or right).
+      4) center:- 
+        - Items centered vertically.
+      5) baseline:- 
+        - Aligned based on text baseline(The text baseline is the line on which most letters "sit.")
+5) flex-wrap:
+- Controls wrapping of flex items:
+     1) nowrap:- 
+     - Default, items stay in one line.
+     2) wrap:- 
+     - Items wrap onto new lines.
+     3) wrap-reverse:- 
+     -Items wrap in reverse order.
+⭐ b) For the Items:-
+1) flex:- 
+- Shortcut for `flex-grow`, `flex-shrink`, and `flex-basis`.
+Syntax:- 
+flex: <flex-grow> <flex-shrink> <flex-basis>;
+2) flex-grow:-
+- Determines how much an item can grow relative to others.
+Default value: `0`.
+3) flex-shrink:-
+- Determines how much an item can shrink relative to others when necessary.
+Default value: `1`.
+4) flex-basis:-
+- Sets the initial size of an item before growing or shrinking.
+Default value: `auto`.
+5) align-self:-
+- Overrides the container's align-items for individual items.
+- Options include auto, flex-start, flex-end, center, and stretch.
+6) order:-
+- Controls the visual order of items within the flex container.
+- Default value: `0`; lower numbers appear first.
+-----------------------------------------------------------------
+==> Summary of Flexbox Properties for Items:-
+1) flex:- 
+- Configures growth, shrinking, and initial size.
+2) flex-grow:- 
+- Controls item growth relative to others.
+3) flex-shrink:- 
+- Dictates item shrinkage relative to others.
+4) flex-basis:- 
+- Defines the item's starting size.
+5) align-self:-  
+- Overrides container alignment for specific items.
+5) order:- 
+- Adjusts the display order without modifying HTML structure.
+=====================⭐Flex Box - Completed⭐==================
+================⭐position Property - Started⭐================
+📌 CSS Position Property
+- The CSS position property is crucial for controlling the positioning of elements on a webpage, determining how and where they appear relative to their normal flow or other elements.
+-----------------------------------------------------------------
+==> Types of Positioning:-
+1) position: static; (default)
+a) Meaning:- 
+- Default positioning for all elements.
+b) Behavior:- 
+- Elements follow the normal document flow (top to bottom, left to right); top, right, bottom, and left cannot be used.
+- Example:- 
+Any element without a specified position is treated as static.
+-----------------------------------------------------------------
+2) position: relative;
+a) Meaning:-
+- Positions an element relative to its normal position.
+b) Behavior:- 
+- Space is reserved for the element in its default position, but it can be moved using top, right, bottom, or left.
+c) Offset Properties:-
+1) top:- 
+- Moves downward.
+2) bottom:- 
+- Moves upward.
+3) right:- 
+- Moves to the left.
+4) left:- 
+- Moves to the right.
+-----------------------------------------------------------------
+3) position: absolute;
+a) Meaning:- 
+- Positions an element precisely using top, right, bottom, and left.
+b) Behavior:- 
+- It takes an element out of the normal layout flow, so it doesn’t influence the positioning of other elements. Its location is determined by the nearest positioned ancestor or the page itself if no such ancestor exists, providing precise control over the element’s placement.
+c) Offset Properties:-
+1) top:- 
+- Moves downwards; negative values move upwards.
+2) bottom:- 
+- Moves upwards; increasing the value moves the element up.
+3) right:-  
+- Increasing the value moves left; decreasing it moves right.
+4) left:-
+- Increasing the value moves right; decreasing it moves left.
+-----------------------------------------------------------------
+4) position: fixed;
+a) Meaning:-
+- Keeps an element fixed in place relative to the viewport when scrolling.
+b) Behavior:-  
+- The element does not take up space in the document flow and is removed from it entirely.
+c) Offset Properties:-
+1) top:- 
+- Sets distance from the top of the viewport.
+2) bottom:- 
+- Sets distance from the bottom of the viewport.
+3) left:- 
+- Sets distance from the left side of the viewport.
+4) right:- 
+- Sets distance from the right side of the viewport.
+-----------------------------------------------------------------
+5) position: sticky;
+a) Meaning:- 
+- Acts like relative until the user scrolls to a certain point, then becomes fixed.
+b) Behavior:- 
+- Initially part of the normal flow, it "sticks" at a defined position (e.g., top) when the scroll reaches a certain threshold.
+c) Offset Properties:-
+1) top:- 
+- Stick to the top of the viewport when scrolled past.
+2) bottom:- 
+- Stick to the bottom of the viewport when scrolled past.
+3) left:- 
+- Stick to the left side of the viewport.
+4) right:-
+- Stick to the right side of the viewport.
+-----------------------------------------------------------------
+==> Summary of Position Types:-
+1) position: static; 
+- Default, follows normal flow.
+2) position: relative; 
+- Moves relative to original position.
+3) position: absolute; 
+- Positioned based on the nearest ancestor and removed from document flow.
+4) position: fixed; 
+- Fixed on the viewport regardless of scrolling.
+5) position: sticky; 
+- Behaves like relative until scrolled to a specific point, then becomes fixed.
+================⭐position Property - Completed⭐===============
+=========⭐Akash Sir's Whatsapp Study Work - Homework⭐=========
+📌 Akash Sir's Whatsapp Study Work:-
+a) What are void elements in HTML?
+- Void elements (or self-closing elements) in HTML are special tags that don’t have any content between an opening and closing tag. They don’t require a closing tag at all. These elements only have an opening tag.
+- For example:-
+<img> (for images)
+<br> (for line breaks)
+<input> (for form inputs)
+<hr> (for horizontal rules)
+==> Why are they called "void" elements?
+- They’re called "void" because they don’t contain any inner content or "body" between a start and end tag, unlike regular elements. 
+- Instead, their function is simply to represent something (like a line break or image) without needing any extra content inside.
+-----------------------------------------------------------------
+b) What are some of the advantages of HTML5 over its previous versions?
+==> HTML5 offers several advantages over its previous versions:
+1) Multimedia Support:- 
+- It has built-in support for audio and video without needing external plugins like Flash.
+2) Cleaner Code:- 
+- HTML5 introduces simpler and more readable code, making it easier to create and maintain websites.
+3) Better Forms:- 
+- New input types (like date, email) and form validation help create better forms with less JavaScript.
+4) Enhanced Semantics:- 
+- New elements like <header>, <footer>, and <article> help organize content better and improve SEO.
+5) Offline Support:- 
+- HTML5 enables websites to work offline using local storage and caching.
+6) Improved Performance:- 
+- It supports faster rendering and better graphics, especially for web applications and games.
+7) Mobile-Friendly:- 
+- HTML5 is designed to be more responsive and works well on mobile devices.
+==> In short, HTML5 makes web development easier, faster, and more compatible with modern technologies.
+-----------------------------------------------------------------
+c) What is the difference between HTML form's "action" and "method" attributes?
+==> Difference between HTML form's "action" and "method" attributes is:-
+1) The "action" attribute in an HTML form specifies the URL where the form data will be sent when the form is submitted.
+2) The "method" attribute defines how the form data will be sent to the server. 
+- There are two main methods:
+a) GET:- 
+Sends the data as part of the URL (good for search forms or non-sensitive data).
+b) POST:- 
+Sends the data inside the request body (good for sensitive or large data).
+==> In short:
+- action = where to send the data.
+- method = how to send the data.
+-----------------------------------------------------------------
+d) What is the purpose of the <meta> tag in HTML?
+==> The `<meta>` tag in HTML provides information about a webpage, like its description, author, or keywords. 
+- This info is not visible on the page but helps search engines, browsers, and other services understand and display the page correctly. 
+- It's often used for SEO (Search Engine Optimization) and setting things like character encoding or viewport settings.
+-----------------------------------------------------------------
+e) What is the purpose of the viewport meta tag?
+==> The viewport meta tag controls how a webpage looks on different screen sizes, like on mobile phones or tablets. 
+- It tells the browser to adjust the page’s width and scaling, so it fits properly on the screen. Without it, your page might look too small or too zoomed in on smaller devices.
+- For example:-
+<meta name="viewport" content="width=device-width initial-scale=1.0">
+This ensures the page is sized correctly for any device.
+=========⭐Akash Sir's Whatsapp Study Work - Completed⭐========

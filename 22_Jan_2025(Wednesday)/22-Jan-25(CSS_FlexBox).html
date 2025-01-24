@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        22 Jan 25 - CSS Flex Box    
+    </title>
+    <style>
+        .parent{
+            border: 2px solid black;
+            background-color:bisque;
+            height: 500px;
+            display: flex;
+        }
+        .child1{
+            border: 2px solid black;
+            background-color:brown;
+            align-self: center;
+        }
+        .child2{
+            border: 2px solid black;
+            background-color:burlywood;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child1">
+            Child - 1
+        </div>
+        <div class="child2">
+            Child - 2
+        </div>
+    </div>
+</body>
+</html>
+<!--  
+==> Flex Box only applies on Parent and works on Parent to Child!
+==> Flex Box works on 2D i.e.; X and Y Axis.
+==> justify-content and align-items will only work when we apply disply - Property as flex.
+----------------------------------------------------------------
+📌 1) justify-content
+==> If we want to move child Horizontally i.e.; X - Axis we use a CSS Property - justify-content.
+==> We can use justify-content only on Parent! 
+1) justify-content:center;
+=> Takes the Childs to Center of the Parent i.e.; X - Axis.
+2) justify-content:flex-end;
+=> Takes the Childs to right of the Parent i.e.; X - Axis.
+3) justify-content:flex-start;
+=> Takes the Childs to Left of the Parent i.e.; X - Axis.
+4) justify-content:space-between;
+=> Allows the Childs to take the Parents remaining space but the space will be between childs .
+5) justify-content:space-around;
+=> Allows the childs to take parents remaining space but the same space will be taken from both right and left hand size.
+6) justify-content:space-evenly;
+=> The parents space will be evenly divided between child!
+----------------------------------------------------------------
+📌 2) align-items
+==> If we want to move child Vertically i.e.; Y - Axis we use a CSS Property - align-items.
+==> We can use align-items only on Parent and Parent should have display as flex!
+1) align-items: center;
+2) align-items: flex-start;
+3) align-items: flex-end;
+4) align-items: stretch;
+=> It makes flex or grid items expand to fill the container's height.
+-----------------------------------------------------------------
+📌 3) align-self 
+==> This align-self Property is used when we want to apply Flex Properties only on one Child!
+-->

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        24 Jan 25 - CSS Units    
+    </title>
+    <style>
+        html
+        {
+            font-size: 100px;
+        }
+        .big
+        {
+            font-size: 100px;
+        }
+        .box1
+        {
+            background-color: darksalmon;
+            width: 50%;
+            /*  
+            👆
+            It takes 50% width of it's Parent Container i.e.;body.
+            Here body's width is the whole screen!
+            So, here it gets 50% of the body! 
+            */
+        }
+        .parent
+        {
+            background-color: brown;
+            padding: 10px;
+            width: 400px;
+        }
+        .child
+        {
+            background-color: burlywood;
+            width: 50%;
+            /*  
+            👆
+            It takes the 50% width of its Parent Container i.e; class named - parent whose width is 400px.
+            So, 50% of 400px is 200px!
+            */
+        }
+        
+        /*  
+        👇
+        - When a parent element has a font size of 10px and a child element has a font size of 2em, the child's font size is calculated based on the parent's size: 2 * 10px = 20px. 
+        - If the child also has a padding of 2em, it is calculated using the parent's font size: 10px * 2 (from 2em) * 2 (padding) = 40px. 
+        ==> Summary:-
+        - The child's font size and properties that use em are based on the parent's font size.
+        - Any properties defined in em for the child will be calculated using the parent's font size.        
+        */
+        /*  
+        👇
+        3) Unit - em
+        */
+        .demo
+        {
+            font-size: 10px;
+        }
+        .test
+        {
+            font-size: 2em;
+            padding: 2rem;
+        }
+        /*  
+        👇
+        4) Unit - rem
+        */
+        .test-rem
+        {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!--  
+    👇
+    1) Unit - px
+    -->
+    <span class="big">
+        Unit - Pixel
+    </span>
+    
+    <!--  
+    👇
+    2) Unit - % Percentage
+    -->
+    <div class="box1">
+        Unit - % Percentage
+    </div>
+    <div class="parent">
+        <div class="child">
+            Child
+        </div>
+    </div>
+    
+    <!--  
+    👇
+    3) Unit - em  
+    -->
+    <div class="demo">
+        <p class="test">
+            Unit - em
+        </p>
+    </div>
+
+    <!--  
+    👇
+    4) Unit - rem
+    ==> Depends on HTML's Font Size because for rem parent is always HTML tag!
+    - And it is same used as the em Unit!
+    ==> HTML tag font-size * Tag with rem Unit
+    -->
+    <div>
+        <p class="test-rem">
+            Unit - rem
+        </p>
+    </div>
+</body>
+</html>
+<!--  
+1) Ctrl + Space
+==> If you do not get any suggestions then, Ctrl + Space provides suggestions for code completion!✌
+-->
+
+<!--  
+There are 2 types of Units in CSS:-
+1) Relative Unit
+- em
+- rem
+2) Absolute Unit
+- px
+- %
+-->

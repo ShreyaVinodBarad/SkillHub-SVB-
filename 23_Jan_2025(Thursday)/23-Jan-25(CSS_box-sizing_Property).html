@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        23 Jan 25 - CSS box-sizing Property
+    </title>
+    <style>
+        /*  
+        Universal Selector
+        👇  
+        */
+        *
+        {
+            /*
+            👇  
+            Resets Browser CSS 
+            */
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .box1
+        {
+            background-color: darksalmon;
+            max-width:200px;
+            padding: 20px;
+        }
+        .box2
+        {
+            background-color:steelblue;
+            max-width:200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">  
+        Box - 1      
+    </div>
+    <div class="box2">
+        Box - 2
+    </div>
+</body>
+</html>
+<!--  
+1) What is box-sizing?
+- The CSS box-sizing property allows us to include the padding and border in an element's total width and height.
+- By default, the width and height of an element is calculated like this:
+a) width + padding + border = actual width of an element
+b) height + padding + border = actual height of an element
+- If you set box-sizing: border-box; on an element, padding and border are included in the width and height 
+-->

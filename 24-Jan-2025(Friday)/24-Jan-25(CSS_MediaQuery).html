@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        24 Jan 25 - CSS Media Query
+    </title>
+    <style> 
+        h1
+        {
+            display: none;
+            /*  
+            👆
+            It will stop displaying content of H1 tag!
+            */ 
+        }
+        body
+        {
+            background-color: burlywood;
+        }
+            
+        @media(max-width:1200px)
+        {
+                body
+                {
+                    background-color: brown;
+                }
+                h1
+                {
+                    display: block;
+                }
+        }
+
+        @media(max-width:800px)
+        {
+            body
+            {
+                background-color:blue;
+            }
+            h1
+            {
+                display: block;
+                /* 
+                👇
+                Show the content of the H1 Tag!
+                But for here H1 Tag's content will only disply for - background-color:chocolate;.
+                But for others the content of the H1 Tag will not display! 
+                */
+            }
+        }
+            
+        /* 
+            h1
+            {
+                display: none;
+            } 
+        */
+        
+        /*
+            - In Media Query's CSS which is at the bottom will be applied first!
+        */
+    </style>
+</head>
+<body>
+    <h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo pariatur quasi tempore eius dolorum soluta dolore odio animi voluptates temporibus natus optio odit, repudiandae quisquam aliquid doloribus repellendus tenetur esse.
+    </h1>
+</body>
+</html>

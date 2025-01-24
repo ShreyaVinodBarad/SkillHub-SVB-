@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        23 Jan 25 - CSS Advanced Selectors
+    </title>
+    <style>
+        /*  
+        👇
+        1) Child Selector
+        */
+        div > p
+        {
+            background-color: blanchedalmond;
+        }
+
+        /*  
+        2) Descendent Selector
+        👇
+        */
+        div p
+        {
+            background-color: burlywood;
+        }
+        
+        /*  
+        👇
+        3) Adjuscent Sibling Selector
+        */
+        div + p 
+        {
+            background-color:aqua;
+        }
+        
+        /*  
+        👇
+        4) Sibling Selector
+        */
+        div ~ p
+        {
+            background-color:yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            Para - 1
+        </p>
+        <p>
+            Para - 2
+        </p>
+        <section>
+            <p>
+                Para - 3
+            </p>
+        </section>
+    </div>
+    <p>
+        Para - 1 Outside div Tag
+    </p>
+    <p>
+        Para - 2 Outside div Tag
+    </p>
+</body>
+</html>
+<!--  
+📌 Some Imp Details:-
+1) Siblings:-
+- div Tag, two <p> tag with data as Para - 1 Outside div Tag and Para - Outside div Tag are known as Siblings.
+2) Adjacent Sibling:-
+- div Tag and the next <p> Tag with data as Para - 1 Outside div Tag, they are known as Adjacent Siblings.
+3) Childerns:-
+- The element that have direct children!
+4) Descendent:-
+- A descendant  are elements that is inside another specified element.
+-----------------------------------------------------------------
+⭐ Advanced Selectors are:-
+1) Child Selectors(>):-
+- This selector targets elements that are direct children of a specified element. For example, div > p will select all <p> elements that are direct children of any <div>.
+2) Descendent Selector:-
+- A descendant selector in CSS is used to select an element that is nested within another element. 
+- It is written by combining the selectors of the parent and child elements with a space in between.
+3) Adjuscent Sibling Selector(+):-
+- This selector targets an element that is directly next to another element. 
+- For example, h1 + p will select the first <p> that immediately follows any <h1>.
+4) Sibling Selector(~):-
+- This selector targets all elements that are siblings i.e., on the same level of a given element. 
+- For example, h1 ~ p will select all <p> elements that come after any <h1> but are not necessarily adjacent.
+-->

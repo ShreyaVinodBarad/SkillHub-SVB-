@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        22 Jan 25 - CSS position Property
+    </title>
+    <style>
+        /*  
+            1) position:static;
+            👆
+            ==> It means an element is positioned according to the normal flow of the document, and it does not respond to top, left, right, or bottom properties.
+        */
+        .parent{
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+            background-color: blanchedalmond;
+            position: relative;
+        }
+        .child{
+            height: 150px;
+            width: 150px;
+            border: 2px solid black;
+            background-color: brown;
+        /*  
+            2) position: fixed;
+            👆
+            ==> Fixed works according to the size of the Window.
+            ==> It does not depend on the parent's position wether it is relative or absolute it just works on Windows Size. 
+        */
+        
+        /* 
+            3) position: relative; 
+            👆
+            ==> position: relative; - shifts an element from its normal position without affecting others, allowing for adjustments using top, right, bottom, and left properties. 
+        */
+        
+        /* 
+            4) position: absolute;
+            👆
+            ==> Absolute works accroding to size of  Browsers Window.
+        */
+            top: 0;
+            right:0;
+        }
+        .dummy{
+            height: 400px;
+            border: 2px solid black;
+            background-color:crimson;
+        }
+        .scroll{
+            height: 2000px;
+        }
+        .sticky{
+            height: 100px;
+            border: 2px solid black;
+            background-color:darkkhaki;
+            top: 0;
+        /*  
+            5) position: sticky;
+            👆
+            ==> Here, sticky works as fixed value of position property. 
+            ==> But when we write - top: 0; then we scroll down and that property top which as value 0 will come into play i.e.; the element will stick to the top position when it reaches top - 0 and get fixed there. It keeps an element in view within its container when you scroll, until the container's boundary is reached.
+        */
+        }
+    </style>
+</head>
+<body>
+    <div class="dummy">
+    </div>
+    <!--  
+        ⭐ 
+        ==> Shortcut to get a class in <div> Tag is:-
+        .ClassName + Enter
+    -->
+    <div class="parent">
+        <div class="child">
+        </div>
+    </div>
+
+    <div class="scroll">
+    </div>
+    <div class="sticky">
+    </div>
+    <div class="scroll">
+    </div>
+</body>
+</html>

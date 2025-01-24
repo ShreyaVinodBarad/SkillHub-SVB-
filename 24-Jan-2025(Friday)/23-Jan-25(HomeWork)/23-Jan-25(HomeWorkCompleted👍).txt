@@ -1,0 +1,299 @@
+⭐ 23 Jan 25, Thursday - Homework ⭐
+=====================⭐Media Query - Started⭐==================
+📌 CSS Media Query - Completed on 22 Jan 25, Wednesday
+=====================⭐Media Query - Completed⭐================
+
+=====================⭐CSS Units - Started⭐====================
+📌 CSS Units - Completed on 22 Jan 25, Wednesday
+=====================⭐CSS Units - Completed⭐==================
+
+=====================⭐CSS Animation - Started⭐================
+📌 CSS Animation
+🌞 What is CSS Animation?
+- CSS animations allow you to create smooth transitions and effects on web elements, such as changing colors, sizes, positions, and more. 
+- They're defined using the @keyframes rule and can be applied to elements with the animation property.
+-----------------------------------------------------------------
+🌞 How to Write CSS Animation?
+1) @keyframes Rule:- 
+- This defines the stages of the animation by specifying the style at certain points during the animation. 
+- Syntax:-
+@keyframes animationName 
+{
+    0% 
+    { 
+        /* starting state */ 
+    }
+    50% 
+    { 
+        /* halfway state */ 
+    }
+    100% 
+    { 
+        /* final state */ 
+    }
+}
+2) animation Property:- 
+- This is applied to an element to activate the animation. It allows you to control various aspects like the duration, timing, delay, and iteration count.
+- Syntax:-
+element 
+{
+  animation: animationName duration timing-function delay iteration-count;
+}
+-----------------------------------------------------------------
+🌞 Example:-
+@keyframes moveRight 
+{
+  0%
+  { 
+    transform: translateX(0); 
+  }
+  100%
+  { 
+    transform: translateX(200px); 
+  }
+}
+div 
+{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation: moveRight 2s ease-in-out infinite;
+}
+==> animation: moveRight 2s ease-in-out infinite;
+👆
+1) moveRight:- 
+- This is the animation name.
+2) 2s:- 
+- Duration of 2 seconds.
+3) ease-in-out:- 
+- A smooth timing function.
+4) infinite:- 
+- The animation repeats indefinitely.
+-----------------------------------------------------------------
+🌞 Key Points:- 
+1) @keyframes:- 
+- Defines the stages of animation (like 0%, 100%).
+2) animation:- 
+- Applies the animation to an element (with properties like duration, timing, and repetition).
+==> This allows for dynamic, interactive web designs!
+-----------------------------------------------------------------
+🌞 Summary:-
+1) What is CSS Animation?
+- CSS Animation is a way to create smooth transitions and effects on web elements, like changing colors, sizes, positions, etc.
+2) How to Write CSS Animation?
+a) @keyframes Rule:-
+- Define the stages of animation using this rule.
+- Syntax:- 
+@keyframes animationName 
+{
+    0% 
+    { 
+        /* starting state */ 
+    }
+    50% 
+    { 
+        /* halfway state */ 
+    }
+    100% 
+    { 
+        /* final state */ 
+    }
+}
+b) animation Property:-
+- Activate the animation on an element.
+- Syntax:- 
+element 
+{ 
+    animation: animationName duration timing-function delay iteration-count;
+}
+3) Example:-
+@keyframes moveRight 
+{
+  0% { transform: translateX(0); }
+  100% { transform: translateX(200px); }
+}
+div 
+{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation: moveRight 2s ease-in-out infinite;
+}
+4) Key Points:-
+1) @keyframes:- 
+- Defines the stages of animation.
+2) animation:- 
+- Applies the animation to an element with properties like duration, timing, and repetition.
+=====================⭐CSS Animation - Completed⭐==============
+
+========⭐ Akash Sir's Whatsapp Study Work - Started ⭐=========
+1) What is the purpose of the "data-*" attribute in HTML?
+==> Data Attributes in HTML:-
+- The data-* attribute stores extra information in HTML elements. 
+- You can:-
+a) Add custom data to elements (e.g. `data-user-id`)
+b) Access this data using JavaScript (e.g. `dataset.userId`)
+==> It's useful for storing metadata or settings without changing the page's appearance.
+-----------------------------------------------------------------
+2) What are HTML entities?
+==> HTML entities are special codes used in HTML to represent characters that have a specific meaning in HTML or cannot be directly typed. 
+- They are used to display characters like symbols, accented letters, or special punctuation that might otherwise be interpreted as part of HTML syntax. 
+- Example:- 
+a) &lt; represents < (less than symbol)
+b) &gt; represents > (greater than symbol)
+c) &amp; represents & (ampersand)
+- Entities start with an ampersand (`&`) and end with a semicolon (`;`). They can be:
+a) Named entities, like `&copy;` (©).
+b) Numeric entities, which can be represented in decimal (e.g., `&#169;` for ©) or hexadecimal (e.g., `&#xA9;` for ©).
+==> They are essential when you need to display characters that are reserved in HTML or are not easily typed on a keyboard. 
+-----------------------------------------------------------------
+3) What is the purpose of the <picture> element in HTML5, and how is it used to optimize images?
+==> The <picture> element in HTML5 is used to provide different image sources for different display conditions, such as varying screen sizes, resolutions, or device types. 
+- This allows web pages to load the most suitable image for the user's device, improving performance and load times.
+- Purpose:-
+a) Responsiveness:- 
+- It helps in serving responsive images that adjust to different screen sizes.
+b) Performance:-  
+- By using different image formats and resolutions, it helps in reducing file sizes, which speeds up page loading.
+c) Device Adaptability:- 
+It provides different images based on device capabilities, such as high-resolution screens (e.g., Retina displays).
+- Usage:-
+<picture>
+  <source srcset="image-small.jpg" media="(max-width: 600px)">
+  <source srcset="image-large.jpg" media="(min-width: 601px)">
+  <img src="image-default.jpg" alt="Description of the image">
+</picture>
+a) The <source> elements specify different image sources depending on the screen width (using the media attribute).
+b) The <img> tag is a fallback for browsers that do not support <picture>, providing a default image.
+==> This technique ensures that users get the most appropriate image for their device and connection, enhancing both performance and user experience.
+-----------------------------------------------------------------
+4) What are HTML ARIA attributes?
+==> ARIA (Accessible Rich Internet Applications) attributes are special additions you can place on HTML elements to make web content more accessible, especially for people using assistive technologies like 0rs.
+- The main idea behind ARIA is to help individuals with disabilities, particularly when working with complex web features or custom UI elements that standard HTML might not explain well. By using ARIA attributes, you can provide extra information about what certain elements do, helping these users better understand and interact with the web content.
+- In simpler terms, ARIA helps improve accessibility on the web, making it easier for everyone to use websites and web applications, especially those with disabilities.
+- Key ARIA Attributes:- 
+a) role:- 
+- Specifies the role of an element (like button, slider, or dialog) to give it meaning. 
+- Example:-
+<div role="button">
+    Click Me
+</div>
+- This tells assistive tech that the div should be treated as a button.
+b) aria-label:- 
+- Provides a textual label for elements that may not have visible text. 
+- Example:- 
+A button with only an icon can use this:-
+<button aria-label="Close">
+    X
+</button>
+c) aria-hidden:- 
+- Hides content from screen readers, making it "invisible" to assistive technology.
+- Example:-
+<div aria-hidden="true">
+    This content is hidden from screen readers.
+</div>
+d) aria-live:- 
+- Tells assistive technology to announce changes to content dynamically (e.g., when new notifications are added to a page).
+- Example:-
+<div aria-live="polite">
+    New notification
+</div>
+e) aria-expanded:- 
+- Indicates whether a collapsible element (like a menu) is expanded or collapsed.
+- Example:-
+<button aria-expanded="false">
+    Open Menu
+</button>
+f) aria-describedby:- 
+- Links an element to another that provides a description, improving clarity for users
+- Example:-
+<button aria-describedby="info">
+    Learn More
+</button>
+<div id="info">
+    This button leads to a tutorial.
+</div>
+g) aria-disabled:- 
+- Marks an element as disabled, helping screen readers inform the user
+- Example:-
+<button aria-disabled="true">
+    Disabled Button
+</button>
+- Why ARIA is Important?
+a) Web Accessibility:- 
+- It helps make websites usable for everyone, including people with disabilities.
+2) Compatibility:- 
+- It ensures that interactive content on dynamic web pages is correctly understood and accessible to users relying on assistive devices.
+==> In short, ARIA attributes enhance communication between your website and assistive technologies, making your content more accessible to users with disabilities.
+-----------------------------------------------------------------
+5) What is the purpose of <nav>, <main>, <article>,<section>,<aside>,<footer> tag?
+==> These are known as Semantic Tags:-
+a) <nav>:-
+1) Purpose:- 
+Defines navigation links.
+2) Use:- 
+- It wraps around links that help users navigate through different parts of the website or between pages.
+3) Example:-
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+</nav>
+b) <main>:-
+1) Purpose:- 
+- Represents the main content of the page.
+2) Use:- 
+- It holds the central content of a document, excluding headers, footers, and sidebars. It's important for accessibility and SEO.
+3) Example:-
+<main>
+  <h1>Welcome to Our Website!</h1>
+  <p>This is the main content of the page.</p>
+</main>
+c) <article>:-
+1) Purpose:- 
+- Defines an independent piece of content.
+2) Use:- 
+- Used for content that can stand alone, like blog posts, news articles, or forum posts. It should make sense even if extracted from the page.
+3) Example:-
+<article>
+  <h2>News Article Title</h2>
+  <p>This is the content of the article.</p>
+</article>
+d) <section>:-
+1) Purpose:- 
+- Defines a section of content within the document.
+2) Use:- 
+- It groups related content together, typically with a heading. It's a way to break the page into different thematic blocks.
+3) Example:-
+<section>
+  <h2>About Us</h2>
+  <p>Information about our company.</p>
+</section>
+e) <aside>:-
+1) Purpose:- 
+- Represents content that is tangentially related to the content around it.
+2) Use:- 
+- It's often used for sidebars, side notes, or advertisements that aren't essential but complement the main content.
+3) Example:-
+<aside>
+  <h3>Related Links</h3>
+  <ul>
+    <li><a href="#">Other Article</a></li>
+  </ul>
+</aside>
+f) <footer>:-
+1) Purpose:- 
+- Represents the footer content of a page or section.
+2) Use:- 
+- Typically contains information like the copyright notice, contact details, or links to privacy policy and terms of service.
+3) Example:-
+<footer>
+  <p>&copy; 2025 My Website. All rights reserved.</p>
+</footer>
+==> Why These Tags Matter?
+a) Semantic HTML:- 
+- These tags describe the purpose of the content, making the webpage more understandable for browsers, search engines, and screen readers.
+b) SEO & Accessibility:- 
+- Proper use helps improve search engine ranking and makes the page more accessible to users with disabilities.
+========⭐ Akash Sir's Whatsapp Study Work - Completed ⭐=======

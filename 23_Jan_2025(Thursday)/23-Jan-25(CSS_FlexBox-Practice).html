@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        23 Jan 25 - CSS Flex Box - Practice
+    </title>
+    <style>
+        .parent
+        {
+            height: 600px;
+            color: 10px solid black;
+            background-color: brown;
+            display: flex;
+            justify-content: space-between;
+            /* 
+            1) flex-wrap: wrap;
+            👆
+            - If there are many childs in Parent container then we can use flex-wrap Property to wrap the childs into Parent Container. 
+            2) gap: 10px; 
+            👆
+            - This provide some space between the childs which are wrapped into the Parent Container! 
+            */
+            /*  
+            3) flex-direction: column;
+            👆
+            - justify-content changes to align-items
+                            &
+            align-items changes to justify-content
+            */
+        }
+        .child1
+        {
+            color: 10px solid black;
+            background-color:burlywood;
+            /*
+            4) flex Property
+            - Example:-
+            a) flex: 1;
+            👆
+            - When there is flex as 1 given in both the child1 and child2 then both will take 50% of space!
+            b) flex: 2;
+            👆
+            - It says that take the twice space of child2!
+            */
+
+        }
+        .child2
+        {
+            color: 10px solid black;
+            background-color:blanchedalmond;
+            /*
+            c) flex: 1;
+            👆
+            - It defines that the remaining space left in the container after child1 should be given to child2!
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child1">
+            Child - 1
+        </div>
+        <div>
+            <div class="child2">
+                GrandChild - 1
+            </div>
+            <div class="child2">
+                GrandChild - 2 
+            </div>
+        </div>
+    </div>
+</body>
+</html>
