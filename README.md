@@ -617,8 +617,8 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 
 ==>  In CSS Flex Box, I have learned about: -
 
-*     What is Flex Box?
-*     Flex Box Properties:-
+* What is Flex Box?
+* Flex Box Properties:-
 
 | justify-content |
 | --------------- |
@@ -629,8 +629,8 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 
    ==>  In CSS position Propert, I have learned about:-
 
-*     What is position Property?
-*     position Property Values:-
+* What is position Property?
+* position Property Values:-
 
 |  position:static;  |
 | :----------------: |
