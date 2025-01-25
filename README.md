@@ -613,26 +613,24 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 
 ==> I finished my homework for Tuesday, January 21, 2025, first thing today. Akash Sir then taught about the following at SkillHub:
 
-1) *CSS Flex Box:-*
+1) ***CSS Flex Box:-***
 
 ==>  In CSS Flex Box, I have learned about: -
 
-    a) What is Flex Box?
-
-    b) Flex Box Properties:-
+*     What is Flex Box?
+*     Flex Box Properties:-
 
 | justify-content |
 | --------------- |
 | align-items     |
 | align-self      |
 
- *2. CSS position Property:-*
+ *2. **CSS position Property:-***
 
    ==>  In CSS position Propert, I have learned about:-
 
-    a) What is position Property?
-
-    b) position Property Values:-
+*     What is position Property?
+*     position Property Values:-
 
 |  position:static;  |
 | :----------------: |
@@ -657,12 +655,8 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 
 1. ***CSS Advanced Selectors:-***
 
-
-
-*  What are Advanced Selectors?
-
-
-*  Types of Advanced Selectors:-
+* What are Advanced Selectors?
+* Types of Advanced Selectors:-
 
 | Child Selectors(>)            |
 | ----------------------------- |
@@ -674,7 +668,6 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 
 * What is CSS box-sizing?
 * Universal Selector(*)
-
 * Resets Browsers CSS
 * Use box-sizing: border-box;
 
@@ -682,14 +675,13 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 
 * What is flex:wrap;?
 * What is gap Property?
-
 * What is flex-direction: column?
 * What is flex Property?
 
 ***4. CSS Pseudo Selector:-***
 
-*    What is Pseudo Selector?
-*    Examples of Pseudo Selector:-
+* What is Pseudo Selector?
+* Examples of Pseudo Selector:-
 
 |    :hover    |
 | :-----------: |
