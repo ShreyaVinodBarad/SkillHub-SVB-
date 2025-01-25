@@ -611,40 +611,28 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 
 ### 22 Jan 2025, Wednesday
 
-
 ==> I finished my homework for Tuesday, January 21, 2025, first thing today. Akash Sir then taught about the following at SkillHub:
-
 
 1) *CSS Flex Box:-*
 
 ==>  In CSS Flex Box, I have learned about: -
 
-
     a) What is Flex Box?
 
-
     b) Flex Box Properties:-
-
 
 | justify-content |
 | --------------- |
 | align-items     |
 | align-self      |
 
-
-
  *2. CSS position Property:-*
-
 
    ==>  In CSS position Propert, I have learned about:-
 
-
-
     a) What is position Property?
 
-
     b) position Property Values:-
-
 
 |  position:static;  |
 | :----------------: |
@@ -653,9 +641,7 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 |  position:sticky;  |
 |  position:fixed;  |
 
-
 ==> The course finally came to a conclusion, and we were given homework by Akash Sir! 🤟
-
 
 | FlexBox(More Points will be Covered) |
 | ------------------------------------ |
@@ -669,14 +655,14 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 
 ==> I finished my homework for Wednesday, January 22, 2025, first thing today. Akash Sir then taught about the following at SkillHub:-
 
-
-1. *CSS Advanced Selectors:-*
-
-a) What are Advanced Selectors?
+1. ***CSS Advanced Selectors:-***
 
 
-b) Types of Advanced Selectors:-
 
+*  What are Advanced Selectors?
+
+
+*  Types of Advanced Selectors:-
 
 | Child Selectors(>)            |
 | ----------------------------- |
@@ -684,56 +670,26 @@ b) Types of Advanced Selectors:-
 | Adjuscent Sibling Selector(+) |
 | Sibling Selector(~)           |
 
+3. ***CSS box-sizing Property:-***
 
-3. *CSS box-sizing Property:-*
+* What is CSS box-sizing?
+* Universal Selector(*)
 
+* Resets Browsers CSS
+* Use box-sizing: border-box;
 
+***3.  Flex Box Practice:-***
 
-a) What is CSS box-sizing?
+* What is flex:wrap;?
+* What is gap Property?
 
+* What is flex-direction: column?
+* What is flex Property?
 
+***4. CSS Pseudo Selector:-***
 
-b) Universal Selector(*)
-
-
-
-c) Resets Browsers CSS
-
-
-
-d) Use box-sizing: border-box;
-
-
-*3.  Flex Box Practice:-*
-
-
-
-a) What is flex:wrap;?
-
-
-
-b) What is gap Property?
-
-
-
-c) What is flex-direction: column?
-
-
-
-d) What is flex Property?
-
-
-
-*4. CSS Pseudo Selector:-*
-
-
-
-  a) What is Pseudo Selector?
-
-
-
-  b) Examples of Pseudo Selector:-
-
+*    What is Pseudo Selector?
+*    Examples of Pseudo Selector:-
 
 |    :hover    |
 | :-----------: |
@@ -741,13 +697,9 @@ d) What is flex Property?
 | :first-child |
 | :nth-child(n) |
 
-
- 5. Next, we created a project that involved combining HTML and CSS to develop a navigation bar.
-
-
+5. Next, we created a project that involved combining HTML and CSS to develop a navigation bar.
 
   ==> The course finally came to a conclusion, and we were given homework by Akash Sir! 👍
-
 
 |  Media Query  |
 | :-----------: |
@@ -760,31 +712,30 @@ d) What is flex Property?
 
 ==> I finished my homework for Thursday, January 23, 2025, first thing today. Akash Sir then taught about the following at SkillHub:-
 
-1. *CSS Media Query:-*
+1. ***CSS Media Query:-***
 
-a. What is Media Query in CSS?
-
-b. display Property of CSS:-
+* What is Media Query in CSS?
+* display Property of CSS:-
 
 | display:block; |
 | :------------: |
 | display:none; |
 
-2.  *CSS Units:-*
+2. ***CSS Units:-***
 
-a. Types of Units in CSS:-
+* Types of Units in CSS:-
 
 | Relative Units |
 | -------------- |
 | Absolute Units |
 
-1) Relative Units:-
+* Relative Units:-
 
 | em  |
 | --- |
 | rem |
 
-2. Absolute Units:-
+* Absolute Units:-
 
 | px |
 | -- |
