@@ -611,10 +611,11 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 
 ### 22 Jan 2025, Wednesday
 
+
 ==> I finished my homework for Tuesday, January 21, 2025, first thing today. Akash Sir then taught about the following at SkillHub:
 
-1) *CSS Flex Box:-*
 
+1) *CSS Flex Box:-*
 
 ==>  In CSS Flex Box, I have learned about: -
 
@@ -636,6 +637,7 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 
 
    ==>  In CSS position Propert, I have learned about:-
+
 
 
     a) What is position Property?
@@ -670,59 +672,64 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 
 1. *CSS Advanced Selectors:-*
 
+a) What are Advanced Selectors?
 
 
-   a) What are Advanced Selectors?
+b) Types of Advanced Selectors:-
 
 
-   b) Types of Advanced Selectors:-
+| Child Selectors(>)            |
+| ----------------------------- |
+| Descendent Selector(space)    |
+| Adjuscent Sibling Selector(+) |
+| Sibling Selector(~)           |
 
 
-
-   | Child Selectors(>)            |
-   | ----------------------------- |
-   | Descendent Selector(space)    |
-   | Adjuscent Sibling Selector(+) |
-   | Sibling Selector(~)           |
-
-
-
-   2. *CSS box-sizing Property:-*
-
-
-    a) What is CSS box-sizing?
-
-
-    b) Universal Selector(*)
-
-
-    c) Resets Browsers CSS
-
-
-    d) Use box-sizing: border-box;
+3. *CSS box-sizing Property:-*
 
 
 
-     *3.  Flex Box Practice:-*
+a) What is CSS box-sizing?
 
 
-   a) What is flex:wrap;?
+
+b) Universal Selector(*)
 
 
-   b) What is gap Property?
+
+c) Resets Browsers CSS
 
 
-  c) What is flex-direction: column?
+
+d) Use box-sizing: border-box;
 
 
-  d) What is flex Property?
+*3.  Flex Box Practice:-*
 
 
-    *4. CSS Pseudo Selector:-*
+
+a) What is flex:wrap;?
+
+
+
+b) What is gap Property?
+
+
+
+c) What is flex-direction: column?
+
+
+
+d) What is flex Property?
+
+
+
+*4. CSS Pseudo Selector:-*
 
 
 
   a) What is Pseudo Selector?
+
 
 
   b) Examples of Pseudo Selector:-
@@ -735,8 +742,7 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 | :nth-child(n) |
 
 
-
-    5. Next, we created a project that involved combining HTML and CSS to develop a navigation bar.
+ 5. Next, we created a project that involved combining HTML and CSS to develop a navigation bar.
 
 
 
@@ -748,43 +754,29 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 | CSS Animation |
 |     Units     |
 
-
 ---
 
 ### 24 Jan 2025, Friday
 
-
 ==> I finished my homework for Thursday, January 23, 2025, first thing today. Akash Sir then taught about the following at SkillHub:-
-
-
 
 1. *CSS Media Query:-*
 
-
 a. What is Media Query in CSS?
 
-
 b. display Property of CSS:-
-
 
 | display:block; |
 | :------------: |
 | display:none; |
 
-
-
-    *2.  CSS Units:-*
-
-
+2.  *CSS Units:-*
 
 a. Types of Units in CSS:-
-
 
 | Relative Units |
 | -------------- |
 | Absolute Units |
-
-
 
 1) Relative Units:-
 
@@ -792,14 +784,11 @@ a. Types of Units in CSS:-
 | --- |
 | rem |
 
-
 2. Absolute Units:-
 
 | px |
 | -- |
 | %  |
-
-
 
 ==> As the course came to a close, Akash Sir instructed us to review every topic that has been covered thus far. Additionally, we will be designing a project on Saturday, January 25, 2025! which will essentially be my second project at SkillHub. ✌
 
