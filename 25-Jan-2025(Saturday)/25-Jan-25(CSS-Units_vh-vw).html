@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        25 Jan 25 - CSS Units vh - and - vw
+    </title>
+    <style>
+        *
+        {
+            /*  
+                👇
+                Resetting Browsers CSS
+            */
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .box
+        {
+            /*  
+            👇
+            1) What is ViewPort?
+            => The viewport is the visible area of a web page on a user’s screen. It's the part of the website that you can see without scrolling. The size of the viewport depends on the device being used (like a desktop, tablet, or mobile phone).
+            - Example:-
+            1) On a desktop computer, the viewport is usually large because the screen is wide.
+            2) On a mobile phone, the viewport is smaller because the screen is narrow.
+            */
+            
+            height: 50vh;
+            height: 100vh;
+            /* 
+            👆
+            => What is vh?
+            - The vh unit in CSS stands for "viewport height."
+            1) Viewport:- 
+            - This is the visible area of your browser window. 
+            2) Height:- 
+            - The vh measures how tall the viewport is.
+            => How it works:- 
+            - 1vh equals 1% of the total height of the viewport.
+            => Example:-
+            - If the browser's height is 1000px, then 1vh = 10px.
+            - If you set something to 50vh, it will take 50% of the browser's height (500px in this case).
+            => Common Use:-
+            - To make elements responsive to the screen size.
+            - Example:- 
+            A full-screen section can be set as `height: 100vh;` to always take up the full height of the browser window, regardless of the screen size.
+            => It's a handy unit for building layouts that adjust dynamically based on the screen's height!
+            */
+
+            width: 50vw;
+            /*  
+            👆
+            => What is vw? 
+            - vw stands for viewport width and is a CSS unit used to measure lengths or sizes relative to the width of the browser's viewport - the visible area of a web page.
+            => Key Points:-
+            1) 1vw = 1% of the viewport's width
+            - If the viewport is 1000 pixels wide, 1vw equals 10 pixels - 1% of 1000 pixels.
+            2) Responsive sizing:-
+            - Since vw adjusts based on the width of the viewport, it's great for creating responsive designs that adapt to different screen sizes.
+            => Summary:-
+            - In summary, vw helps you create flexible designs that change size dynamically based on the width of the screen.
+            */
+
+            background-color: darksalmon;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    </div>
+</body>
+</html>

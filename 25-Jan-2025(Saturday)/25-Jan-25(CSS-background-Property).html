@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        25 Jan 25 - CSS Units vh - and - vw
+    </title>
+    <style>
+        *
+        {
+            /*  
+            👇
+            Resetting Browsers CSS
+            */
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            /*  
+            👆
+            => This block of code is a CSS reset, which is used to make sure your web page starts with consistent default styles across different browsers. 
+            => Here's a simple breakdown:-
+            1. padding: 0;  
+            - It removes any default inner space (padding) that browsers add around elements.
+            2. margin: 0;  
+            - It removes any default outer space (margin) that browsers add around elements.
+            3. box-sizing: border-box;  
+            - It ensures that the width and height of elements include padding and borders, so your layout is easier to control. 
+            - For example, if you set the width of a box to 100px, it will always be 100px, regardless of padding or borders.
+            => By applying this reset to all elements (`*`), you eliminate unwanted differences in how browsers display your page, making your designs more predictable and consistent.
+            */
+        }
+        .box
+        {
+            background-image: url("./25-Jan-25_Assets/bg.svg");
+            background-repeat: no-repeat;
+            /*  
+            👆  
+            => The background-repeat: no-repeat; property in CSS means the background image will only appear once and won't be repeated across the element.
+            => Example:-
+            - If you have a small image as a background, it won’t tile (copy itself) horizontally or vertically.
+            - The image will stay in its original size and position, appearing only once.
+            => This is useful when you just want a single background image without it repeating.
+            */
+            background-size: cover;
+            /*
+            👆  
+            => Here, by default the Image will Stretch from Right - Top!
+            => The background-size: cover; property is used to make a background image fill the entire area of an element, such as a box, section, or webpage. 
+            => Here's how it works:-
+            - The image will stretch or shrink so that it covers the whole area without leaving any empty spaces.
+            - Parts of the image might get cropped if the proportions of the image and the element don’t match exactly.
+            - It ensures the background always looks complete and doesn’t repeat or leave gaps.
+            => Think of it like resizing a picture to fit perfectly over a frame, even if some edges get cut off.
+            */
+            background-position: left bottom;
+            /* 
+            👆 
+            => We can change the stretching property from Left - Bottom!
+            => The background-position property in CSS is used to control where the background image appears inside an element. 
+            => When you set background-position: left bottom;, here's what happens:-
+            1) left:- 
+            - The background image starts from the left edge of the element horizontally.
+            2) bottom:- 
+            - The background image starts from the bottom edge of the element vertically.
+            => In simple terms, the image is placed in the bottom-left corner of the element.
+            */
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    </div>
+</body>
+</html>

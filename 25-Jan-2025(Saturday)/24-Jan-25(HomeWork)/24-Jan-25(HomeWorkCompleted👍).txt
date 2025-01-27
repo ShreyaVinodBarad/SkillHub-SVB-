@@ -1,0 +1,117 @@
+⭐ 24 Jan 25, Friday - Homework ⭐
+=====================⭐Revision - Started⭐==================
+📌 Revision 
+=====================⭐Revision - Completed⭐================
+
+=================⭐Akash Sir's Whatsapp Study Work - Started⭐===================
+📌 Akash Sir's Whatsapp Study Work:-
+1) What are the possible ways to apply CSS styles to a web page?
+==> There are three main ways to apply CSS styles to a web page:-
+a) Inline CSS:-
+- Styles are added directly to an HTML element using the style attribute.
+- Example:-
+<p style="color: red; font-size: 20px;">
+    This is red text.
+</p>
+b) Internal CSS:-
+- Styles are written inside a <style> tag in the <head> section of the HTML file.
+- Example:-
+<head>
+  <style>
+    p {
+      color: blue;
+      font-size: 18px;
+    }
+  </style>
+</head>
+c) External CSS:-
+- Styles are written in a separate .css file, and the file is linked to the HTML using a <link> tag.
+- Example:-
+1) In HTML:-
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+2) In styles.css:-
+p 
+{
+  color: green;
+  font-size: 16px;
+}
+=> Note:-
+- Inline CSS is best for small, specific changes.
+- Internal CSS is good for styling a single page.
+- External CSS is ideal for applying styles to multiple pages, keeping the code clean and reusable.
+--------------------------------------------------------------------------------
+2) What are some new features in CSS3?
+==> CSS3 introduced several powerful features for web design, enhancing responsiveness:-
+a) Media Queries:- 
+- Adjusts layout based on device size for responsive design.
+b) Flexbox:- 
+- Simplifies alignment of items in rows or columns.
+c) Grid Layout:- 
+- Organizes content into rows and columns for complex layouts.
+d) Transitions & Animations:-
+- Creates smooth effects during element changes.
+e) Border Radius:- 
+- Enables rounded corners on elements.
+f) Box Shadows:- 
+- Adds depth with shadow effects.
+g) Text Shadows:- 
+- Enhances text with stylish shadow effects.
+h) Gradients:-  
+- Provides smooth color transitions for backgrounds.
+i) Custom Fonts:- 
+- Uses unique web fonts via `@font-face`.
+j) Opacity:- 
+- Controls transparency of elements.
+k) Transform:- 
+- Manipulates elements by rotating or scaling them.
+l) Pseudo-Classes & Elements:- 
+- Targets specific states or parts of elements.
+m) Multiple Backgrounds:- 
+- Allows multiple background layers on one element.
+n) Variable Support:- 
+- Defines reusable CSS values for easier theming.
+==> These features enable the creation of modern, attractive, and responsive web designs.
+--------------------------------------------------------------------------------
+3) What is universal selector in css?
+==> The universal selector in CSS is represented by an asterisk (`*`). 
+- It selects all elements on the page, regardless of their type. 
+==> Example:-
+* 
+{
+    color: blue;
+}
+- This will turn the text color of every element on the page to blue. 
+==> It's useful when you want to apply a style to all elements at once.
+--------------------------------------------------------------------------------
+4) Explain the difference between classes and IDs in CSS.
+==> In CSS, both classes and IDs are used to apply styles to elements, but they work a bit differently:-
+a) Class:- 
+- A class is used to style multiple elements.
+- It’s reusable, so you can apply it to as many elements as you like.
+- Classes are written with a `.` (dot) before the name (e.g., `.button`).
+b) ID:-
+- An ID is used to style one specific element.
+- It must be unique, meaning no two elements on the page should have the same ID.
+- IDs are written with a `#` (hash) before the name (e.g., `#header`).
+==> In short:-  
+- Class = multiple elements, reusable (.class).
+- ID    = one unique element, not reusable (#id).
+--------------------------------------------------------------------------------
+5) Explain box model in CSS.
+==> The CSS box model is a way of describing how elements on a webpage are structured and how their size is calculated. 
+==> Each element is considered a "box" made up of four parts:-
+a) Content:- 
+- The actual text or image inside the box.
+b) Padding:- 
+- Space between the content and the border. It’s like inner cushioning.
+c) Border:- 
+- A line around the padding (if you add one).
+d) Margin:- 
+- Space outside the border, separating the element from others.
+==> When you set the size of an element (like width or height), it only affects the content area. 
+==> Padding, border, and margin add extra space outside of the content box. 
+==> In short, the box model defines how much space an element takes up on the page, considering all these parts.
+--------------------------------------------------------------------------------
+=================⭐Akash Sir's Whatsapp Study Work  - Completed⭐================
