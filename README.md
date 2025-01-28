@@ -739,22 +739,14 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 
 ### 25 Jan 2025, Saturday
 
-
--  I finished my assignment for Friday, January 24, 2025, first thing this morning. It required me to go over every topic that had been covered up to this point and then I completed questions that Akash Sir had sent us on WhatsApp.
-
-
-
--  Akash Sir then taught about the following at SkillHub:-
-
+- I finished my assignment for Friday, January 24, 2025, first thing this morning. It required me to go over every topic that had been covered up to this point and then I completed questions that Akash Sir had sent us on WhatsApp.
+- Akash Sir then taught about the following at SkillHub:-
 
 1. CSS Units:-
-
 
 | vw |
 | -- |
 | vh |
-
-
 
 2. CSS background Property:-
 
@@ -764,18 +756,14 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 |   background-size   |
 | background-position |
 
-
 3. Project - 2 (SkillHub):-
 
 - Here we have to make a clone of Website!
 - The Link of the Website and it's Assets:-
 
-
 | Link of the Website | https://akashskillhub.github.io/gsap-portfolio/ |
 | :-----------------: | :---------------------------------------------: |
 | Link of the Assets |      https://github.com/akashskillhub/john      |
-
-
 
 4. Homework:-
 
@@ -785,5 +773,11 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 
 ### 27 Jan 2025, Monday
 
-
 - First off, Akash Sir assigned us the task of designing the entire website! However, it lacks animation and is entirely static! I have a minor doubt, but after writing a little code, I can finally say that I created the entire website in static format!😉
+
+
+* Today's session at SkillHub, was not conducted because of Akash Sir's Personal reasons!📌
+
+---
+
+### 28 Jan 2025, Tuesday
