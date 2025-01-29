@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      29 Jan 25 - BootStrap offcanvas Class
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#show">
+    <!--   👆 
+      Links this button to the sidebar. 
+    -->
+    <!--                                    👆 
+                              Enables offcanvas functionality.
+    -->
+      Click Me
+    </button>
+    <div class="offcanvas offcanvas-start" id="show">
+        <!--                 👆 
+                        - offcanvas-bottom
+                        - offcanvas-top
+                        - offcanvas-end  
+        -->
+        <div class="offcanvas-header">Header</div>
+        <div class="offcanvas-body">Body</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" ></script>
+    <!--  
+    👆
+    data-bs-toggle  => Here data is used in JavaScript!
+    -->
+  </body>
+</html>
+<!--  
+=> The Bootstrap Offcanvas component is used to create a hidden sidebar (or panel) that slides in and out from the side of the screen. It is often used for navigation menus, sidebars, or additional content that doesn’t need to be shown all the time.
+---------------------------------------------------------------------------
+=> How It Works:-
+a) Hidden by Default:- 
+- The offcanvas panel is not visible initially.
+b) Trigger Button:- 
+- Clicking a button or link makes the offcanvas panel slide in.
+c) Close Button:- 
+- You can close it using a button or by clicking outside the panel.
+d) Positioning:- 
+- It can slide in from the left, right, top, or bottom.
+---------------------------------------------------------------------------
+=> Different Offcanvas Positions:-
+Class Name	          |        Effect
+---------------------------------------------------
+offcanvas-start	               Opens from the left
+offcanvas-end	                 Opens from the right
+offcanvas-top	                 Opens from the top
+offcanvas-bottom	             Opens from the bottom
+---------------------------------------------------------------------------
+=> Understanding the Header & Body in Offcanvas:-
+- When you create an offcanvas component, it has two main parts:
+a) Offcanvas Header:-
+- This is the top part of the offcanvas.
+- It helps users understand what the offcanvas is about and allows them to close it.
+b) Offcanvas Body:-
+- This is the main content area of the offcanvas.
+- You can add text, images, buttons, forms, or any other content here.
+It scrolls if the content is long.
+---------------------------------------------------------------------------
+-->

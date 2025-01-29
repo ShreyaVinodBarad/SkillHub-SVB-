@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      29 Jan 25 - BootStrap container Class
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="alert alert-primary">
+        Takes Full Width of the Screen
+    </div>
+    <!------------------------------------------------------------------------->
+    <div class="container">
+        <div class="alert alert-primary">
+            Provides Margin from both Sides!
+        </div>
+    </div>
+    <!------------------------------------------------------------------------->
+    <div class="container-fluid">
+        <div class="alert alert-primary">
+            Provides Margin from both Sides but - Small Margin!
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" ></script>
+  </body>
+</html>
+<!--  
+=> Bootstrap provides a .container class that helps structure and organize your webpage layout. It creates a responsive and centered layout for your content.
+--------------------------------------------------------------------------------
+=> What is .container?
+- It is a Bootstrap class used to wrap and center content on the page.
+- It provides automatic margins and padding to ensure a clean and structured layout.
+- It makes your page responsive, meaning it adjusts to different screen sizes (mobile, tablet, desktop).
+--------------------------------------------------------------------------------
+=> Types of Containers in Bootstrap:-
+1️⃣ container Class:-
+- It is centered automatically on the page.
+- The width changes at different breakpoints (like mobile, tablet, and desktop).
+- Breakpoints for container Class:-
+Extra Small (XS)  → 100% (Full Width)
+Small (SM)        → 540px
+Medium (MD)       → 720px
+Large (LG)        → 960px
+Extra Large (XL)  → 1140px
+XXL               → 1320px
+2️⃣ container-fluid Class:-
+- It stretches the full width of the screen.
+3️⃣ .container-{breakpoint}:-(Responsive Container)
+- It is a mix of .container and .container-fluid.
+- It acts fluid (full-width) until a specific screen size, then becomes a fixed-width container.
+- Breakpoints:- 
+container-sm, container-md, container-lg, container-xl, container-xxl
+--------------------------------------------------------------------------------
+=> Key Takeaways:-
+1) .container → Fixed-width (changes based on screen size).
+2) .container-fluid → Always full-width.
+3) .container-{breakpoint} → Fluid until a certain size, then fixed.
+--------------------------------------------------------------------------------
+-->

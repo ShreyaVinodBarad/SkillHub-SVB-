@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      29 Jan 25 - BootStrap collapse Class
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!--  
+    👇
+    => Here we are actually doing Hide and Show!
+    => First, here provide a class with name - collapse to the Element which you want to Collapse!
+    - Then you have to use 2 Attributes:-
+    a) data-bs-toggle:=
+    - This attribute take the class collapse - Hide
+    - This tells Bootstrap to toggle the collapse effect.
+    b) data-bs-target:=
+    - This attribute take the id provided to the Element to which you have given a class collapse!
+    - This attribute take the text as - #id where id is provided to the element which has class - collapse!
+    -->
+    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#show">
+        Click Me
+    </button>
+    <h1 class="collapse" id="show">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, deserunt? A voluptatem recusandae placeat sapiente dolore provident adipisci exercitationem nam necessitatibus esse! Soluta, assumenda porro.
+    </h1>
+    <!--  
+    👆
+    - This is the hidden content.
+    - It appears when you click the button.
+    -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" ></script>
+  </body>
+</html>
+<!--  
+=> The Bootstrap collapse class is used to show and hide elements (like a div, paragraph, or navbar items) smoothly without using JavaScript. It makes elements collapse (hide) and expand (show) with an animation effect when triggered.
+--------------------------------------------------------------------------------
+=> How It Works:-
+a) You attach the .collapse class to the element you want to hide/show.
+b) You use a button or link with a data-bs-toggle="collapse" attribute to trigger it.
+c) You specify the target element using data-bs-target="#elementID" or href="#elementID".
+--------------------------------------------------------------------------------
+-->
