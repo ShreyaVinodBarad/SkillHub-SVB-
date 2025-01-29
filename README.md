@@ -775,9 +775,23 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 
 - First off, Akash Sir assigned us the task of designing the entire website! However, it lacks animation and is entirely static! I have a minor doubt, but after writing a little code, I can finally say that I created the entire website in static format!😉
 
-
 * Today's session at SkillHub, was not conducted because of Akash Sir's Personal reasons!📌
 
 ---
 
 ### 28 Jan 2025, Tuesday
+
+
+- Today Akash Sir, took some Revision of VS Code Shortcuts so he called us at 05:15 Pm! Then from 06:10 Pm Sir started the regular Session with the remaining coding of Project - 2.
+
+- Things that Sir, taught at the timing of Regular Session:-
+
+1. *pre Tag*
+2. *Animation in CSS*
+3. *Hover Animaton in CSS*
+
+- At the end of the session, Sir said he will start with BootStrap from 29 Jan 25, Wednesday!📌
+
+---
+
+### 29 Jan 2025, Wednesday

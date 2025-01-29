@@ -1,0 +1,82 @@
+1) height: calc(100vh - 150px);
+=> The calc() property in CSS allows you to perform calculations directly in styles to determine values for properties like width, height, margin, etc.
+- This is useful when you need dynamic sizing that adjusts based on the screen size.
+--------------------------------------------------------------------------------
+2) background-repeat: no-repeat;
+=> The background-repeat: no-repeat; property in CSS makes sure that the background image does not repeat itself. By default, background images can repeat both horizontally and vertically to fill the container, but using no-repeat stops this behavior.
+--------------------------------------------------------------------------------
+3) background-size: cover;
+=> The background-size: cover; property makes the background image cover the entire element.
+- Key Points:-
+1) Fills the Area:- 
+- The image will resize to fully cover the element, even if it needs to stretch or crop parts of the image.
+2) No Empty Space:- 
+- There won't be any gaps; the entire element is covered by the image.
+3) Cropping May Happen:- 
+- Some parts of the image may be cut off to maintain its proportions while covering the element.
+--------------------------------------------------------------------------------
+4) background-position: left bottom;
+=> The background-position property controls where the background image starts inside an element.
+1) left:- 
+- Aligns the background to the left side of the element.
+2) bottom:- 
+- Aligns the background to the bottom edge of the element.
+=> Simple Explanation:-
+- It tells the background to start from the bottom-left corner of the element.
+--------------------------------------------------------------------------------
+5) z-index: 1; 
+=> The z-index property in CSS controls the stacking order of elements on a web page — it decides which element appears in front of or behind other elements.
+==> Default Value: 1
+==> Higher the z-index Value it will be on Top of the Lower z-index's Value!
+=> Key Points:-
+1) Higher z-index = On top:- 
+- An element with a higher z-index value will appear above one with a lower value.
+2) Default z-index is 0:- 
+- If you don’t set a z-index, elements are stacked based on their order in the HTML.
+3) Only works with positioned elements:- 
+- The element must have a position set to relative, absolute, fixed, or sticky.
+--------------------------------------------------------------------------------
+6) background-color: transparent;            
+=> The background-color: transparent; property makes the background see-through. It removes any solid color or background so you can see what's behind the element.
+=> In simple terms:-
+- Transparent = No background color at all.
+- Whatever is underneath the element will be visible.
+=> Example:- 
+- If you have text in a box and set background-color: transparent;, only the text will show, and the box won't have any visible background.
+--------------------------------------------------------------------------------
+7) transition: 0.3s;
+=> The transition: 0.3s; property in CSS makes changes - like color, size, position, etc; happen smoothly over 0.3 seconds instead of instantly.
+=> Transition should be only applied in Initial State!
+=> Example:-
+- If you hover over a button and its color changes, transition: 0.3s; will make the color change gradually in 0.3 seconds, creating a smooth effect instead of a sudden jump.
+--------------------------------------------------------------------------------
+8) border-radius: 30px;
+=> The border-radius property in CSS is used to round the corners of an element.
+=> Example:-
+1) Value: 10px → 
+- Makes the corners slightly rounded.
+2) Value: 50% → 
+- Makes a square element into a circle or oval.
+=> Key Points:-
+1) Default Shape:- 
+- The element like a div has sharp corners.
+2) With border-radius:- 
+- You can make the corners curved or even a circle.
+--------------------------------------------------------------------------------
+9) background: linear-gradient(
+        to right, 
+        coral 80%, 
+        #ddd 80%
+        );
+=> This CSS background: linear-gradient property creates a smooth transition between two colors along a straight line. 
+=> Here's what it does in simple terms:-
+1) to right:- 
+- The gradient moves from the left side to the right side of the container.
+2) rgb(255, 127, 80) 80%:-  
+- The coral color fills the first 80% of the container.
+3) #ddd 80%:- 
+- At the 80% mark, it switches to the #ddd color (light gray), which fills the rest of the container (20%).
+=> Result:-
+- The first 80% of the container is coral.
+- The last 20% is light gray (#ddd).
+--------------------------------------------------------------------------------

@@ -8,7 +8,7 @@
     </title>
     <style>
         /*  
-        👇 Universal Selector
+        👇 Universal Selector - Resetting Browsers CSS => Starts
         */
         *
         {
@@ -20,69 +20,31 @@
             margin: 0;
             box-sizing: border-box;
         }
-
         /*  
-        ------------------------------------------------------------------------
+        👆 Universal Selector - Resetting Browsers CSS => Ends 
         */
 
         /*  
-        👇
-        Background Color to body!  => Starts
+        👇 Background Color to body!  => Starts
         */
         body
         {
             background-color: #eee;
         }
         /*  
-        👆
-        Background Color to body!  => Ends
-        */
-        
-        /*  
-        ------------------------------------------------------------------------
+        👆 Background Color to body!  => Ends
         */
 
         /*  
-        👇
-        Designing Background, etc!
+        👇 Designing Background => Starts
         */
         .backgroung-img
         {
             height: calc(100vh - 150px);
-            /*  
-            👆
-            - The calc() property in CSS allows you to perform calculations directly in styles to determine values for properties like width, height, margin, etc.
-            - This is useful when you need dynamic sizing that adjusts based on the screen size.
-            */
             background-image: url(./25-Jan-25_Assets_SkillHub_Project-2/background-image.svg);
             background-repeat: no-repeat;
-            /*  
-            👆
-            - The background-repeat: no-repeat; property in CSS makes sure that the background image does not repeat itself. By default, background images can repeat both horizontally and vertically to fill the container, but using no-repeat stops this behavior.
-            */
             background-size: cover;
-            /*  
-            👆
-            - The background-size: cover; property makes the background image cover the entire element.
-            - Key Points:-
-            1) Fills the Area:- 
-            - The image will resize to fully cover the element, even if it needs to stretch or crop parts of the image.
-            2) No Empty Space:- 
-            - There won't be any gaps; the entire element is covered by the image.
-            3) Cropping May Happen:- 
-            - Some parts of the image may be cut off to maintain its proportions while covering the element.
-            */
             background-position: left bottom;
-            /*  
-            👆
-            => The background-position property controls where the background image starts inside an element.
-            1) left:- 
-            - Aligns the background to the left side of the element.
-            2) bottom:- 
-            - Aligns the background to the bottom edge of the element.
-            => Simple Explanation:-
-            - It tells the background to start from the bottom-left corner of the element.
-            */
             display: flex;
             position: relative;
         }
@@ -91,27 +53,13 @@
             height: calc(100vh - 150px);
             position: absolute;
             right: 0;
-            /* 
-            z-index: 1; 
-            👆
-            => The z-index property in CSS controls the stacking order of elements on a web page — it decides which element appears in front of or behind other elements.
-            => Key Points:-
-            1) Higher z-index = On top:- 
-            - An element with a higher z-index value will appear above one with a lower value.
-            2) Default z-index is 0:- 
-            - If you don’t set a z-index, elements are stacked based on their order in the HTML.
-            3) Only works with positioned elements:- 
-            - The element must have a position set to relative, absolute, fixed, or sticky.
-            */
         }
-        
         /*  
-        ------------------------------------------------------------------------
+        👆 Designing Background => Ends
         */
 
         /*  
-        👇
-        Content on Web Page!
+        👇 Content on Web Page => Starts
         */
         .user-data
         {
@@ -141,52 +89,20 @@
             border: 5px solid coral;
             padding: 50px;
             background-color: transparent;            
-            /*  
-            👆
-            => The background-color: transparent; property makes the background see-through. It removes any solid color or background so you can see what's behind the element.
-            => In simple terms:-
-            - Transparent = No background color at all.
-            - Whatever is underneath the element will be visible.
-            => Example:- 
-            - If you have text in a box and set background-color: transparent;, only the text will show, and the box won't have any visible background.
-            */
             transition: 0.3s;
-            /*
-            👆  
-            => The transition: 0.3s; property in CSS makes changes - like color, size, position, etc; happen smoothly over 0.3 seconds instead of instantly.
-            => Transition should be only applied in Initial State!
-            => Example:-
-            - If you hover over a button and its color changes, transition: 0.3s; will make the color change gradually in 0.3 seconds, creating a smooth effect instead of a sudden jump.
-            */
         }
         button:hover
         {
             background-color: coral;
             color: white;
             border-radius: 30px;
-            /*  
-            👆
-            => The border-radius property in CSS is used to round the corners of an element.
-            => Example:-
-            1) Value: 10px → 
-            - Makes the corners slightly rounded.
-            2) Value: 50% → 
-            - Makes a square element into a circle or oval.
-            => Key Points:-
-            1) Default Shape:- 
-            - The element like a div has sharp corners.
-            2) With border-radius:- 
-            - You can make the corners curved or even a circle.
-            */
         }
-        
         /*  
-        ------------------------------------------------------------------------
+        👆 Content on Web Page => Ends
         */
-        
+
         /*  
-        👇
-        Navigation Bar!
+        👇 Navigation Bar => Starts
         */
         .Nav-Bar
         {
@@ -205,99 +121,71 @@
             /* border: 3px solid wheat; */
             font-family:Arial, Helvetica, sans-serif;
         }
-        
+        .Nav-Bar > span > a
+        {
+            text-decoration: none;
+        }
         /*  
-        ------------------------------------------------------------------------
+        👆 Navigation Bar => Ends
         */
 
         /*  
-        👇
-        From here, Skills Progress Bar Starts!😉 
+        👇 From here, Skills Progress Bar => Starts!📌
         */
-        
-        /*  
-        👇
-        Parent Contanier for Progress Bar for different Skills!
-        */
-        .skills-1
+        .skills
         {
+            /*  
+            👇 Parent Contanier for Progress Bar for different Skills!
+            */
             display: flex;
             justify-content: space-between;
             /* border: 3px solid black; */
             margin: 70px 90px;
+            font-size: 35px;
         }
-        
+        .viewport
+        {
+            width: 50vw;
+        }
         /*  
-        ------------------------------------------------------------------------
+        👇 First Row for Skills Progress Bar!   ==> Starts
         */
-        
-        /*  
-        👇
-        First Row for Skills Progress Bar!   ==> Starts
-        */
-        
-        .skill-1
+        .HTML
         {
             /* border: 3px solid black; */
-            width: 50vw;
-            font-size: 35px;
             background: linear-gradient(
         to right, 
         coral 80%, 
         #ddd 80%
         );
-        /*  
-        👆
-        => This CSS background: linear-gradient property creates a smooth transition between two colors along a straight line. 
-        => Here's what it does in simple terms:-
-        1) to right:- 
-        - The gradient moves from the left side to the right side of the container.
-        2) rgb(255, 127, 80) 80%:-  
-        - The coral color fills the first 80% of the container.
-        3) #ddd 80%:- 
-        - At the 80% mark, it switches to the #ddd color (light gray), which fills the rest of the container (20%).
-        => Result:-
-        - The first 80% of the container is coral.
-        - The last 20% is light gray (#ddd).
-        */
         }
         
-        .skill-1-2
+        .NodeJS
         {
-            width: 50vw;
-            font-size: 35px;
             background: linear-gradient(
         to right, 
         coral 60%, 
         #ddd 60%
         ); 
         }
-
         /*  
-        👆
-        First Row for Skills Progress Bar!   ==> Ends
+        👆 First Row for Skills Progress Bar!   ==> Ends
         */
 
         /*  
-        👇
-        Second Row for Skills Progress Bar!   ==> Starts
+        👇 Second Row for Skills Progress Bar!   ==> Starts
         */
-        .skill-2
+        .CSS
         {
             /* border: 3px solid black; */
-            width: 50vw;
-            font-size: 35px;
             background: linear-gradient(
         to right, 
         coral 35%, 
         #ddd 35% 
         ); 
-        }
-        
-        .skill-2-2
+        }        
+        .MongoDB
         {
-            width: 50vw;
-            font-size: 35px;
             background: linear-gradient(
         to right, 
         coral 35%, 
@@ -305,249 +193,111 @@
         );  
         }
         /*  
-        👆
-        Second Row for Skills Progress Bar!   ==> Ends
+        👆 Second Row for Skills Progress Bar!   ==> Ends
         */
         
         /*  
-        👇
-        Third Row for Skills Progress Bar!   ==> Starts
+        👇 Third Row for Skills Progress Bar!   ==> Starts
         */
-        .skill-3
+        .JS
         {
             /* border: 3px solid black; */
-            width: 50vw;
-            font-size: 35px;
             background: linear-gradient(
                 to right, 
                 coral 15%, 
                 #ddd 15% 
                 ); 
             }
-            .skill-3-2
+        .SQL
             {
                 /* border: 3px solid black; */
-                width: 50vw;
-                font-size: 35px;
                 background: linear-gradient(
                     to right, 
                     coral 25%, 
                     #ddd 25% 
-                    );
-                
+                    );   
             }
         /*  
-        👆
-        Third Row for Skills Progress Bar!   ==> Ends
+        👆 Third Row for Skills Progress Bar!   ==> Ends
         */
 
         /*  
-        👇
-        Fourth Row for Skills Progress Bar!   ==> Starts
+        👇 Fourth Row for Skills Progress Bar!   ==> Starts
         */
-        .skill-4
+        .React
         {
             /* border: 3px solid black; */
-            width: 50vw;
-            font-size: 35px;
             background: linear-gradient(
                 to right, 
                 coral 10%, 
                 #ddd 10% 
         ); 
         }
-        .skill-4-2
+        .Express_JS
         {
             /* border: 3px solid black; */
-            width: 50vw;
-            font-size: 35px;
             background: linear-gradient(
                 to right, 
                 coral 90%, 
                 #ddd 90% 
                 ); 
-            text-align: center; /* Center text horizontally */
+            text-align: center;
             }
         /*  
-        👆
-        Fourth Row for Skills Progress Bar!   ==> Ends
+        👆 Fourth Row for Skills Progress Bar!   ==> Ends
+        */
+        /*  
+        👆 Skills Progress Bar Ends!📌
         */
 
         /*  
-        👆
-        Skills Progress Bar Ends!😉 
-        */
-
-        /*  
-        ------------------------------------------------------------------------
-        */
-
-        /*  
-        👇
-        From here, Projects Row will Start! 
+        👇 From here, Projects Row => Start 
         */
         .projects
         {
             /* border: 3px solid black; */
             display: flex;
-            align-items: flex-start;
             justify-content: space-between;
             margin: 70px 110px;
         }
-        .project-1, .project-2, .project-3, .project-4
+        .project
         {
             border: 3px solid black;
-            padding-bottom: 200px;
-            margin-right: 40px;
+            padding-bottom: 150px;
+            margin-left: 40px;
+            font-family: sans-serif;
         }
-
-        .project-1 img
+        .project img
         {
             width: 465px;
             height: 465px;
         }
-        .project-2 img
-        {
-            width: 465px;
-            height: 465px;
-        }
-        .project-3 img
-        {
-            width: 484px;
-            height: 465px;
-        }
-        .project-4 img
-        {
-            width: 465px;
-            height: 465px;
-        }
-
-        .project-1 h1
+        .project h1
         {
             font-size: 80px;
             color: black;
-            text-align: center;
-            font-family: sans-serif;
             margin: 30px;
         }
-
-        .project-2 h1
-        {
-            font-size: 80px;
-            color: black;
-            text-align: center;
-            font-family: sans-serif;
-            margin: 30px;
-        }
-
-        .project-3 h1
-        {
-            font-size: 80px;
-            color: black;
-            text-align: center;
-            font-family: sans-serif;
-            margin: 30px;
-        }
-
-        .project-4 h1
-        {
-            font-size: 80px;
-            color: black;
-            text-align: center;
-            font-family: sans-serif;
-            margin: 30px;
-        }
-
-        .project-1 p
+        .project p
         {
             font-size: 50px;
             color: grey;
-            text-align: center;
-            font-family: sans-serif;
             margin: 30px;
         }
 
-        .project-2 p
-        {
-            font-size: 50px;
-            color: grey;
-            text-align: center;
-            font-family: sans-serif;
-            margin: 30px;
-        }
-
-        .project-3 p
-        {
-            font-size: 50px;
-            color: grey;
-            text-align: center;
-            font-family: sans-serif;
-            margin: 30px;
-        }
-
-        .project-4 p
-        {
-            font-size: 50px;
-            color: grey;
-            text-align: center;
-            font-family: sans-serif;
-            margin: 30px;
-        }
-
-        .project-1 a
+        .project a
         {
             font-size: 50px;
             color:#000080;
-            font-family: sans-serif;
-            margin: 30px;
-            padding-left: 60px;
-            text-decoration: none; 
-        }
-
-        .project-2 a
-        {
-            font-size: 50px;
-            color:#000080;
-            font-family: sans-serif;
-            margin: 30px;
-            padding-left: 60px;
-            text-decoration: none; 
-        }
-
-        .project-3 a
-        {
-            font-size: 50px;
-            color:#000080;
-            font-family: sans-serif;
-            margin: 30px;
-            padding-left: 60px;
-            text-decoration: none; 
-        }
-
-        .project-4 a
-        {
-            font-size: 50px;
-            color:#000080;
-            font-family: sans-serif;
-            margin: 30px;
             padding-left: 60px;
             text-decoration: none; 
         }
         /*  
-        👆
-        Projects Row will Ends!😉 
-        */
-
-        /*  
-        ------------------------------------------------------------------------
+        👆 Projects Row => Ends!😉 
         */
     </style>
 </head>
 <body>
-    <!--  
-    👇
-    Setting Background, etc! => Starts
-    -->
     <div class="backgroung-img">
         <img src="./25-Jan-25_Assets_SkillHub_Project-2/backgroundImage-For-userImage.svg" alt="BackgroundImage-For-UserImage" class="user-image">
         <img src="./25-Jan-25_Assets_SkillHub_Project-2/user-image.png" alt="User-Image" class="user-image">
@@ -563,103 +313,76 @@
             </button>
         </div>
     </div>
-    <!--  
-    👆
-    Setting Background, etc! => Ends
-    -->
-    <!--  
-    ----------------------------------------------------------------------------
-    -->
-    <!--  
-    👇
-    Navigation Bar => Starts
-    -->
+    
     <div class="Nav-Bar">
         <span>
-            John
+            <a href="#">
+                John
+            </a>
         </span>
         <span>
-            Home
+            <a href="#">
+                Home
+            </a>
         </span>
         <span>
-            Education
+            <a href="#">
+                Education
+            </a>
         </span>
         <span>
-            Projects
+            <a href="#">
+                Projects
+            </a>
         </span>
         <span>
-            Experience
+            <a href="#">
+                Experience
+            </a>
         </span>
         <span>
-            Contact
+            <a href="#">
+                Contact
+            </a>
         </span>
     </div>
-    <!--  
-    👆
-    Navigation Bar => Ends
-    -->
     
-    <!-- ------------------------------------------------------------------------------>
-
-    <!--  
-    👇
-    Skills Progress Bar => Starts
-    -->
-    <div class="skills-1">
-        <span class="skill-1">
+    <div class="skills">
+        <span class="HTML viewport">
             HTML
         </span>
-        <span class="skill-1-2">
+        <span class="NodeJS viewport">
             Node JS
         </span>
     </div>
-    <!-- ------------------------------------------------------------------------------>
-    <div class="skills-1 coral-progress-bar">
-        <span class="skill-2">
+    <div class="skills">
+        <span class="CSS viewport">
             CSS
         </span>
-        <span class="skill-2-2">
+        <span class="MongoDB viewport">
             Mongo DB
         </span>
     </div>
-    <!-- ------------------------------------------------------------------------------>
-    <div class="skills-1">
-        <span class="skill-3">
+    <div class="skills">
+        <span class="JS viewport">
             JS
         </span>
-        <span class="skill-3-2">
+        <span class="SQL viewport">
             SQL
         </span>
     </div>
-    <!--  
-    ----------------------------------------------------------------------------
-    -->
-    <div class="skills-1">
-        <span class="skill-4">
+    <div class="skills">
+        <span class="React viewport">
             React
         </span>
-        <span class="skill-4-2">
+        <span class="Express_JS viewport">
             Express JS
         </span>
     </div>
-    <!--  
-        👆
-        Skills Progress Bar => Ends
-    -->
     
-    <!--  
-    ----------------------------------------------------------------------------
-    -->
-
-    <!--  
-       👇 
-        Projects Row => Starts
-    -->
     <div class="projects">
-
-        <div class="project-1">
+        <div class="project-1 project body">
             <img src="./25-Jan-25_Assets_SkillHub_Project-2/Project-Img.avif" alt="Project-Img">
-
             <h1>
                 To - Do Project
             </h1>
@@ -670,10 +393,8 @@
                 Visit
             </a>
         </div>
-        
-        <div class="project-2">
+        <div class="project-2 project">
             <img src="./25-Jan-25_Assets_SkillHub_Project-2/Project-Img.avif" alt="Project-Img">
-
             <h1>
                 Tic - Tac - Toe Game
             </h1>
@@ -684,10 +405,8 @@
                 Visit
             </a>
         </div>
-        
-        <div class="project-3">
+        <div class="project-3 project">
             <img src="./25-Jan-25_Assets_SkillHub_Project-2/Project-Img.avif" alt="Project-Img">
-
             <h1>
                 Currency Converter
             </h1>
@@ -698,10 +417,8 @@
                 Visit
             </a>
         </div>
-        
-        <div class="project-4">
+        <div class="project-4 project">
             <img src="./25-Jan-25_Assets_SkillHub_Project-2/Project-Img.avif" alt="Project-Img">
-
             <h1>
                 Red Bus Clone
             </h1>
@@ -713,15 +430,5 @@
             </a>
         </div>
     </div>
-    <!--  
-        👆
-        Projects Row => Ends
-    -->
 </body>
 </html>
-
-<!--  
-1) z-index:-
-==> Default Value: 1
-==> Higher the z-index Value it will be on Top of the Lower z-index's Value!
--->
