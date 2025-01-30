@@ -781,9 +781,7 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 
 ### 28 Jan 2025, Tuesday
 
-
 - Today Akash Sir, took some Revision of VS Code Shortcuts so he called us at 05:15 Pm! Then from 06:10 Pm Sir started the regular Session with the remaining coding of Project - 2.
-
 - Things that Sir, taught at the timing of Regular Session:-
 
 1. *pre Tag*
@@ -795,3 +793,25 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 ---
 
 ### 29 Jan 2025, Wednesday
+
+- Today, Akash Sir introduced a new topic,  **Bootstrap** , in our session, which began at 6:30 PM.
+- Topics covered during this session included:-
+
+1. What is BootStrap?
+2. BootStrap Template
+3. BootStrap Text Color
+4. BootStrap Alert
+5. BootStrap Background Color
+6. BootStrap card Class
+7. BootStrap collapse Class - Hide & Show
+8. BootStrap container Class
+9. BootStrap offcanvas Class
+10. BootStrap Button
+    - BootStrap Button Size
+    - BootStrap Hover Button
+
+- Akash Sir instructed us to go through the Grid topic in Bootstrap, and with that, the session concluded successfully.
+
+---
+
+### 30 Jan 2025, Thursday
