@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        30 Jan 25 - BootStrap offset-Property(Grid-System)
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container" style="border: 2px solid black;">
+      <div class="row" style="border: 2px solid black;">
+        <div class="alert alert-primary col-6 offset-2" style="border: 2px solid black;">
+          Hello
+        </div>
+        <div class="alert alert-primary col-4" style="border: 2px solid black;">
+          Hello!
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" ></script>
+  </body>
+</html>
+<!--  
+==> What is offset in Grid System?
+- In Bootstrap, the offset property is used in the grid system to create space or gaps between columns.
+--------------------------------------------------------------------------------
+==> Understanding the Grid System:-
+- Bootstrap uses a 12-column grid layout. This means that every row can be divided into up to 12 columns. 
+- For example:-
+a) If you want a column to take up half the width, you'd give it col-6 - because 6 out of 12 is half.
+b) If you want it to take up one-third of the space, you'd use col-4 - because 4 out of 12 equals one-third.
+--------------------------------------------------------------------------------
+==> What is the "Offset" Property?
+- The offset class shifts a column to the right by a certain number of columns. - This means it will "move" over to make space, leaving a gap before the content.
+- For example:-
+a) offset-3 will move a column 3 spaces to the right.
+b) offset-6 will move it 6 spaces to the right, and so on.
+--------------------------------------------------------------------------------
+==> Why Use the Offset?
+- If you want your column to not start from the very left of the row but instead to have some space before it, you use an offset. This is helpful for centering content or creating custom layouts.
+--------------------------------------------------------------------------------
+==> Breakpoints and Offset:-
+- Bootstrap's grid system is responsive, meaning it changes based on the screen size. You can apply offsets at different breakpoints (screen sizes). 
+- Here's how the breakpoints work:
+a) col- (default): For extra small screens (mobile devices).
+b) col-sm-: For small screens (tablets).
+c) col-md-: For medium screens (laptops).
+d) col-lg-: For large screens (desktops).
+e) col-xl-: For extra large screens (large desktops or high-res monitors).
+--------------------------------------------------------------------------------
+-->

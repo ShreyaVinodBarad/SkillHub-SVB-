@@ -1,0 +1,174 @@
+29 Jan 2025, Wednesday - HomeWork Completed😃
+==> Grid System in BootStrap:-
+- Bootstrap's Grid System helps you create flexible, responsive layouts easily. - It divides the screen into a 12-column layout, making it easy to arrange content.
+--------------------------------------------------------------------------------
+=> How Bootstrap Grid Works?
+1) The grid system is container-based (all elements should be inside a container).
+2) It uses rows and columns to arrange content.
+3) It is responsive (adjusts to different screen sizes).
+4) It is flexible (you can mix and match column sizes).
+--------------------------------------------------------------------------------
+=> Basic Structure:-
+- Example:-
+<div class="container">
+    <div class="row">
+        <div class="col">Column 1</div>
+        <div class="col">Column 2</div>
+        <div class="col">Column 3</div>
+    </div>
+</div>
+a) .container → A wrapper that holds everything inside.
+b) .row → Creates a horizontal row.
+c) .col → Automatically distributes columns equally.
+--------------------------------------------------------------------------------
+=> Grid Columns – Understanding Sizes:-
+- The grid has 12 columns.
+- You can divide these 12 columns as needed.
+- Example:-
+<div class="container">
+    <div class="row">
+        <div class="col-4">Column 1 (4 columns wide)</div>
+        <div class="col-8">Column 2 (8 columns wide)</div>
+    </div>
+</div>
+- How it Works?
+a) col-4 → Takes 4 out of 12 columns.
+b) col-8 → Takes 8 out of 12 columns.
+--------------------------------------------------------------------------------
+=> Responsive Grid Classes:-
+- Bootstrap allows different layouts for different screen sizes using:-
+1) col-sm- (Small devices, ≥576px)
+2) col-md- (Medium devices, ≥768px)
+3) col-lg- (Large devices, ≥992px)
+4) col-xl- (Extra Large devices, ≥1200px)
+- Example:-
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3">Column 1</div>
+        <div class="col-sm-6 col-md-4 col-lg-3">Column 2</div>
+        <div class="col-sm-6 col-md-4 col-lg-3">Column 3</div>
+        <div class="col-sm-6 col-md-4 col-lg-3">Column 4</div>
+    </div>
+</div>
+- How it Works?
+1️⃣ Main Container (<div class="container">):-
+a) The <div class="container"> is a Bootstrap class that creates a responsive layout.
+b) It helps organize content neatly by adding margins and padding.
+c) This container holds all the content inside it.
+2️⃣ Row (<div class="row">):-
+a) The <div class="row"> class creates a horizontal row.
+b) It ensures that all the columns inside it are aligned properly in a single row.
+3️⃣ Columns (<div class="col-sm-6 col-md-4 col-lg-3">Column 1</div>):-
+a) There are four columns inside the row.
+b) Each column has Bootstrap's grid system classes (col-sm-6 col-md-4 col-lg-3).
+c) These classes define how much space the columns take up on different screen sizes.
+4️⃣ Understanding the Column Classes (col-sm-6 col-md-4 col-lg-3):-
+a) Each column has different class names that control its width depending on the screen size:-
+1) col-sm-6
+- On small screens (width ≥576px), each column takes 6 out of 12 grid spaces (50% width, 2 columns per row).
+2) col-md-4	
+- On medium screens (width ≥768px), each column takes 4 out of 12 grid spaces (33.33% width, 3 columns per row).
+3) col-lg-3	
+On large screens (width ≥992px), each column takes 3 out of 12 grid spaces (25% width, 4 columns per row).
+5️⃣ How It Looks on Different Screens:-
+a) Small Screens (Mobile Phones)
+- Each column takes 6 out of 12 spaces → 2 columns per row.
+b) Medium Screens (Tablets)
+- Each column takes 4 out of 12 spaces → 3 columns per row.
+c) Large Screens (Laptops, Desktops)
+- Each column takes 3 out of 12 spaces → 4 columns per row.
+🔹 Final Summary:-
+1) The <div class="container"> holds everything.
+2) The <div class="row"> aligns the columns in a single row.
+3) The column classes (col-sm-6 col-md-4 col-lg-3) make the layout responsive.
+4) The columns adjust their width automatically based on the screen size.
+--------------------------------------------------------------------------------
+=> Nested Grids (Grid Inside Grid):-
+- You can also place a grid inside another grid.
+- Example:-
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <p>Main Column</p>
+            <div class="row">
+                <div class="col-6">Nested 1</div>
+                <div class="col-6">Nested 2</div>
+            </div>
+        </div>
+        <div class="col-6">Column 2</div>
+    </div>
+</div>
+1) The Outer Container(<div class="container">):-
+- This is like a big box that holds everything inside.
+- It helps organize the layout of the page.
+2) The First Row (<div class="row">):-
+- Inside the container, we have a row. Think of a row as a horizontal line that divides space into columns.
+3)  The First Column (Takes Half of the Row):-
+- I.e.;
+<div class="col-6">
+    <p>Main Column</p>
+- This column takes up half (6 out of 12 parts) of the row’s width.
+- It contains a paragraph (<p>) with the text "Main Column".
+4) A Nested Row Inside the First Column:-
+- I.e.;
+<div class="row">
+    <div class="col-6">Nested 1</div>
+    <div class="col-6">Nested 2</div>
+</div>
+- Inside the first column, there is another row.
+- This row also divides into two smaller columns, each taking half (6 out of 12 parts) of the available space.
+- "Nested 1" and "Nested 2" are placed inside these two smaller columns.
+5) The Second Column (Takes Half of the Row):-
+- I.e.;
+<div class="col-6">Column 2</div>
+- This column is next to the first column.
+- It also takes half (6 out of 12 parts) of the row.
+- It contains the text "Column 2".
+6) Final Structure:-
+1) The main row has two equal columns (each taking 6 out of 12).
+2) The first column contains text and a nested row with two smaller columns.
+3) The second column contains just text.
+7) Visual Representation:-
+📦 Container
+    📏 Row
+        🟦 Column 1 (50%)
+            📏 Nested Row
+                🟩 Nested 1 (25%)
+                🟩 Nested 2 (25%)
+        🟦 Column 2 (50%)
+--------------------------------------------------------------------------------
+=> Offset Columns (Add Space):-
+- Offsets help you add empty space before a column.
+- Example:-
+<div class="container">
+    <div class="row">
+        <div class="col-4 offset-2">Column with Offset</div>
+    </div>
+</div>
+- How it Works?
+a) offset-2 → Adds space equal to 2 columns before this column.
+--------------------------------------------------------------------------------
+=> Aligning Columns:-
+- You can align columns vertically.
+- Example:-
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col">Center Aligned</div>
+    </div>
+</div>
+--------------------------------------------------------------------------------
+=> Justifying Content:-
+- You can center content inside a row.
+- Example:-
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-4">Centered Column</div>
+    </div>
+</div>
+--------------------------------------------------------------------------------
+=> Conclusion:-
+1) Bootstrap Grid uses containers, rows, and columns.
+2) The screen is divided into 12 columns.
+3) You can control column width using col- classes.
+4) It is responsive and flexible.
+--------------------------------------------------------------------------------

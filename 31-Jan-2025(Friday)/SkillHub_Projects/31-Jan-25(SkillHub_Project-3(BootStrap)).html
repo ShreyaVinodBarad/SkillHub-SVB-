@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        31 Jan 25 - SkillHub Project - 3(BootStrap)
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .box
+        {
+            height: 160px;
+            background-color: indigo;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+    </div>
+    <div class="container" style="margin-top: -130px;">
+        <div class="row">
+            <div class="col-sm-6 offset-3">
+                <div class="card">
+                    <div class="card-header text-center bg-primary text-light">
+                    <h1>Secure Login</h1>
+                    <p>Powered by SKILLHUB</p>
+                  </div>
+
+                  <div class="card-body">
+                      <div class="input-group">
+                            <span class="input-group-text">UserName</span>
+                            <input type="text" class="form-control" placeholder="UserName">
+                        </div>
+                        <p class="my-3">
+                            You can use your Registered Email or Mobile Number
+                        </p>
+
+                        <div class="input-group">
+                            <span class="input-group-text">Class Pin</span>
+                            <input type="text" class="form-control" placeholder="Class Pin">
+                        </div>
+                        <p class="my-3">
+                            Enter 4 Digit Pin that have recieved through SMS.
+                        </p>
+
+                        <div class="input-group">
+                            <span class="input-group-text">Password</span>
+                            <input type="text" class="form-control" placeholder="Password">
+                        </div>
+                        <p class="my-3">
+                            Forget Password!
+                        </p>
+                        <button type="button" class="btn btn-primary w-100">
+                            Login
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" ></script>
+  </body>
+</html>
+<!--  
+1) w-100
+- This class in Bootstrap is a utility class that sets an element’s width to 100% of its parent container. It ensures the element spans the full available width. This is useful for responsive layouts, images, buttons, and other block-level elements.
+- Goes to Full - Width of the Parent Container!
+--------------------------------------------------------------------------------
+2) my-3
+- Y Axis ==> Top and Bottom.
+- In Bootstrap, the this class applies a margin of 1rem (16px by default) to both the top (mt-3) and bottom (mb-3) of an element. It is part of Bootstrap's spacing utility classes, where:-  
+a)  m stands for margin  
+b) y targets the vertical axis (top and bottom)  
+c) 3 represents the spacing size (based on Bootstrap's spacing scale:- 0 to 5)  
+- It helps in adding consistent vertical spacing between elements.
+--------------------------------------------------------------------------------
+3) text-center
+- In Bootstrap, .text-center is a utility class that aligns text to the center. It applies text-align: center; to the selected element. It works on block-level and inline elements within Bootstrap's grid system or standalone.
+- Takes the Text to Center.
+--------------------------------------------------------------------------------
+4) margin-top:-100px;
+- Takes the Element top of the other element.
+- It moves an element 100 pixels upward from its normal position by applying a negative margin. This shifts the element closer to the previous element or the top of its container, potentially overlapping content. Negative margins can be useful for fine-tuning layouts but should be used carefully to avoid unintended overlaps.
+-->

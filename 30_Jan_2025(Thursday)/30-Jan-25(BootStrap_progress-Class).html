@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        30 Jan 25 - BootStrap progress Class
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!--  
+    1) What is progress Class?
+    - In Bootstrap, the .progress class is used to create a progress bar that visually represents progress, like loading or completion percentage.
+    -->
+    <div class="container">
+        <div class="progress">
+            <!-- 👆 It creates the progress bar container. -->
+            <div class="progress-bar w-50 bg-primary">
+                <!-- 👆 It fills the bar based on the width percentage. -->
+                HTML
+            </div>
+            <!--  
+            2) Features:-
+            a) Different Colors:- 
+            - Use classes like bg-success, bg-info, etc.
+            b) Striped Effect:- 
+            - Add progress-bar-striped.
+            c) Animated:- 
+            - Add progress-bar-animated.
+            ==> progress-bar-animated class should be applied where you have used the class progress-bar-striped. They should be used together!
+            -->
+            <div class="progress-bar w-25 bg-warning">
+                CSS
+            </div>
+            <div class="progress-bar w-25 bg-info progress-bar-striped progress-bar-animated">
+                BootStrap
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" ></script>
+  </body>
+</html>

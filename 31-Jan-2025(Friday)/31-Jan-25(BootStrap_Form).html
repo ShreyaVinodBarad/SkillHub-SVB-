@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        31 Jan 25 - BootStrap Form
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+        <input type="text" class="form-control">
+        <hr>
+        <textarea class="form-control"></textarea>
+        <hr>
+        <select class="form-control">
+          <option value="">Choose City</option>
+          <option value="">Hyderabad</option>
+          <option value="">Nizambad</option>
+          <option value="">Adilabad</option>
+        </select>
+        <hr>
+        <!--  
+        1) form-control Class:-
+        - The form-control class in Bootstrap is used to style input elements like text fields, textareas, and select boxes. It ensures that these elements look consistent and polished across your web page.
+        -->
+        <input type="radio" class="form-check-input"> 
+        <input type="checkbox" class="form-check-input">
+        <hr>
+        <!--  
+        2) form-check-input Class:-
+        - In Bootstrap, the form-check-input class is used to style input elements like checkboxes and radio buttons. It’s a utility class that helps make these elements look consistent with the overall Bootstrap theme and ensures they have a clean, modern appearance.
+        -->
+        <h4>Sizes for input Tag</h4>
+        <input type="text" class="form-control form-control-sm" placeholder="Small">
+        <input type="text" class="form-control form-control" placeholder="Medium">
+        <input type="text" class="form-control form-control-lg" placeholder="Large">
+        <hr>
+        <!--  
+        3) Sizes of input Tag:-
+        a) form-control-sm
+        b) form-control
+        c) form-control-lg
+        -->
+        <h4>form-floating Class</h4>
+        <div class="form-floating">
+          <input type="text" placeholder="" class="form-control">
+          <label for="">Enter Name</label>
+        </div>
+        <!--  
+        👆
+        4) form-floating Class
+        - While using form-floating Class it is Mandatory to use a Attribute in the input Tag i.e. placeholder!
+        - The form-floating class in Bootstrap is used to create floating labels for input fields. This means that the label for the input will appear inside the input box initially, but when the user focuses on the input field or starts typing, the label will float above the input field.
+        -->
+        <hr>
+        <h4>Validation</h4>
+        <div>
+          <input type="text" class="form-control is-valid">
+          <span class="valid-feedback">Thank You</span>
+          <span class="invalid-feedback">This is Required!</span>
+        </div>
+        <hr>
+        <!--  
+        5) is-valid & is-invalid Class
+        - In Bootstrap, the classes is-valid and is-invalid are used to indicate the validity of form inputs. These classes provide visual feedback to the user, making it easier to see if their input is correct or not. They are mainly used with form elements like input fields, selects, and textareas.
+        6) valid-feedback & invalid-feedback Class
+        - In Bootstrap, the valid-feedback and invalid-feedback classes are used to display feedback messages to users after form validation. They help guide users by indicating whether their form input is correct or incorrect.
+        -->
+        <h4>input-group Class</h4>
+        <div class="input-group">
+          <!--  
+          👆
+          Works as display: flex; Property! 
+          -->
+          <span class="input-group-text">User Name</span>
+          <input type="text" class="form-control">
+          <button type ="button" class="btn btn-primary">Login</button>
+        </div>
+        <hr>
+        <!--  
+        7) input-group Class
+        -  In Bootstrap, the input-group class is used to create groups of inputs and add elements like buttons, icons, or text alongside form fields. It allows you to combine input fields with other elements to make your forms more interactive and visually appealing.
+        8) input-group-text Class
+        - The input-group-text class in Bootstrap is used to style and add additional elements, like text or icons, to the left or right side of an input field in a group. It's part of the Input Group feature, which allows you to combine form elements (like text boxes, buttons, or dropdowns) into a single unified line.
+        -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" ></script>
+  </body>
+</html>

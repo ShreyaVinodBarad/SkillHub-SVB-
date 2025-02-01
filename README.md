@@ -815,3 +815,34 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 ---
 
 ### 30 Jan 2025, Thursday
+
+- Due to a health-related issue, I was unable to attend the session.
+- Topics covered during this session included:-
+
+1. Grid System
+2. offset Property
+3. BootStrap Modal
+4. BootStrap progress Class
+5. BootStrap spinner Class
+
+- I have successfully covered all the topics that Akash Sir taught! ✌
+
+---
+
+### 31 Jan 2025, Friday
+
+- Today, Akash Sir asked us some insightful questions and, after that, he introduced new topics to kickstart the session!
+- Topics covered during this session included:-
+
+1. BootStrap Table
+2. BootStrap Form
+3. Project - 3 (Basic Structure Completed)
+
+- Later, Sir concluded the session by assigning a set of topics for revision at home:-
+
+1. navbar Class in BootStrap
+2. carousel Class in BootStrap
+
+---
+
+### 1 Feb 2025, Saturday

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        30 Jan 25 - BootStrap Modal
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!--  
+    => What is Modal in BootStrap?
+    - A Modal in Bootstrap is a pop-up window that appears on top of the webpage to display important information, ask for user confirmation, or take input without navigating away from the page. It helps in improving user interaction without disrupting the flow of the webpage.
+    -->
+    <!-- 
+    👇Button to Click to see Modal!
+    -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#demoModal">
+        Warning Modal
+    </button>
+    <!-- ------------------------------------------------------------------- -->
+    <div class="modal" id="demoModal"> 
+        <!-- 
+        👆
+        => In Bootstrap, .modal is a class used to create popup windows (also called modals). These modals are used to display messages, forms, or other content on top of the main page without leaving it.
+        => Key Features of .modal:-
+        ✅ Popup Window – Shows a dialog box over the page.
+        ✅ Customizable – Can contain text, buttons, forms, or images.
+        ✅ Closable – Users can close it by clicking outside or using a close button.
+        ✅ JavaScript Control – Can be opened and closed using Bootstrap's JavaScript methods. 
+        -->
+        <div class="modal-dialog">
+            <!--  
+            👆
+            In Bootstrap, .modal-dialog is a class used to style and position the modal - popup box. It helps in setting the size, width, and alignment of the modal window on the screen.
+            -->
+            <div class="modal-content">
+                <!--  
+                👆
+                - In Bootstrap, .modal-content is a class used to style the main content area of a modal -> a popup window. It provides the layout and padding to make the modal content look organized and spaced properly within the modal dialog. 
+                - It typically contains the title, body, and footer of the modal, and helps to define the structure and appearance of the content inside the modal box.
+                -->
+                <div class="modal-header">
+                    <!--  
+                    👆
+                    - In Bootstrap, the `.modal-header` class is used to style the header section of a modal. 
+                    - It typically contains the modal's title and can include elements like a close button. 
+                    - This class helps to add padding, background color, and proper spacing to make the header look distinct and organized within the modal.
+                    -->
+                    <h3 class="modal-title">
+                        <!--  
+                        👆
+                        In Bootstrap, the .modal-title class is used to style the title of a modal window, ensuring it appears prominently at the top with appropriate font size, weight, and spacing for better organization and visual appeal.
+                        -->
+                        Warning
+                    </h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                        <!--  
+                        1) .btn-close:-
+                        - In Bootstrap, the .btn-close class creates a close button, usually represented by a small X symbol. It is used for dismissing alerts, modals, or other elements, applying styles that make it look like a clickable button for closing or hiding content.
+                        2) Attribute => data-bs-dismiss
+                        - The data-bs-dismiss attribute in Bootstrap allows elements such as modals and alerts to be closed or hidden when a button or link is clicked, requiring no additional JavaScript. For example, a button with data-bs-dismiss="modal" will close the corresponding modal.
+                        -->
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!--  
+                    👆
+                    - The .modal-body class in Bootstrap defines the content area of a modal, presenting key information like text, images, and forms. 
+                    - It ensures content organization and permits scrolling for overflowed content.
+                    -->
+                    Please input Correct OTP!
+                </div>
+                <div class="modal-footer">
+                    <!--  
+                    👆
+                    - In Bootstrap, the .modal-footer class is used to define the section at the bottom of a modal - popup window. 
+                    - This area typically contains action buttons like "Close", "Save", or "Submit". 
+                    - It helps in organizing the modal by separating the footer actions from the rest of the content.
+                    -->
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                        Close!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" ></script>
+  </body>
+</html>
