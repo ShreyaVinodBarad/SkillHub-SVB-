@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>        
+        01 Feb 25 - BootStrap carousel Class(SkillHub Shortcut)
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- 
+    Code which handles each period after which Carousel Item should be shown! -->
+    <div class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000" id="sliderIcon">
+      
+      <!-- Code which contains data about the Carousel Items -->
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img class="vh-100 w-100" src="https://images.unsplash.com/photo-1735627062325-c978986b1871?q=80&w=1412&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="carousel-item-1">
+              <div class="carousel-caption">
+                  <h1>
+                      Carousel Image - 1
+                  </h1>
+                  <p>
+                      This is my First Carousel Image!
+                  </p>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img class="vh-100 w-100" src="https://images.unsplash.com/photo-1738273473785-99c1fc498c14?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="carousel-item-2">
+              <div class="carousel-caption">
+                  <h1>
+                      Carousel Image - 2
+                  </h1>
+                  <p>
+                      This is my Second Carousel Image!
+                  </p>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img class="vh-100 w-100" src="https://images.unsplash.com/photo-1737741276705-569ebd946f5b?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="carousel-item-3">
+              <div class="carousel-caption">
+                  <h1>
+                      Carousel Image - 3
+                  </h1>
+                  <p>
+                      This is my Third Carousel Image!
+                  </p>
+              </div>
+          </div>
+      </div>
+
+      <!-- Code which help users to next or previous slide!  -->
+      <button class="carousel-control-prev" data-bs-target="#sliderIcon" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" data-bs-target="#sliderIcon" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+      </button>
+
+      <!-- Code which help users to go on any Slide they Wish! -->
+      <div class="carousel-indicators">
+          <button data-bs-slide-to="0" data-bs-target="#sliderIcon" class="active"></button>
+          <button data-bs-slide-to="1" data-bs-target="#sliderIcon"></button>
+          <button data-bs-slide-to="2" data-bs-target="#sliderIcon"></button>
+      </div>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" ></script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      01 Feb 25 - BootStrap navbar Class(SkillHub Shortcut)
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div style="height: 1000px;"></div>
+    
+    <nav class="navbar navbar-expand-lg bg-info sticky-top">
+      <!--  
+      1) sticky class in BootStrap:-
+      - The sticky-top class in Bootstrap is used to make an element stick to the top of the viewport - the visible part of the web page as you scroll down. This means the element stays visible at the top, even as the rest of the page content scrolls underneath it. It's useful for things like navigation bars or headers that you want to remain accessible without having to scroll back to the top.
+      -->
+      <div class="container">
+        
+        <a class="navbar-brand" href="#">SkillHub</a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div style="height: 1000px;"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" ></script>
+  </body>
+</html>
+<!--  
+1) fixed-top
+- <div style="height: 4000px;"></div>
+2) sticky-top
+- After Body Tag
+<div style="height: 1000px;"></div>
+- After Nav Tag
+<div style="height: 1000px;"></div>
+-->

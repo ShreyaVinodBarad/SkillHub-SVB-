@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        01 Feb 25 - BootStrap carousel Class
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000" id="sliderIcon">
+        <!--  
+        👆
+        slide Class doesnot allow white space to enter while the Images are moving!
+        -->
+        <div class="carousel-inner">
+            <!--  
+            👇
+            You have to provide active class to one of the carousel-item, after that only you can see something on screen! Or else there will be nothing on screen.
+            -->
+            <div class="carousel-item active">
+                <img class="vh-100 w-100" src="https://images.unsplash.com/photo-1735627062325-c978986b1871?q=80&w=1412&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="carousel-item-1">
+                <div class="carousel-caption">
+                    <h1>
+                        Carousel Image - 1
+                    </h1>
+                    <p>
+                        This is my First Carousel Image!
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="vh-100 w-100" src="https://images.unsplash.com/photo-1738273473785-99c1fc498c14?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="carousel-item-2">
+                <div class="carousel-caption">
+                    <h1>
+                        Carousel Image - 2
+                    </h1>
+                    <p>
+                        This is my Second Carousel Image!
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="vh-100 w-100" src="https://images.unsplash.com/photo-1737741276705-569ebd946f5b?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="carousel-item-3">
+                <div class="carousel-caption">
+                    <h1>
+                        Carousel Image - 3
+                    </h1>
+                    <p>
+                        This is my Third Carousel Image!
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <button class="carousel-control-prev" data-bs-target="#sliderIcon" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        
+        <button class="carousel-control-next" data-bs-target="#sliderIcon" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
+        <div class="carousel-indicators">
+            <button data-bs-slide-to="0" data-bs-target="#sliderIcon" class="active"></button>
+            <button data-bs-slide-to="1" data-bs-target="#sliderIcon"></button>
+            <button data-bs-slide-to="2" data-bs-target="#sliderIcon"></button>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" ></script>
+  </body>
+</html>
+<!--  
+1)carousel
+- The .carousel class in Bootstrap is used to create a carousel - slideshow that cycles through images or content automatically. This feature is commonly used in websites for displaying multiple images or banners in a compact, interactive way. 
+--------------------------------------------------------------------------------
+2) slide
+- In Bootstrap, the slide class is mainly used with carousels to create sliding image galleries. It enables smooth transitions between images or content.
+--------------------------------------------------------------------------------
+3) data-bs-ride="carousel"
+a) What is data-bs-ride="carousel" Attribute?
+- In Bootstrap, is an attribute used in the Carousel component. It controls how the carousel - slideshow behaves when the page loads.
+b) Explanation:-
+- "carousel" is a Bootstrap component that displays a series of images or content as a slideshow.
+- The data-bs-ride="carousel" attribute makes the slideshow automatically start when the page loads.
+- Without this attribute, the carousel will not start moving automatically; users will have to click buttons to change slides.
+c) Types of data-bs-ride Values:-
+- "carousel" 
+→ Automatically starts sliding when the page loads.
+- "false" 
+→ The carousel will not start automatically - users must navigate manually.
+--------------------------------------------------------------------------------
+4) data-bs-interval="1000"
+a) What is data-bs-interval="1000" Attribute?
+- In Bootstrap, the attribute data-bs-interval="1000" is used in carousel components to control the time interval between slides.
+b) Explanation:-
+- data-bs-interval 
+→ This is a data attribute in Bootstrap that sets the delay in milliseconds before automatically moving to the next slide.
+- 1000 
+→ This value is in milliseconds, meaning 1 second.
+→ It means that after 1 second, the carousel will automatically move to the next slide.
+c) Key Points:-
+- The first slide will stay for 1 second 1000ms.
+- The second slide will stay for 2 seconds 2000ms.
+- You can set different intervals for each slide or apply a global setting.
+- This attribute helps in customizing the speed of the Bootstrap carousel transition.
+--------------------------------------------------------------------------------
+5) carousel-inner Class:-
+a) The .carousel-inner class in Bootstrap is an important part of creating a carousel - slideshow. It is used inside the carousel component to hold all the slide items.
+b) Key Points about .carousel-inner
+1) Container for Slides
+- It acts as a wrapper that contains all the individual slides .carousel-item.
+Each slide inside it is displayed one at a time.
+2) Used Inside .carousel
+- It must be placed inside a parent <div> with the class .carousel.
+3) Works with .carousel-item
+- Inside .carousel-inner, each slide is created using the .carousel-item class.
+Only one .carousel-item is visible at a time.
+4) Controlled by JavaScript or Buttons
+- The carousel slides change automatically or with controls arrows, indicators.
+c) Important Notes
+- The first .carousel-item must have the active class; otherwise, the carousel won’t work properly.
+- The images or content inside .carousel-item change when the carousel moves.
+--------------------------------------------------------------------------------
+6) carousel-item Class
+a) The .carousel-item class in Bootstrap is used to define individual slides inside a carousel a slideshow component that cycles through multiple items like images or text.
+b) Key Points:
+- .carousel-item is used inside .carousel-inner.
+- The first item should have the .active class.
+- Items inside .carousel-item can be images, text, or other content.
+--------------------------------------------------------------------------------
+7) carousel-caption Class
+a) The .carousel-caption class in Bootstrap is used to add text like headings, paragraphs, or buttons inside a Bootstrap Carousel. This text appears as an overlay on the images or slides.
+--------------------------------------------------------------------------------8) carousel-control-prev Class
+a) The .carousel-control-prev class in Bootstrap is used for adding a previous left navigation button in a Bootstrap carousel. This button allows users to move to the previous slide in a carousel.
+--------------------------------------------------------------------------------9) carousel-control-next Class
+a) This class in Bootstrap is used to create the Next button in a Bootstrap carousel slideshow.
+--------------------------------------------------------------------------------
+10) data-bs-slide = "prev" and data-bs-slide = "next" Attribute in BootStrap
+a) In Bootstrap, the data-bs-slide="prev" and data-bs-slide="next" attributes are used in carousel components to navigate between slides.
+- data-bs-slide="prev" 
+→ Moves the carousel to the previous slide.
+- data-bs-slide="next" 
+→ Moves the carousel to the next slide. 
+--------------------------------------------------------------------------------
+11) carousel-control-prev-icon and carousel-control-next-icon Class
+a) In Bootstrap, the classes carousel-control-prev-icon and carousel-control-next-icon are used to style the icons for the "previous" and "next" buttons in a carousel.
+1) carousel-control-prev-icon: 
+- This class adds the icon for the "previous" button usually a left arrow When clicked, it moves the carousel to the previous slide.
+2) carousel-control-next-icon: 
+- This class adds the icon for the "next" button usually a right arrow. When clicked, it moves the carousel to the next slide.
+==> These classes are applied to <span> elements inside the carousel controls previous and next buttons to display the icons.  
+--------------------------------------------------------------------------------
+12) carousel-indicators Class
+a) The .carousel-indicators class in Bootstrap is used to create the navigation dots - indicators for a carousel component. These dots let users see which slide is currently active and allow them to click on a dot to navigate to that specific slide.
+--------------------------------------------------------------------------------
+13) data-bs-target Class 
+a) Specifies the carousel ID.
+--------------------------------------------------------------------------------
+14) data-bs-slide-to Class 
+a) Specifies which slide to navigate to when the indicator is clicked.
+-  It allows you to control which slide is displayed when a user interacts with the carousel indicators.
+b) Example:-
+data-bs-slide-to="2" means clicking that indicator will take the user to the third slide (index 2) in the carousel.
+==> It's a simple way to navigate between slides directly.
+--------------------------------------------------------------------------------
+-->

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        01 Jan 25 - BootStrap Utility -> Imp Classes
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+        <div class="border border-3 border-warning p-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, accusamus saepe. Atque minima nisi praesentium porro cupiditate sed eaque eos reprehenderit incidunt. Cumque, eligendi recusandae?
+        </div>
+        
+        <div class="bg-danger w-25 mx-auto">
+            Width 25%
+        </div>
+        <div class="bg-success w-50">
+            Width 50%
+        </div>
+        <div class="bg-info w-75">
+            Width 75%
+        </div>
+        <div class="bg-primary w-100">
+            Width 100%
+        </div>
+
+        <div style="height: 400px;" class="bg-secondary mt-4 d-flex flex-column justify-content-between">
+            <div class="bg-danger">Child-1</div>
+            <div class="bg-success">Child-2</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" ></script>
+  </body>
+</html>
+<!--  
+1) Padding and Margin in BootStrap
+- p  | m  -> Padding and Margin ==> All Sides
+- pt | mt -> Padding and Margin ==> Top
+- pe | me -> Padding and Margin ==> Right
+- ps | ms -> Padding and Margin ==> Left
+- pb | mb -> Padding and Margin ==> Bottom
+- py | my -> Padding and Margin ==> Top - Bottom
+- px | mx -> Padding and Margin ==> Left - Right
+--------------------------------------------------------------------------------
+2) mx-auto 
+- Takes the Element to the Center of the X Axis
+--------------------------------------------------------------------------------
+3) d-flex
+- Display Flex
+--------------------------------------------------------------------------------
+4) flex-column
+- X Axis ==> align-items 
+- Y Axis ==> justify-content
+--------------------------------------------------------------------------------
+5) flex-1
+- It is given to child.
+- Takes the remaining space of the container.
+--------------------------------------------------------------------------------
+6) border Class in BootStrap
+- In Bootstrap, the border class is used to add borders to elements. You can apply this class to any HTML element like divs, buttons, or images to give it a visible border.
+--------------------------------------------------------------------------------
+7) border-warning|info|primary|secondary| etc - Class in BootStrap
+- The border-warning class in Bootstrap is used to apply a yellowish border to an element.
+--------------------------------------------------------------------------------
+8) w-25, w-50, w-75, w-100 Class in BootStrap
+- In Bootstrap, the classes w-25, w-50, w-75, and w-100 are used to set the width of an element as a percentage of its parent container.
+a) w-25: 
+- Sets the width to 25% of the parent element.
+b) w-50: 
+- Sets the width to 50% of the parent element.
+c) w-75: 
+- Sets the width to 75% of the parent element.
+d) w-100: 
+- Sets the width to 100% of the parent element, making it take up the entire available width.
+==> These classes help in creating responsive layouts by adjusting element widths easily without needing custom CSS.
+--------------------------------------------------------------------------------
+9) d-flex Class in BootStrap
+- The d-flex class in Bootstrap is used to apply the CSS display: flex; property to an element, making it a flex container. This means that the children - direct child elements of this container are arranged in a flexible layout, either in a row or column, based on additional flex properties.
+--------------------------------------------------------------------------------
+10) flex-column Class in BootStrap
+- The flex-column class in Bootstrap is used to arrange flex items vertically, from top to bottom. By default, flex items are laid out horizontally - in a row, but when you apply flex-column, it changes the direction to a vertical alignment - in a column. 
+--------------------------------------------------------------------------------
+11) justify-content-between Class in BootStrap
+- n Bootstrap, justify-content-between is a utility class used to align flex items - like divs or elements inside a flex container with space between them. When you apply this class to a flex container, it positions the first item at the start - left side, the last item at the end  - right side, and evenly distributes the remaining items in between. This helps in creating a balanced layout with equal space between items without affecting the outer margins.
+--------------------------------------------------------------------------------
+-->

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      01 Feb 25 - BootStrap navbar Class
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="navbar bg-info navbar-expand-lg navbar-light">
+        <!-- 
+        👆 
+        In navbar Class:-
+        1) navbar-light
+        - Give text color Black!
+        2) navbar-dark
+        - Give text color White!
+        -->
+        <div class="container">
+            <a href="#" class="navbar-brand">SkillHub</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon">
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <div class="navbar-nav  ms-auto">
+                    <a class="nav-link">Home</a>
+                    <a class="nav-link">About</a>
+                    <a class="nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" ></script>
+  </body>
+</html>
+<!--  
+1) navbar Class
+a) In Bootstrap, the navbar class is used to create a responsive navigation bar. It provides a flexible and stylish way to organize menus, links, logos, and other elements at the top of a webpage.
+--------------------------------------------------------------------------------
+2) navbar-expand-lg Class
+a) The navbar-expand-lg class in Bootstrap makes the navigation bar expandable full-width on large screens lg and above but keeps it collapsed hidden inside a toggle button on smaller screens.
+1)  expand-lg means: 
+- Expand the navbar when the screen size is large (≥992px) or bigger.
+2) On smaller screens (<992px): 
+- The navbar items will be hidden and accessible via a hamburger menu toggle button.
+==> This helps create a responsive navigation bar that adjusts based on the screen size. 🚀
+--------------------------------------------------------------------------------
+3) navbar-light or navbar-dark Class
+a) In Bootstrap, navbar-light and navbar-dark are classes used to style the navigation bar text and background for better visibility.  
+1) navbar-light 
+→ Used when the navbar has a light background like white or light gray. It makes the text dark for better contrast.  
+2) navbar-dark 
+→ Used when the navbar has a dark background like black or dark blue. It makes the text light white for better readability.  
+==> These classes help improve the appearance of the navbar based on the background color. 🚀
+--------------------------------------------------------------------------------
+4) navbar-brand Class
+a) The navbar-brand class in Bootstrap is used to style a brand logo or name inside a navigation bar (.navbar). It helps make the brand stand out by adjusting its size, color, and spacing. You can use it for a company name, logo, or any branding element in the navbar. It is usually placed inside the 
+.navbar component and aligns with other navbar elements.
+--------------------------------------------------------------------------------
+5) navbar-toggler Class
+a) The .navbar-toggler class in Bootstrap is used to create a button that opens and closes the navigation menu on smaller screens like mobile devices. It makes the navbar responsive by collapsing it into a toggleable menu when the screen size is small. When clicked, it expands or collapses the menu items.
+--------------------------------------------------------------------------------
+6) navbar-toggler-icon Class
+a) The navbar-toggler-icon class in Bootstrap is used to display a small icon usually three horizontal lines in the navigation bar when the screen size is small. This icon helps users toggle open and close the menu on mobile devices. It works along with the navbar-toggler button, making the navigation responsive.
+--------------------------------------------------------------------------------
+7) navbar-collapse Class
+a) The .navbar-collapse class in Bootstrap is used to make the navigation bar navbar collapsible on smaller screens. This means that when the screen size is small, the navigation links and menu items are hidden and can be shown by clicking a button usually a hamburger icon. On larger screens, the menu items remain visible by default.
+--------------------------------------------------------------------------------
+8) navbar-nav Class
+a) The .navbar-nav class in Bootstrap is used to style navigation links inside a navigation bar (.navbar). It helps in organizing menu items in a horizontal or vertical list. By default, it aligns items in a row when used inside a 
+.navbar, and it works well with other Bootstrap components like dropdowns.
+--------------------------------------------------------------------------------
+9) ms-auto Class
+a) The `ms-auto` class in Bootstrap is used to automatically push an element to the right side of its container. It applies a left margin that takes up all the available space, effectively aligning the element to the far right. It's often used to create space between elements or to align something at the end of a row or container.
+--------------------------------------------------------------------------------
+10) nav-link Class
+a) In Bootstrap, the `nav-link` class is used to style links that are part of a navigation menu. It's a simple way to make links look like menu items with proper spacing, alignment, and active states. When applied to a link inside a navigation bar, it ensures that the link has the right visual style, such as a clean and consistent design with hover effects. Additionally, it helps in creating a responsive navigation menu that adjusts well across different screen sizes.
+--------------------------------------------------------------------------------
+-->

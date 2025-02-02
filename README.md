@@ -846,3 +846,21 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 ---
 
 ### 1 Feb 2025, Saturday
+
+- Akash Sir got right into the remaining BootStrap classes today!
+- Topics covered during this session included:-
+
+1. BootStrap list-group Class
+2. BootStrap dropdown Class
+3. BootStrap navbar Class
+4. BootStrap carousel Class
+5. BootStrap Utility Classes
+
+- After the session was finally over, Akash Sir handed us a project in which we were to develop a website!😅
+
+| Link to Project | https://akashskillhub.github.io/flipkart/ |
+| --------------- | ----------------------------------------- |
+
+---
+
+### 3 Feb 2025, Monday
