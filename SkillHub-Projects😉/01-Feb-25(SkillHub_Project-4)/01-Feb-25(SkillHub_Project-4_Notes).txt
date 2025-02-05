@@ -1,5 +1,183 @@
 ⭐01-Feb-25 - SkillHub Project-4⭐
 1) Link to Project
 https://akashskillhub.github.io/flipkart/
+================================================================================
+2) Explaination of Written Code:-
+1) Structure of Page Section:-
+<!doctype html>
+<html lang="en">
+a) <!doctype html> 
+- Declares the document type and version of HTML, which helps browsers render the page correctly.
+b) <html lang="en"> 
+- Opens the HTML document and declares the language as English.
 --------------------------------------------------------------------------------
-2) 
+2) Head Section:-
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>01 Feb 25 -> SkillHub Project - 4</title>
+a) <head>
+- Contains meta-information about the document.
+b) <meta charset="utf-8">
+- Defines the character encoding for the document (UTF-8 is a standard).
+c) <meta name="viewport" content="width=device-width, initial-scale=1">
+- Makes the webpage responsive by controlling the layout on mobile browsers.
+d) <title> 
+- Sets the title of the webpage that appears on the browser tab.
+--------------------------------------------------------------------------------
+3) Link for Bootstrap Icons and BootStrap CSS:- 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<style>
+    /* CSS styles */
+</style>
+a) <link>
+-  Links to external stylesheets. The first one is for Bootstrap CSS, and the second is for Bootstrap Icons.
+b) <style>
+- Contains custom CSS styles defined for this document.
+--------------------------------------------------------------------------------
+4) CSS Styles Explained:-
+a) * { margin: 0; padding: 0; box-sizing: border-box; }
+-  Resets default margin and padding for all elements and sets the box model to make width and height include padding and border.
+b) .btn-hover:hover { ... }
+-  Changes the background and text color when hovering over a button with the class `btn-hover`.
+c) .shop-now { ... }
+-  Styles for a "Shop Now" button.
+d) .box:hover { ... } 
+Scales up the box slightly on hover.
+c) .button-danger-hover:hover { ... } and .button-warning-hover:hover { ... } 
+- Similar styles for buttons in the cart which change their appearance on hover.
+--------------------------------------------------------------------------------
+5) Body Section:-
+<body>
+a) <body>
+- Contains all the contents of the webpage.
+--------------------------------------------------------------------------------6) Search Button Collapse:-
+<div class="collapse" id="search">
+    <div class="alert alert-primary mb-0">
+        <div class="container">
+            <div class="input-group">
+                <!-- Search Input and Button -->
+            </div>
+            <h2 style="color: #084289;" class="mt-5">Quick Links</h2>
+            <div class="row">
+                <!-- Quick Links -->
+            </div>
+        </div>
+    </div>
+</div>
+a) <div class="collapse" id="search">
+- Bootstrap's collapse component, which can hide/show content. The `id="search"` allows toggling the section.
+b) <div class="alert alert-primary mb-0">
+-  Creates a blue alert box with Bootstrap styles. `mb-0` removes the bottom margin.
+--------------------------------------------------------------------------------
+7) Cart Offcanvas:-
+<div class="offcanvas offcanvas-end" id="show">
+    <div class="offcanvas-header bg-primary">
+        <div class="offcanvas-title text-light">
+            <h3>Cart</h3>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body alert alert-primary mb-0">
+        <!-- Cart Items -->
+    </div>
+</div>
+a) <div class="offcanvas offcanvas-end" id="show">
+- Creates a sidebar that slides in from the right (`offcanvas-end`).
+b) <div class="offcanvas-header bg-primary">
+- Defines the header for the offcanvas, styled with a blue background.
+c) <div class="offcanvas-body alert alert-primary mb-0">
+- Body of the offcanvas with a primary alert style.
+--------------------------------------------------------------------------------
+8) Login Offcanvas:-
+a) This section is similar to the cart section but displays the login form.
+--------------------------------------------------------------------------------
+9) Navigation Bar:-
+<div class="navbar navbar-expand-lg bg-danger navbar-dark">
+    <div class="container navbar-nav d-flex justify-content-start">
+        <div class="navbar-brand" style="margin-left: 150px;">Flipkart Pro +</div>
+        <button type="button" class="btn btn-light dropdown dropdown-toggle" data-bs-toggle="dropdown">Menu</button>
+    </div>
+    <div class="container navbar-nav d-flex justify-content-end" style="margin-right: 100px;">
+        <!-- Search and Cart Buttons -->
+    </div>
+</div>
+a) <div class="navbar navbar-expand-lg bg-danger navbar-dark">
+- Creates a responsive navigation bar with a dark theme and a red background.
+b) <div class="container navbar-nav d-flex justify-content-start">
+- Aligns elements to the left inside a container.
+c) <button type="button" class="btn btn-light dropdown dropdown-toggle" data-bs-toggle="dropdown">
+- Creates a dropdown button that shows options when clicked.
+--------------------------------------------------------------------------------10) Carousel
+<div class="carousel slide mt-5" data-bs-ride="carousel" data-bs-interval="100">
+    <div class="carousel-inner">
+        <div class="carousel-item active carousel-item-start">
+            <!-- Carousel Content -->
+        </div>
+    </div>
+</div>
+a) <div class="carousel slide mt-5" data-bs-ride="carousel" data-bs-interval="100">
+- Initializes Bootstrap's carousel component with an automatic slide interval of 100 milliseconds. The `mt-5` adds top margin.
+--------------------------------------------------------------------------------
+11) Secure Check Section
+<div class="bg-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="d-flex align-items-center text-light py-3 gap-4">
+                    <!-- Secure Check Items -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+a) <div class="bg-primary">
+- Background set to primary color (blue).
+b) <div class="container">
+- Wraps the content in a responsive fixed-width container.
+--------------------------------------------------------------------------------
+12) Featured Products Section
+<div class="container" style="margin-top: 75px;">
+    <div class="d-flex justify-content-between">
+        <h1>Featured Products</h1>
+        <button type="button" class="btn btn-primary">View All</button>
+    </div>
+</div>
+a) Uses Bootstrap utility classes for spacing and alignment.
+--------------------------------------------------------------------------------
+13) Card Components
+<div class="col-sm-4 me-3">
+    <div class="card">
+        <div class="card-body">
+            <!-- Card Content -->
+        </div>
+        <div class="card-footer alert alert-primary mb-0 ">
+            <!-- Button and Info -->
+        </div>
+    </div>
+</div>
+a) <div class="card">
+- Bootstrap card component used for displaying content with a header, footer, or body.
+--------------------------------------------------------------------------------
+14) Closing the Document
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+a) Includes Bootstrap's JavaScript bundle for interactivity (e.g., dropdowns, modals).
+b) Closes the body and HTML tags.
+--------------------------------------------------------------------------------
+⭐ Summary of Bootstrap Classes ⭐
+a) .navbar
+- Defines a navigation bar. 
+b) .offcanvas
+- Used to create hidden panels that can slide in.
+c) .card
+- Used to create a flexible and extensible content container.
+c) .carousel
+- For image carousels.
+d) .alert
+- For feedback messages.
+e) .container
+- Responsive fixed-width container.
+================================================================================

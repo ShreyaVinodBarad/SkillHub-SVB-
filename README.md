@@ -864,3 +864,27 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 ---
 
 ### 3 Feb 2025, Monday
+
+- Akash Sir has officially begun designing **Project 4!**
+- I attempted to attend the session online, but unfortunately, I was unable to hear Sir's voice.
+- Link to the Project - 4
+
+| Link to Project | https://akashskillhub.github.io/flipkart/ |
+| --------------- | ----------------------------------------- |
+
+---
+
+### 4 Feb 2025, Tuesday
+
+- Sir has started the session and continued working on the same project, which has now been successfully completed!
+- Akash Sir concluded the session by mentioning that in the next session, he will guide us through the process of hosting our project on GitHub.
+
+---
+
+### 5 Feb 2025, Wednesday
+
+- Today's session was not conducted due to unforeseen circumstances on Sir's side.
+
+---
+
+### 6 Feb 2025, Thursday
