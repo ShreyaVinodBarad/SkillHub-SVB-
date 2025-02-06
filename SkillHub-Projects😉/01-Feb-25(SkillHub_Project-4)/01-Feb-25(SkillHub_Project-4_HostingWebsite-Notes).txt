@@ -1,0 +1,63 @@
+⭐SkillHub Project - 4 ==> Hosting Website on GitHub⭐
+1) Hosting a website on GitHub is simple. You just need to create a repository for your website's code, enable GitHub Pages, and (if you want) connect it to a custom domain. GitHub helps manage your code and makes your site live on the internet.
+================================================================================
+2) Here's a step-by-step guide to hosting a website on GitHub:-
+a) Step 1: Create a GitHub Account
+- If you haven't already, sign up for a GitHub account. This is necessary for hosting your website on GitHub.
+--------------------------------------------------------------------------------
+b) Step 2: Create a New Repository
+1) Navigate to GitHub: 
+- Go to github.com and sign in with your GitHub account.
+2) Click New: 
+- Click on the "+" icon at the top right corner of the page to create a new repository.
+3) Choose a Name: 
+- Enter a unique name for your repository. It's recommended to name it after your project (e.g., "mywebsite").
+4) Description: 
+- Add a description if you want to.
+5) Public or Private: 
+- Choose whether your repository will be public (viewable by anyone) or private (only viewable to people you invite).
+6) Initialize with README: 
+- It's a good practice to create an initial README file with basic information about your project. Leave this option checked.
+7) Create Repository: 
+- Click "Create repository."
+--------------------------------------------------------------------------------
+c) Step 3: Prepare Your Website Files
+1) Set Up Your Project Structure: 
+- Organize your project files (HTML, CSS, images, etc.) in a structure that makes sense for your website.
+2) Ensure Necessary Files: 
+- Make sure you have at least an index.html file, which will serve as the entry point of your website.
+--------------------------------------------------------------------------------
+d) Step 4: Configure GitHub Pages
+1) Go to Your Repository Settings: 
+- Click on your repository name and then click on "Settings" at the top right corner.
+2) GitHub Pages: 
+- Scroll down to the "GitHub Pages" section.
+3) Source: 
+- Click on the dropdown menu next to "Source" and select "main" or the branch where your index.html file resides.
+4) Save Changes: 
+- Click "Save" to save these settings.
+--------------------------------------------------------------------------------
+e) Step 5: Link to a Custom Domain (Optional)
+- If you want to use a custom domain name instead of the GitHub-provided subdomain, you'll need to set up a custom domain with GitHub.
+1) Connect Custom Domain: 
+- In the "GitHub Pages" settings, click on the "Custom domain" link under "Domain name".
+2) Enter Your Domain Name: 
+- Enter your custom domain name (e.g., example.com).
+3) Verify Domain Ownership: 
+- You may need to verify your domain ownership by adding a CNAME record in your DNS settings.
+4) Save Changes: 
+- Save the changes.
+--------------------------------------------------------------------------------
+f) Step 6: Deploy Your Website
+- Your website should now be live and accessible via the GitHub Pages URL (e.g., yourusername.github.io/yourrepositoryname). If you've set up a custom domain, use that instead.
+================================================================================
+3) How to make a Repo Public:-
+a) Go to your repository: 
+- Access the repository you want to change on GitHub.
+b) Open settings: 
+- Click on the "Settings" tab located in the repository page.
+c) Access Danger Zone: 
+- Scroll down to the "Danger Zone" section.
+d) Change visibility: 
+- Click "Change repository visibility" and choose "Public".
+================================================================================
