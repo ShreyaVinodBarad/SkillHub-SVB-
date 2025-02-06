@@ -61,3 +61,7 @@ c) Access Danger Zone:
 d) Change visibility: 
 - Click "Change repository visibility" and choose "Public".
 ================================================================================
+4) 📌 Important
+- If your index.html is inside another folder (e.g., /myProject/), GitHub Pages will serve the repository's root by default. To access your site, you need to manually enter the folder name in the URL:
+https://your-username.github.io/your-repository/myProject/
+================================================================================
