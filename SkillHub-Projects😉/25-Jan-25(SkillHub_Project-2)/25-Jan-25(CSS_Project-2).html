@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +11,7 @@
         /*  
         👇 Universal Selector - Resetting Browsers CSS => Starts
         */
-        *
-        {
+        * {
             /*  
             👇
             Resetting Browsers CSS
@@ -20,6 +20,7 @@
             margin: 0;
             box-sizing: border-box;
         }
+
         /*  
         👆 Universal Selector - Resetting Browsers CSS => Ends 
         */
@@ -27,10 +28,10 @@
         /*  
         👇 Background Color to body!  => Starts
         */
-        body
-        {
+        body {
             background-color: #eee;
         }
+
         /*  
         👆 Background Color to body!  => Ends
         */
@@ -38,8 +39,7 @@
         /*  
         👇 Designing Background => Starts
         */
-        .backgroung-img
-        {
+        .backgroung-img {
             height: calc(100vh - 80px);
             background-image: url(./25-Jan-25_Assets_SkillHub_Project-2/background-image.svg);
             background-repeat: no-repeat;
@@ -48,12 +48,13 @@
             display: flex;
             position: relative;
         }
-        .user-image
-        {
+
+        .user-image {
             height: calc(100vh - 80px);
             position: absolute;
             right: 0;
         }
+
         /*  
         👆 Designing Background => Ends
         */
@@ -61,42 +62,42 @@
         /*  
         👇 Content on Web Page => Starts
         */
-        .user-data
-        {
+        .user-data {
             padding: 50px 100px;
             /* border: 3px solid wheat; */
             max-width: 70%;
         }
-        h1
-        {
+
+        h1 {
             color: white;
             font-size: 50px;
             /* border: 3px solid wheat; */
         }
-        p
-        {
+
+        p {
             color: white;
             font-size: 20px;
             font-weight: normal;
             /* border: 3px solid wheat; */
         }
-        button
-        {
+
+        button {
             margin-top: 40px;
-            color:coral;
+            color: coral;
             font-size: 30px;
             font-weight: normal;
             border: 5px solid coral;
             padding: 20px;
-            background-color: transparent;            
+            background-color: transparent;
             transition: 0.3s;
         }
-        button:hover
-        {
+
+        button:hover {
             background-color: coral;
             color: white;
             border-radius: 30px;
         }
+
         /*  
         👆 Content on Web Page => Ends
         */
@@ -104,10 +105,9 @@
         /*  
         👇 Navigation Bar => Starts
         */
-        .Nav-Bar
-        {
+        .Nav-Bar {
             background-color: coral;
-            height: 80px ;
+            height: 80px;
             color: #000080;
             font-size: 20px;
             display: flex;
@@ -115,17 +115,18 @@
             justify-content: space-evenly;
             /* border: 3px solid wheat; */
         }
-        span
-        {
+
+        span {
             padding: 20px 20px;
             margin: 30px;
             /* border: 3px solid wheat; */
-            font-family:Arial, Helvetica, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
         }
-        .Nav-Bar > span > a
-        {
+
+        .Nav-Bar>span>a {
             text-decoration: none;
         }
+
         /*  
         👆 Navigation Bar => Ends
         */
@@ -133,8 +134,7 @@
         /*  
         👇 From here, Skills Progress Bar => Starts!📌
         */
-        .skills
-        {
+        .skills {
             /*  
             👇 Parent Contanier for Progress Bar for different Skills!
             */
@@ -144,37 +144,33 @@
             margin: 10px 30px;
             font-size: 20px;
         }
-        .viewport
-        {
+
+        .viewport {
             width: 50vw;
         }
-        .progress-bar-deco
-        {
+
+        .progress-bar-deco {
             display: flex;
             align-items: center;
             height: 20px;
         }
+
         /*  
         👇 First Row for Skills Progress Bar!   ==> Starts
         */
-        .HTML
-        {
+        .HTML {
             /* border: 3px solid black; */
-            background: linear-gradient(
-        to right, 
-        coral 80%, 
-        #ddd 80%
-        );
+            background: linear-gradient(to right,
+                    coral 80%,
+                    #ddd 80%);
         }
-        
-        .NodeJS
-        {
-            background: linear-gradient(
-        to right, 
-        coral 60%, 
-        #ddd 60%
-        ); 
+
+        .NodeJS {
+            background: linear-gradient(to right,
+                    coral 60%,
+                    #ddd 60%);
         }
+
         /*  
         👆 First Row for Skills Progress Bar!   ==> Ends
         */
@@ -182,48 +178,40 @@
         /*  
         👇 Second Row for Skills Progress Bar!   ==> Starts
         */
-        .CSS
-        {
+        .CSS {
             /* border: 3px solid black; */
-            background: linear-gradient(
-        to right, 
-        coral 35%, 
-        #ddd 35% 
-        ); 
-        }        
-        .MongoDB
-        {
-            background: linear-gradient(
-        to right, 
-        coral 35%, 
-        #ddd 35% 
-        );  
+            background: linear-gradient(to right,
+                    coral 35%,
+                    #ddd 35%);
         }
+
+        .MongoDB {
+            background: linear-gradient(to right,
+                    coral 35%,
+                    #ddd 35%);
+        }
+
         /*  
         👆 Second Row for Skills Progress Bar!   ==> Ends
         */
-        
+
         /*  
         👇 Third Row for Skills Progress Bar!   ==> Starts
         */
-        .JS
-        {
+        .JS {
             /* border: 3px solid black; */
-            background: linear-gradient(
-                to right, 
-                coral 15%, 
-                #ddd 15% 
-                ); 
-            }
-        .SQL
-            {
-                /* border: 3px solid black; */
-                background: linear-gradient(
-                    to right, 
-                    coral 25%, 
-                    #ddd 25% 
-                    );   
-            }
+            background: linear-gradient(to right,
+                    coral 15%,
+                    #ddd 15%);
+        }
+
+        .SQL {
+            /* border: 3px solid black; */
+            background: linear-gradient(to right,
+                    coral 25%,
+                    #ddd 25%);
+        }
+
         /*  
         👆 Third Row for Skills Progress Bar!   ==> Ends
         */
@@ -231,25 +219,21 @@
         /*  
         👇 Fourth Row for Skills Progress Bar!   ==> Starts
         */
-        .React
-        {
+        .React {
             /* border: 3px solid black; */
-            background: linear-gradient(
-                to right, 
-                coral 10%, 
-                #ddd 10% 
-        ); 
+            background: linear-gradient(to right,
+                    coral 10%,
+                    #ddd 10%);
         }
-        .Express_JS
-        {
+
+        .Express_JS {
             /* border: 3px solid black; */
-            background: linear-gradient(
-                to right, 
-                coral 90%, 
-                #ddd 90% 
-                ); 
+            background: linear-gradient(to right,
+                    coral 90%,
+                    #ddd 90%);
             text-align: center;
-            }
+        }
+
         /*  
         👆 Fourth Row for Skills Progress Bar!   ==> Ends
         */
@@ -260,67 +244,71 @@
         /*  
         👇 From here, Projects Row => Start 
         */
-        .projects
-        {
+        .projects {
             /* border: 3px solid black; */
             display: flex;
             justify-content: space-between;
             margin: 70px;
         }
-        .project
-        {
+
+        .project {
             border: 3px solid black;
             padding-bottom: 40px;
             margin-left: 30px;
             font-family: sans-serif;
         }
-        .project img
-        {
+
+        .project img {
             width: 230px;
             height: 165px;
         }
-        .project h1
-        {
+
+        .project h1 {
             font-size: 30px;
             color: black;
             margin: 30px;
         }
-        .project p
-        {
+
+        .project p {
             font-size: 18px;
             color: grey;
             margin: 30px;
         }
 
-        .project a
-        {
+        .project a {
             font-size: 25px;
-            color:#000080;
+            color: #000080;
             padding-left: 60px;
-            text-decoration: none; 
+            text-decoration: none;
         }
+
         /*  
         👆 Projects Row => Ends!😉 
         */
     </style>
 </head>
+
 <body>
     <div class="backgroung-img">
-        <img src="./25-Jan-25_Assets_SkillHub_Project-2/backgroundImage-For-userImage.svg" alt="BackgroundImage-For-UserImage" class="user-image">
+        <img src="./25-Jan-25_Assets_SkillHub_Project-2/backgroundImage-For-userImage.svg"
+            alt="BackgroundImage-For-UserImage" class="user-image">
         <img src="./25-Jan-25_Assets_SkillHub_Project-2/user-image.png" alt="User-Image" class="user-image">
         <div class="user-data">
             <h1>
                 Hi! My name is Jhon.
             </h1>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus accusantium deserunt ducimus sit ad, reprehenderit laudantium facere incidunt culpa omnis placeat illum animi natus optio accusamus dolores corporis. Explicabo soluta tempora pariatur animi debitis, iure quaerat hic perferendis molestias iusto?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus accusantium deserunt ducimus sit
+                ad, reprehenderit laudantium facere incidunt culpa omnis placeat illum animi natus optio accusamus
+                dolores corporis. Explicabo soluta tempora pariatur animi debitis, iure quaerat hic perferendis
+                molestias iusto?
             </p>
             <button>
                 Hire Me!
             </button>
         </div>
     </div>
-    
+
     <div class="Nav-Bar">
         <span>
             <a href="#">
@@ -353,7 +341,7 @@
             </a>
         </span>
     </div>
-    
+
     <div class="skills">
         <span class="HTML viewport progress-bar-deco">
             HTML
@@ -386,7 +374,7 @@
             Express JS
         </span>
     </div>
-    
+
     <div class="projects">
         <div class="project-1 project body">
             <img src="./25-Jan-25_Assets_SkillHub_Project-2/Project-Img.avif" alt="Project-Img">
@@ -438,4 +426,5 @@
         </div>
     </div>
 </body>
+
 </html>
