@@ -884,3 +884,9 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 ---
 
 ### 8 Feb 2025, Saturday
+
+- Today, Akash Sir gave a Mini Project! Files regarding Mini Projects are Stored in SkillHub-Projects😉 Folder. This is our Project - 7.
+
+---
+
+### 10 Feb 2025, Monday
