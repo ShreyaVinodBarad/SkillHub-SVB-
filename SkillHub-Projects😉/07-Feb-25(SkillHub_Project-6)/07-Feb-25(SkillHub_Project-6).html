@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" id="theme" class="dark">
+<!--                        
+                            👆 This is the Default Color when the Page Loads 
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        07 Feb 25 - Tailwind Dark and Light Mode
+    </title>
+    <!-- 
+    👇 
+    Here while writing the code of Dark and Light Mode you have to use Tailwind Version 3.4.17.
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class"
+        }
+    </script>
+</head>
+
+<body class="h-screen flex justify-center items-center dark:bg-black">
+    <!-- 👆 100vh Height -->
+    <div class="bg-green-300 p-10 dark:bg-green-950 dark:text-white">
+        <h1 class="text-3xl">Hello! My name is Shreya.</h1>
+        <p class="text-xl">Lorem ipsum dolor sit amet.</p>
+        <h1 class="h-[10px]"></h1>
+        <button id="btn" class="bg-green-800 px-5 py-2 text-white rounded dark:bg-green-400">
+            Toggle
+        </button>
+    </div>
+
+    <script>
+        const btn = document.getElementById("btn")
+        const doc = document.getElementById("theme")
+        btn.addEventListener("click", () => {
+            if (doc.classList.contains("dark")) {
+                doc.classList.remove("dark")
+            }
+            else {
+                doc.classList.add("dark")
+            }
+        })
+    </script>
+</body>
+
+</html>

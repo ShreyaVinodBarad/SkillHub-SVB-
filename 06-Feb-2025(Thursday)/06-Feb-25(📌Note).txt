@@ -1,0 +1,5 @@
+⭐06 Feb 2025 - Thursday⭐
+📌 Note:-
+I participated in the online session today! Additionally, Akash Sir demonstrated how to create a repository on your GitHub account in order to push code to GitHub.
+Lastly, we hosted Project-4, a website, on GitHub Pages.
+Following the conclusion of the session, Sir stated that he would begin using Tailwind tomorrow and requested that you review some tutorials to have a basic understanding of what Tailwind is.

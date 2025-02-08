@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        07 Feb 25 - Tailwind Grid System
+    </title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="./tailwind.config.js"></script>
+</head>
+
+<body>
+    <!--  
+    lg:grid-cols-4 => For Normal Screen Size
+    md:grid-cols-4 => For Medium Screen Size
+    👆
+    By doing this we can make Responsive Design
+    -->
+    <div class="grid lg:grid-cols-4 md:grid-cols-2">
+        <div class="bg-pink-50">Col-1</div>
+        <div class="bg-pink-100">Col-2</div>
+        <div class="bg-pink-200">Col-3</div>
+        <div class="bg-pink-300">Col-4</div>
+    </div>
+</body>
+
+</html>

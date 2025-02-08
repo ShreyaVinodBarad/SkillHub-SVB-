@@ -1,0 +1,23 @@
+1) Difference between Tailwind and BootStrap:-
+- Tailwind  => Utitlity first class Framework => Occupied market by 60%
+- BootStrap => Component based Framework      => 40%
+--------------------------------------------------------------------------------
+2) How to setup Tailwind?
+- Go to Google
+- Search Tailwind CSS on Google
+- Go to Play CDN
+- You will find option 1 with name "Add the Play CDN script to your HTML". Copy Script Tag from first option. I.e.:
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+- Paste it below title Tag.
+- Then create a File named - tailwind.config.js
+- Go to your File where you are going to use Tailwind and has already given this Script Tag i.e. 
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+so here you have use Script Tag and provide Relative Path of the 
+File named - tailwind.config.js
+- And now you can use Tailwind CSS in your Design.
+⭐ Important ⭐
+- Here when ever you create a File you have to provide 2 things below Title Tag:-
+1) <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+2) Have to provide Relative Path of the File named - tailwind.config.js
+in your Designing File where you will use Tailwind CSS.
+--------------------------------------------------------------------------------
