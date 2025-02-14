@@ -889,4 +889,8 @@ My session for today was finally over! cleared a lot of doubts and learned a lot
 
 ---
 
-### 10 Feb 2025, Monday
+### 10 Feb 2025, Monday to 15 Feb 2025, Saturday
+
+- Akash Sir hasn't taken classes for a week.
+
+---
