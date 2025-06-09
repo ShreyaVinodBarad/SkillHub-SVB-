@@ -1,0 +1,4 @@
+1) Introduction to Full Stack Web and App Developement
+2) VS Code Setup
+3) VS Code Shortcuts
+4) Extensions Download
