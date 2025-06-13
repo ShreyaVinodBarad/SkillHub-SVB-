@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+</head>
+
+<body>
+    <video width="400px" controls loop autoplay muted poster="./03_VideoPoster.jpeg">
+        <source src="./03_Video.mp4" type="video/mp4">
+    </video>
+    <!--  
+    👆
+    1) controls
+    - Without it, you won’t see the play/pause buttons.
+    2) autoplay 
+    – start playing automatically
+    3) muted 
+    – required for autoplay in some browsers
+    - Mandatory with "autoplay" attribute for chrome!
+    4) loop 
+    – repeat the video
+    5) poster="image.jpg" 
+    – thumbnail image before play
+    6) width
+    - Helps to give a width to the video 
+    -->
+</body>
+
+</html>

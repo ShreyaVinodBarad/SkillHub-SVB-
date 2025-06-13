@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+</head>
+
+<body>
+    <audio controls autoplay loop preload="auto">
+        <source src="./04_Audio.mp3" type="audio/mp3">
+    </audio>
+    <!--  
+    1) controls	
+    - Shows default play/pause/volume UI
+    2) autoplay	
+    - Starts playing the audio automatically (requires muted in some browsers)
+    3) loop	
+    - Repeats the audio once it ends
+    4) muted	
+    - Mutes the audio by default
+    5) preload	
+    - Tells the browser how to load the audio file 
+    - preload Attribute Options
+    1) auto	
+    - Load the whole audio file (default)
+    2) metadata	
+    - Load only metadata (like duration)
+    3) none	
+    - Don’t preload anything until user hits play
+    6) src	
+    - Audio file path (used when not using <source> tag)
+    -->
+</body>
+
+</html>
