@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+    <style>
+        h1 {
+            color: red;
+        }
+
+        .demo {
+            color: blue;
+        }
+
+        #apply {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  
+    1) What is Specificity in CSS?
+    - It’s like a priority system. When multiple CSS rules target the same element, the one with higher specificity wins.
+    
+    2) Specificity Levels (from low to high):
+    => Element selectors (like p, h1) – low specificity
+    => Class selectors (.class) – medium specificity
+    => ID selectors (#id) – high specificity
+    => Inline styles (like style="color:red") – highest specificity
+    -->
+    <h1 class="demo" id="apply">
+        Lorem ipsum dolor sit amet.
+    </h1>
+
+    <!-- 
+    1) Shortcut for creating id(#) and class(.) at the same time to h1 tag 
+    h1#root.demo
+    2) Shortcut for creating two classes(.) at the same time to h1 tag
+    h1.root.demo
+    -->
+
+    <!--  
+    - If a class attribute has 2 classes which has same CSS property like color, at that time the class which is at the last in CSS that will be applied to the tag. 
+    -->
+</body>
+
+</html>

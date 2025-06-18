@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>max-width Property</title>
+    <style>
+        h1 {
+            border: 2px solid red;
+            width: 2000px;
+            /* 
+            1) width in CSS: 
+            - It takes 2000px space at any cost. For width it doesn't matter whether space is there or not.
+            - Because of width we will get a scroll bar, which is not a good practice to follow.
+            - The width property sets how wide an element (like a box, div, image, etc.) should be.
+            - You give it a fixed size like 200px, 50%, or 10rem.
+            */
+        }
+
+        h2 {
+            border: 2px solid blue;
+            max-width: 2000px;
+            /*
+            2) max-width  
+            - If we provide max-width as 2000px then, it only take the avilable space and it does not spread if space is not avilable.
+            - And it also helps us to avoide scroll bar which is good practice.
+            - The max-width property sets the maximum width an element can grow to.
+            - The element can be smaller, but it will never go wider than the max-width.
+            */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World!</h1>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <!--  
+    3) When to use each?
+    - Use width when you want a fixed size.
+    - Use max-width when you want it to be responsive (adjustable) but with a limit.
+    - Try to avoid using "width" property while designing.
+    -->
+    <!--  
+    4) Quick Example Together:
+    div {
+        width: 100%;
+        max-width: 800px;
+    }
+    - This means:
+    The div will stretch to fill the screen (100%),
+    but it will never become wider than 800px.
+    -->
+</body>
+
+</html>

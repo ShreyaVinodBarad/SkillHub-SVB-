@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        .fullName {
+            color: magenta;
+        }
+
+        /* 
+        👆 
+        For class selector we use dot(.)
+        */
+
+        #lorem {
+            color: tomato;
+        }
+
+        /* 
+        👆 
+        For id selector we use Hash(#)
+        */
+
+        .name {
+            padding: 20px;
+            border: 2px solid black;
+        }
+
+        #wheat {
+            background-color: wheat;
+            padding: 20px;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="fullName name">Shreya Barad</h1>
+    <h1 id="lorem" class="name">Lorem ipsum dolor sit amet.</h1>
+    <h2 id="wheat" class="yellow">Lorem, ipsum dolor.</h2>
+    <!--  
+    - For a element id will be only one.
+    - For a element classes can be multiple.
+    - We can have both id and class for a tag.
+    - id has higher priority than class.
+    So, if we provide id and class with same CSS property, like background-color as wheat for id and background-color as yellow for class, at that time the style that is going to apply is of id i.e.; background-color as wheat.
+    -->
+
+    <!--  
+    1) What are selectors in CSS?
+    - Selectors in CSS are used to select (or target) HTML elements so you can style them (like changing color, size, font, etc.).
+    - In simple words:
+    A selector tells CSS which part of the webpage to style.
+    
+    2) Common types of selectors:
+    | Selector Type | Example   | What it selects                 |
+    | ------------- | --------- | ------------------------------- |
+    | Element       | `p`       | All `<p>` tags                  |
+    | Class         | `.box`    | All elements with `class="box"` |
+    | ID            | `#header` | The element with `id="header"`  |
+    | Universal     | `*`       | All elements                    |
+    | Grouping      | `h1, p`   | All `<h1>` and `<p>` tags       |
+    | Descendant    | `div p`   | All `<p>` inside a `<div>`      |
+    -->
+</body>
+
+</html>
