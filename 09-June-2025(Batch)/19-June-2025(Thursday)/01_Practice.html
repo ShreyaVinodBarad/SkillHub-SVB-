@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: blue;
+        }
+
+        .heading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .demo {
+            color: yellowgreen;
+            padding: 20px;
+        }
+
+        .test {
+            color: white;
+        }
+
+        /* 
+        👆 
+        Here, only the property color gets overwrite, but padding will be applied form demo class.
+        */
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+        <h1 class="test demo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore placeat rem, unde delectus necessitatibus,
+            quo
+            aut illo laudantium architecto porro ipsam odit est tempora soluta consectetur excepturi facilis esse. Nemo.
+        </h1>
+    </div>
+</body>
+
+</html>
