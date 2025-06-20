@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        .parent {
+            background-color: grey;
+            height: 500px;
+            display: flex;
+            /* 👇 justify-content Property with it's Values */
+            /* justify-content: flex-end;
+            justify-content: flex-start;
+            justify-content: center;
+            justify-content: space-between;
+            justify-content: space-around;
+            justify-content: space-evenly; */
+
+            /* 👇 align-items Property with it's Values */
+            /* align-items: flex-start;
+            align-items: flex-end;
+            align-items: center; */
+
+            /*  
+            👆
+            justify-content Property is for main axis i.e.; x - axis.
+            align-items Property is for cross axis i.e.; y - axis.
+            */
+        }
+
+        .child1 {
+            background-color: violet;
+            /* align-self: center; */
+            flex: 1;
+            /* 
+            👆 
+            If flex is 1 for both the childs give 50 - 50 space to both the childs.
+            */
+        }
+
+        .child2 {
+            background-color: darkorchid;
+            /* align-self: flex-end; */
+            /*  
+            👆
+            Applies on child's
+            */
+            flex: 1;
+            /*
+            👆  
+            Remaining Space
+            */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <!--  
+        Parent
+        -->
+        <div class="child1">
+            Child - 1
+        </div>
+        <div class="child2">
+            Child - 2
+        </div>
+        <!--  
+        child1 and child2 are children for parent class
+        -->
+    </div>
+    <!-- 
+    <span></span>
+    Here parent class and this span tag are known as siblings. 
+    -->
+</body>
+
+</html>

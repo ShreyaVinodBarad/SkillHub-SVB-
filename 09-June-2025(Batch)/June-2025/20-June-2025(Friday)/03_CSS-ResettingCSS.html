@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resetting CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            background-color: violet;
+        }
+
+        .box1 {
+            background-color: cornflowerblue;
+            width: 500px;
+            padding: 50px;
+            box-sizing: border-box;
+            /*  
+            👆
+            The total size of an element (width and height) will include the padding and border.
+            */
+        }
+
+        .box2 {
+            background-color: darkcyan;
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa molestiae at inventore tenetur eius optio
+        beatae, ex quia labore cum magni. Corrupti numquam nostrum molestiae id saepe quasi aliquam quo!
+    </div>
+    <div class="box1">Box - 1</div>
+    <div class="box2">Box - 2</div>
+</body>
+
+</html>
