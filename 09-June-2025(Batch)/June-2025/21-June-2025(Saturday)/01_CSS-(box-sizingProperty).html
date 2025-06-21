@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-sizing Property</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .box1 {
+            background-color: lightcoral;
+            width: 400px;
+            height: 100px;
+            padding: 60px;
+            /* box-sizing: border-box; */
+        }
+
+        .box2 {
+            background-color: lightpink;
+            width: 400px;
+            height: 100px;
+            padding: 90px;
+        }
+
+        /*  
+        1) box-sizing Property:
+        - The total size of an element (width and height) will include the padding and border.
+        - Default value of box-sizing property is set to content-box.
+        - box-sizing: border-box property will work only 50% value of width. If width is 200px then we can apply padding only 50% of width's value i.e.; 100px. If we exceed the padding value to 101px then we cant help out with that issue!
+        */
+    </style>
+</head>
+
+<body>
+    <div class="box1">Box - 1</div>
+    <div class="box2">Box - 2</div>
+</body>
+
+</html>

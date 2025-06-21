@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - 1</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 100px;
+            height: 70px;
+            background-color: lightskyblue;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        .options a,
+        .login-register a {
+            text-decoration: none;
+            font-size: 1.2em;
+            color: black;
+        }
+
+        .borderRight {
+            border-right: 2px solid black;
+            padding-right: 16px;
+            margin-right: 16px;
+        }
+
+        /* 
+        .options {
+            display: flex;
+            justify-content: space-between;
+            👆 justify-content: space-between; is not working effectively because .options container only takes as much width as its content (its default behavior).
+            gap: 30px;
+        }
+        */
+
+        .mx-30 {
+            margin: 0px 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <h1>SKILLHUB</h1>
+        <div class="options">
+            <a href="">Full Stack</a>
+            <a href="" class="mx-30">Blogs</a>
+            <a href="">Download</a>
+        </div>
+        <div class="login-register">
+            <a href="#" class="borderRight">Login</a>
+            <a href="#">Register</a>
+        </div>
+    </div>
+</body>
+
+</html>
