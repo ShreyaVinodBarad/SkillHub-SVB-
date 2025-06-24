@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Writing CSS</title>
+    <style>
+        /* 👇 This is Internal CSS */
+        .test {
+            background-color: lightgrey;
+        }
+
+        /*  
+        => There are three ways of writing CSS:
+        1) Inline 
+        2) External
+        3) Internal
+        */
+    </style>
+    <!-- 👇 This is External CSS -->
+    <link rel="stylesheet" href="./01_TypesOfWritingCSS.css">
+</head>
+
+<body>
+    <div class="test">Lorem ipsum dolor sit amet.</div>
+    <!-- 👇 This is Inline CSS -->
+    <div style="background-color: lightseagreen;">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div class="dummy">Lorem ipsum dolor sit amet.</div>
+</body>
+
+</html>
