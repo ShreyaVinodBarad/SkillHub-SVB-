@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions</title>
+    <style>
+        .dummy {
+            height: 200px;
+            background-color: yellow;
+        }
+
+        .parent {
+            height: 100px;
+            width: 200px;
+            background-color: red;
+            position: relative;
+        }
+
+        /*  
+        - If we want to lock child inside parent than you have to make position relative for parent.
+        */
+
+        .child {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            position: absolute;
+            /*
+            - If position is absolute then the properties top, right, bottom and left will work according to the viewport or bowser's window. 
+            - The properties top, right, bottom and left will only work on positions named:
+            1) Absolute
+            2) Relative
+            3) Sticky
+            4) Fixes
+            */
+            /* position: relative; */
+            /* 
+            - If position is relative then the properties top, right, bottom and left will work from the same place where it resides i.e.; current position.
+            1) top => px increses it goes to bottom 
+            2) right => px increses it goes towards left side
+            */
+            bottom: 0;
+            right: 0;
+        }
+
+        .fixed {
+            height: 100px;
+            width: 100px;
+            background-color: green;
+            position: fixed;
+            /*  
+            - If position is fixed it remains at the same place though we move vertical scroll bar.
+            */
+            right: 0;
+            top: 0;
+        }
+
+        .sticky {
+            height: 100px;
+            background-color: cyan;
+            position: sticky;
+            /*  
+            - Position sticky work as fixed but at a certain condition.
+            */
+            top: 0;
+        }
+
+        .fake {
+            height: 2000px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dummy"></div>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+    <div class="fixed"></div>
+    <div class="sticky"></div>
+    <div class="fake"></div>
+    <!-- 👆 For vertical scroll bar! -->
+</body>
+
+</html>

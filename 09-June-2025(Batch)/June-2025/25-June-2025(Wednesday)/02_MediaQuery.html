@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        body {
+            background-color: blue;
+        }
+
+        @media(max-width:1200px) {
+            body {
+                background-color: burlywood;
+            }
+        }
+
+        /*  
+        - Always max-width with higher value should be on the top of lower max-width's value.
+        */
+
+        @media(max-width:800px) {
+            body {
+                background-color: cadetblue;
+            }
+        }
+
+        /*  
+        - Here 800px is known as Breakpoint.
+        */
+
+        /*  
+        - Media query is used to make your website responsive with CSS.
+        */
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
