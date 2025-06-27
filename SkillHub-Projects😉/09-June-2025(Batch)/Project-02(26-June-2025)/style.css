@@ -5,12 +5,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    margin: 0;
-    overflow-x: hidden;
-    height: 1000px;
-}
-
 .container {
     background-image: url(./Assets/Background.svg);
     background-repeat: no-repeat;
@@ -47,6 +41,7 @@ body {
     color: white;
     font-size: 1rem;
     font-weight: bold;
+    transition: 3s;
 }
 
 .userDetail button:hover {
@@ -61,7 +56,13 @@ body {
     height: 50px;
     position: absolute;
     bottom: 0;
+    width: 100%;
+    /*  
     width: 100vw;
+    100vw includes the scrollbar width, sometimes causing horizontal scroll. It’s better to use:
+    width: 100%;
+    so it aligns with your container’s width and avoids overflow issues.
+    */
 }
 
 .bottomNav a {
@@ -72,6 +73,7 @@ body {
     text-transform: uppercase;
 }
 
+/* Method - 1 
 .skills {
     display: flex;
     justify-content: space-evenly;
@@ -79,37 +81,97 @@ body {
 }
 
 .skills .border {
-    border: 1px solid grey;
-    width: 400px;
+    width: 500px;
     height: 27px;
 }
 
-.skill-html {
+.skill-html,
+.skill-nodeJS {
     background: linear-gradient(to right, coral 70%, lightgrey 70%);
     padding-left: 140px;
 }
 
-.skill-nodeJS {
-    background: linear-gradient(to right, coral 80%, lightgrey 80%);
-    padding-left: 170px;
-}
-
-.skill-css {
-    background: linear-gradient(to right, coral 40%, lightgrey 40%);
-    padding-left: 70px;
-}
-
+.skill-css,
 .skill-mongoDB {
-    background: linear-gradient(to right, coral 40%, lightgrey 40%);
+    background: linear-gradient(to right, coral 50%, lightgrey 50%);
     padding-left: 70px;
 }
 
-.skill-js {
-    background: linear-gradient(to right, coral 30%, lightgrey 30%);
-    padding-left: 50px;
-}
-
+.skill-js,
 .skill-reactJS {
     background: linear-gradient(to right, coral 30%, lightgrey 30%);
     padding-left: 50px;
+}
+
+.skill-expressJS,
+.skill-sql {
+    background: linear-gradient(to right, coral 60%, lightgrey 60%);
+    padding-left: 50px;
+} 
+*/
+
+.skills {
+    margin: 60px;
+}
+
+.progress {
+    background-color: lightgrey;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.bar {
+    background-color: coral;
+    text-align: center;
+    font-weight: 500;
+}
+
+.skill-html,
+.skill-nodeJS {
+    width: 70%;
+}
+
+.skill-css,
+.skill-mongoDB {
+    width: 50%;
+}
+
+.skill-js,
+.skill-reactJS {
+    width: 30%;
+}
+
+.skill-expressJS,
+.skill-sql {
+    width: 60%;
+}
+
+.skills .skills-2 {
+    display: flex;
+    gap: 30px;
+}
+
+.projects {
+    display: flex;
+    padding: 40px;
+    gap: 20px;
+}
+
+.card {
+    border: 2px solid lightgray;
+    width: 25%;
+}
+
+.card .card-header img {
+    max-width: 100%;
+}
+
+.card .card-body {
+    padding: 15px;
+    line-height: 32px;
+}
+
+.card .card-body a {
+    text-decoration: none;
+    font-size: 1.4rem;
 }
