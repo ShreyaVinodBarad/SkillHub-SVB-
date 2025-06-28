@@ -1,0 +1,6 @@
+- Today Sir has taken revision of topics that students has not understood.
+- Topics are:
+1) How to apply Bootstrap icons?
+2) Relative and Absolute Paths
+3) Positions in CSS
+4) Media Query
