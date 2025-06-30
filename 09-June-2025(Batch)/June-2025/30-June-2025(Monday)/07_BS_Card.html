@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Card</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">Hello Card Header</div>
+            <div class="card-body">Hello Card Body</div>
+            <div class="card-footer">Hello Card Footer</div>
+        </div>
+    </div>
+    <!--  
+    - A Bootstrap card is like a ready-made box that you can use on your website to display content neatly.
+    - Easy way to design a card:
+    div.container>div.card>.card-header+.card-body+.card-footer
+    👆 
+    - "+" sign for creating siblings
+    - Gives output like this 👇
+    <div class="container">
+        <div class="card">
+            <div class="card-header"></div>
+            <div class="card-body"></div>
+            <div class="card-footer"></div>
+        </div>
+    </div>
+    -->
+    <!--  
+    1) ~ (General sibling)	
+    - All siblings after the element	
+    - All <p> after <h2>
+    2) + (Adjacent sibling)	
+    - Only immediate next sibling	
+    - First <p> after <h2>
+    -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
