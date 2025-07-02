@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Modal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+            Click Me
+        </button>
+        <div class="modal fade" id="myModal">
+            <!--  
+            👆 fade - for animation of modal.
+            -->
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-light">
+                        <h3 class="modal-title">
+                            Welcome to Modal
+                        </h3>
+                        <button type="button" data-bs-dismiss="modal" class="btn-close">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, officia.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-bs-dismiss="modal" class="btn btn-danger">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  
+    1) What is a Modal in Bootstrap?
+    - A modal is a small popup window that appears on top of your webpage.
+    - It shows important information or asks the user to take action (like filling a form, confirming delete, etc.).
+    - When the modal is open, the background becomes greyed out, and the user can’t interact with the page until they close the modal.
+    -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
