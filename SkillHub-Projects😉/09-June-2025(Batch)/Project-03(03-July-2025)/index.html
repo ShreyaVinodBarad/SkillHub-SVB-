@@ -6,6 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap Project</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .custom-placeholder::placeholder {
+            color: indigo;
+            opacity: 1;
+        }
+
+        .form-control:focus {
+            border-color: indigo;
+            box-shadow: 0 0 0 0.2rem rgba(92, 45, 145, 0.25);
+            /*  
+            👆
+            1) 0 (offset-x)
+            → No horizontal shift (shadow is centered horizontally).    
+            2) 0 (offset-y)
+            → No vertical shift (shadow is centered vertically).
+            3) 0 (blur-radius)
+            → No blur, making the shadow sharp.
+            4) 0.2rem (spread-radius)
+            → Shadow expands 0.2rem around the element, creating a clear outline glow.
+            5) rgba(92, 45, 145, 0.25)
+            → Shadow color:
+            rgb(92, 45, 145) = purple shade.    
+            0.25 = 25% opacity (light and subtle glow).
+            */
+        }
+
+        .btn-primary {
+            background-color: indigo !important;
+            color: text !important;
+            border: none !important;
+        }
+
+        .btn-primary:hover {
+            background-color: rgb(92, 45, 145) !important;
+        }
+
+        .btn-primary:focus {
+            box-shadow: 0 0 0 0.2rem rgba(92, 45, 145, 0.25) !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -13,30 +53,33 @@
         <div class="row">
             <div class="col-sm-8 offset-2">
                 <div class="card mt-4">
-                    <div class="card-header text-center">
+                    <div class="card-header bg-purple text-center text-light" style="background-color: indigo;">
                         <h1>Secure Login</h1>
                         <p>Powered by ABC</p>
                     </div>
                     <div class="card-body">
                         <div>
                             <div class="input-group">
-                                <span class="input-group-text w-25">
+                                <span class="input-group-text w-25 text-white" style="background-color: indigo;">
                                     Username
                                 </span>
-                                <input type="text" class="form-control" placeholder="Enter Email / Mobile Number">
+                                <input type="text" class="form-control text-light custom-placeholder"
+                                    placeholder="Enter Email / Mobile Number" style="background-color:#D8BFD8;">
                             </div>
                             <p class="mt-2">
                                 We can use your registered Email or Mobile Number.
                             </p>
                             <div class="input-group">
-                                <span class="input-group-text w-25">
+                                <span class="input-group-text w-25 text-white" style="background-color: indigo;">
                                     Pin
                                 </span>
-                                <input type="text" class="form-control" placeholder="Enter Pin...">
+                                <input type="text" class="form-control custom-placeholder text-white"
+                                    placeholder="Enter Pin..." style="background-color:#D8BFD8;">
                             </div>
                             <p class="mt-2">
                                 Enter four digit Pin you have recieved through SMS.
-                                <a data-bs-toggle="modal" data-bs-target="#pinModal">
+                                <a data-bs-toggle="modal" data-bs-target="#pinModal"
+                                    style="color: indigo; font-weight: bold;">
                                     Don't have Pin?
                                 </a>
                             </p>
@@ -55,13 +98,15 @@
                                 </div>
                             </div>
                             <div class="input-group">
-                                <span class="input-group-text w-25">
+                                <span class="input-group-text w-25 text-white" style="background-color: indigo;">
                                     Password
                                 </span>
-                                <input type="text" class="form-control" placeholder="Enter Password...">
+                                <input type="text" class="form-control custom-placeholder text-white"
+                                    placeholder="Enter Password..." style="background-color:#D8BFD8;">
                             </div>
                             <p class="mt-2">
-                                <a data-bs-toggle="modal" data-bs-target="#passwordModal">
+                                <a data-bs-toggle="modal" data-bs-target="#passwordModal"
+                                    style="color: indigo; font-weight: bold;">
                                     Forget Password?
                                 </a>
                             </p>
@@ -82,7 +127,8 @@
                                 Login
                             </button>
                             <p class="mt-2 text-center">
-                                <a data-bs-toggle="modal" data-bs-target="#troubleModal">
+                                <a data-bs-toggle="modal" data-bs-target="#troubleModal"
+                                    style="color: indigo; font-weight: bold;">
                                     Trouble Login
                                 </a>
                             </p>

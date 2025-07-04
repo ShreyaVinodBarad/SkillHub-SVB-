@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Navigation Bar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar bg-primary navbar-expand-sm navbar-dark">
+        <!--  
+        1) navbar-expand is used to control when the navbar should expand horizontally vs collapse into a toggler (hamburger) on different screen sizes.
+        -->
+        <!--  
+        1) What is navbar-dark?
+        - navbar-dark is a utility class in Bootstrap applied to a <nav> element with the navbar class.
+        - It changes the color of navbar text and links to light colors so that they are visible on dark backgrounds.
+        -->
+        <div class="container">
+            <a href="#" class="navbar-brand">SkillHub</a>
+            <button type="button" class="btn btn-light navbar-toggler" data-bs-toggle="collapse"
+                data-bs-target="#navItem">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navItem">
+                <ul class="navbar-nav ms-auto">
+                    <!--  
+                    👆
+                    1) ms-auto 
+                    It automatically pushes the element to the right by taking all the remaining horizontal space on the left.
+                    -->
+                    <li class="nav-link">Home</li>
+                    <li class="nav-link">About</li>
+                    <li class="nav-link">Download</li>
+                    <li class="nav-link">Contact</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
