@@ -44,8 +44,19 @@
         </div>
     </nav>
 
-    <div style="background-image: url(./Assets/BackgroundImage-01.jpeg); background-size: cover; background-position: center;"
+    <div style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                  url(./Assets/BackgroundImage-01.jpeg); background-size: cover; background-position: center;"
         class="w-100 vh-100">
+        <!--
+        1) linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75))  
+        - is a semi-transparent black overlay.
+        2) The second layer:
+        url(./Assets/BackgroundImage-01.jpeg)
+        - is your actual background image.
+        3) Here:
+        - The semi-transparent gradient is on top.
+        - The image is at the back.
+        -->
         <div class="container" style="padding: 150px 30px;">
             <h5 class="text-light">Developer Company</h5>
             <h1 class="text-light fw-bolder">Software App</h1>
