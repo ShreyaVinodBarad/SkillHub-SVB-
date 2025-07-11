@@ -1,0 +1,11 @@
+<!-- 
+album and checkout - Skillhub Shortcut for a Demo Websites for Deployment 
+-->
+Step 1) Create a Repo in Github
+Step 2) Open VS Code Terminal
+Step 3) Fire below given command one by one:
+git init
+git remote add origin link-of-git-Repo
+git add .
+git commit -M "give-ur-message"
+git push origin main
