@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Variables</title>
+</head>
+
+<body>
+    <!--  
+    1) What are Variables in JavaScript?
+    - Variables are containers that store data so you can reuse it later.
+    - Think of them like labeled boxes where you can put things (like numbers, text, etc.) and use them whenever you need.
+    
+    2) How to create a variable in JavaScript
+    - We use three keywords:
+    1) var (old, avoid using now)
+    2) let (mostly used now)
+    3) const (for values that should not change)
+
+    3) Difference Between var, let and const:
+    | Feature             |     var     |      let     |         const       |
+    | ------------------- | ------------| ------------ | --------------------|
+    | Can re-declare?     |  Yes        | No           |  No                 |
+    | Can re-initialize?  |  Yes        | Yes          |  No                 |
+    | Scope               | Function    | Block        | Block               |
+    | Recommended now?    |  No         |  Yes         | Yes(fixed values)   |
+
+          |    initialize   |   reinitialize   |   redeclare  |
+    ------|-----------------|------------------|--------------|                 
+    let   |    optional     |       yes        |     no       |
+    const |    required     |       no         |     no       |
+
+    4) How to Name a Variables in JS? 
+    a) Can include:
+    - Letters (a–z, A–Z)
+    - Digits (0–9)
+    - $ (dollar sign)
+    - _ (underscore) 
+    b) Cannot start with a digit.
+    c) Cannot use spaces.
+    d) Cannot use reserved keywords (like let, var, function, etc.) as variable names.
+
+    5) camelCase
+    a) What it is:
+    - The first word is small, and each next word starts with a capital letter.
+    b) Example:
+    - userName, totalMarks, isLoggedIn
+    
+    6) snake_case
+    a) What it is:
+    - All letters are small, and words are separated using _ (underscore).
+    b) Example:
+    - user_name, total_marks, is_logged_in
+
+    7) Variable names are case sensitive in JavaScript.
+    - In simple words:
+    name, Name, and NAME are three different variables in JavaScript.
+    - JavaScript treats lowercase and uppercase letters as different when reading variable names.
+    -->
+
+    <script>
+        let num1 = 10;
+        /*
+        👆
+        let     => Keyword
+        num1    => Variable
+        =       => Assignment Operator
+        10      => Value of the Variable
+        */
+        const num2 = 10;
+        console.log(num1) // 👈 Prints value of the variable num1
+        console.log("Prints the data!")
+        // 👆 Data written in quotes inside the consol.log will print as it is!
+
+        let x;      // 👈 Declaration of the variable x
+        x = 10;     // 👈 Initializtion of the variable x
+        let y = 12; // 👈 Declaration + Initialization of the variable y
+
+        /*
+        ⭐ In const we have to Declare and Initialize at the same time or else it will show Error!
+        */
+    </script>
+</body>
+
+</html>
