@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Operators</title>
+</head>
+
+<body>
+    <!-- 
+    1) What are Operators?
+    - Operators are special symbols used to perform actions on values or variables.
+    
+    2) Types of Operators in JavaScript
+    a) Arithmetic Operators (do maths)
+    - Used for mathematical calculations:
+    + ➔ Addition (5 + 3 is 8)
+    - ➔ Subtraction (5 - 2 is 3)
+    * ➔ Multiplication (4 * 2 is 8)
+    / ➔ Division (10 / 2 is 5)
+    % ➔ Modulus (remainder) (5 % 2 is 1)
+    ** ➔ Exponentiation (2 ** 3 is 8)
+    ++ ➔ Increment (x++ increases x by 1)
+    -- ➔ Decrement (x-- decreases x by 1)
+
+    b) Assignment Operators (assign values)
+    - Used to assign values to variables:
+    = ➔ Assign (let x = 5) 
+    += ➔ Add and assign (x += 3 means x = x + 3)
+    -= ➔ Subtract and assign
+    *= ➔ Multiply and assign
+    /= ➔ Divide and assign
+    %= ➔ Modulus and assign
+
+    c) Comparison Operators (compare values)
+    - Used to compare two values:
+    == ➔ Equal to (5 == '5' is true) (checks value, not type)
+    === ➔ Equal value and type (5 === '5' is false)
+    != ➔ Not equal (5 != 3 is true)(First check equality than reverse it!)
+    !== ➔ Not equal value or type
+    > ➔ Greater than
+    < ➔ Less than
+    >= ➔ Greater than or equal to
+    <= ➔ Less than or equal to
+
+    d) Logical Operators (combine conditions)
+    - Used for checking multiple conditions:
+    && ➔ AND (both conditions must be true)
+    || ➔ OR (at least one condition must be true)
+    ! ➔ NOT (reverses true to false, or false to true) 
+    - OR(||) Truthy Table:
+    |   a        |     b      | Result (a || b)    |
+    |------------|------------|--------------------|
+    |   true     |    true    |      true          | 
+    |   true     |    false   |      true          | 
+    |   false    |    true    |      true          | 
+    |   false    |    false   |      false         |
+    - AND(&&) Truthy Table
+    |     a      |    b        |  Result (a && b)  |
+    | ---------- | ----------- | ----------------- | 
+    |   true     |   true      |    true           | 
+    |   true     |   false     |   false           | 
+    |   false    |   true      |   false           | 
+    |   false    |   false     |   false           | 
+
+    e) String Concatenation Operator
+    + ➔ Joins strings together
+    += ➔ Concatenation and assign
+
+    f) Type Operator
+    typeof ➔ returns the type of a variable
+    instanceof ➔ checks if an object is an instance of a type
+    
+    g)  Ternary Operator (Conditional)
+    Shorthand for if-else:
+    condition ? value_if_true : value_if_false
+    -->
+
+    <script>
+        let z = 10 + 20 * 10;
+        /*
+        1) BODMAS stands for:
+        B ➔ Brackets
+        O ➔ Orders (powers, roots like 2^3, √4)
+        D ➔ Division
+        M ➔ Multiplication
+        A ➔ Addition
+        S ➔ Subtraction
+        */
+        /*
+        2) How to Calculate Percentage
+        Percentage = (Part / Whole) * 100
+        */
+        console.log((45 / 50) * 100);
+    </script>
+</body>
+
+</html>
