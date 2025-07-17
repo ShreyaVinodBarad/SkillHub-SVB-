@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+
+<body>
+    <!--  
+    1) push()
+    - Adds one or more elements at the end of the array.
+    - Returns the new length of the array.
+    
+    2) pop()
+    - Removes the last element from the array.
+    - Returns the removed element. 
+    
+    3) shift()
+    - Removes the first element from the array.
+    - Returns the removed element.
+    
+    4) unshift()
+    - Adds one or more elements at the beginning of the array.
+    - Returns the new length of the array.
+    
+    5) includes()
+    - Checks whether an element exists in the array.
+    - Returns true or false. 
+    
+    6) join()
+    - Converts all elements of the array into a single string, separated by a specified separator.
+
+    7) reverse()
+    - Reverses the order of the elements in the array. 
+    
+    8) sort()
+    - Sorts the array alphabetically or numerically (with a compare function).
+    
+    9)slice(start, end)
+    - Returns a new array containing selected elements from start to end-1.
+    - Does not change the original array.
+
+    10) splice(start, deleteCount, item1, item2, ...)
+    - Changes the content of an array by:
+    a) Removing deleteCount elements from start.
+    b) Adding new elements (item1, item2, etc.) at start.
+    - Modifies the original array.
+
+    11) forEach()
+    - Executes a function for each element in the array.
+    -->
+
+    <script>
+        const arr = ["Apple", "Watermelon", "Mango"];
+        // push 👇
+        arr.push("Banana");
+        // unshift 👇
+        arr.unshift("Grapes");
+        console.log(arr);
+        // shift 👇
+        arr.shift();
+        // pop 👇
+        arr.pop()
+        console.log(arr);
+        // includes 👇
+        console.log(arr.includes("Mango"))
+        // join 👇
+        console.log(arr.join(", "))
+        // reverse 👇
+        // arr.reverse();
+        let numbers = [1, 4, 3, 2];
+        // sort 👇
+        numbers.sort();
+        console.log(numbers);
+        // slice 👇
+        let newArr = arr.slice(0, 2)
+        console.log(newArr);
+        // splice 👇
+        // arr.splice(0, 2);
+        console.log(arr);
+        arr.splice(3, 0, "Pineapple");
+        console.log(arr);
+        // forEach() 👇
+        arr.forEach(function (item, index) {
+            console.log(item, index);
+        })
+    </script>
+</body>
+
+</html>

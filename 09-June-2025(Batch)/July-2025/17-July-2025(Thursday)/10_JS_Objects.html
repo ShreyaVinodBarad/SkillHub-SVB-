@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+
+<body>
+    <!--  
+    1) What is an Object?
+    - An object in JavaScript is a collection of key-value pairs.
+    - Key (also called property): A string (name).
+    - Value: Can be any data type (number, string, boolean, array, function, or another object).
+    - It helps to group related data together.
+    
+    2) How to create an Object
+    a) Using { } (object literal)
+    b) Using new Object()
+    
+    3) Accessing object properties
+    a) Using dot notation 
+    b) Using bracket notation
+
+    4) Updating values
+    object.key = ValueToUpdate
+
+    5) Adding new properties
+    object.NewKey = NewValue;
+
+    6) Deleting properties
+    delete object.key
+
+    7) Objects can have functions (methods)
+    -->
+
+    <script>
+        let obj = {
+            name: "Shreya",
+            age: 23,
+            address: "My World",
+            greet: function () {
+                console.log("Hello World!");
+            }
+        };
+
+        /*
+        2) How to create an Object
+        b) Using new Object() 
+        👇
+        */
+        let person = new Object();
+        person.name = "Padma";
+        person.age = 23;
+        console.log(person);
+
+        /*
+        3) Accessing object properties
+        a) Using dot notation
+        👇
+        */
+        console.log(obj.name);
+        console.log(obj.address);
+        /*
+        b) Using bracket notation
+        👇
+        */
+        console.log(obj["name"]);
+        console.log(obj["address"]);
+
+        obj.greet();
+
+
+    </script>
+</body>
+
+</html>

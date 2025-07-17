@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of Objects</title>
+</head>
+
+<body>
+    <!--  
+    1) What is an array of objects in JS?
+    - It is an array where each element is an object.
+    -->
+
+    <script>
+        const arr = [
+            {
+                name: "Shreya",
+                mobile: { home: [123, 999], office: 456 },
+                age: 23,
+                address: "London",
+                skills: ["HTML", "CSS"]
+            },
+            {
+                name: "Gouri",
+                mobile: { home: [888, 777], office: 654 },
+                age: 22,
+                address: "Pune",
+                skills: ["JavaScript", "BootStrap"]
+            }
+        ];
+        console.log(arr[0]);
+        console.log(arr[0].name);
+        console.log(arr[1].age);
+        console.log(arr[1].skills[0]);
+        console.log(arr[0].skills[1]);
+        console.log(arr[1].mobile.home[1]);
+    </script>
+</body>
+
+</html>
+<!--  
+Tomorrow's Topic - 18 July 2025 (Friday):
+a) Functions
+-->
