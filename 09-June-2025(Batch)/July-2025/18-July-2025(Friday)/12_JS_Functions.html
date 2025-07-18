@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+
+<body>
+    <!--  
+    1) What is a function in JavaScript?
+    - A function in JavaScript is:
+    a) A block of code that does a specific task.
+    b) You can use it again and again without rewriting the same code.
+    c) It helps keep your code clean and organized.
+
+    2) Example:
+    function greet() {
+    console.log("Hello, Shreya!");
+    }
+    - Here:
+    a) function → tells JavaScript you are creating a function.
+    b) greet → the name of the function.
+    c) { ... } → contains the code that will run when you call the function.
+
+    3) How to use (call) this function:
+    greet(); 
+    - It will print "Hello, Shreya!" in the console.
+    - You can call function n number of times.
+
+    4) What is the return keyword in JavaScript?
+    - The return keyword is used inside a function to:
+    a) Give back a value when the function is called.
+    b) Stop the function immediately at that point.
+
+    5) Why is return important?
+    - Without return, a function does its work but does not give back any value.
+    - With return, you can store, print, or use the value elsewhere. 
+    -->
+
+    <script>
+        function greet() {
+            console.log("Shreya, hello!");
+            // 👆 Function Body
+        }
+        greet();
+
+        function add(a, b) {
+            console.log(a + b);
+        }
+        add(2, 5);
+        /*
+        - Here:
+        a) a and b are parameters (placeholders for values).
+        b) add(2, 5) passes 2 and 5 to the function and 2 and 5 are called arguments.
+        c) It prints their sum (7).
+        */
+        // 👇 Task by Akash Sir!
+        function sum(num1, num2) {
+            console.log(num1 + num2);
+        }
+        sum(1000, 90);
+        // 👇 Task by Akash Sir!
+        function square(num) {
+            return Math.pow(num, 2);
+        }
+        const result = square(5);
+        console.log(result);
+        // 👇 Task by Akash Sir!
+        const combineFun = sum(square(2), square(1));
+        console.log(combineFun);
+    </script>
+</body>
+
+</html>
