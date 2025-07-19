@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+
+<body>
+    <!--  
+    1) What is an event in JavaScript?
+    - An event is something that happens in the web page.
+    - Examples:
+    a) A click on a button.
+    b) A key press on the keyboard.
+    c) Moving the mouse.
+    d) A webpage loading.
+    e) A form being submitted.
+
+    2) Why do we use events?
+    - To make websites interactive.
+    - For example:
+    a) You click a button → A message pops up.
+    b) You type in a box → It shows live suggestions.
+    c) You hover over an image → It changes.
+    
+    3) In short:
+    - An event in JavaScript is an action that happens, and you can run your code when that action happens.
+    -->
+    <h1 id="print">Hello!</h1>
+    <button onclick="test()">Click Me</button>
+    <script>
+        function test() {
+            // console.log("Hello JS!");
+            // let result = document.getElementById("print").innerText;
+            /*
+            👆
+            1) What .innerText means?
+            - .innerText gives you the visible text inside an HTML element.
+            */
+            // console.log(result);
+            document.getElementById("print").innerHTML = "My name is Shreya!"
+            /*
+            👆
+            1) What .innerHTML means?
+            - .innerHTML gives you the HTML content inside an element.
+            - It includes: Formatting inside that element.
+            */
+        }
+    </script>
+</body>
+
+</html>

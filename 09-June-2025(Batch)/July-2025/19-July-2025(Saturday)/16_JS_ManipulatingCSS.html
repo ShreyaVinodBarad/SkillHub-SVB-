@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating CSS</title>
+</head>
+
+<body>
+    <!--  
+    1) What is “Manipulating CSS in JavaScript”?
+    - It means:
+    Changing the style (color, size, background, etc.) of HTML elements using JavaScript.
+    
+    2) How to manipulate CSS in JS?
+    a) Using .style.property
+    - You can select the element and change its style.
+    -->
+
+    <h1 id="title">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque itaque consequuntur iure voluptate laudantium
+        totam ratione, labore amet cupiditate unde placeat quia nam assumenda repellat maxime, facere, similique
+        accusamus quam.
+    </h1>
+    <button onclick="addColor()">Add Color</button>
+    <button onclick="addBorder()">Add Border</button>
+    <br>
+
+    <h1 id="heading"></h1>
+    <button onclick="handleCount()">Click Me</button>
+    <br>
+
+    <input type="text" id="user">
+    <button onclick="handleClick()">Say Hello!</button>
+    <br>
+
+    <h1 id="head1"></h1>
+
+    <script>
+        function addColor() {
+            document.getElementById("title").style.color = "red";
+        }
+        function addBorder() {
+            document.getElementById("title").style.border = "2px solid black";
+        }
+
+        let count = 0;
+        function handleCount() {
+            count++;
+            document.getElementById("heading").innerHTML = `You have Clicked ${count} times!`;
+        }
+
+        function handleClick() {
+            const data = document.getElementById("user").value;
+            /*
+            1) What is .value?
+            - .value is used to get or set the value of form elements like <input>, <textarea>, <select>, etc.
+            
+                2) In simple words:
+            - .value tells you what is currently typed in an input box.
+            - You can also change what is inside the input box using .value.
+            */
+            console.log(`${data} hello!`);
+            document.getElementById("head1").innerHTML = `Hello ${data}!`;
+        }
+    </script>
+</body>
+
+</html>
+<!--  
+Topics to cover on 21 July 2025 - Monday
+1) ES6
+2) Conditions
+3) Loops
+-->
