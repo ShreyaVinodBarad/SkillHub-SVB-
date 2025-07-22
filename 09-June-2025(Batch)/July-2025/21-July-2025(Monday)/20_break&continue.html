@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>break & continue</title>
+</head>
+
+<body>
+    <!--  
+    1) break 
+    a) What it does:
+    - It stops the loop completely.
+    b) When to use:
+    - If you find what you need in a loop and don’t want to check further, use break to exit.
+
+    2) continue 
+    a) What it does:
+    - It skips the current iteration and moves to the next iteration of the loop.
+    b) When to use:
+    - If you want to skip a particular value or condition but continue the loop, use continue.
+
+    3) In short:
+    a) break → Stop the loop completely.
+    b) continue → Skip the current step, continue the loop.    
+    -->
+    <script>
+        for (let i = 1; i <= 5; i++) {
+            if (i === 3) {
+                break;  // loop will stop here when i is 3
+            }
+            console.log(i);
+        }
+        /*
+        👆
+        Output:
+        1
+        2
+        - Because when i becomes 3, break stops the loop.
+        */
+
+        for (let i = 1; i <= 5; i++) {
+            if (i === 3) {
+                continue;  // skip printing 3 and go to next iteration
+            }
+            console.log(i);
+        }
+        /*
+        👆
+        Output:
+        1
+        2
+        4
+        5
+        - Because when i is 3, it skips console.log(i) and moves to the next iteration.
+        */
+    </script>
+</body>
+
+</html>

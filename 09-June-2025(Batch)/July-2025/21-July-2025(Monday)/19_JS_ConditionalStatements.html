@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statements</title>
+</head>
+
+<body>
+    <!--  
+    1) What are Conditional Statements?
+    - Conditional statements help your code make decisions.
+    - They check if a condition is true or false, and then run different code based on that.
+
+    2) Types of Conditional Statements in JavaScript
+    a) if statement
+    - Checks a condition. If true, runs the block inside.
+    
+    b) if...else statement
+    - Runs one block if the condition is true, another if it is false.
+    
+    c) if...else if...else statement
+    - Checks multiple conditions in order.
+
+    d) switch statement
+    - Used when you need to check many exact values.
+    -->
+    <script>
+        // if - else Statement 👇
+        let x = 50;
+        let y = 40;
+        if (x > y) {
+            console.log(x);
+        }
+        else {
+            console.log(y);
+        }
+
+        // else if Ladder 👇
+        let a = 500;
+        let b = 200;
+        let c = 3;
+        if (a > b && a > c) {
+            console.log(a)
+        }
+        else if (b > a && b > c) {
+            console.log(b)
+        }
+        else {
+            console.log(c)
+        }
+
+        console.clear();
+
+        // Switch Case 👇
+        switch (true) {
+            case a > b && a > c: console.log(a); break;
+            case b > a && b > c: console.log(b); break;
+            default: console.log(c);
+        }
+    </script>
+</body>
+
+</html>

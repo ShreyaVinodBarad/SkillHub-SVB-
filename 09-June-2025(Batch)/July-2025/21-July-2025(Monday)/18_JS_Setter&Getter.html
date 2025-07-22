@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setter and Getter</title>
+</head>
+
+<body>
+    <!--  
+    1) What are getters and setters?
+    - Getter: A way to get (read) the current value of something.
+    - Setter: A way to set (update) the value of something.
+
+    2) Easy way to remember:
+    - Getter → read input value using .value
+    - Setter → change input value using .value = something
+    -->
+    <input type="text" id="getter">
+    <h1 id="res"></h1>
+    <button onclick="get()">Getter</button>
+    <button onclick="set()">Setter</button>
+    <script>
+        const str = document.getElementById("getter");
+        function get() {
+            document.getElementById("res").innerHTML = str.value;
+            /*
+            👆
+            a) Getter (to get the input value)
+            - When you want to read what the user has typed in an input field.
+            - Here, .value gets the current value from the input box.
+            */
+        }
+        function set() {
+            str.value = "";
+            /*
+            👆
+            b) Setter (to set the input value)
+            - When you want to set a value in the input field, for example, to clear it or fill it with a default value.
+            -  Here, .value = "" sets the input value to empty.
+            */
+        }
+    </script>
+</body>
+
+</html>
