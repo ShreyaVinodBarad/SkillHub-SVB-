@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenation</title>
+</head>
+
+<body>
+    <!--  
+    1) What is concatenation?
+    - Concatenation means joining two or more strings together.
+    - In JavaScript, you can concatenate using the + operator.
+
+    2) Basic rule:
+    - If both values are strings, they will join together.
+    
+    3) What if you add a string and a number?
+    - JavaScript converts the number to a string and joins them.
+
+    4) What if you add numbers only?
+    - It will add the numbers (math addition), not concatenate.
+
+    5) Mixing numbers and strings in multiple parts:
+    - JavaScript evaluates left to right:
+    a) If it sees a string, it starts concatenating.
+    b) After that, numbers will also be converted to strings for concatenation.
+
+    6) Summary Table:
+    | Case                     | Result                                   |
+    | ------------------------ | ---------------------------------------- |
+    | String + String          | Concatenation                            |
+    | String + Number          | Number converts to String, concatenation |
+    | Number + Number          | Math addition                            |
+    | Number + Number + String | Adds first, then concatenates            |
+
+    7) Remember:
+    - When we concatenate if there is a string than what ever be after that, number or string it will be converted to string only! 
+    -->
+
+    <script>
+        // 2) 👇
+        console.log("Hello" + " World"); // "Hello World"
+        // 3) 👇
+        console.log("Age: " + 20);   // "Age: 20"
+        console.log(10 + "apples");  // "10 apples"
+        // 4) 👇
+        console.log(10 + 2);
+        // 5) 👇
+        console.log(10 + 5 + "apples")
+        /*
+        👆
+        10 + 5 = 15, then "15" + " apples" = "15 apples"
+        */
+        console.log("I have " + 10 + 5 + "apples")
+        /*
+        👆
+        "I have " + "10" = "I have 10"
+        "I have 10" + "5" = "I have 10 5"
+        "I have 10 5" + " apples" = "I have 10 5 apples"
+        */
+        console.log()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literal</title>
+</head>
+
+<body>
+    <!--  
+    1) What is a Template Literal?
+    - A Template Literal is a special way to write strings in JavaScript using backticks (` `) instead of quotes.
+    - It helps you:
+    a) Write strings across multiple lines easily.
+    b) Insert variables inside strings directly.
+    
+    2) Key Points:
+    - Uses backticks: ` ` instead of "" or ''
+    - Use ${variable} to insert variable values directly inside the string
+    - Allows multiline strings without \n
+    - Easier to read and maintain.
+    -->
+
+    <script>
+        /*
+        Use ${variable} to insert variable values directly inside the string 
+        👇
+        */
+        const a = 10;
+        const b = 20;
+        console.log(`Addition of ${a} and ${b} is ${a + b}.`);
+
+        /*
+        Allows multiline strings without \n 👇
+        */
+        let poem = `Roses are red,
+        Violets are blue,
+        I love coding,
+        And so do you.`;
+        console.log(poem);
+    </script>
+</body>
+
+</html>
