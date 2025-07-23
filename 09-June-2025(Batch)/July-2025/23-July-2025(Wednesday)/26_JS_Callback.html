@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+
+<body>
+    <!--  
+    1) What is a callback?
+    - A callback is a function you pass as an argument to another function, which will be called (run) later.
+    - In simple words: “Call me back when you are done.”
+    - JavaScript uses callbacks to do things in order, especially for waiting and handling results later.
+
+    2) Why do we need callbacks?
+    - JavaScript is single-threaded (does one thing at a time).
+    - But some tasks take time (like loading data, waiting for user input).
+    - Instead of stopping everything, JavaScript:
+    a) Starts the task.
+    b) Continues other tasks.
+    c) Calls the callback when the task finishes.
+
+    3) What is a Higher Order Function?
+    - A Higher Order Function (HOF) is: A function that does one (or both) of these:
+    a) Takes another function as an argument.
+    b) Returns another function.
+    => Why is it called “higher order”?
+    - Because it operates on functions, not just values.
+    - Normal functions work with numbers, strings, etc.
+    - HOFs can receive or give back other functions, making them “higher level.”
+    => One-Line Definition:
+    - A Higher Order Function is a function that takes a function or returns a function.
+    -->
+    <script>
+        function sayHello(arg, x) {
+            console.log(arg);
+            x();
+        }
+        function sayBye() {
+            console.log("Bye!");
+        }
+        // 👆 sayBye => Callback Function
+        sayHello("Hello!", sayBye)
+        // 👆 sayHello => Higher Order Function(HOF)
+        /*
+        👆
+        Explanation of the above code:
+        a) sayBye is a callback function because it is passed as an argument to another function (sayHello).
+        b)sayHello is a Higher Order Function (HOF) because:
+        - It takes a function as an argument (x).
+        c) Inside sayHello:
+        - console.log(arg); prints "Hello!".
+        - x(); calls the callback sayBye.
+        - sayBye runs, printing "Bye!".
+        d) Output:
+        Hello!
+        Bye!
+        e) How this explains callbacks:
+        - A callback function is passed into another function (HOF) to be executed later.
+        - In your code:
+        sayBye is not called immediately when passed.
+        It is called inside sayHello, when x(); executes.
+        f) One-line summary:
+        - sayBye is a callback. sayHello is a Higher Order Function that takes the callback and calls it later inside its body.
+        */
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primitive and Non - Primitive</title>
+</head>
+
+<body>
+    <!--  
+    1) Primitive:
+    - Primitive Space is Fixed in RAM
+    - In JavaScript, primitives: number, string, boolean, undefined, null, symbol, bigint.
+    - Fixed size in memory (RAM): They store actual values directly in memory.- - Example:
+    let x = 10;
+    Here, x directly stores 10 in RAM in a small, fixed space.
+    - Since the size of primitives is small and known, RAM can easily allocate fixed space for them.
+    a) Call by Value
+    - Primitives (number, string, boolean, etc.) in JavaScript are passed by value.
+    - When you write:
+    let q = p;
+    - it copies the value of p into q, not the reference.
+    - Any changes in q do not affect p because they are stored separately in memory.
+    - 
+
+    2) Non - Primitive
+    - Non-Primitive Space Cannot Be Defined in RAM
+    - In JavaScript, non-primitives (objects, arrays, functions): Can store multiple key-value pairs, dynamic values, nested objects.
+    - We do not know how big they will become during runtime.
+    - Example:
+    let arr = [1, 2, 3, 4, 5];
+    - Here, arr is stored as a reference (address) in RAM, pointing to another location in memory (heap) where the actual data is kept.
+    - Because:
+    1) Arrays or objects can grow or shrink,
+    2) Their size is dynamic and not fixed,
+    So, RAM only stores the reference address in a fixed space, And the actual data is stored in a flexible memory area called the heap.
+    a) Call by Reference
+    - Non-primitives in JavaScript are passed/stored by reference.
+    - Functions in JS are objects (non-primitive).
+    - Assigning a function to another variable copies its reference.
+    -->
+    <!--  
+    Easy Analogy:   
+    1) Primitive (Fixed in RAM): Like a locker storing a small coin – space is fixed and the coin is directly inside.
+    2) Non-Primitive (Reference in RAM): Like a locker containing a slip with an address to a large storage room where your items are kept – only the address is stored in RAM, the real data is somewhere else.
+    -->
+    <script>
+        // Primitive => Call by Value 👇
+        const p = 10;
+        let q = p;
+        q++
+        console.log(q)
+        /*
+        👆
+        Explanation:
+        a) const p = 10;
+        - p is a primitive (number) with value 10.
+        - Memory stores:
+        p - 10
+        b) let q = p;
+        - Here, q gets a copy of the value of p.
+        - Since p is a primitive, it is passed by value, so:
+        q - 10(copy of p's value)
+        c) q++;
+        - q becomes q + 1 = 10 + 1 = 11.
+        - Now:
+        q - 11
+        ⭐ Note: Changing q does NOT affect p because primitives are passed by value(copy), not by reference.
+        d) console.log(q);
+        - It prints:
+        11
+        */
+
+        // Non - Primitive => Call by Reference 👇
+        // Example - 01 => With array
+        const arr = ["Dell", "Apple"];
+        const a = arr;
+        a.push("HP");
+        console.log(a);
+        console.log(arr);
+        /*
+        👆
+        Explanation:
+        a) arr is a non-primitive (array), so stored by reference in memory.
+        b) const a = arr;
+        - a points to the same reference as arr, not a separate copy.
+        c) a.push("HP");
+        - Adds "HP" to the same array in memory.
+        d) Outputs:
+        console.log(a); → ["Dell", "Apple", "HP"]
+        console.log(arr); → ["Dell", "Apple", "HP"]
+        e) Why both changed? (Call by Reference)
+        - Arrays are non-primitives in JavaScript.
+        - When you assign const a = arr;, both a and arr point to the same memory address.
+        - Any change using a reflects in arr, and vice versa.
+        */
+        // Example - 02 => With object
+        const obj = { name: "Shreya" };
+        const b = obj;
+        b.age = 23;
+        console.log(obj)
+        console.log(b)
+        // Example - 03 => With function
+        function test(arg) {
+            return arg;
+        }
+        const res = test;
+        let result = res("Apple");
+        console.log(result);
+        /*
+        👆
+        - In JavaScript, functions are non-primitive (objects).
+        - When you do:
+        const res = test;
+        you copy the reference (address) of the function test into res, not the function’s code itself.
+        - This means:
+        res and test both point to the same function in memory.
+        You can now call res() exactly like test().
+        a) Why it is Call by Reference:
+        - The function test (non-primitive) is assigned by reference to res.
+        - Both refer to the same memory location of the function.
+        */
+    </script>
+</body>
+
+</html>
