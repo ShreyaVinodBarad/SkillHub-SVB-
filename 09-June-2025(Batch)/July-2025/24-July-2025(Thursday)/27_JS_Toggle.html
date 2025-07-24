@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle</title>
+</head>
+
+<body>
+    <!--  
+    1) What the code does:
+    - There is a button that says “Click Me”.
+    - When you click the button, it runs the toggle() function.
+    - Inside this function:
+    a) It checks if x is true.
+    - If true, it prints "Hello!" and changes x to false.
+    - If false, it prints "Bye" and changes x to true.
+
+    2) What toggle means here:
+    - Toggle means switching between two states again and again.
+    - In this code:
+    a) The first click prints "Hello!" (x becomes false).
+    b) The second click prints "Bye" (x becomes true).
+    c) The third click prints "Hello!" again.
+    d) The fourth click prints "Bye" again.
+    - And this keeps repeating every time you click.
+    
+    3) Why this happens:
+    - x starts as true.
+    - Every time you click, the function switches x to the opposite:
+    a) if true, it becomes false.
+    b) if false, it becomes true.
+    - This is why it alternates between “Hello!” and “Bye” on each click.
+    -->
+    <button onclick="toggle()">Click Me</button>
+    <button onclick="toggleXO()">Click Me</button>
+    <script>
+        let x = true;
+        function toggle() {
+            if (x) {
+                console.log("Hello!");
+                x = false;
+            }
+            else {
+                console.log("Bye");
+                x = true;
+            }
+        }
+
+        /*
+        Same concept for Tic - Tac - Toe Project 👇
+        */
+        let chance = "x";
+        function toggleXO() {
+            if (chance === "x") {
+                console.log("X");
+                chance = "o";
+            }
+            else {
+                console.log("O");
+                chance = "x";
+            }
+        }
+    </script>
+</body>
+
+</html>

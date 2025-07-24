@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tic-Tac-Toe Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .box {
+            width: 100%;
+            height: 100px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3">
+                <div class="card">
+                    <div class="card-header text-center alert alert-primary">
+                        <h2>
+                            Tic-Tac-Toe
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="box" onclick="handleClick(`box1`)" id="box1">
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="box" onclick="handleClick(`box2`)" id="box2">
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="box" onclick="handleClick(`box3`)" id="box3">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="box" onclick="handleClick(`box4`)" id="box4">
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="box" onclick="handleClick(`box5`)" id="box5">
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="box" onclick="handleClick(`box6`)" id="box6">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="box" onclick="handleClick(`box7`)" id="box7">
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="box" onclick="handleClick(`box8`)" id="box8">
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="box" onclick="handleClick(`box9`)" id="box9">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
