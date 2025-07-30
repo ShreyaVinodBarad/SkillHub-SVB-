@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookMyShow - Booking System</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./tailwind.config.js"></script>
+</head>
+
+<body class="flex justify-center items-center h-screen">
+    <div class="grid grid-cols-12 mx-20">
+        <div class="col-span-8 p-5">
+            <div class="w-full bg-gray-200 h-4 mb-3"></div>
+            <div class="grid grid-cols-12 gap-2 py-2" id="seatContainer">
+            </div>
+        </div>
+        <div class="col-span-4 bg-blue-400">Payment</div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
+<!-- 
+1) w-full
+- Makes the element’s width 100% of its parent/container
+2) w-screen
+- Makes the element’s width equal to the width of the viewport/screen (i.e., 100vw).
+| Feature        | w-full                   | w-screen                     |
+| -------------- | ------------------------ |------------------------------|
+| Width based on | Parent element           | Viewport/screen              |
+| CSS equivalent | width: 100%              | width: 100vw                 |
+| Affected by    | Parent container's width | Not affected by parent width |
+-->

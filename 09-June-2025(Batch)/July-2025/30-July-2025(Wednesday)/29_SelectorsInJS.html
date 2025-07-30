@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Selectors in JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="bg-primary" id="title">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="bg-primary">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="bg-primary">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="bg-primary">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="bg-primary">Lorem ipsum dolor sit amet.</h1>
+        <button onclick="test()">Test</button>
+    </div>
+
+    <script>
+        function test() {
+            const titleId = document.getElementById("title");
+            console.log(titleId);
+            /*
+            👆
+            1) What are Selectors in JavaScript?
+            - Selectors in JavaScript are methods used to select HTML elements from a webpage so that you can interact with them using JavaScript.
+            
+            2) getElementById():
+            - getElementById() is a DOM method used in JavaScript to select a single HTML element by its id attribute.
+            a) Syntax:
+            document.getElementById("id-name")
+            1) document → Refers to the HTML page.
+            2) .getElementById() → A method to select one element.
+            3) "id-name" → The value of the id attribute of the HTML element you want to access.
+            */
+            const byClassName = document.getElementsByClassName("bg-primary");
+            console.log(byClassName);
+            /*
+            👆
+            3) getElementsByClassName()
+            - getElementsByClassName() is a JavaScript method used to select all HTML elements that have a specific class name.
+            - It returns a collection of elements with that class. This collection is called an HTMLCollection.
+            a) Syntax:
+            document.getElementsByClassName("className");
+            1) "className" is the name of the class you want to select.
+            2) It returns a live HTMLCollection of elements.
+            3) You can access elements using index numbers or loop through them.
+            */
+            const byQuerySelector = document.querySelector(".bg-primary");
+            console.log(byQuerySelector);
+            /*
+            👆
+            4) querySelector()
+            - querySelector() is a DOM method used to select the first HTML element that matches a CSS-style selector.
+            a) Syntax:
+            document.querySelector(selector)
+            - selector is a string written in CSS selector format (e.g., #id,    .class, tag, etc.).
+            - Returns the first matching element (or null if none found).
+            */
+            const byQuerySelectorAll = document.querySelectorAll(".bg-primary");
+            console.log(byQuerySelectorAll);
+            /*
+            👆
+            5) querySelectorAll()
+            - querySelectorAll() is a JavaScript method that allows you to select all elements in the DOM that match a CSS selector.
+            - It returns a NodeList (which is like an array) of all matching elements.
+            a) Syntax:
+            document.querySelectorAll(selector)
+            - selector is a string written in CSS selector format (e.g., #id,    .class, tag, etc.).
+            - It returns a NodeList (which is like an array) of all matching elements.
+            */
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

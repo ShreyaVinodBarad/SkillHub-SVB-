@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>classList Property</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .box {
+            color: coral;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">Hello Bootstrap!</h1>
+    <button onclick="addCSS()">Add CSS</button>
+    <button onclick="removeCSS()">Remove CSS</button>
+    <button onclick="checkCSSClass()">Check CSS Class</button>
+    <button onclick="toggleClass()">Toggle Class</button>
+    <hr>
+
+    <script>
+        const title = document.getElementById("title");
+        function addCSS() {
+            /*
+            title.style.color = "coral";
+            title.style.border = "2px solid black";
+            title.style.padding = "20px"
+            */
+            // title.classList.add("alert", "alert-primary")
+            title.classList.add("box");
+
+            /*
+            1) What is classList?
+            - classList is a built-in JavaScript property available on HTML elements. It gives you an easy way to access and manipulate the classes (the class attribute) of that element.
+            */
+
+            /*
+            👆
+            2) classList.add()
+            a) Purpose: 
+            - Adds one or more CSS classes to an element.
+            b) Syntax:
+            - element.classList.add("class1", "class2", ...);
+            */
+        }
+        function removeCSS() {
+            /*
+            title.style.color = "";
+            title.style.border = "";
+            title.style.padding = ""
+            */
+            // title.classList.remove("alert", "alert-primary");
+            title.classList.remove("box");
+
+            /*
+            👆
+            3) classList.remove()
+            a) Purpose: 
+            - Removes one or more CSS classes from an element.
+            b) Syntax:
+            - element.classList.remove("class1", "class2", ...);
+            */
+        }
+
+        function checkCSSClass() {
+            const checkAns = title.classList.contains("box");
+            console.log(checkAns);
+            /*
+            👆
+            4) classList.contains()
+            a) classList.contains(className) is a JavaScript method that checks if a particular class exists on an HTML element.
+            b) Syntax:
+            - element.classList.contains("class-name");
+            1) element — your HTML element (e.g., a div, button, etc.)
+            2) "class-name" — the name of the class you're checking for.
+            3) Returns:
+            true → if the class exists
+            false → if the class doesn't exist
+            */
+        }
+
+        function toggleClass() {
+            title.classList.toggle("box");
+            /*
+            👆
+            5) What is classList.toggle()?
+            a) The classList.toggle() method is used in JavaScript to add or remove a class from an HTML element.
+            b) Syntax:  
+            element.classList.toggle("class-name");
+            - If the element does not have the class → it adds it.
+            - If the element already has the class → it removes it.
+            */
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
