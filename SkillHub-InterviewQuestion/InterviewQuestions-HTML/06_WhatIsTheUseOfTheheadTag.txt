@@ -1,0 +1,10 @@
+1) What is the use of the <head> tag?
+- The <head> tag in HTML is used to store important information about the webpage — not the content you see on the page, but things that help the browser understand and display it correctly.
+a) In simple words:
+- The <head> is like the brain of the webpage. 
+- It contains things like:
+a) The title of the page (what shows up in the browser tab)
+b) Links to CSS files (for styling the page)
+c) Meta tags (like how to display the page on mobile)
+d) Links to fonts or icons
+e) Sometimes JavaScript files

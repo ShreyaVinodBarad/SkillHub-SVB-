@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remember this about Object!</title>
+</head>
+
+<body>
+    <!--  
+    1)  In JavaScript, if the variable name and the object key are the same, you can use shorthand syntax to make your code shorter and cleaner.
+    
+    2) Rule:
+    - If the key name and the variable name are the same, you can just write the name once inside the object.
+    -->
+
+    <script>
+        // 👇 2) Example without shorthand: 
+        let name = "Shreya";
+        let person = {
+            name: name
+        };
+        console.log(person.name);
+
+        // 👇 2) Example with shorthand: 
+        let details = {
+            name
+        };
+        console.log(details.name);
+        // 📌 Both versions do the same thing, but the second one is cleaner.
+    </script>
+</body>
+
+</html>

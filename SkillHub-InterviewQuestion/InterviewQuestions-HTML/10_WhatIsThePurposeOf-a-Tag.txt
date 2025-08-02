@@ -1,0 +1,13 @@
+1) What is the purpose of <a> tag?
+- The <a> tag in HTML is used to create links.
+- Simple Answer:
+The purpose of the <a> tag is to link one page to another. 
+- It can link to:
+a) Another website
+b) Another page on the same website
+c) A file (like PDF, image, etc.)
+d) An email address or phone number
+- Example:
+<a href="https://www.google.com">Go to Google</a>
+- This creates a clickable link that takes you to Google.
+- So, the <a> tag helps users navigate from one place to another on the web.

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>settimeout()</title>
+</head>
+
+<body>
+    <!--  
+    1) What is setTimeout()?
+    - The setTimeout() method is used to delay the execution of a function.
+    - Syntax:
+    setTimeout(function, delay);
+    a) function: The code or function you want to run after the delay.
+    b) delay: The time to wait in milliseconds (1 second = 1000 milliseconds).
+    - How it works:
+    It tells JavaScript:    
+    “Wait for some time, then run this function.”
+
+    2) What is Asynchronous Code?
+    - Imagine this:
+    You’re cooking food and also doing laundry. While the food is boiling, you don’t just wait. You do laundry in the meantime. When the food is ready, the cooker beeps and you go back to it.
+    This is how asynchronous code works!
+    - In JavaScript:
+    a) JavaScript usually runs code line by line (this is called synchronous).
+    b) But with asynchronous code, some tasks don’t block others.
+    c) JS starts a task, and moves on. When that task is done, it comes back and finishes it.
+    => In Simple Words:
+    - Asynchronous code lets JavaScript do multiple things at once without waiting — like multitasking.
+    -->
+
+    <script>
+        function test() {
+            console.log("Hello World");
+        }
+        setTimeout(test, 2000)  // Asynchronous Code
+        // Here test is the function reference!
+    </script>
+</body>
+
+</html>

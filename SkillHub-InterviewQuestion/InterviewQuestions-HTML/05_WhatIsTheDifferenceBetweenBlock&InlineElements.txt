@@ -1,0 +1,9 @@
+1) What is the difference between Block and Inline elements?
+a) Block Elements 
+- Block elements take up the full width available, even if the content inside is small. 
+- They always start on a new line.
+- Examples: <div>, <p>, <h1> to <h6>
+b) Inline Elements 
+- Inline elements only take up as much width as needed. 
+- They do not start on a new line, and they sit next to each other.
+- Examples: <span>, <a>, <strong>

@@ -1,0 +1,4 @@
+1) What is the role of <!DOCTYPE html>?
+- The <!DOCTYPE html> tells the web browser that the page is written in HTML5, which is the latest version of HTML.
+- It helps the browser understand how to read and display the webpage correctly.
+- Without it, the browser might not show the page properly because it could guess the wrong rules.
