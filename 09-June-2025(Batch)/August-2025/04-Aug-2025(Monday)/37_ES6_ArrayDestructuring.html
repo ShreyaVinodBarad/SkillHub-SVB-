@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Destructuring</title>
+</head>
+
+<body>
+    <!--  
+    1) What is Array Destructuring?
+    - Array destructuring is a way to unpack values from an array and assign them to variables — all in one line.
+
+    2) Skip Values:
+    - You can skip values if you don’t need all:
+    -->
+    <script>
+        // Normal way of using an Array! 👇
+        const brand = ["Dell", "HP", "Apple"];
+        const x = brand[0];
+        const y = brand[1];
+        const z = brand[2];
+
+        // Array Destructuring 👇
+        const [b1, b2, b3] = brand;
+        /*
+        👆
+        - When we write an array at left hand side than this is known as Array Destructuring.
+        */
+        console.log(b1, b2, b3);
+
+        // Skip Values 👇
+        const numbers = [1, 2, 3, 4, 5];
+        let [one, , three, , five] = numbers;
+        console.log(one);
+        console.log(three);
+        console.log(five);
+
+        /*
+        Example by Akash Sir 👇
+        */
+        const demo = () => [10, 20, 30];
+        const [result] = demo();
+        console.log(result);
+    </script>
+</body>
+
+</html>

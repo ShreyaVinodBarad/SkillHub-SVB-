@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+
+<body>
+    <!--  
+    1) What is Hoisting?
+    - Hoisting means JavaScript moves declarations to the top of the code before running it.
+    - Example:
+
+    2) What about let and const?
+    - They are also hoisted, but not initialized. That’s where TDZ comes in.
+
+    3) What is TDZ (Temporal Dead Zone)?
+    - TDZ is the time between:
+    a) When a let/const variable is hoisted
+    - You cannot access the variable during this "dead zone". If you try, you get a ReferenceError.
+    - When you declare a variable with let or const and try to access it before declaration then, where the line you declare that above it all the area is TDZ.
+    - Hoisting makes the variable known to JavaScript.
+    a) The declaration line (like let x = 10) is when:
+    - The TDZ ends.
+    - The variable becomes safe to use.
+    => Example with TDZ:
+
+    4) Summary Table:
+    | Keyword| Hoisted?| Initialized?     | Before declaration?  |
+    | -------| --------| -----------------| -------------------- |
+    | var    |  Yes    |  Yes (undefined) |  Yes                 |
+    | let    |  Yes    |  No              |  No (TDZ error)      |
+    | const  |  Yes    |  No              |  No (TDZ error)      |
+
+    5) Easy Trick to Remember:
+    a) var is old-school: It’s hoisted and forgiving.
+    b) let and const are modern: They’re safer, and don’t allow access before declaration (TDZ protects them).
+    -->
+
+    <script>
+        console.log(a)   //undefined
+        var a = 10;
+        /*
+        a) Why? 
+        - Because JavaScript "hoists" the var a declaration to the top, like this:
+        var a;       => declaration is hoisted
+        console.log(a); => undefined
+        a = 10;      => assignment happens here
+        */
+
+        console.log(b); // ReferenceError
+        let b = 5;
+        /*
+        a) Why? 
+        - Because the variable b is in the Temporal Dead Zone from the start of the block until the let b = 5; line.
+        */
+
+        console.log(x);   // ReferenceError
+        let x = 10;
+        /*
+        👆
+        - The line where you write let x = 10;, that’s when the variable is both declared and initialized.
+        - Before that line:
+        a) JavaScript knows that x exists (because of hoisting),
+        b) But you can’t use it — that’s the Temporal Dead Zone.
+        */
+    </script>
+</body>
+
+</html>

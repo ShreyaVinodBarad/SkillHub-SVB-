@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Destructuring</title>
+</head>
+
+<body>
+    <!--  
+    1) What is Object Destructuring?
+    - Object destructuring is a feature in ES6 (JavaScript) that lets you extract values from objects and assign them to variables easily.
+    - Instead of accessing each property one by one, destructuring lets you do it in a short and clean way.
+
+    2) Rename Variables (If needed):
+    - If you want to use a different variable name.
+
+    3) Why Use It?
+    - Cleaner and shorter code
+    - Helps when working with large objects
+    - Often used in React, Node.js, etc.
+    -->
+
+    <script>
+        // Normal way of using an Object! 👇
+        const person = { name: "Gouri", age: 23, city: "London" };
+        const myName = person.name;
+        const myAge = person.age;
+        const myCity = person.city;
+
+        // Object Destructuring 👇
+        const { name, age, city } = person;
+        // const { age, name, city } = person; => Sequence does not matter
+        console.log(name, age, city);
+        /*
+        console.log(name, age, city, x); 
+        => 👆 x is not there in an object person so it returns - undefined 
+        */
+        /*
+        => What's Happening?
+        - { name, age, city } is the pattern you're using to pull out values from the object person.
+        */
+
+        // Rename Variables 👇
+        const { name: MyName, age: MyAge, city: MyCity } = person;
+        console.log(MyName, myAge, myCity);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literal</title>
+</head>
+
+<body>
+    <!--  
+    1) What is a Template Literal?
+    - Template Literals are a new way to work with strings in JavaScript, introduced in ES6 (ECMAScript 2015).
+    - They make it easier to:
+    a) Add variables into strings (without + sign).
+    b) Write multi-line strings (without \n).
+    c) Include expressions directly inside strings.
+
+    2) How do we write a Template Literal?
+    - We use backticks ( ` ` ) instead of quotes.
+    
+    3) What's inside ${}?
+    - You can put:
+    a) Variables
+    b) Math
+    c) Function calls
+    d) Any JavaScript expression
+
+    4) Why use Template Literals?
+    - Cleaner and easier to read
+    - Better for HTML templates or long strings
+    - More powerful than old string methods
+
+    5) Summary:
+    | Feature            | Old Way               | Template Literal Way |
+    | ------------------ | --------------------- | -------------------- |
+    | Variable in string | "Hello " + name + "!" | `Hello ${name}!`     |
+    | Multi-line string  | "Line1\nLine2"        | `Line1<br>Line2`     |
+    | Expressions        | "Sum: " + (a + b)     | `Sum: ${a + b}`      |
+    -->
+
+    <script>
+        /*
+        Adding variables into strings and Include expressions directly inside strings 👇
+        */
+        const a = 10;
+        const b = 20;
+        console.log(`Sum of ${a} and ${b} is ${a + b}.`);
+
+        // Write multi-line strings 👇
+        const poem = `This is line 1
+        This is line 2      
+        This is line 3`;
+        console.log(poem);
+    </script>
+</body>
+
+</html>

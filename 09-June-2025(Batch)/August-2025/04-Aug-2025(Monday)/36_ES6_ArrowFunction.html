@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+
+<body>
+    <!--  
+    1) What is an Arrow Function?
+    - An arrow function is a shorter way to write a function in JavaScript. 
+    - It was introduced in ES6 (ECMAScript 2015).
+
+    2) Easy Way to Remember:
+    - Remove the word function
+    - Add an => (arrow) after the parentheses
+    - If it has only one line of code, you don’t need curly brackets {} or return
+
+    3) Difference from Regular Function:
+    - Arrow functions:
+    a) Don't have their own this (important in object-oriented code)
+    b) Cannot be used as constructors (you can't use new with them)
+    -->
+
+    <script>
+        // Simple Function 👇 called => Named Function
+        function square(arg) {
+            return arg * arg;
+        }
+        console.log(square(2));
+
+        // Arrow Function 👇
+        let square1 = (num) => {
+            return num * num;
+        }
+        console.log(square1(3));
+
+        /*
+        Arrow Function with: 👇
+        a) single argument does not required to use () 
+        b) one statement does not require to put inside {} it can be directly used and that will be it's return statement. 
+        */
+        let square2 = n => n ** 2;
+        let res = square2(2)
+        console.log(res);
+
+        /*
+        In Arrow Function this is required () only : 👇
+        a) When you have more than 1 arguments.
+        b) And you have no arguments. 
+        */
+        let display = () => "Hello World";
+        let res1 = display()
+        console.log(res1)
+        let twoNum = (n1, n2) => n1 + n2;
+        let res2 = twoNum(2, 3);
+        console.log(res2)
+
+        /*
+        Task by Akash Sir 👇
+        */
+        let greterThan = (num1, num2) => num1 > num2 ? num1 : num2;
+        console.log(greterThan(4, 5))
+
+        const demo = (arg) => arg > 10 ? greterThan(5, 6) : arg;
+        console.log(demo(21));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let, var and const</title>
+</head>
+
+<body>
+    <!--  
+    1) var (Old way)
+    - Introduced in: ES5 (old JavaScript)
+    - Scope: Function-scoped – it only works inside the function where it's declared.
+    - Hoisting: Yes (moved to the top of the scope, but not initialized)
+    - Can be re-declared? Yes
+    - Can be updated? Yes
+    
+    2) let (Modern way)
+    - Introduced in: ES6
+    - Scope: Block-scoped – works only within the block { } where it's declared.
+    - Hoisting: Yes (but not usable until declared — called "temporal dead zone")
+    - Can be re-declared? No (in the same scope)
+    - Can be updated? Yes
+    
+    3) const (Constant)
+    - Introduced in: ES6
+    - Scope: Block-scoped
+    - Hoisting: Yes (but same "temporal dead zone" as let)
+    - Can be re-declared? No
+    - Can be updated? ❌ No – it's a constant
+
+    4) Summary Table:
+    | Feature      | var      |   let | const   |
+    | ------------ | -------- | ----- | ------- |
+    | Scope        | Function | Block | Block   |
+    | Hoisting     | Yes      | Yes   | Yes     |
+    | Re-declare   | Yes      | No    | No      |
+    | Update value | Yes      | Yes   | No      |
+    -->
+
+    <script>
+        let globalScope = 10;
+        /*
+        👆
+        Can be accessed anywhere in the script tag.
+        */
+        function test() {
+            // 👇 These are functional scoped variable
+            var a = 2;
+            let b = 10;
+            const c = 3;
+
+            if (true) {
+                var d = 10;  // Functional Scope
+                let e = 2;   // Block Scope 
+                const f = 22;   // Block Scope
+            }
+            console.log(d);    // 10
+            console.log(e);    // Error => e is not defined
+            console.log(f);    // Error
+            /*
+            Here, d variable can be accessed anywhere inside the function i.e.; test() but other two variables e and f are block scoped they cannot be accessed outside {curly braces}.
+            */
+        }
+        // console.log(a);
+        // 👆 When accessed from out side the function it gives Error!
+        test();
+    </script>
+</body>
+
+</html>
