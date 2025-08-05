@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest and Spread Operator</title>
+</head>
+
+<body>
+    <!--  
+    1) Rest and Spread Operators in ES6
+    - Both Rest and Spread use three dots ..., but their purpose is different.
+
+    2) Rest Operator ...
+    - Used to collect multiple values into a single array.
+    a) Where is it used?
+    - In functions, to accept any number of arguments.
+    - In arrays or objects, to collect the remaining elements or properties.
+    b) Example in a function:
+
+    3) Spread Operator ...
+    - Used to expand or "spread" elements of an array or object.
+    a) Where is it used?
+    - To copy arrays or objects.    
+    - To merge arrays or objects.
+    - To pass array elements as arguments to a function.
+    -->
+
+    <script>
+        /*
+        Rest Operator 👇 => Makes single array from given values!
+        Rest Operator works with functions Argument and it will be used in left hand.
+        */
+        const sum = (...arr) => {
+            // 👆 ...arr collects all the arguments into an array called arr.
+            let total = 0;
+            for (let item of arr) {
+                total += item;
+            }
+            return total;
+        }
+        console.log(sum(10, 20, 30, 40, 50));
+
+        /*
+        Spread Operator => Give one by one items of Array
+        Spread Operator is used with array and used in right hand. 👇
+        */
+        const arr1 = ["Dell", "Hp", "Apple"];
+        console.log(...arr1);
+
+        const brand = [...arr1];  // Shallow copy not reference.
+        brand.push("Lenovo");
+        console.log(brand) // ['Dell', 'Hp', 'Apple', 'Lenovo']
+        console.log(arr1)  // ['Dell', 'Hp', 'Apple']
+
+        // With Object 👇
+        const obj = { name: "Ross", age: 23 };
+        /*
+        const test = obj;
+        test.name = "Ethan";
+        console.log(test);  // {name: 'Ethan', age: 23}
+        console.log(obj);  // {name: 'Ethan', age: 23}
+        */
+
+        // Spread with Object 👇
+        const test = { ...obj }; // Shallow copy not reference.
+        test.name = "Ethan";
+        console.log(test);  // {name: 'Ethan', age: 23}
+        console.log(obj);   // {name: 'Ross', age: 23}
+
+        // Spread operator to concat array 👇
+        const laptop = ["Dell", "Hp", "Apple"];
+        const mobile = ["Moto", "Samsung"];
+        const x = [...laptop, ...mobile];
+        console.log(x); // ['Dell', 'Hp', 'Apple', 'Moto', 'Samsung']
+
+        const person1 = { name: "Ross", age: 20 };
+        const person2 = { name: "Kate", age: 25 };
+        const z = { ...person1, ...person2 };
+        console.log(z) // {name: 'Kate', age: 25}
+
+        const student = ["Ross", "Kate", "Ethan"];
+        const [p, ...q] = student;
+        // 👆 Rest Operator
+        console.log(p);  // Ross
+        console.log(q);  // ['Kate', 'Ethan']
+
+        const employ = { name: "John", city: "New York", age: 25 };
+        const { name, ...demo } = employ;
+        console.log(name);  // John
+        console.log(demo);  // {city: 'New York', age: 25}  
+        /*
+        👆
+        Here demo creates new object with rest operator
+        demo => Creates a new Object with remaining values as {city: 'New York', age: 25}
+        */
+
+        const fun = (str, ...arg) => {
+            console.log(str); // Hello
+            console.log(arg); // [10, 20, 30, 40]
+        }
+        fun("Hello", 10, 20, 30, 40);
+
+        //                    👇 Rest => Array with values 10 & 5 ie.; [10, 5]
+        const wrapper = (fun, ...arg) => {
+            //        👇 Spread => fun(10, 5)
+            return fun(...arg);
+        };
+        const multiply = (n1, n2) => n1 * n2;
+        console.log(wrapper(multiply, 10, 5));  // 50
+
+        const [a, b, ...c] = [1, 2, 3, 4];
+        console.log(a)  // 1 
+        console.log(b)  // 2
+        console.log(c)  // [3, 4]
+
+        const { a1, b1, ...c1 } = { city: "London", mobile: 123, edu: "BTech" };
+        console.log(a1)  // undefined 
+        console.log(b1)  // undefined
+        console.log(c1)  // {city: 'London', mobile: 123, edu: 'BTech'}
+    </script>
+</body>
+
+</html>

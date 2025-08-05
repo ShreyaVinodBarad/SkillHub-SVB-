@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important</title>
+</head>
+
+<body>
+    <script>
+        // Example given by Akash Sir(To change a function into Arrow Fun) 👇
+        const demo = (n1, n2) => {
+            if (n1 < n2) {
+                n1 = n2
+            }
+            return 10;
+        }
+
+        const demo1 = () => {
+            return { name: "ross" }
+        };
+        console.log(demo1());
+        /*
+        👆
+        When writing an object as a single statement to return in a function. you have to write complete return inside {} because if you do like this: 
+        const demo1 = () => {name: "ross"}
+        JS gets confuse whether to take {} as object or function body. 
+        */
+
+        const x = 10;
+        if (true) {
+            const x = 20;
+            console.log(x); // 20
+            /*
+            👆
+            Here when we are accessing x from inner scope then value assigned to x in inner scope is considered ie; const x = 20;. 
+            */
+
+            console.log(y);   // Reference Error
+            let y = 10;
+            /*
+            👆
+            Here, we are using y before initialization so we are accessing y in TDZ(Temporal Dead Zone).
+            */
+        }
+        console.log(x);  // 10
+        /*
+        👆
+        Here we are accessing x from outer scope then value assigned to x in outer scope is considered ie; const x = 10;. 
+        */
+    </script>
+</body>
+
+</html>
