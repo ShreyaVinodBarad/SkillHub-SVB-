@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+
+<body>
+    <!--  
+    => A Promise in JavaScript is a way to handle something that will happen in the future, like data coming from a server.
+    -->
+    <!--  
+    1) What is a Promise?
+    - A Promise is like a guarantee of a result in the future. It is used when something takes time to finish — like downloading data, reading a file, etc.
+    - Think of it like ordering food online:
+    a) You place the order (you make a request).
+    b) You wait (the app says “order in progress”).
+    c) The food arrives or fails to arrive.
+    d) A Promise works the same way.
+
+    2) Why Promises?
+    - In JavaScript, many tasks take time (like fetching data from the internet). Instead of stopping everything and waiting, we use Promises to:
+    a) Keep doing other things while waiting for the result
+    b) Know when the result is ready (success or failure)
+    
+    3) States of a Promise
+    - A Promise has 3 states:
+    a) Pending – still waiting
+    b) Fulfilled – done successfully
+    c) Rejected – something went wrong
+    
+    4) Promise Syntax
+    let promise = new Promise(function(resolve, reject) {
+        // Do something (like fetch data)
+        if (/* success */) {
+            resolve("Success!");
+        } else {
+            reject("Error!");
+        }
+    });
+    - resolve() means: success
+    - reject() means: failed
+
+    5) Using .then() and .catch()
+    promise
+    .then(function(result) {
+        console.log("Result: " + result); // when resolved
+    })
+    .catch(function(error) {
+        console.log("Error: " + error);   // when rejected
+    });
+
+    6) In Short:
+    - Promises handle things that take time (like loading data).
+    - They either succeed (resolve) or fail (reject).
+    - We use .then() for success and .catch() for errors.
+    -->
+    <div id="root"></div>
+    <script>
+        let orderPizza = new Promise(function (resolve, reject) {
+            let isPizzaReady = true;
+            if (isPizzaReady) {
+                resolve("Pizza is Ready!");
+            }
+            else {
+                reject("Pizza is not ready yet!");
+            }
+        });
+        orderPizza.then(function (msg) {
+            console.log("Yay!" + msg);
+        }).catch(function (err) {
+            console.log("Oops!" + err);
+        })
+
+        // Examples by Akash Sir 👇
+        const handleSuccess = (arg) => console.log("Success", arg);
+        // 👆 This function will be called if the promise is successful.
+        const handleFail = () => console.log("Fail");
+        // 👆 This function will be called if the promise fails.
+        const x = new Promise((resolve, reject) => {
+            // 👆 You’re creating a new Promise named x.
+            resolve("Dell");
+            /*
+            👆
+            - This means: "Everything went well — here’s the result: Dell".
+            - So, this promise is resolved with the value "Dell".
+            */
+        });
+        x
+            .then(handleSuccess)
+            /*
+            👆
+            .then(handleSuccess) means:
+            - If the promise is successful, call handleSuccess("Dell")
+            - Output: Success Dell
+            */
+            .catch(handleFail);
+        /*
+            👆
+        .catch(handleFail) means:
+        - If the promise is rejected, call handleFail()
+        - But this won’t happen here because the promise was resolved, not rejected.
+        */
+
+
+        const result = fetch("https://jsonplaceholder.typicode.com/users");
+        /*
+        👆
+        - This line calls the fetch() function, which is used to make an HTTP request (in this case, a GET request) to the given API URL.
+        - fetch() returns a Promise that will eventually resolve to a Response object from the server.
+        */
+        result
+            .then((data) => {
+                return data.json();
+            })
+            /*
+            👆
+            - When the response comes back, take it (we're calling it data), and now convert it to real JavaScript using .json().            
+            - So:
+            a) data is the response object from the server.
+            b) It contains all the information sent back, including the actual user data, headers, status, etc.
+            c) But this data is in a special format (called a Response object), so you can't use it directly.
+            - Why data.json()?
+            a) The server usually sends data in JSON format (looks like text), and we want to convert it into a real JavaScript object so we can use it. 
+            - data.json():
+            a) Converts that response into real, usable JavaScript (like arrays or objects).
+            b) Also returns another Promise, which is why we chain another .then() after it.
+            */
+            .then((arg) => {
+                console.log(arg);
+                let str = "";
+                for (const item of arg) {
+                    str += `<div>${item.name}</div>`;
+                }
+                document.getElementById("root").innerHTML = str;
+            })
+            /*
+            👆
+            - Now arg is the array of users (parsed from the JSON).
+            - console.log(arg) shows the array in the browser console.
+            - It loops through each user in the array using for...of.
+            - It creates a string of HTML <div>s containing each user's name.
+            - Then, it updates the HTML content of the element with ID "root" by setting innerHTML to the constructed string.
+            */
+            .catch((err) => {
+                console.log("Not Ok!", err);
+            })
+        /*
+        👆
+        - This .catch() block runs if any error occurs during the fetch or while processing the response.
+        - It logs "Not Ok!" along with the error.
+        */
+    </script>
+</body>
+
+</html>
