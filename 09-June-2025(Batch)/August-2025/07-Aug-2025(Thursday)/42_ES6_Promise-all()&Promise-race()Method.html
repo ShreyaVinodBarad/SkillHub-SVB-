@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise.all() and Promise.race() Method</title>
+</head>
+
+<body>
+    <!--  
+    1) The Promise.all() method in JavaScript is used to run multiple promises in parallel and wait for all of them to resolve (or for any one to reject).
+
+    2) Syntax
+    Promise.all(iterable)
+    - iterable: An array (or any iterable) of promises.
+    - Returns a single Promise.
+
+    3) How it works
+    - If all promises resolve, Promise.all() returns a resolved promise with an array of the resolved values.
+    - If any promise rejects, Promise.all() immediately returns a rejected promise with the error of the first rejected promise.
+    
+    4) Summary:
+    | Promises        | Result                 |
+    | --------------- | ---------------------- |
+    | All resolve     |   Resolved with array  |
+    | Any one rejects |   Rejected immediately |
+    -->
+
+    <script>
+        const firstPromise = () => new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("First Promise!");
+            }, 2000);
+        })
+        const secondPromise = () => new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Second Promise!");
+            }, 1000);
+        })
+        const thirdPromise = () => new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Third Promise!");
+            }, 2000);
+        })
+
+        /*
+        👇 This way Promises are called sequentially one by one by 2 seconds taking total time of 6 seconds
+        firstPromise()
+            .then(message => {
+                console.log(message);
+                return secondPromise();
+            })
+            .then(message => {
+                console.log(message);
+                return secondPromise();
+            })
+            .then(message => {
+                console.log(message);
+            })
+            .catch(err => console.log(err));
+        */
+
+        // 👇 This way all Promises are called by 2 seconds at once only
+        Promise.all([firstPromise(), secondPromise(), thirdPromise()])
+            .then(message => console.log(message))
+            .catch(err => console.log(err));
+
+        Promise.race([firstPromise(), secondPromise(), thirdPromise()])
+            .then(message => console.log(message))
+            .catch(err => console.log(err));
+        /*
+        👆
+        1) The Promise.race() method is a built-in JavaScript function used to run multiple promises simultaneously, but it resolves or rejects as soon as one of the promises settles (i.e., resolves or rejects), whichever happens first. => Depends on time, the promise with less time executes first here.
+
+        2) Syntax:
+        Promise.race(iterable);
+        - iterable: An array (or any iterable) of promises (or values).
+        
+        3) Behavior:
+        - If the first settled promise is resolved, the race promise resolves with that value.
+        - If the first settled promise is rejected, the race promise rejects with that reason.
+        */
+
+        /*
+        => Differenc:
+        1) Promise.all()
+        a) Purpose:
+        - Waits for all promises to resolve. If all succeed, it returns an array of results.
+        - If any one fails, it immediately rejects with that error.
+        b) Syntax:
+        Promise.all([promise1, promise2, promise3])
+        c) Resolves when:
+        - All promises resolve.
+        d) Rejects when:
+        - Any one promise rejects (and stops waiting for the rest).
+        e) Output:
+        - An array of all resolved values, in the same order as input.
+
+        2) Promise.race()
+        a) Purpose:
+        - Returns the result of the first settled promise (resolved or rejected).
+        b) Syntax:
+        Promise.race([promise1, promise2, promise3])
+        c) Resolves when:
+        - The first promise resolves.
+        d) Rejects when:
+        - The first promise rejects.
+        e) Output:
+        - The value (or error) of the first settled promise.
+        */
+    </script>
+</body>
+
+</html>

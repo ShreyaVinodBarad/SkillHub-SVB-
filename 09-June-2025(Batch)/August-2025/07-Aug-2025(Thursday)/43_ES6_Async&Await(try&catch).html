@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async and Await with try and catch</title>
+</head>
+
+<body>
+    <!--  
+    1) Imagine This:
+    - You order a pizza.
+    - While waiting for the pizza to be delivered (which takes time), you don’t just sit there doing nothing — you continue watching Netflix.
+    - In JavaScript, this idea of doing other things while waiting is handled by something called asynchronous programming — and that’s where async and await come in.
+
+    2) The Problem:
+    - Normally, JavaScript code runs line by line — it waits for each line to finish before going to the next one.
+    - But what if a line takes time (e.g., fetching data from the internet)? Should everything stop and wait?
+    - NO! We want it to keep going and handle the result later. That’s asynchronous behavior.
+    
+    3) The Solution: async and await
+    a) async keyword:
+    - If you put async before a function, it always returns a Promise — even if you don’t write a .then() or new Promise.
+    - Used to define a function that will return a promise. It means “this function might do something that takes time.”
+    - Example:
+    
+    b) await keyword:
+    - You use await inside an async function to pause the code until a Promise finishes (like waiting for the pizza to arrive).
+    - Used inside async functions only. It tells JavaScript to wait for the promise to complete before moving to the next line.
+
+    4) Summary:
+    | Term    | Meaning                                       |
+    | ------- | --------------------------------------------- |
+    | async   | Makes a function return a Promise             |
+    | await   | Waits for a Promise to resolve inside async   |
+
+    5) In Easy Words:
+    - async = “This function might take time.”
+    - await = “Pause here until the task is done, then continue.”
+
+    6) What is try-catch?
+    - Used to handle errors in a clean way.
+    a) try: Block where you write code that might throw an error.
+    b) catch: If any error happens in the try, this block catches it and lets you handle it without crashing the app.
+
+    7) Easy Summary:
+    | Concept | Meaning in Simple Words                       |
+    | ------- | --------------------------------------------- |
+    | async   | Function that works in the background.        |
+    | await   | Wait for the background task to finish.       |
+    | try     | Try something that might go wrong.            |
+    | catch   | If it goes wrong, catch and handle the error. |
+
+    8) Where to use async and await:
+    - Use async and await when you are doing something that takes time and you want to wait for it to finish before moving on.
+
+    9) Summary:
+    - Use async on the function.
+    - Use await inside that function to pause and wait for results.
+    - Use with try-catch if there’s a chance of error.
+    -->
+
+    <script>
+        // Code by Shreya 👇
+        const greet = async () => {
+            return "Hello World!";
+        }
+        greet()
+            .then(message => console.log(message));  // Hello World! => Output
+
+        // Code with async and await with try and catch 👇
+        const orderPizza = (flavor) => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (flavor === "Cheese") {
+                        resolve("Your cheese pizza is ready!");
+                    }
+                    else {
+                        reject("Sorry, only cheese pizza is available right now!");
+                    }
+                }, 1000);
+            })
+        }
+        const handleOrder = async () => {
+            try {
+                console.log("Ordering Pizz!");
+                const result = await orderPizza("Cheese");
+                console.log(result);
+            }
+            catch (err) {
+                console.log(err);
+            }
+        }
+        handleOrder();
+        /*
+        👆
+        1) Output (if flavor is "cheese"):
+        Ordering pizza...
+        Your Cheese Pizza is ready!
+        2) Output (if flavor is "pepperoni"):
+        Ordering pizza...
+        Sorry, only Cheese Pizza is available right now.
+        */
+
+        // Code by Akash Sir: 👇
+        // This is how we use Promise 👇
+        const test = () => new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Done!");
+            }, 5000)
+        })
+        test()
+            .then(message => console.log(message))
+            .catch(err => console.log(err));
+
+        // Async and Await 👇
+        const demo = async () => {
+            try {
+                const message = await test();
+                console.log(message);
+            }
+            catch {
+                console.log(err);
+            }
+        }
+        demo();
+    </script>
+</body>
+
+</html>
