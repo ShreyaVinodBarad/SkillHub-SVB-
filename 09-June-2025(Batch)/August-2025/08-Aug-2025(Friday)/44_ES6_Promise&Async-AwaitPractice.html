@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Promise + Async and Await Practice</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <button type="button" class="btn btn-primary" onclick="handleThenCatch()">
+            Then-Catch
+        </button>
+        <button type="button" class="btn btn-secondary" onclick="handleAsyncAwait()">
+            Async-Await
+        </button>
+        <div id="root"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const URL = "https://jsonplaceholder.typicode.com/todos";
+        const handleThenCatch = () => {
+            let str = "";
+            let index = 0;
+            fetch(URL)
+                .then(res => res.json())
+                .then(data => {
+                    for (let item of data) {
+                        str += `<div>
+                            ${data[index].id} => ${data[index].title}
+                            </div >`;
+                        index++;
+                    }
+                    document.getElementById("root").innerHTML = str;
+                })
+                .catch(err => console.log(err));
+        };
+
+        // The above code is in Promise and the same thing is happening in handleAsyncAwait() function but the suntax is different
+
+        const handleAsyncAwait = async () => {
+            /*
+            const res = await fetch(URL);
+            const data = await res.json();
+            console.log(data);
+            👆
+            This is code for then, but it does not have catch like promise so we use try and catch in async and await just like in Promise - then and catch.
+            */
+            try {
+                // We can't use await keyword without having async keyword in a function.    👇 await => Used for Promise
+                const res = await fetch(URL);
+                const data = await res.json();
+                console.log(data);
+            }
+            catch (error) {
+                // 👇 If try has something wrong in it then catch's code runs! 
+                console.log(error);
+            }
+        };
+    </script>
+</body>
+
+</html>

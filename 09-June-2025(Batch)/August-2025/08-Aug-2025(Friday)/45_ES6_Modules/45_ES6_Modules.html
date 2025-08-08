@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modules</title>
+</head>
+
+<body>
+    <!--  
+    1) What are Modules?
+    - Modules in ES6 (ECMAScript 2015) are a way to organize your code by splitting it into smaller, reusable files.
+    - You can export things (like functions, variables, classes) from one file, and import them into another.
+    - Think of modules like separate boxes 🧰 – each box has tools inside, and you can choose which tools to take out and use.
+    
+    2) Why Use Modules?
+    - Keeps your code clean and organized
+    - Allows reuse of code across files
+    - Prevents naming conflicts
+    - Makes collaboration easier
+
+    3) There are two main types of exports:
+    a) Named Exports
+    - You can export multiple values by name.
+    - Syntax (exporting):
+    file: mathUtils.js
+    export const add = (a, b) => a + b;
+    export const subtract = (a, b) => a - b;
+    - Syntax (importing):
+    import { add, subtract } from './mathUtils.js';
+    => 👆 You must use the exact names when importing.
+
+    b) Default Export
+    - You can export one single default value per file.
+    - Syntax (exporting):
+    const log = (message) => console.log(message);
+    export default log;
+    - Syntax (importing):
+    import log from './logger.js';
+    => 👆 You can name the import anything you want.
+
+    c) You Can Also Combine Both
+    file: helper.js
+    export const greet = () => console.log("Hello!");
+    export default function sayBye() {
+        console.log("Bye!");
+    }
+    => Importing:
+    file: app.js
+    import sayBye, { greet } from './helper.js';
+    -->
+
+    <script type="module" src="./45_ES6_Modules(Import).js"></script>
+    <!-- 👆 type="module" is required to use import and export -->
+</body>
+
+</html>
