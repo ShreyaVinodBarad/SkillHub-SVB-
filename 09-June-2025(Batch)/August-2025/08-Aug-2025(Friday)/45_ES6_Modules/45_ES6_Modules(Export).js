@@ -10,8 +10,14 @@ const Add = () => {
 };
 export default Add;
 */
+/*
 const users = [
     { name: "Kate", sub: ["HTML", "CSS"] },
     { name: "Ethan", sub: ["ReactJS", "Angular"] }
 ];
 export default users;
+*/
+const sayHello = (name) => {
+    return `Hello, ${name}!`;
+}
+export default sayHello;
