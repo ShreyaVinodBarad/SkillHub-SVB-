@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Storage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--  
+    1) What is Local Storage?
+    - Local Storage is like a small notebook inside your browser where a website can write and keep information.
+    - This notebook stays even if you close the browser or restart your computer.
+    - Only the website that wrote in it can read it back.
+    a) In short:
+    - Local Storage = Your browser’s permanent memory for one website, controlled by JavaScript.
+    ---------------------------------------------------------------
+    2) Local Storage, Session Storage and Cookies:
+    a) Local Storage (Long-term memory)
+    - Think of it like: A diary you keep at home. You write in it, close it, and it’s still there next week, next month, next year — unless you tear the pages out yourself.
+    - Lifespan: Stays forever (until you or the site deletes it).
+    - Capacity: Around 5MB per website.
+    - Access: Only the same website that saved the data can read it.
+
+    b) Session Storage (Short-term memory)
+    - Think of it like: A sticky note you keep on your desk. When you close your desk (browser tab), the note is gone.
+    - Lifespan: Only until the browser tab is closed.
+    - Capacity: Similar to local storage (~5MB).
+    - Access: Only the same tab and same website can read it.
+    
+    c) Cookies (Small notes sent to the kitchen — the server)
+    - Think of it like: A tiny piece of paper with info that your browser gives to the website every time you visit or reload.
+    - Lifespan: Can expire at a set time (seconds, days, years).
+    - Capacity: Very small (~4KB).
+    - Access: Both browser and server can use them.
+    - Example use: Logging you in automatically, tracking visits across pages.
+    ---------------------------------------------------------------
+    3) In short:
+    a) Local Storage = Permanent until deleted.
+    b) Session Storage = Gone when tab closes.
+    c) Cookies = Tiny, can talk to the server.
+    -->
+
+    <div class="container">
+        <div id="root" class="p-3 fs-1 my-4 border text-center rounded-pill" style="width: 80px;">
+        </div>
+        <button type="button" class="btn btn-primary" onclick="increase()">
+            Add
+        </button>
+        <button type="button" class="btn btn-info" onclick="addData()">
+            Add Data
+        </button>
+        <button type="button" class="btn btn-success" onclick="getData()">
+            Get
+        </button>
+        <button type="button" class="btn btn-danger" onclick="removeData()">
+            Remove
+        </button>
+        <button type="button" class="btn btn-danger" onclick="addCookie()">
+            Add Cookie
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        let i = 0;
+        const increase = () => {
+            i++;
+            document.getElementById("root").innerHTML = i;
+        }
+        const addData = () => {
+            // Local Storage 👇
+            // Save data 👇
+            // localStorage => An Object & setItem(keyName, value) => Adds the Data => value always in String format
+            // localStorage.setItem("NameOfPerson", "Shreya Vinod Barad");
+            const arrOfBrand = ["Dell", "Apple", "HP"];
+            // localStorage.setItem("ArrOfBrand", arrOfBrand); => Dell,Apple,HP
+            localStorage.setItem("ArrOfBrand", JSON.stringify(arrOfBrand));
+            // 👆 ["Dell", "Apple", "HP"]
+            /*
+            JSON.stringify() 
+            - JSON.stringify() is a JavaScript function that turns an object or array into a text (string) in JSON format.
+            a) Why we need it
+            - Local Storage and Cookies can only store data as strings — not as objects or arrays.
+            - When sending data to a server, you often send it as a JSON string.            
+            */
+
+            // Session Storage 👇
+            sessionStorage.setItem("ArrOfBrand", JSON.stringify(arrOfBrand));
+        }
+        const getData = () => {
+            // Read data 👇
+            // localStorage.getItem("KeyName");
+            let getData = localStorage.getItem("ArrOfBrand");
+            console.log(getData);
+            // Converting by to Array 👇
+            console.log(JSON.parse(getData));
+            /*
+            JSON.parse()
+            - Take a JSON string and turn it into a real JavaScript object (or array).
+            a) When to use
+            - You use JSON.parse() whenever you have data in JSON format as a string and you want to work with it like a normal JavaScript object.
+            */
+        }
+        const removeData = () => {
+            // Remove specific data 👇
+            // localStorage.removeItem("KeyName");
+            localStorage.removeItem("ArrOfBrand");
+        }
+        const addCookie = () => {
+            const today = new Date();
+            console.log(today);
+            console.log(today.toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }));  // Changing time according to country code
+            console.log(today.toUTCString());
+            console.log(today.getTime()); // Time in MilliSeconds from January 1, 1970
+            today.setTime(today.getTime() + (10 * 1000));
+            // document.cookie = `cookieName=cookieValue; expires=`
+            document.cookie = `NameOfPerson=Shreya; expires=${today.toUTCString()}`
+
+            /*
+            a) What happens after running this
+            - A cookie named NameOfPerson with value Shreya is stored in your browser for this domain.
+            - If you don’t set an expiration date, it becomes a session cookie, meaning it disappears when you close the browser.
+            */
+        }
+    </script>
+</body>
+
+</html>
