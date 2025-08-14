@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Object</title>
+</head>
+
+<body>
+    <!--  
+    1) What is an Event Variable? 
+    - In JavaScript, the event variable (often written as e or evt) refers to the Event object that gets automatically passed to your event handler when an event is triggered.
+    - It contains information about what happened — for example, which element was clicked, what key was pressed, mouse position, and more.
+    
+    2) Common Properties:
+    a) event.type → Type of event (click, change, keydown, etc.)
+    b) event.target → Element that triggered the event
+    c) event.currentTarget → Element the listener is attached to
+    d) event.preventDefault() → Stops default browser behavior
+    e) event.stopPropagation() → Stops event bubbling
+    
+    3) Best Practice:
+    - Always name it something (event, e, or evt) instead of relying on a global event object — because in strict mode or in modern browsers, that global might not exist.
+    -->
+    <button type="button" id="myBtn">Click Me</button>
+
+    <script>
+        document.getElementById("myBtn").addEventListener("click", () => {
+            console.log(event);  // Full event object => An object
+            console.log(event.type);  // Event type (e.g., "click") => click
+            console.log(event.target);  // The element that triggered the event => <button type="button" id="myBtn">Click Me</button>
+        })
+    </script>
+</body>
+
+</html>
