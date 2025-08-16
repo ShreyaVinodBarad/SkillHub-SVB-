@@ -12,6 +12,9 @@ const transport = document.getElementById("transport");
 const rent = document.getElementById("rent");
 const food = document.getElementById("food");
 
+const accountData = JSON.parse(localStorage.getItem("BudgetTracker")) || [];
+
+/*
 const accountData = [
     { title: "Budget Tracker", amount: 45000, type: "Income", category: "Salary", note: "Microsoft Monthly Salary" },
     { title: "Cidco Home Rent", amount: 12000, type: "Expense", category: "Rent", note: "Rent of the Home" },
@@ -20,6 +23,7 @@ const accountData = [
     { title: "Birthday Party", amount: 2180, type: "Expense", category: "Food", note: "Chinese Food" },
     { title: "Snacks", amount: 1080, type: "Expense", category: "Food", note: "Evening Snacks" }
 ];
+*/
 
 const handleAdd = () => {
     /*
@@ -33,6 +37,8 @@ const handleAdd = () => {
         note: note.value
     });
     // console.log(accountData);
+
+    localStorage.setItem("BudgetTracker", JSON.stringify(accountData));
 
     resetInput();
     displayDataInTable();
@@ -75,15 +81,15 @@ const displayDataInTable = (arg, cate) => {
     expenseData.innerHTML = "&#8377; " + totalExpense;
     balanceData.innerHTML = "&#8377; " + balanceAmount;
 
-    const totalTransportCost = accountData
+    const totalTransportCost = (accountData
         .filter(item => item.category === "Transport")
-        .reduce((sum, item) => sum + item.amount, 0) / totalExpense * 100;
-    const totalRentCost = accountData
+        .reduce((sum, item) => sum + item.amount, 0) / totalExpense * 100) || 0;
+    const totalRentCost = (accountData
         .filter(item => item.category === "Rent")
-        .reduce((sum, item) => sum + item.amount, 0) / totalExpense * 100;
-    const totalFoodCost = accountData
+        .reduce((sum, item) => sum + item.amount, 0) / totalExpense * 100) || 0;
+    const totalFoodCost = (accountData
         .filter(item => item.category === "Food")
-        .reduce((sum, item) => sum + item.amount, 0) / totalExpense * 100;
+        .reduce((sum, item) => sum + item.amount, 0) / totalExpense * 100) || 0;
 
     transport.style.width = `${(Number(totalTransportCost).toFixed(2))}%`;
     rent.style.width = `${(Number(totalRentCost).toFixed(2))}%`;
