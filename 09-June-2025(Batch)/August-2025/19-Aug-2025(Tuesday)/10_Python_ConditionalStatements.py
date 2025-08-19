@@ -17,23 +17,24 @@ c) if...elif...else → Checks multiple conditions.
 3) In short:
 Conditional statements = “If this happens, do this, otherwise do that.”
 """
+
 # if Statement
 age = 20
-if(age > 18):
-    print("You can vote") # You can vote
+if age > 18:
+    print("You can vote")  # You can vote
 
 # if...else Statement
 age = 16
-if(age > 18):
+if age > 18:
     print("You are eligible to Vote!")
 else:
-    print("You are too young to Vote!") # You are too young to Vote!
+    print("You are too young to Vote!")  # You are too young to Vote!
 
 # if...elif...else
 marks = 67
-if(marks >= 90):
+if marks >= 90:
     print("Grade: A")
-elif(marks >= 75):
+elif marks >= 75:
     print("Grade: B")
 else:
-    print("Grade: C") # Grade: C
+    print("Grade: C")  # Grade: C
