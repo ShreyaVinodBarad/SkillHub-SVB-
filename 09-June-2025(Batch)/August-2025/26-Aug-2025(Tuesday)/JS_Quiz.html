@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+
+<body>
+
+    <script>
+        quiz = [
+            {
+                Question: "What is the capital of India?",
+                Options: ["New Delhi", "Kolkata", "Hyderabad", "Mumbai"],
+                CorrectAns: "New Delhi",
+            },
+            {
+                Question: "How many days are there in a leap year?",
+                Options: ["365 days", "366 days", "367 days", "364 days"],
+                CorrectAns: "366 days",
+            },
+            {
+                Question: "Which planet is known as the 'Red Planet'?",
+                Options: ["Jupiter", "Mars", "Saturn", "Earth"],
+                CorrectAns: "Mars",
+            },
+            {
+                Question: "Who is known as the 'Father of Computers'?",
+                Options: [
+                    "Albert Einstein",
+                    "Charles Babbage",
+                    "Isaac Newton",
+                    "Thomas Edison",
+                ],
+                CorrectAns: "Charles Babbage",
+            },
+            {
+                Question: "What is H₂O commonly known as?",
+                Options: [
+                    "Oxygen",
+                    "Water",
+                    "Hydrogen",
+                    "Salt",
+                ],
+                CorrectAns: "Water",
+            }
+        ]
+
+        let correctAnsCount = 0;
+        for (let item of quiz) {
+            let optionsText = "";
+            let optionIndex = 1;
+            for (let i = 0; i < item.Options.length; i++) {
+                optionsText += `Option ${optionIndex++}: ${item.Options[i]}\n`;
+            }
+            let questionAns = prompt(`Question: ${item.Question} 
+            ${optionsText}
+            `);
+            if (questionAns == item.CorrectAns) {
+                alert("Your answer is Correct!");
+                correctAnsCount++;
+            }
+            else {
+                alert("Your answer is Wrong!");
+            }
+        }
+        alert(`Your correct answer out of ${quiz.length} is ${correctAnsCount}!`);
+        alert(`Your percentage is: ${correctAnsCount / quiz.length * 100}`);
+    </script>
+</body>
+
+</html>
