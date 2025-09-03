@@ -20,6 +20,8 @@ def toDoList():
             task = input("Enter your task: ")
             toDoListArr.append(f"{task} [❌ Not Done]")
         # elif choice == 3:
+        elif choice == 4:
+            toDoListArr.remove(task)
         elif choice == 5:
             print("Thank You for using our To - Do App!")
             break
