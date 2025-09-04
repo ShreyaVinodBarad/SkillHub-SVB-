@@ -1,0 +1,6 @@
+file = open("test.txt", "w+")
+file.write("This is my first line!")
+file.seek(0)
+res = file.read()
+print(res)
+file.close()

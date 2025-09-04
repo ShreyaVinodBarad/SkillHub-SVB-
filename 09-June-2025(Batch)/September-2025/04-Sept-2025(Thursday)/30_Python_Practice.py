@@ -1,0 +1,7 @@
+fileName = input("Enter file name: ")
+file = open(fileName, "w+")
+contentOfFile = input("Enter the content of the file: ")
+file.write(contentOfFile)
+file.seek(0)
+res = file.read()
+print(res)
