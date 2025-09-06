@@ -1,0 +1,50 @@
+<!-- 
+1) Tag => Opening and closing tag => <h1></h1> 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python - Web Scraping</title>
+    <style>
+        /* Inside style tag you can write the CSS for the file */
+        .test {
+            background-color: burlywood;
+        }
+
+        .demo {
+            color: darkgreen;
+        }
+
+        div>p {
+            /* 👆 Child Selector */
+            background-color: aquamarine;
+        }
+
+        div+p {
+            /* 👆 Adjacent Sibling Selector */
+            background-color: blueviolet;
+        }
+
+        #title {
+            color: chocolate;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Code should be inside the body -->
+    <h1 class="test demo">Hello</h1>
+    <!-- 👆 h1 and div are sibling 👇 -->
+    <div>
+        <!-- 👆 Parent -->
+        <p>Hello World</p>
+        <!-- 👆 Child -->
+    </div>
+    <p>Hello World</p>
+    <h2 id="title">Hello World</h2>
+</body>
+
+</html>
