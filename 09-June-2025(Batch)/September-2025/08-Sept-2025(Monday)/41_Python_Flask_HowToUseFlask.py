@@ -76,6 +76,21 @@ if __name__ == "__main__":
     app.run(debug=True)
 """
 👆
+a) if __name__ == "__main__":
+- Every Python file has a special built-in variable called __name__.
+- If you run a file directly (like python app.py), Python sets __name__ = "__main__".
+- If you import that file into another file, Python sets __name__ to the file's name (e.g., "app").
+- This line makes sure the code runs only when the file is executed directly, not when imported.
+b) app.run(debug=True)
+- app is your Flask application object (app = Flask(__name__)).
+- app.run() starts a local web server so you can test your Flask app in the browser or with Postman.
+- debug=True means:
+a) The server will automatically restart when you change the code.
+b) Flask will show a detailed error page in the browser if something goes wrong.
+"""
+
+"""
+👆
 - This runs your Flask server.
 debug=True → helpful while developing. 
 - It:
