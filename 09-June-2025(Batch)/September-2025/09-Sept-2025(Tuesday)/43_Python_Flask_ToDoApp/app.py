@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 import json
 
 """
@@ -8,6 +8,7 @@ a) Flask → to create the web app.
 b) jsonify → converts Python objects into JSON responses (so the browser/Postman can read them).
 c) request → lets you get data sent from the client (like JSON from Postman).
 d) import json → used for working with JSON files (reading/writing db.json).
+e) render_template connects your Python code (Flask) with your HTML files so you can build web pages with dynamic content.
 """
 
 app = Flask(__name__)
@@ -60,8 +61,10 @@ def addToDo(data):
 
 @app.route("/")
 def home():
-    return "Welcome to Flask To - Do App"
+    return render_template("index.html")
 
+
+# 👆 Instead of returning plain text, this tells Flask: “Find a file called index.html inside the templates/ folder and send it to the browser.” So the browser displays the HTML page.
 
 # 👆 When you visit / in the browser → returns a welcome message.
 
