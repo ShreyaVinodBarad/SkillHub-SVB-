@@ -19,15 +19,33 @@ def toDoList():
         elif choice == 2:
             task = input("Enter your task: ")
             toDoListArr.append(f"{task} [❌ Not Done]")
+            print("Task Added Successfully!")
         elif choice == 3:
-            indexNo = int(input("Enter index no of the task to mark it as done: "))
+            indexNo = int(input("Enter index no of the task to mark it as done: ")) - 1
+            if indexNo >= 0 and indexNo < len(toDoListArr):
+                task = toDoListArr[indexNo].replace("[❌ Not Done]", "[✅ Done]")
+                toDoListArr[indexNo] = task
+                print("Task marked as Done!")
+            else:
+                print("Invalid Task Number!")
         elif choice == 4:
-            indexNo = int(input("Enter task index no to delete the task: "))
-            toDoListArr.remove(toDoListArr[indexNo])
-            print(f"Your task deleted - {toDoListArr[indexNo]}")
+            indexNo = int(input("Enter index no of the task to mark it as done: ")) - 1
+            if indexNo >= 0 and indexNo < len(toDoListArr):
+                deleted = toDoListArr.pop(indexNo)
+                print(f"Your task deleted: {deleted}")
+            else:
+                print("Invalid Task Number!")
         elif choice == 5:
             print("Thank You for using our To - Do App!")
             break
 
 
 toDoList()
+"""
+=> Syntax for replace():
+string.replace(old, new, count)
+a) string → the original text you want to change
+b) old → the part of the string you want to replace
+c) new → the new text you want instead
+d) count (optional) → how many occurrences to replace. If omitted, all occurrences are replaced.
+"""
