@@ -12,6 +12,7 @@ const transport = document.getElementById("transport");
 const rent = document.getElementById("rent");
 const food = document.getElementById("food");
 
+// localStorage.clear()
 const accountData = JSON.parse(localStorage.getItem("BudgetTracker")) || [];
 
 /*
