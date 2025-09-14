@@ -43,28 +43,56 @@
     <script>
         const API_URL = "https://crud-operations-app-ykdk.onrender.com"
         // const API_URL = "http://127.0.0.1:5000"
+        /*
+        👆
+        - Backend API URL (online).
+        - Second line(commented) is for local testing.
+        */
 
         document.getElementById("todoForm").addEventListener("submit", async (e) => {
+            // 👆 Finds the form with id todoForm and runs this            function when the form is submitted.
             e.preventDefault()
+            // 👆 When form is submitted, stop page reload.
             const task = document.getElementById("task").value.trim()
+            // 👆 The trim() method in JavaScript is a built-in string function used to remove whitespace characters from both the beginning and end of a string.
             if (!task) return alert("Enter a task!")
+            // 👆 Get task text from input. If empty → show alert and stop.
 
             await fetch(`${API_URL}/create`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ task })
             });
+            // 👆 Send new task to backend with POST request in JSON format.
+            /*
+            👆
+            - fetch(...) → makes a network request to your backend
+            (/create endpoint).
+            - method: "POST" → tells the server we are sending data
+            (not just reading).
+            - headers: { "Content-Type": "application/json" } → tells
+            the server the data is in JSON format.
+            - body: JSON.stringify({ task }) → converts the task
+            (JavaScript object) into a JSON string before sending.
+            - await → waits until the request finishes before moving
+            to the next line.
+            - So basically: It sends the new task to your backend as
+            JSON.
+            */
 
             document.getElementById("todoForm").reset()
             fetchTodos()
+            // 👆 Clear form input. Refresh task list.
         })
 
         async function fetchTodos() {
             const res = await fetch(`${API_URL}/read`)
             const todos = await res.json()
+            // 👆 Get all tasks from backend using GET. Convert response to JSON list.
 
             const tableBody = document.getElementById("todoTable")
             tableBody.innerHTML = ""
+            // 👆 Clear table before showing tasks again.
 
             todos.forEach(todo => {
                 const row = document.createElement("tr")
@@ -80,6 +108,14 @@
               </td>
             `
                 tableBody.appendChild(row)
+                /*
+                👆
+                For each task:
+                - Show ID.
+                - Show input box (disabled).
+                - Show Edit button, Save button (hidden by default), and Delete button.
+                - Add row to table.
+                */
             })
         }
 
@@ -88,6 +124,7 @@
             input.disabled = false
             document.getElementById(`save-${id}`).classList.remove("d-none")
         }
+        // 👆 Make input editable and show the Save button.
 
         async function updateTask(id) {
             const updatedTask = document.getElementById(`task-${id}`).value
@@ -99,6 +136,7 @@
             })
 
             fetchTodos()
+            // 👆 Take new text. Send PUT request to backend with updated task. Refresh list.
         }
 
         async function deleteTask(id) {
@@ -106,9 +144,18 @@
             await fetch(`${API_URL}/delete/${id}`, { method: "DELETE" })
             fetchTodos()
         }
+        // 👆 Show confirm popup. If Yes → send DELETE request to backend. Refresh list.
 
         fetchTodos()
+        // 👆 Load tasks immediately when page first opens.
     </script>
 </body>
 
 </html>
+<!-- 
+Summary of Flow:
+- Create → Add task using form → POST request.
+- Read → Get tasks from API → Show in table.
+- Update → Enable input → Save → PUT request.
+- Delete → Confirm → DELETE request.
+-->
