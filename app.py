@@ -48,7 +48,7 @@ with open("db.json") as file:
 
 
 def addToDo(data):
-    with open("db.json", "+w") as file:
+    with open("db.json", "w+") as file:
         json.dump(data, file, indent=4)
 
 
