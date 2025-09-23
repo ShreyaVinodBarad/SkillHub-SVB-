@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bus Booking App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="d-flex justify-content-center align-items-center min-vh-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3">
+                <div class="card">
+                    <div class="card-header alert alert-warning">
+                        <h2 class="text-center">
+                            Bus Booking App
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <select class="form-select" id="from">
+                                <option selected>From...</option>
+                                <option value="Pune">Pune</option>
+                                <option value="Mumbai">Mumbai</option>
+                                <option value="Nagpur">Nagpur</option>
+                                <option value="Aurangabad">Aurangabad</option>
+                            </select>
+                            <select class="form-select" id="to">
+                                <option selected>To...</option>
+                                <option value="Pune">Pune</option>
+                                <option value="Mumbai">Mumbai</option>
+                                <option value="Nagpur">Nagpur</option>
+                                <option value="Aurangabad">Aurangabad</option>
+                            </select>
+                            <button type="button" class="btn btn-primary" onclick="handleSearch()">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="root">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
