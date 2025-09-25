@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Practice</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .seat {
+            height: 100px;
+            width: 50px;
+            border: 2px solid grey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 offset-4">
+                <div class="card">
+                    <div class="card-header alert alert-warning text-center">
+                        <h2>
+                            Bus Booking
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div class="seat" id="s-1"></div>
+                            <div class="d-flex">
+                                <div class="seat" id="s-2"></div>
+                                <div class="seat" id="s-3"></div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="seat" id="s-1"></div>
+                            <div class="d-flex">
+                                <div class="seat" id="s-2"></div>
+                                <div class="seat" id="s-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="root" class="my-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        price = 500
+        seat = document.getElementsByClassName("seat")
+        for (const item of seat) {
+            item.addEventListener("click", () => {
+                item.classList.toggle("bg-success")
+                const selectedSeats = document.getElementsByClassName("bg-success")
+                const cost = selectedSeats.length * price
+                const gst = 18
+                const tax = cost * gst / 100
+                const total = cost + tax
+
+                let str = ""
+                for (const s of selectedSeats) {
+                    str += s.id + ", "
+                    // 👆 element.id = the value of the id attribute of that element.
+                }
+                console.log(str)
+                document.getElementById("root").innerHTML = `
+                <div class = "alert alert-success">
+                    <h5>Bill: ${cost} Tax: ${total} Total: ${total}</h5>
+                    <h6>You have selected ${str} seats.</h6>
+                    </div>
+                `
+            })
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
