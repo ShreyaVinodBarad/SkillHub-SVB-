@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision</title>
+</head>
+
+<body>
+    <h1 data-skillhub="hello"></h1>
+    <!-- 
+    👆
+    - This creates an <h1> element with a custom attribute called data-skillhub.
+    - The value of this attribute is "hello".
+    - data-* attributes are HTML5 custom attributes used to store extra information on elements.
+    - In this case, you’re storing "hello" as metadata.
+    -->
+
+    <input type="radio" name="gender" id="male">
+    <label for="male">Male</label>
+    <input type="radio" name="gender" id="female">
+    <label for="female">Female</label>
+
+    <!--
+    Semantic Tags 👇 
+    - Semantic tags in HTML are special tags that tell the meaning or purpose of the content inside them — both to the browser and to developers.
+    - In simple words:
+    Semantic tags make your webpage more understandable — they describe what each part of the page is for.
+    - Semantic tags make your webpage meaningful, organized, and easier for everyone to understand — humans, browsers, and search engines.
+    - Example:
+    header, section, article, footer, etc.
+    -->
+
+    <!-- 
+    div > p => Only Children => Child Selector
+    div  p => Children and Grandchildren => Descendant Selector
+    div + p => p tag immeditaley after div tag => Adjacent Sibling Selector
+    div ~ p => all p tags after div tag => All Sibling Selector
+    -->
+
+    <!-- 
+    rgb(0, 0, 255) => Gives Blue Color
+    rgba(0, 0, 0, 255, 0.5) => Alpha - 0.5 => Opacity => range - 0 t0 1 => 0 - Fully Transparent, 0.5 - Semi Transparent, 1 - Solid
+    -->
+
+    <!-- 
+    flex-direction: column;
+    👆
+    a) flex-direction property
+    - It controls the direction of the flex items inside the container.
+    b) flex-direction: column
+    - This makes the flex items stack vertically, from top to bottom (like a column).
+    c) Summary: 
+    | Property                 | Direction     | Layout     |
+    | ------------------------ | --------------| ---------- |
+    | flex-direction: row      | Left ➡ Right | Horizontal |
+    | flex-direction: column   | Top ⬇ Bottom  | Vertical   |
+    -->
+
+    <!-- 
+    flex-wrap => wrap => When overflow of items happen over container
+    flex-wrap => nowrap => By default 
+    -->
+
+    <!-- 
+    Things to remember while using Media Query:-
+    a) Avoid apply height and width => Use max-width and max-heigth
+    b) Avoid using px(Absolute Units) and use %, em, rem (Relative Units)
+    -->
+
+    <!-- 
+    height: 100dvh
+    👆
+    - This means the element’s height will be 100% of the device’s viewport height — using dynamic viewport height (dvh).
+    a) What is dvh?
+    - dvh stands for Dynamic Viewport Height.
+    - 1dvh = 1% of the visible height of the browser or screen right now.
+    - 100dvh = 100% of the visible height — the full height of the current screen.
+    b) Why “dynamic”?
+    - It’s called dynamic because it changes automatically if the visible area of the screen changes — for example:
+    1) When the address bar or keyboard appears or disappears on mobile.
+    2) When the screen rotates (portrait ↔ landscape).
+    - So, the layout adjusts smoothly!
+    c) Difference between vh and dvh
+    1) Unit: vh
+    a) Viewport Height
+    b) Fixed — doesn’t change when screen UI changes (like mobile address bar)
+    c) Desktop layouts
+    -----------------------------------------------------------------
+    2) Unit: dvh
+    a) Dynamic Viewport Height
+    b) Adjusts dynamically with visible screen changes
+    c) Mobile-friendly layouts
+    - dvh = Dynamic Viewport Height → it keeps your design flexible and mobile-friendly by adapting to the visible screen size in real time.
+    -->
+
+    <!-- 
+    em depends on Parent
+    rem depends on HTML
+    -->
+
+    <!-- 
+    aspect-ratio => The aspect-ratio property in CSS controls the shape of an element — it decides how wide and how tall it should be in relation to each other.
+    - aspect-ratio keeps a fixed width-to-height ratio — so the element doesn’t look stretched.
+    -->
+
+    <!-- 
+    object-fit => The object-fit property in CSS tells the browser how an image or video should fit inside its container (like a box or frame)
+    - It’s mostly used with the <img> or <video> tag.
+    a) fill => Stretches the image to fill the box (may look squished)
+    b) contain => Fits the whole image inside the box (no cropping)
+    c) cover => Fills the box completely (some parts may be cropped)
+    d) none => Keeps the original size (might overflow)
+    e) scale-down => Chooses the smaller of none or contain
+    -->
+    <script>
+        const x = document.querySelector("[data-skillhub]")
+        console.log(x)
+        /*
+        👆
+        - [] inside the string [data-skillhub] is a CSS attribute selector.
+        - It matches any element that has a data-skillhub attribute.
+        */
+    </script>
+</body>
+
+</html>
