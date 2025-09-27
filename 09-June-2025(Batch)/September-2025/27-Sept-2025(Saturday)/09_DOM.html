@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM(Document Object Model)</title>
+</head>
+
+<body>
+    <!-- 
+    - The DOM is like a map or tree of your web page that the browser creates when it loads your HTML.
+    - It turns the HTML code into a structure of objects, so that JavaScript can easily see, change, or control parts of the page.
+    - DOM = A live, object-based version of your webpage that JavaScript can interact with.
+    -->
+    <div class="card">
+        <div class="card-header" id="id1">header</div>
+        <!-- 
+        👆 To change the content inside the card-header clas we have to first
+        select the element
+        -->
+        <div class="card-body">body</div>
+        <div class="card-footer">footer</div>
+    </div>
+    <h1>Hello</h1>
+    <button onclick="changeText()">Test</button>
+
+    <script>
+        const x = document.getElementById("id1")
+        const y = document.getElementsByClassName("card-body") // Gives an Array
+        const z = document.getElementsByTagName("h1") // Gives an Array
+        const q = document.querySelector("#id1")
+        console.log(x)
+        console.log(y)
+        console.log(z)
+        console.log(q)
+
+        const changeText = () => {
+            const ele = document.querySelector("h1")
+            console.log(ele.innerText) // Gives all the content inside the H1 tag also tags
+            // ele.innerText = "SkillHub" => Changes the text
+            ele.innerHTML = "<a href='www.google.com'>SkillHub</a>"
+            // 👆 Tag are also given preference
+        }
+    </script>
+</body>
+
+</html>

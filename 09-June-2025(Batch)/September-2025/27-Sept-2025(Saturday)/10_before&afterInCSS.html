@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>before and after in CSS</title>
+    <style>
+        h1::before {
+            content: "*";
+        }
+
+        h1:hover::after {
+            content: "Shreya";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+            background-color: wheat;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    1) :before and :after in CSS
+    - These are called pseudo-elements.
+    - They let you add extra content to a webpage without changing the HTML.
+
+    2) Easy way to remember:
+    a) :before → adds something before the content of an element.
+    b) :after → adds something after the content of an element.
+
+    3) In short:
+    - :before and :after help you add extra style or content to elements using CSS only, without editing HTML.
+
+    4) Tooltip:
+    - A tooltip is a small message that appears when you hover over an element (like a button or text).
+    - Example: When you hover over a word, a small box pops up with extra info.
+    -->
+    <h1>Hello</h1>
+</body>
+
+</html>
