@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Practice</title>
+</head>
+
+<body>
+    <button onclick="fetchData()">
+        Get Data Using then-catch
+    </button>
+    <button onclick="fetchDataWithAsync()">
+        Get Data Using async-await
+    </button>
+
+    <script>
+        const URL = "https://jsonplaceholder.typicode.com/users" // EndPoint
+        const fetchData = () => {
+            const x = fetch(URL)
+            x
+                .then(data => data.json())
+                .then(res => console.log(res))
+                .catch(err => console.log(err))
+        }
+
+        const fetchDataWithAsync = async () => {
+            try {
+                const data = await fetch(URL)
+                const res = await data.json()
+                console.log(res)
+            }
+            catch (err) {
+                console.log(err)
+            }
+        }
+    </script>
+</body>
+
+</html>
