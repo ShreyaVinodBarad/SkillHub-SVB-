@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Task Manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="d-flex justify-content-center align-items-center vh-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3">
+                <div class="card">
+                    <div class="card-header alert alert-warning fs-3 text-center">
+                        Task Manager
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="task" placeholder="Enter the Task...">
+                                    <label for="task">Enter the Task</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating mb-3">
+                                    <select class="form-select" id="priority">
+                                        <option selected value="">
+                                            Choose Priority
+                                        </option>
+                                        <option value="High">High</option>
+                                        <option value="Medium">Medium</option>
+                                        <option value="Low">Low</option>
+                                    </select>
+                                    <label for="priority">
+                                        Choose Priority
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="description"
+                                        placeholder="Enter Description...">
+                                    <label for="description">
+                                        Enter Description
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating mb-3">
+                                    <input type="date" class="form-control" id="date" placeholder="Enter Date...">
+                                    <label for="date">Enter Date</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-success w-100" id="addTaskBtn">Add the Task</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/app.js" type="module"></script>
+</body>
+
+</html>
+<!-- 
+1) Task 
+2) Priority
+3) Description
+4) Date
+-->
