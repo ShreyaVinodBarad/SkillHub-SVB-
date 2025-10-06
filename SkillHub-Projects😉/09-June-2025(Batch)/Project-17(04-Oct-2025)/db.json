@@ -1,0 +1,39 @@
+{
+    "notes": [
+        {
+            "task": "Learn BootStrap",
+            "priority": "High",
+            "description": "Learn BS",
+            "date": "2025-10-08",
+            "id": 1
+        },
+        {
+            "task": "Learn Python",
+            "priority": "Medium",
+            "description": "All topics",
+            "date": "2025-10-09",
+            "id": 2
+        },
+        {
+            "task": "Learn JS",
+            "priority": "Medium",
+            "description": "Learn BS",
+            "date": "2025-10-03",
+            "id": 3
+        },
+        {
+            "task": "Learn Python",
+            "priority": "High",
+            "description": "All topics",
+            "date": "2025-10-11",
+            "id": 4
+        },
+        {
+            "task": "Learn Python",
+            "priority": "Medium",
+            "description": "All topics",
+            "date": "2025-10-17",
+            "id": 5
+        }
+    ]
+}
