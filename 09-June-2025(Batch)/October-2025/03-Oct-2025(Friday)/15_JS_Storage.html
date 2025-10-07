@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage</title>
+</head>
+
+<body>
+    <!-- 
+    1) Cookies
+    Where: Stored in the browser, sent to the server with each request.
+    Size limit: ~4 KB
+    Expiry: Can be set via expires or max-age; otherwise, session-only
+    Use case: Authentication, tracking small data
+    
+    2) Local Storage
+    Where: Stored in the browser only (not sent to server)
+    Size limit: ~5–10 MB
+    Expiry: Persistent until manually cleared
+    Use case: Storing preferences, theme, offline data
+
+    3) Session Storage
+    Where: Stored in the browser tab only
+    Size limit: ~5 MB
+    Expiry: Until the tab is closed
+    Use case: Temporary data per session, form data
+    -->
+    <button onclick="addToLocal()">Add</button>
+    <button onclick="getFromLocal()">Get</button>
+    <button onclick="removeFromLocal()">Remove</button>
+
+    <button onclick="addToSession()">Add</button>
+    <button onclick="getFromSession()">Get</button>
+    <button onclick="removeFromSession()">Remove</button>
+
+    <h1>Cookie</h1>
+    <button onclick="addCookie()">Add Cookie</button>
+
+    <button onclick="add()">Practice With Array - Add</button>
+    <button onclick="get()">Practice With Array - Get</button>
+
+    <script>
+        const addToLocal = () => {
+            localStorage.setItem("SkillHub", "Shreya")
+        }
+
+        const getFromLocal = () => {
+            const res = localStorage.getItem("SkillHub")
+            console.log(res)
+        }
+
+        const removeFromLocal = () => {
+            localStorage.removeItem("SkillHub")
+        }
+
+        const addToSession = () => {
+            sessionStorage.setItem("Brand", "Apple")
+        }
+
+        const getFromSession = () => {
+            const res = sessionStorage.getItem("Brand")
+            console.log(res)
+        }
+
+        const removeFromSession = () => {
+            sessionStorage.removeItem("Brand")
+        }
+
+        const addCookie = () => {
+            const x = new Date() // 1. Create a new Date object (current time)
+            const res = x.getTime() + (10 * 1000) // 2. Add 10 seconds (10 * 1000 ms) to current time
+            x.setTime(res) // 3. Set the new time to the Date object
+            document.cookie = `user=apple;expires=${x.toUTCString()}` // 4. Create a cookie 'user=apple' that expires in 10 seconds
+        }
+        /*
+        Summary:
+        - This function creates a cookie named user with value apple.
+        - The cookie expires in 10 seconds from the current time.
+        - toUTCString() formats the expiration time correctly for the cookie.
+        */
+
+        const add = () => {
+            const arr = [10, 20, 30] // 1. Create an array
+            localStorage.setItem("Data", JSON.stringify(arr)) // 2. Convert array to string and store in localStorage under key "Data"
+        }
+
+        const get = () => {
+            const res = JSON.parse(localStorage.getItem("Data")) // 3. Retrieve string from localStorage and convert back to array
+            console.log(res) // 4. Log the array [10, 20, 30]
+        }
+    </script>
+</body>
+
+</html>
