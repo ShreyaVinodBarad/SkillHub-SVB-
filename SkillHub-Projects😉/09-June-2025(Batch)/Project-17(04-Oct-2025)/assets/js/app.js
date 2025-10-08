@@ -1,4 +1,4 @@
-import { validate } from "./validationCheck.js"
+import { validate, showToast } from "./utility.js"
 
 // console.log("App running...")
 const task = document.getElementById("task")
@@ -8,6 +8,11 @@ const date = document.getElementById("date")
 const addTaskBtn = document.getElementById("addTaskBtn")
 const root = document.getElementById("root")
 const URL = "http://localhost:5000/notes"
+const updateTaskBtn = document.getElementById("updateTaskBtn")
+let selectedIdToEdit
+const result = document.getElementById("result")
+const cancleUpdateTaskBtn = document.getElementById("cancleUpdateTaskBtn")
+
 
 addTaskBtn.addEventListener("click", () => {
     console.log(task.value, priority.value, description.value, date.value)
@@ -20,6 +25,8 @@ addTaskBtn.addEventListener("click", () => {
             date: date.value
         })
         getAllNotes()
+        reset()
+        showToast(result, "To - Do Create Successfully!")
     }
     else {
         console.log("All fields are required!")
@@ -54,7 +61,7 @@ const getAllNotes = async () => {
                 <td>${item.description}</td>
                 <td>${item.date}</td>
                 <td>
-                    <button type="button" class="btn btn-warning btn-sm mx-2" onclick = "handleEdit('${item.task}', '${item.priority}','${item.description}', '${item.date}')">Edit</button>
+                    <button type="button" class="btn btn-warning btn-sm mx-2" onclick = "handleEdit('${item.task}', '${item.priority}','${item.description}', '${item.date}','${item.id}')">Edit</button>
                     <button type="button" class="btn btn-danger btn-sm" onclick = "removeNote(${item.id})">Delete</button>
                 </td>
             </tr>`).join("") // 👈 join() removes commas and merges all rows
@@ -71,22 +78,73 @@ window.removeNote = async id => {
     try {
         await fetch(`${URL}/` + id, { method: "DELETE" })
         console.log("To - Do Delete Successfull! ")
+        getAllNotes()
+        showToast(result, "To - Do Delete Successfully!", "danger")
     }
     catch (error) {
         console.log(error)
     }
 }
 
-window.handleEdit = (eTask, ePriority, eDescription, eDate) => {
+window.handleEdit = (eTask, ePriority, eDescription, eDate, eId) => {
+    selectedIdToEdit = eId
     task.value = eTask
     priority.value = ePriority
     description.value = eDescription
     date.value = eDate
 
     addTaskBtn.classList.add("d-none")
+    updateTaskBtn.classList.remove("d-none")
+
+    cancleUpdateTaskBtn.classList.remove("d-none")
 }
 
+updateTaskBtn.addEventListener("click", async () => {
+    try {
+        const body = {
+            task: task.value,
+            priority: priority.value,
+            description: description.value,
+            date: date.value
+        }
+        await fetch(`${URL}/${selectedIdToEdit}`, {
+            method: "PATCH",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(body)
+        })
+        console.log("Update Successfull!")
+        getAllNotes()
+        reset()
+        addTaskBtn.classList.remove("d-none")
+        updateTaskBtn.classList.add("d-none")
+        cancleUpdateTaskBtn.classList.add("d-none")
+        showToast(result, "To - Do Update Successfully!", "warning")
+
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+cancleUpdateTaskBtn.addEventListener("click", () => {
+    reset()
+    cancleUpdateTaskBtn.classList.add("d-none")
+    addTaskBtn.classList.remove("d-none")
+    updateTaskBtn.classList.add("d-none")
+})
+
 getAllNotes()
+
+const reset = () => {
+    task.value = ""
+    priority.value = ""
+    description.value = ""
+    date.value = ""
+
+    task.classList.remove("is-valid")
+    priority.classList.remove("is-valid")
+    description.classList.remove("is-valid")
+    date.classList.remove("is-valid")
+}
 
 /*
 1) Command Explanation:

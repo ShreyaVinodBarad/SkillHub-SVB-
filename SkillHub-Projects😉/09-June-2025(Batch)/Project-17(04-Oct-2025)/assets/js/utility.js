@@ -13,3 +13,10 @@ export const validate = (...el) => {
     }
     return isValid
 }
+
+export const showToast = (el, message, variant = "success") => {
+    el.innerHTML = `<div class = "alert alert-${variant} text-center">${message}</div>`
+    setTimeout(() => {
+        el.innerHTML = ""
+    }, 3000)
+}
