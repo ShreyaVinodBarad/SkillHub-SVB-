@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast</title>
+</head>
+
+<body>
+    <!-- 
+    - Toast in JavaScript refers to a small, temporary notification message that appears on the screen (usually at the bottom or top) to give feedback to the user — like “Task added successfully” or “Error occurred”.        
+    1)Definition:
+    - A toast is a lightweight, non-blocking popup message that automatically disappears after a few seconds.
+    2) In Short:
+    - A toast is a temporary message popup used to inform users about an action’s result — it appears briefly and then fades away automatically.
+    -->
+    <div id="toast"></div>
+    <button onclick="displayToast()">Toast</button>
+
+    <script>
+        const displayToastDiv = document.getElementById("toast")
+        const displayToast = () => {
+            displayToastDiv.innerHTML = `<div class = "alert alert-success text-center">Toast displayed successfully!</div>`
+
+            setTimeout(() => {
+                displayToastDiv.innerHTML = ""
+            }, 3000)
+        }
+    </script>
+</body>
+
+</html>
