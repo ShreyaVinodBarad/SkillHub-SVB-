@@ -1,4 +1,4 @@
-import { validate } from "./utils.js"
+import { validate, addToast } from "./utils.js"
 
 const name = document.getElementById("name")
 const price = document.getElementById("price")
@@ -38,6 +38,7 @@ const createProduct = async () => {
             } // 👈 For Backend
         })
         console.log("Product Created Successfully!")
+        addToast("Product Created Successfully!", "success")
     } catch (error) {
         console.log(error)
     }
@@ -72,6 +73,7 @@ const readProduct = async () => {
 const updateProduct = async () => {
     try {
         await fetch(URL, { method: "PATCH" })
+        addToast("Product Details Updated Successfully!", "success")
     } catch (error) {
         console.log(error)
     }
@@ -82,6 +84,7 @@ window.deleteProduct = async id => {
         await fetch(`${URL}/${id}`, { method: "DELETE" })
         console.log("Produt Deleted Successfully!")
         readProduct()
+        addToast("Product Deleted Successfully!", "danger")
     } catch (error) {
         console.log(error)
     }

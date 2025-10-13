@@ -1,3 +1,5 @@
+import { addToast } from "./utils.js"
+
 const home = document.getElementById("home")
 const count = document.getElementById("count")
 const URL = "http://localhost:5000"
@@ -40,6 +42,7 @@ window.handleAddToCart = async (id, name, price, description, image) => {
         })
         displayCart()
         console.log("Add to Cart Successfully!")
+        addToast("Item Added to Cart!", "success")
     }
     catch (error) {
 
@@ -51,6 +54,17 @@ const displayCart = async () => {
         const res = await fetch(`${URL}/cart`)
         const data = await res.json()
         count.innerHTML = data.length
+
+        if (data.length === 0) {
+            return document.querySelector("#cart>.offcanvas-body").innerHTML = `  <div class="alert alert-success text-center"><h4>Cart is Empty!<h4/></div>  `
+        }
+
+        const total = data.reduce((sum, item) => sum + +item.price, 0)
+        console.log(total)
+        const gst = total * 18 / 100
+        const bill = gst + total
+        console.log(gst)
+        console.log(bill)
         document.querySelector("#cart>.offcanvas-body").innerHTML = data.map(item => `
             <div class="card my-3">
                 <div class="card-body">
@@ -65,7 +79,7 @@ const displayCart = async () => {
                     </div>
                     <div class="row mt-3">
                         <div class="col-sm-12">
-                            <button type="button"                           onclick = "handleDeleteFromCart('${item.pid}')" class="btn btn-danger w-100">
+                            <button type="button"                           onclick = "handleDeleteFromCart('${item.id}')" class="btn btn-danger w-100">
                                 Remove Item
                             </button>
                         </div>
@@ -73,12 +87,43 @@ const displayCart = async () => {
                 </div>
             </div>
         `).join("")
-
+        document.querySelector("#cart>.offcanvas-body").innerHTML += `
+        <div class="card mt-3">
+            <div class="card-header alert alert-success text-center mb-0"><h3>Total Bill<h3/></div>
+            <div class="card-body alert alert-warning mb-0">
+                <div class="d-flex justify-content-between">
+                    <span>Total</span>
+                    <strong>${total}</strong>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <span>Tax</span>
+                    <strong>${gst}</strong>
+                </div>
+                <hr/>
+                <div class="d-flex justify-content-between">
+                    <span>Bill</span>
+                    <strong>${bill}</strong>
+                </div>
+            </div>
+        </div>
+        `
     }
     catch (error) {
         console.log(error)
     }
 }
+
+window.handleDeleteFromCart = (async id => {
+    try {
+        await fetch(`${URL}/cart/${id}`, { method: "DELETE" })
+        console.log("Product Removed Successfully from the Cart!")
+        displayCart()
+        addToast("Item Removed from Cart Successfully!", "danger")
+    }
+    catch (error) {
+        console.log(error)
+    }
+})
 
 getAllProducts()
 displayCart()

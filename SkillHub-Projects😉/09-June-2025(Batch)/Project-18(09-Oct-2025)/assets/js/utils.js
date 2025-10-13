@@ -13,3 +13,17 @@ export const validate = (...elements) => {
     }
     return isValid
 }
+
+export const addToast = (message, varient) => {
+    const toastContainer = document.getElementById("toast-container")
+    toastContainer.innerHTML = `
+    <div class = "alert alert-${varient} my-2 text-center">
+        <h4>
+            ${message}
+        </h4>
+    </div>   
+    `
+    setTimeout(() => {
+        toastContainer.innerHTML = ""
+    }, 3000)
+}
