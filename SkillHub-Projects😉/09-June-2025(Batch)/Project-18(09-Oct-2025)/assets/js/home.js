@@ -3,29 +3,57 @@ import { addToast } from "./utils.js"
 const home = document.getElementById("home")
 const count = document.getElementById("count")
 const URL = "http://localhost:5000"
-const getAllProducts = async () => {
+const productLimit = document.getElementById("productLimit")
+const pagination = document.getElementById("pagination")
+
+const getAllProducts = async (limit = 2, page = 1) => {
     try {
-        const res = await fetch(`${URL}/products`, { method: "GET" })
+        const res = await fetch(`${URL}/products/?_limit=${limit}&_page=${page}`, { method: "GET" })
         const data = await res.json()
-        home.innerHTML = data.map(item =>
-            `
+
+        const totalRecord = res.headers.get("X-Total-Count") // 👉 total entries
+        const totalBtn = Math.ceil(totalRecord / limit)
+
+        pagination.innerHTML = ""
+
+        // 👈 Previous Button
+        if (page > 1) {
+            pagination.innerHTML += `<button class="btn btn-primary" onclick="handlePagination(${page - 1})">Previous</button>`
+        }
+
+        // 👈 Page Buttons
+        for (let i = 1; i <= totalBtn; i++) {
+            if (page === i) {
+                pagination.innerHTML += `<button class="btn btn-primary">${i}</button>`
+            } else {
+                pagination.innerHTML += `<button class="btn btn-outline-primary" onclick="handlePagination(${i})">${i}</button>`
+            }
+        }
+
+        // 👈 Next Button
+        if (page < totalBtn) {
+            pagination.innerHTML += `<button class="btn btn-primary" onclick="handlePagination(${page + 1})">Next</button>`
+        }
+
+        // 👇 Display Products
+        home.innerHTML = data.map(item => `
             <div class="col-sm-4 my-3">
                 <div class="card">
-                    <div class="card-body">
-                        <img src="${item.image}" alt="" style = "width:100%; height:150px; object-fit:contain;background-color: #f5f5f5;">
-                        <div class = "alert alert-success my-3">
-                        <h5 class="text-center">${item.name}</h5>
-                        <div class="text-center">Price: Rs. ${item.price}</div>
-                        <div class="text-center">${item.description}</div>
+                    <div class="card-body d-flex flex-column flex-grow-1" style = "height:480px">
+                        <img src="${item.image}" alt="" style="width:100%; height:150px; object-fit:contain; background-color:#f5f5f5;">
+                        <div class="alert alert-success my-3" style = "height:420px">
+                            <h5 class="text-center">${item.name}</h5>
+                            <h5 class="text-center">Item Id: ${item.id}</h5>
+                            <div class="text-center">Price: Rs. ${item.price}</div>
+                            <div class="text-center">${item.description}</div>
                         </div>
-                        <button type="button"                              onclick = "handleAddToCart('${item.id}','${item.name}','${item.price}','${item.description}','${item.image}')" class="btn btn-primary w-100">
+                        <button type="button" onclick="handleAddToCart('${item.id}','${item.name}','${item.price}','${item.description}','${item.image}')" class="btn btn-primary w-100 mt-auto">
                             Add to Cart
                         </button>
                     </div>
                 </div>
             </div>
-            `
-        ).join("")
+        `).join("")
     }
     catch (error) {
         console.log(error)
@@ -124,6 +152,15 @@ window.handleDeleteFromCart = (async id => {
         console.log(error)
     }
 })
+
+productLimit.addEventListener("change", () => {
+    // 👆When change of value the change event runs
+    getAllProducts(productLimit.value)
+})
+
+window.handlePagination = (index) => {
+    getAllProducts(productLimit.value, index)
+}
 
 getAllProducts()
 displayCart()

@@ -12,6 +12,7 @@ const updateProductBtn = document.getElementById("editProductBtn")
 let selectedIdToEdit
 const productLimit = document.getElementById("productLimit")
 const pagination = document.getElementById("pagination")
+const cancleUpdateProductBtn = document.getElementById("cancleUpdateProductBtn")
 
 addProduct.addEventListener("click", () => {
     if (validate(name, price, description, image, category)) {
@@ -66,7 +67,7 @@ const readProduct = async (limit = 2, page = 1) => {
                 <td><img src="${item.image}" style="width:100px;height:100px;object-fit:contain;border-radius:4px;background-color: #f5f5f5;"/></td>
                 <td>${item.category}</td>
                 <td class="d-flex justify-content-center align-items-center gap-2">
-                    <button type="button" class="btn btn-warning" id="editProduct" onclick = handleEdit('${item.name}', '${item.price}', '${item.description}', '${item.image}', '${item.category}', ${item.id})><i class="bi bi-pencil"></i></button>
+                    <button type="button" class="btn btn-warning" id="editProduct" onclick = "handleEdit('${item.name}', '${item.price}','${item.description}','${item.image}','${item.category}','${item.id}')"><i class="bi bi-pencil"></i></button>
                     <button type="button" class="btn btn-danger" id="deleteProduct" onclick = "deleteProduct(${item.id})"><i class="bi bi-trash"></i></button>
                     </td>
                     </tr>
@@ -109,6 +110,7 @@ window.handleEdit = (eName, ePrice, eDescription, eImage, eCategory, eId) => {
 
     addProduct.classList.add("d-none")
     updateProductBtn.classList.remove("d-none")
+    cancleUpdateProductBtn.classList.remove("d-none")
 }
 
 updateProductBtn.addEventListener("click", async () => {
@@ -127,13 +129,24 @@ updateProductBtn.addEventListener("click", async () => {
         })
         readProduct()
         reset()
-
+        addProduct.classList.remove("d-none")
+        updateProductBtn.classList.add("d-none")
+        cancleUpdateProductBtn.classList.add("d-none")
         addToast("Product Details Updated Successfully!", "success")
+
 
     } catch (error) {
         console.log(error)
     }
 })
+
+cancleUpdateProductBtn.addEventListener("click", () => {
+    reset()
+    cancleUpdateProductBtn.classList.add("d-none")
+    addProduct.classList.remove("d-none")
+    updateProductBtn.classList.add("d-none")
+})
+
 window.deleteProduct = async id => {
     // 👆 Goes to global scope because problem when using module
     try {
