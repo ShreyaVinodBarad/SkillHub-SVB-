@@ -6,7 +6,8 @@ const description = document.getElementById("description")
 const image = document.getElementById("image")
 const category = document.getElementById("category")
 const addProduct = document.getElementById("addProduct")
-const URL = "http://localhost:5000/products"
+// const URL = "http://localhost:5000/products"
+const URL = "https://skillhub-svb.onrender.com/products"
 const root = document.getElementById("root")
 const updateProductBtn = document.getElementById("editProductBtn")
 let selectedIdToEdit

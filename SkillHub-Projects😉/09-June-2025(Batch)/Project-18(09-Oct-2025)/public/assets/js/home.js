@@ -2,7 +2,8 @@ import { addToast } from "./utils.js"
 
 const home = document.getElementById("home")
 const count = document.getElementById("count")
-const URL = "http://localhost:5000"
+// const URL = "http://localhost:5000"
+const URL = "https://skillhub-svb.onrender.com"
 const productLimit = document.getElementById("productLimit")
 const pagination = document.getElementById("pagination")
 
