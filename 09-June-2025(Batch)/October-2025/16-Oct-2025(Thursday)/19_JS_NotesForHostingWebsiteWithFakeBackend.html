@@ -1,0 +1,48 @@
+- Sir, has given folder in which some changes are done:
+a) Prepare Your Project Folder:
+- Copy all your code files into the folder given by Sir.
+- Move db.json (your fake database file) outside the public folder (keep it directly inside your main project folder).
+- Delete db.json from the public folder if it’s there.
+b) Install Node Modules
+- Open your folder in VS Code or terminal.
+- Run this command to install dependencies:
+npm i
+- This will create the node_modules folder (used by your index.js backend).
+c) Run Project Locally
+- In terminal, run:
+node index.js
+- The terminal will show:
+JSON Server is running on http://localhost:5000
+- This means your fake backend (API) is working.
+d) Check the Frontend
+- Open index.html in your browser — it connects to the fake backend (http://localhost:5000/products) defined in your
+app.js
+- You can add, update, or delete products, and the data will update inside db.json.
+e) Upload Code to GitHub
+- Push your whole project folder (except node_modules) to GitHub.
+Example:
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/yourusername/yourrepo.git
+git push -u origin main
+f) In gitignore file write the folder that you don't want to push into GitHub, i.e., node_modules.
+g) Host on Render
+- Go to https://render.com
+- Click New → Web Service.
+- Connect your GitHub repo where your project is uploaded.
+- Click Deploy — Render will host your backend and give a public URL (e.g. https://yourproject.onrender.com).
+h) Update Frontend URLs
+- In your home.js or app.js, change:
+const URL = "http://localhost:5000/products"
+to your Render URL:
+const URL = "https://yourproject.onrender.com/products"
+i) Refresh or Re-Deploy
+- After changing the URL, push your changes to GitHub again.
+- Render will automatically detect updates and re-deploy your site with the correct hosted backend.
+j) Final Result
+- Now your frontend (HTML, CSS, JS) and fake backend (JSON Server) are both live!
+- Your app can:
+1) Create, read, update, and delete products.
+2) Use pagination and display data dynamically.
