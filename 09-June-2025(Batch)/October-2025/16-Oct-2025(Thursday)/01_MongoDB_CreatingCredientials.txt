@@ -1,0 +1,38 @@
+1) Go to MongoDB Atlas
+- Open this website: https://www.mongodb.com/cloud/atlas
+- Click “Try Free” or “Sign In” if you already have an account.
+2) Sign Up / Log In
+- You can sign up using Google or Email.
+- Once inside, you’ll see the MongoDB Atlas Dashboard.
+3) Build a Cluster
+- Click “Build a Database”.
+- Choose the Free Shared option (starts with “M0 Free Tier”).
+- Choose your Cloud Provider (AWS is fine) and a Region near you (like Mumbai if you’re in India).
+- Click Create Deployment.
+It takes a minute or two to set up.
+4) Create Database Username & Password
+a) After your cluster is created:
+- Go to Security → Database Access (on the left menu).
+- Click “Add New Database User”.
+- Enter a username (e.g., adminuser).
+- Enter a password (keep it safe!).(Can also generate password)
+- Choose “Read and Write to Any Database”.
+- Click Add User.
+Keep this username & password — you’ll need them in the connection link.
+5) Allow Network Access
+a) To connect from your laptop:
+- Go to Security → Network Access.
+- Click “Add IP Address”.
+- Choose:
+Add Current IP Address (recommended),
+OR 
+use 0.0.0.0/0 (for access from anywhere — use only for testing).
+- Click Confirm.
+6) Get Your Connection Link (URI)
+- Go to Database (left menu).
+- Click “Connect” on your cluster.
+- Choose “Connect your application”.
+- Copy the connection string — it will look like this 👇
+mongodb+srv://<username>:<password>@cluster0.abcd123.mongodb.net/
+Example:
+mongodb+srv://adminuser:myPass123@cluster0.abcd123.mongodb.net/

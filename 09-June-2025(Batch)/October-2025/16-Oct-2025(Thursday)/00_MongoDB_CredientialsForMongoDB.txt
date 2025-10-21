@@ -1,5 +1,4 @@
-YGnHd6PtXGOD4jZ9 => Password
+YGnHd6PtXGOD4jZ9 => Password(MongoDB)
 
 mongodb+srv://ShreyaVinodBarad:<db_password>@cluster0.zayylg6.mongodb.net/
-
 mongodb+srv://ShreyaVinodBarad:YGnHd6PtXGOD4jZ9@cluster0.zayylg6.mongodb.net/

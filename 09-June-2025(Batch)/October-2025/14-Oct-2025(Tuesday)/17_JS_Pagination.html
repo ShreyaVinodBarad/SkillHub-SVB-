@@ -1,3 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination</title>
+</head>
+
+<body>
+    <div id="list"></div>
+    <button onclick="prevPage()">Previous</button>
+    <div id="pages"></div>
+    <button onclick="nextPage()">Next</button>
+
+    <script>
+        const data = ["Item-1", "Item-2", "Item-3", "Item-4", "Item-5", "Item-6", "Item-7", "Item-8"]
+        let currentPage = 1
+        const perPage = 2
+        /*
+        👆
+        a) data → an array of items we want to show.
+        b) currentPage → keeps track of which page is currently shown. Starts at 1.
+        c) perPage → how many items we want to show on each page (2 in this case).
+        */
+
+        const showPage = page => {
+            const start = (page - 1) * perPage
+            const end = start + perPage
+            document.getElementById("list").innerHTML = data.slice(start, end).join("<br>")
+            /*
+            👆
+            a) start = (page-1)*perPage → calculates where to start slicing the array.
+            - Example: page 1 → start = 0, page 2 → start = 2
+            b) end = start + perPage → calculates where to stop slicing.
+            - Example: page 1 → end = 2 → gets data[0] and data[1]
+            c) data.slice(start, end) → takes only the items for the current page.
+            d) .join("<br>") → makes a string with <br> so each item appears on a new line.
+            e) document.getElementById("list").innerHTML = ... → shows these items in the HTML <div>.
+            */
+            showPageButtons() // Call it here to refresh buttons
+        }
+
+        const nextPage = () => {
+            if (currentPage * perPage < data.length) {
+                currentPage++
+            }
+            showPage(currentPage)
+            /*
+            👆
+            - Checks if there are more items to show: currentPage*perPage < data.length
+            - If yes, increases currentPage by 1
+            - Calls showPage(currentPage) → updates the items shown
+            */
+        }
+
+        const prevPage = () => {
+            if (currentPage > 1) {
+                currentPage--
+            }
+            showPage(currentPage)
+            /*
+            👆
+            - Checks if we are not on the first page
+            - If yes, decreases currentPage by 1
+            - Updates the items shown
+            */
+        }
+
+        const showPageButtons = () => {
+            const pageCount = Math.ceil(data.length / perPage)
+            /*
+            👆
+            - data.length → total items (like 8 items)
+            - perPage → items per page (like 2)
+            - Math.ceil(...) → rounds up to the next whole number
+            - Example: 8 / 2 = 4 → 4 pages
+            */
+            const pagesDiv = document.getElementById("pages")
+            pagesDiv.innerHTML = ""
+            /*
+            👆
+            - Gets the <div id="pages"> from HTML
+            - innerHTML = "" → clears any existing buttons so we don’t repeat them
+            */
+            for (let i = 1; i <= pageCount; i++) {
+                const btn = document.createElement("button")
+                btn.innerText = i
+                /*
+                👆
+                - Loops from 1 to pageCount (e.g., 1, 2, 3, 4)
+                - Creates a <button> element for each page
+                - Sets the button text to the page number
+                */
+                if (i === currentPage) {
+                    btn.style.fontWeight = "bold"
+                }
+                /*
+                👆
+                - Makes the current page button bold so users know which page they are on
+                */
+                btn.onclick = () => {
+                    currentPage = i
+                    showPage(currentPage)
+                }
+                /*
+                👆
+                - When user clicks a button:
+                a) Set currentPage to that page number
+                b) Call showPage(currentPage) → updates the items and refreshes the buttons
+                */
+                pagesDiv.appendChild(btn)
+                // 👆 Adds the button to the <div id="pages"> in HTML
+            }
+        }
+
+        showPage(currentPage) // Shows the first page when the page loads
+
+        /*
+        Summary:
+        - We slice the data array based on the current page.
+        - Next and Prev buttons just change the page number and refresh the display.
+        */
+    </script>
+</body>
+
+</html>
 <!-- 
 1) What is Pagination?
 - Pagination means dividing content into multiple pages instead of showing everything at once.
