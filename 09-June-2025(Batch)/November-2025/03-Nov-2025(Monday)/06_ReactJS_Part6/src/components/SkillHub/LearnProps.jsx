@@ -2,18 +2,18 @@ import React from 'react'
 
 // const LearnProps = (props) => { => Direct Object
 const LearnProps = ({ name, age }) => { // => Object Destructuring
-    return (
-        <div>
-            {/* <h2>{props.name}</h2> => Using Direct Object */}
-            {/* <h2>{props.age}</h2> => Using Direct Object*/}
-            {/* 
-            👆
-            In ReactJS, you can’t directly print an object inside JSX because React doesn’t know how to show an object as text.
-            */}
-            <h2>{name}</h2>
-            <h2>{age}</h2>
-        </div>
-    )
+  return (
+    <div>
+      {/* <h2>{props.name}</h2> => Using Direct Object */}
+      {/* <h2>{props.age}</h2> => Using Direct Object*/}
+      {/* 
+      👆
+      In ReactJS, you can’t directly print an object inside JSX because React doesn’t know how to show an object as text.
+      */}
+      <h2>{name}</h2>
+      <h2>{age}</h2>
+    </div>
+  )
 }
 
 export default LearnProps
