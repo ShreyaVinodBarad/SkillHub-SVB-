@@ -1,0 +1,40 @@
+{
+    "notes": [
+        {
+            "task": "Learn CSS",
+            "priority": "Low",
+            "desc": "smdsadbasn",
+            "id": 1
+        },
+        {
+            "task": "dfsd",
+            "priority": "Medium",
+            "desc": "dsfsd",
+            "id": 2
+        },
+        {
+            "task": "dfsd",
+            "priority": "Medium",
+            "desc": "dsfsd",
+            "id": 3
+        },
+        {
+            "task": "",
+            "priority": "",
+            "desc": "",
+            "id": 4
+        },
+        {
+            "task": "",
+            "priority": "",
+            "desc": "",
+            "id": 5
+        },
+        {
+            "task": "",
+            "priority": "",
+            "desc": "",
+            "id": 6
+        }
+    ]
+}

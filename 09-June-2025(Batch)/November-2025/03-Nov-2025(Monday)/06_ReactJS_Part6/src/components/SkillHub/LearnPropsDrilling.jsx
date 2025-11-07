@@ -1,15 +1,38 @@
 import React from 'react'
 
 const LearnPropsDrilling = () => {
+    const admin = "Sony Barad"
+    const age = 23
     return (
         <div>
-
+            <h3>Props Drilling</h3>
+            <Parent data={admin} age={age}></Parent>
         </div>
     )
 }
-const Parent = () => { }
-const Child = () => { }
-const GrandChild = () => { }
+const Parent = ({ data, age }) => {
+    return (
+        <div>
+            <h3>Parent</h3>
+            <Child data1={data} age={age}></Child>
+        </div>
+    )
+}
+const Child = ({ data1, age }) => {
+    return (
+        <div>
+            <h3>Child</h3>
+            <GrandChild data2={data1} age={age}></GrandChild>
+        </div>
+    )
+}
+const GrandChild = ({ data2, age }) => {
+    return (
+        <div>
+            <h3>GrandChild: {data2} {age}</h3>
+        </div>
+    )
+}
 
 export default LearnPropsDrilling
 /*
