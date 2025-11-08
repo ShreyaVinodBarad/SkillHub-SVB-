@@ -1,5 +1,5 @@
 {
-  "name": "11-reactjs-part11",
+  "name": "12-reactjs-part12",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,11 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^1.13.2",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-router-dom": "^7.9.5",
-    "react-toastify": "^11.0.5"
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
