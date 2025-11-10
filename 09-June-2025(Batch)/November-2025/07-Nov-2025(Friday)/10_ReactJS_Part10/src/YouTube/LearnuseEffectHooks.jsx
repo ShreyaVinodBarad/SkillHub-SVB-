@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 
 const LearnuseEffectHooks = () => {
-    let [count, setCount] = useState(0)
-    const greet = () => console.log("Hello World!")
-    // greet()
-    {/* 
+  let [count, setCount] = useState(0)
+  const greet = () => console.log("Hello World!")
+  // greet()
+  {/* 
     👆
     - The function greet() runs every time the component re-renders (like when you click the button and count changes).
     - So, "Hello World!" gets printed again and again in the console.
@@ -13,16 +13,16 @@ const LearnuseEffectHooks = () => {
     We use useEffect() to control when a function runs.
     */}
 
-    // 👇 Example fix 
-    useEffect(() => {
-        greet()
-    }, [count]) //  [] → run only once, [count] → runs only once once count changes
-    return (
-        <div>
-            <h3 className='alert alert-warning mx-3 mt-3 w-25'>{count}</h3>
-            <button type="button" className="btn btn-primary mx-3 mt-3" onClick={() => setCount(count + 1)}>Counter</button>
-        </div>
-    )
+  // 👇 Example fix 
+  useEffect(() => {
+    greet()
+  }, [count]) //  [] → run only once, [count] → runs only once once count changes
+  return (
+    <div>
+      <h3 className='alert alert-warning mx-3 mt-3 w-25'>{count}</h3>
+      <button type="button" className="btn btn-primary mx-3 mt-3" onClick={() => setCount(count + 1)}>Counter</button>
+    </div>
+  )
 }
 
 export default LearnuseEffectHooks
