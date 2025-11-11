@@ -9,13 +9,15 @@ import NavBar from './SkillHub/components/NavBar'
 import BetterForm from './SkillHub/pages/BetterForm'
 import Formik from './YouTube/Formik'
 import Yup from './YouTube/Yup'
+import CreatingFormWithFormikComponents from './YouTube/CreatingFormWithFormikComponents'
+import Libraryclsx from './YouTube/Libraryclsx'
 
 const App = () => {
   return (
     <div>
       <ToastContainer />
       {/* SkillHub 👇 */}
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <NavBar />
         <Routes>
           <Route path='/' element={<Home />} />
@@ -24,12 +26,14 @@ const App = () => {
           <Route path='/better' element={<BetterForm />} />
           <Route path='*' element={<h1>Page Not Found</h1>} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
 
       {/* YouTube 👇 */}
       {/* <Formik /> */}
       {/* <Yup /> */}
-    </div>
+      {/* <CreatingFormWithFormikComponents /> */}
+      <Libraryclsx />
+    </div >
   )
 }
 

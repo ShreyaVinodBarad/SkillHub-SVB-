@@ -1,0 +1,22 @@
+{
+    "notes": [
+        {
+            "task": "Learn JS",
+            "desc": "Cover all notes...",
+            "priority": "Medium",
+            "id": 1
+        },
+        {
+            "task": "Learn CSS",
+            "desc": "Cover all notes...",
+            "priority": "Low",
+            "id": 2
+        },
+        {
+            "task": "Learn HTML",
+            "desc": "Learning all notes...",
+            "priority": "Low",
+            "id": 3
+        }
+    ]
+}

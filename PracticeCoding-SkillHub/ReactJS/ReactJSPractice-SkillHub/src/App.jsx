@@ -13,7 +13,10 @@ const App = () => {
       {/* Part-02 👇 */}
       {/* <PracticeState /> */}
       {/* <UsingStateForInput /> */}
-      <Calculator />
+      {/* <Calculator /> */}
+
+      {/* Part-03 👇 */}
+
 
     </div>
   )
