@@ -11,6 +11,7 @@ import Formik from './YouTube/Formik'
 import Yup from './YouTube/Yup'
 import CreatingFormWithFormikComponents from './YouTube/CreatingFormWithFormikComponents'
 import Libraryclsx from './YouTube/Libraryclsx'
+import YupValidationWithFormikComponents from './YouTube/YupValidationWithFormikComponents'
 
 const App = () => {
   return (
@@ -31,8 +32,9 @@ const App = () => {
       {/* YouTube 👇 */}
       {/* <Formik /> */}
       {/* <Yup /> */}
-      {/* <CreatingFormWithFormikComponents /> */}
-      <Libraryclsx />
+      {/* <CreatingFormWithFormikComponents />? */}
+      {/* <Libraryclsx /> */}
+      <YupValidationWithFormikComponents />
     </div >
   )
 }

@@ -115,10 +115,10 @@ d) Steps to do in Formik:
 e) Summary in Short:
 | Step | What Happens                                           |
 | ---- | ------------------------------------------------------ |
-| 1️⃣  | Define starting form data (`initialValues`)            |
-| 2️⃣  | Use `useFormik()` to manage form                       |
-| 3️⃣  | Destructure (`handleChange`, `handleSubmit`, `values`) |
-| 4️⃣  | Connect them to form and input fields                  |
-| 5️⃣  | On submit, Formik gives all data in one object         |
+| 1    | Define starting form data (`initialValues`)            |
+| 2    | Use `useFormik()` to manage form                       |
+| 3    | Destructure (`handleChange`, `handleSubmit`, `values`) |
+| 4    | Connect them to form and input fields                  |
+| 5    | On submit, Formik gives all data in one object         |
 -------------------------------------------------------------
 */ 

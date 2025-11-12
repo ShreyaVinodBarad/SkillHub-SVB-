@@ -1,8 +1,21 @@
-import { Field, Form, Formik } from 'formik'
+import { ErrorMessage, Field, Form, Formik } from 'formik'
+import * as yup from "yup"
 import React, { useState } from 'react'
+import RedErrorMessage from './RedErrorMessage'
 
-const CreatingFormWithFormikComponents = () => {
+const YupValidationWithFormikComponents = () => {
     const [formData, setFormData] = useState({})
+    const newValidations = yup.object({
+        name: yup.string().required(),
+        age: yup.number().required().min(10).max(50),
+        password: yup.string()
+            .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/)
+            .required("Password is Must!"),
+        gender: yup.string().required(),
+        hobby: yup.array().min(1, "One hobby is must"),
+        city: yup.string().required(),
+        comment: yup.string().required()
+    })
     return (
         <div>
             <div className="container">
@@ -10,11 +23,12 @@ const CreatingFormWithFormikComponents = () => {
                     <div className="col-sm-6 offset-sm-3">
                         <div class="card">
                             <div class="card-header alert alert-warning fs-4 text-center">
-                                Creating Form with Formik Components
+                                Yup Validation with Formik Components
                             </div>
                             <div class="card-body">
                                 <Formik
-                                    initialValues={{ name: "", age: "", password: "", gender: "", hobby: "", city: "", comment: "" }}
+                                    initialValues={{ name: "", age: "", password: "", gender: "", hobby: [], city: "", comment: "" }}
+                                    validationSchema={newValidations}
                                     onSubmit={(values) => {
                                         console.log(values)
                                         setFormData(values)
@@ -26,18 +40,22 @@ const CreatingFormWithFormikComponents = () => {
                                             name="name"
                                             className="form-control" placeholder="Enter name..."
                                         />
+                                        <RedErrorMessage name="name" />
+                                        {/* <ErrorMessage name='name' /> */}
 
                                         <Field
                                             type="number"
                                             name="age"
                                             className="form-control mt-3" placeholder="Enter age..."
                                         />
+                                        <RedErrorMessage name="age" />
 
                                         <Field
                                             type="password"
                                             name="password"
                                             className="form-control mt-3" placeholder="Enter password..."
                                         />
+                                        <RedErrorMessage name="password" />
 
                                         <label
                                             htmlFor=""
@@ -72,6 +90,7 @@ const CreatingFormWithFormikComponents = () => {
                                                 </label>
                                             </div>
                                         </div>
+                                        <RedErrorMessage name="gender" />
 
                                         <label
                                             htmlFor=""
@@ -118,11 +137,12 @@ const CreatingFormWithFormikComponents = () => {
                                                 </label>
                                             </div>
                                         </div>
+                                        <RedErrorMessage name="hobby" />
 
                                         <Field class="form-select mt-3" as="select" name='city'>
                                             {/* 👆 as means "use this HTML tag" for the Formik Field.
-                                            Example:
-                                            as="select" → tells Formik to show a dropdown instead of a normal input.*/}
+                                                    Example:
+                                                    as="select" → tells Formik to show a dropdown instead of a normal input.*/}
                                             <option value="">
                                                 Select City
                                             </option>
@@ -136,6 +156,7 @@ const CreatingFormWithFormikComponents = () => {
                                                 Chhatrapati Sambhaji Nagar
                                             </option>
                                         </Field>
+                                        <RedErrorMessage name="city" />
 
                                         <label
                                             htmlFor=""
@@ -148,6 +169,7 @@ const CreatingFormWithFormikComponents = () => {
                                             name="comment"
                                             className="form-control mt-2"
                                         />
+                                        <RedErrorMessage name="comment" />
 
                                         <button type="submit" class="btn btn-primary mt-3 w-100">
                                             Submit
@@ -159,13 +181,6 @@ const CreatingFormWithFormikComponents = () => {
                         <pre className='alert alert-success mt-3'>
                             {JSON.stringify(formData)}
                         </pre>
-                        {/* 
-                        👆
-                        - It simply converts your form data (object) into a readable text format (string) so you can see it on the screen.
-                        - In short:
-                        It shows the full form data like an object — useful for checking what values were submitted.
-                        */}
-                        {/* <h6>{formData.name}</h6> */}
                     </div>
                 </div>
             </div>
@@ -173,39 +188,4 @@ const CreatingFormWithFormikComponents = () => {
     )
 }
 
-export default CreatingFormWithFormikComponents
-/*
-1) YouTube:
-a) Using Fromik:
-- Form Creation
-- Form Handling
-- Formik -> Some Components: <Form>, <Field>, <ErrorMessage>, etc
----------------------------------------------------------------
-2) Notes
-a) <Formik>
-- It is the main wrapper for your form.
-- It manages the form’s state, values, and submission.
-
-b) <Form>
-- It is a replacement for <form> tag.
-- It connects your HTML form with Formik’s system.
-
-c) <Field>
-- It is a replacement for <input>, <select>, <textarea>, etc.
-- Formik automatically manages its value and onChange.
-- as:
-as="select" → shows dropdown
-as="textarea" → shows text area
-
-d) <ErrorMessage>
-- Used to show validation errors for a specific field.
-
-e) In short summary:
-| Component        | Purpose                          |
-| ---------------- | -------------------------------- |
-| <Formik>         | Wraps everything & manages state |
-| <Form>           | Replaces normal `<form>`         |
-| <Field>          | Replaces input/select/textarea   |
-| <ErrorMessage>   | Shows validation error message   |
----------------------------------------------------------------
-*/ 
+export default YupValidationWithFormikComponents
