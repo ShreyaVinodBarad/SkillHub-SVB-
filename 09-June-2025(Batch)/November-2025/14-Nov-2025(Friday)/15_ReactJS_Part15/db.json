@@ -1,0 +1,28 @@
+{
+  "employees": [
+    {
+      "name": "Shreya Vinod Barad",
+      "email": "shreyavbarad72@gmail.com",
+      "mobile": 9325893090,
+      "photo": "https://images.unsplash.com/photo-1761960083519-1edf2f46a807?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8",
+      "role": "FrontendDev",
+      "id": 1
+    },
+    {
+      "name": "Shreya Vinod Barad",
+      "email": "shreyavbarad72@gmail.com",
+      "mobile": 9529222495,
+      "photo": "https://images.unsplash.com/photo-1729974354505-edb5855eb876?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxM3x8fGVufDB8fHx8fA%3D%3D",
+      "role": "BackendDev",
+      "id": 2
+    },
+    {
+      "name": "Shreya Vinod Barad",
+      "email": "shreyavbarad72@gmail.com",
+      "mobile": 9325893090,
+      "photo": "https://images.unsplash.com/photo-1761960083519-1edf2f46a807?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8",
+      "role": "FrontendDev",
+      "id": 3
+    }
+  ]
+}
