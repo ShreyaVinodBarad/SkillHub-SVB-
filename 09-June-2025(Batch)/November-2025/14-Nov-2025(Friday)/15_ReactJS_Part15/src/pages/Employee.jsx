@@ -228,11 +228,11 @@ const Employee = () => {
                                                 <td>{item.role}</td>
                                                 <td className='d-flex justifiy-content-center align-items-center gap-3 flex-column'>
                                                     <button type="button" class="btn btn-warning" onClick={() => setSelectedEmployee(item)}>
-                                                        <bi className="bi-pencil"></bi>
+                                                        <i className="bi bi-pencil"></i>
                                                     </button>
                                                     <button type="button" class="btn btn-danger" onClick={() => deleteEmployee(item.id)}>
-                                                        <bi className="bi-trash">
-                                                        </bi>
+                                                        <i className="bi bi-trash">
+                                                        </i>
                                                     </button>
                                                 </td>
                                             </tr>

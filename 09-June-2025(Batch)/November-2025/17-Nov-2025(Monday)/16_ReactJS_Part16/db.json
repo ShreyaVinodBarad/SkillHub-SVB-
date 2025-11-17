@@ -1,0 +1,28 @@
+{
+    "products": [
+        {
+            "name": "Nike Shoes",
+            "price": 2500,
+            "desc": "Nike Shoes Premium",
+            "category": "Shoes",
+            "stock": 123,
+            "id": 1
+        },
+        {
+            "name": "Dress",
+            "price": 1400,
+            "desc": "Long Dress",
+            "category": "Clothing",
+            "stock": 12,
+            "id": 2
+        },
+        {
+            "name": "Mobile",
+            "price": 24000,
+            "desc": "Samsung Mobile",
+            "category": "Electronics",
+            "stock": 43,
+            "id": 3
+        }
+    ]
+}

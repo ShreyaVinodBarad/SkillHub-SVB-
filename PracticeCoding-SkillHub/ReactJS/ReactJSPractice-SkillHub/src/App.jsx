@@ -4,6 +4,7 @@ import PracticeState from './Part-02/PracticeState'
 import UsingStateForInput from './Part-02/UsingStateForInput'
 import Calculator from './Part-02/Calculator'
 import CalculatorPractice from './Part-03/CalculatorPractice'
+import ToDoList from './Part-03/ToDoList'
 
 const App = () => {
   return (
@@ -18,6 +19,9 @@ const App = () => {
 
       {/* Part-03 👇 */}
       {/* <CalculatorPractice /> */}
+      {/* <ToDoList /> */}
+
+      {/* Part-03 👇 */}
 
     </div>
   )
