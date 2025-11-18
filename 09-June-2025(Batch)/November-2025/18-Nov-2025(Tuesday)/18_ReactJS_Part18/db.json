@@ -1,0 +1,32 @@
+{
+    "users": [
+        {
+            "name": "Shreya Vinod Barad",
+            "email": "shreyavbarad72@gmail.com",
+            "password": "Sony123@",
+            "cpassword": "Sony123@",
+            "id": 1
+        },
+        {
+            "name": "Shreya ",
+            "email": "shreyavbarad72@gmail.com",
+            "password": "Sony123@",
+            "cpassword": "Sony123@",
+            "id": 2
+        },
+        {
+            "name": "Shreya Vinod Barad",
+            "email": "shreyavbarad72@gmail.com",
+            "password": "Sony123@",
+            "cpassword": "Sony123@",
+            "id": 3
+        },
+        {
+            "name": "Shreya Vinod Barad",
+            "email": "shreyavbarad72@gmail.com",
+            "password": "Sony123@",
+            "cpassword": "Sony123@",
+            "id": 4
+        }
+    ]
+}
