@@ -1,0 +1,9 @@
+import clsx from "clsx";
+
+export const handleClasses = (formik, key) => clsx({
+    "form-control mt-3": true,
+    "is-invalid": formik.touched[key] && formik.errors[key],
+    "is-valid": formik.touched[key] && !formik.errors[key]
+})
+
+export const URL = "http://localhost:5000"
