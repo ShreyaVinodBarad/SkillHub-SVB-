@@ -31,7 +31,7 @@ const AdminToDo = () => {
 
     const createToDo = async () => {
         try {
-            await axios.post(`${URL}/todos`, formik.values)
+            await axios.post(`${URL}/todos`, { ...formik.values, complete: false })
             toast.success("Task Created Successfully!")
             readToDo()
         } catch (err) {
@@ -180,6 +180,7 @@ const AdminToDo = () => {
                                     <th>Description</th>
                                     <th>Priority</th>
                                     <th>Employee</th>
+                                    <th>Complete</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -192,13 +193,24 @@ const AdminToDo = () => {
                                             <td>{item.desc}</td>
                                             <td>{item.priority}</td>
                                             <td>{handleEmployeeName(item.emp)}</td>
-                                            <td className='d-flex justify-content-center align-items-center gap-3'>
-                                                <button type="button" class="btn btn-warning">
-                                                    Edit
-                                                </button>
-                                                <button type="button" class="btn btn-danger" onClick={() => deleteToDo(item.id)}>
-                                                    Delete
-                                                </button>
+                                            <td className='d-flex justify-content-center'>
+                                                {
+                                                    item.complete
+                                                        ? <span className='badge text-bg-success'>
+                                                            Complete
+                                                        </span>
+                                                        : <div className="spinner spinner-border text-danger"></div>
+                                                }
+                                            </td>
+                                            <td className='text-center'>
+                                                <div class="d-flex justify-content-center gap-3">
+                                                    <button type="button" class="btn btn-warning">
+                                                        Edit
+                                                    </button>
+                                                    <button type="button" class="btn btn-danger" onClick={() => deleteToDo(item.id)}>
+                                                        Delete
+                                                    </button>
+                                                </div>
                                             </td>
                                         </tr>
                                     })

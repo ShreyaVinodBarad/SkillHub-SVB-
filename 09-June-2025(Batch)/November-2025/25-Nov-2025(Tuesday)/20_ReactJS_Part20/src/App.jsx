@@ -12,6 +12,7 @@ import EmployeeNavbar from './components/EmployeeNavbar'
 import AdminProtected from './components/AdminProtected'
 import AdminLayout from './components/AdminLayout '
 import AdminToDo from './pages/AdminToDo'
+import EmployeeLayout from './components/EmployeeLayout'
 
 export const AuthContext = createContext()
 
@@ -31,7 +32,8 @@ const App = () => {
             <Route path='employee' element={<AdminEmployee />} />
             <Route path='todo' element={<AdminToDo />} />
           </Route>
-          <Route path='/employee' element={<><EmployeeNavbar /> <Outlet /></>}>
+          {/* <Route path='/employee' element={<><EmployeeNavbar /> <Outlet /></>}> */}
+          <Route path='/employee' element={<EmployeeLayout />}>
             <Route index element={<EmployeeDashboard />} />
           </Route>
           <Route path='*' element={<h1>Page Not Found</h1>} />

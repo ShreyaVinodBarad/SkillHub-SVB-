@@ -44,24 +44,19 @@
   "todos": [
     {
       "task": "Project - 01",
-      "desc": "ReactJS Project",
+      "desc": "Python AI Project",
       "priority": "High",
-      "emp": "2",
+      "emp": "3",
+      "complete": true,
       "id": 1
     },
     {
       "task": "Project - 02",
-      "desc": "Python AI Project",
+      "desc": "Tailwind Project",
       "priority": "Medium",
       "emp": "3",
+      "complete": false,
       "id": 2
-    },
-    {
-      "task": "Project - 03",
-      "desc": "JavaScript Project",
-      "priority": "High",
-      "emp": "4",
-      "id": 3
     }
   ]
 }

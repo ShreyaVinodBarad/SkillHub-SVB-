@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { AuthContext } from '../App'
 
 const EmployeeNavBar = () => {
+    const { auth, setAuth } = useContext(AuthContext)
+    const handleLogOut = () => {
+        localStorage.removeItem("auth")
+        setAuth(null)
+    }
     return (
         <div>
             <nav class="navbar navbar-expand-lg bg-light">
@@ -20,14 +26,14 @@ const EmployeeNavBar = () => {
                         </div>
                     </div>
                     <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" >
-                            Welcome Employee
+                        <button class="btn btn-secondary dropdown-toggle mx-3" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" >
+                            Welcome {auth.name}
                         </button>
                         <ul class="dropdown-menu">
                             {/* <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li> */}
                             <li>
-                                <button class="dropdown-item text-danger" href="#">
+                                <button class="dropdown-item text-danger" href="#" onClick={handleLogOut}>
                                     LogOut
                                 </button>
                             </li>
