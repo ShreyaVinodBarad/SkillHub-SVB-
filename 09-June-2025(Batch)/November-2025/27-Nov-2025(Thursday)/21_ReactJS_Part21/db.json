@@ -1,0 +1,22 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "admin",
+            "email": "admin@gmail.com",
+            "password": "123",
+            "role": "admin"
+        },
+        {
+            "name": "Shreya ",
+            "photo": "https://plus.unsplash.com/premium_photo-1762518577411-27d3695b994b?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "email": "shreyavbarad72@gmail.com",
+            "password": "Sony@123",
+            "cpassword": "Sony@123",
+            "role": "author",
+            "active": true,
+            "id": 2
+        }
+    ],
+    "blogs": []
+}
