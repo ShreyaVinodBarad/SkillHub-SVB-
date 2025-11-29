@@ -34,10 +34,14 @@ const Login = () => {
                         toast.success("Admin Login Success!")
                         navigate("/admin")
                     } else {
-                        localStorage.setItem("local-author", JSON.stringify(data[0]))
-                        setAuth({ ...auth, author: data[0] })
-                        toast.success("Author Login Success!")
-                        navigate("/author")
+                        if (data[0].active) {
+                            localStorage.setItem("local-author", JSON.stringify(data[0]))
+                            setAuth({ ...auth, author: data[0] })
+                            toast.success("Author Login Success!")
+                            navigate("/author")
+                        } else {
+                            toast.error("Account Blocked by Admin!")
+                        }
                     }
                 }
                 console.log(data)

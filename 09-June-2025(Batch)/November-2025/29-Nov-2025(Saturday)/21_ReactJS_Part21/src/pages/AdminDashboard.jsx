@@ -47,6 +47,9 @@ const AdminDashboard = () => {
     const getAllBlogs = async () => {
         try {
             const { data } = await axios.get(`${URL}/blogs`)
+            const copy = [...stat]
+            copy[1].count = data.length
+            setStat(copy)
             console.log(data.length)
         } catch (err) {
             toast.error(err)
