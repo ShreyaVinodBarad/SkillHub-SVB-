@@ -1,6 +1,8 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import NavBar from './components/NavBar'
+import Counter from './pages/Counter'
+import ToDo from './pages/ToDo'
 
 const App = () => {
   return (
@@ -8,7 +10,8 @@ const App = () => {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Counter />} />
+          <Route path='/todo' element={<ToDo />} />
           <Route path='*' element={<h1>Page Not Found</h1>} />
         </Routes>
       </BrowserRouter>
