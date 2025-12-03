@@ -1,0 +1,86 @@
+<!-- 
+1) What is Redux?
+- Redux is a state manager for React. It stores data in one place so any component can use it. 
+---------------------------------------------------------------
+2) Redux Flow 
+Component -> dispatch(Action) -> Reducer -> Store -> Component (useSelector)
+---------------------------------------------------------------
+3) a) Store
+- A big container where all your app data (state) is kept.
+- Created using createStore().
+const store = createStore(rootReducer)
+
+b) Action
+- A message / instruction that tells WHAT to do.
+- It has a type and sometimes data (payload).
+const inc = () => ({ type: "INCREMENT" })
+const dec = () => ({ type: "DECREMENT" })
+Actions do NOT change the data. They just tell the reducer what happened.
+
+c) Reducer
+- A function that actually changes the state.
+- It listens to actions and updates the store.
+- Reducer ≈ state-changing machine.
+- A reducer is a function that receives two things:
+a) state → current data
+b) action → what to do (type + payload)
+It returns the new updated state.
+- Code:
+const counterReducer = (state = { count: 0 }, { type, payload }) => {
+  if (type === "INCREMENT") {
+    return { count: state.count + 1 }
+  }
+  if (type === "DECREMENT") {
+    return { count: state.count - 1 }
+  }
+  return state
+}
+- What is happening here?
+| Part                   | Meaning                       |
+| ---------------------- | ----------------------------- |
+| state = { count: 0 }   | Default value when app starts |
+| { type, payload }      | Action object destructured    |
+| "INCREMENT"            | Increase the count by 1       |
+| "DECREMENT"            | Decrease the count by 1       |
+| return state           | If action unknown → no change |
+
+d) rootReducer
+- Combines all reducers into one.
+const rootReducer = combineReducers({
+  counter: counterReducer,
+  todo: todoReducer
+})
+- This helps if you have multiple features.
+
+e) Provider
+- Connects the Redux store with React app.
+<Provider store={store}>
+  <App />
+</Provider>
+
+f) useDispatch()
+- Used IN COMPONENT to send (dispatch) actions.
+const dispatch = useDispatch()
+dispatch(inc())
+
+g) useSelector()
+- Used IN COMPONENT to read data from the store.
+const { count } = useSelector(state => state.counter)
+- Here,
+state = whole Redux store
+state.counter = part managed by counterReducer
+
+h) Short:
+Component dispatches an Action → Reducer updates Store → useSelector reads data → UI updates
+
+i) Short:
+| Term        | Meaning                 |
+| ----------- | ----------------------- |
+| Store       | Keeps the data          |
+| Action      | What to change          |
+| Reducer     | How to change           |
+| Dispatch    | Send action to reducer  |
+| useSelector | Get data from store     |
+| Provider    | Connects Redux to React |
+---------------------------------------------------------------
+-->
