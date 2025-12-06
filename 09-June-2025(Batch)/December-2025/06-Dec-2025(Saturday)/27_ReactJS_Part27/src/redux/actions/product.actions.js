@@ -1,0 +1,51 @@
+import { createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios"
+const API_URL = "http://localhost:5000/products"
+export const createProduct = createAsyncThunk(
+    "createProduct",
+    async (productData, { rejectWithValue, getState }) => {
+        try {
+            const { data } = await axios.post(API_URL, productData)
+            return true
+            // createSuccess = true 👉 product.slice.js
+        } catch (error) {
+            return rejectWithValue(error.message || "something went wrong")
+        }
+    })
+
+export const readProduct = createAsyncThunk(
+    "readProduct",
+    async (productData, { rejectWithValue, getState }) => {
+        try {
+            const { data } = await axios.get(API_URL)
+            return data
+            // allProducts = data 👉 product.slice.js
+        } catch (error) {
+            return rejectWithValue(error.message || "something went wrong")
+        }
+    })
+
+export const updateProduct = createAsyncThunk(
+    "updateProduct",
+    async (productData, { rejectWithValue, getState }) => {
+        try {
+            const { data } = await axios.patch(`${API_URL}/${productData.id}`, productData)
+            return true
+            // updateSuccess = true 👉 product.slice.js
+        } catch (error) {
+            return rejectWithValue(error.message || "something went wrong")
+        }
+    })
+
+export const deleteProduct = createAsyncThunk(
+    "deleteProduct",
+    async (id, { rejectWithValue, getState }) => {
+        try {
+            const { data } = await axios.delete(`${API_URL}/${id}`)
+            return true
+            // deleteSuccess = true 👉 product.slice.js
+        } catch (error) {
+            return rejectWithValue(error.message || "something went wrong")
+        }
+    })
+// 📌 srta => SkillHub Shortcut
