@@ -1,0 +1,22 @@
+{
+  "todos": [
+    {
+      "title": "Learn BS",
+      "desc": "Main Topics!",
+      "priority": "medium",
+      "id": 7
+    },
+    {
+      "title": "Learn JS",
+      "desc": "Learning...",
+      "priority": "high",
+      "id": 8
+    },
+    {
+      "title": "Learn Redux",
+      "desc": "Main Topics!",
+      "priority": "high",
+      "id": 9
+    }
+  ]
+}

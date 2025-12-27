@@ -1,0 +1,148 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "tpo",
+      "email": "tpo@gmail.com",
+      "password": "123",
+      "role": "tpo"
+    },
+    {
+      "name": "Shreya Vinod Barad",
+      "email": "shreyavbarad72@gmail.com",
+      "mobile": 9529222495,
+      "education": "MCA Graduate ",
+      "skills": "Frontend Developer ",
+      "role": "student",
+      "password": "Shreya Vinod Barad@123",
+      "id": 2,
+      "active": true
+    },
+    {
+      "name": "Gouri",
+      "email": "gouri@gmail.com",
+      "mobile": 9421315926,
+      "education": "B.Tech ",
+      "skills": "AI",
+      "role": "student",
+      "password": "Gouri@123",
+      "id": 3,
+      "active": true
+    },
+    {
+      "name": "Badam Swamy",
+      "email": "badamswamy@gmail.com",
+      "mobile": 8897206499,
+      "education": "SBH Bank Manager",
+      "skills": "Banking",
+      "role": "student",
+      "password": "Badam Swamy@123",
+      "id": 4,
+      "active": true
+    },
+    {
+      "name": "SkillHub",
+      "email": "skillhub@gmail.com",
+      "logo": "https://www.skillhubitsolution.com/skillhub-dark.svg",
+      "address": "Kranti Chowk",
+      "mobile": 9922968453,
+      "password": "123",
+      "role": "company",
+      "id": 5,
+      "active": false
+    },
+    {
+      "name": "Google",
+      "email": "google@gmail.com",
+      "logo": "https://img.freepik.com/premium-vector/google-logo_1273375-1572.jpg?semt=ais_hybrid&w=740&q=80",
+      "address": "USA",
+      "mobile": 9293293292,
+      "password": "123",
+      "role": "company",
+      "id": 6,
+      "active": true
+    }
+  ],
+  "jobs": [
+    {
+      "title": "Frontend Developer",
+      "desc": "Designing the Frontend of the Website",
+      "skills": "HTML, CSS, BootStrap, ReactJS",
+      "salary": "80000",
+      "experience": "2.5",
+      "location": "Hyderabad",
+      "type": "Full-Time",
+      "publish": true,
+      "company": 5,
+      "id": 1
+    },
+    {
+      "title": "Backend Developer",
+      "desc": "Designing the Backend of the Website",
+      "skills": "HTML, CSS, BootStrap, ReactJS, NodeJS",
+      "salary": 100000,
+      "experience": 3.5,
+      "location": "Hyderabad",
+      "type": "Full-Time",
+      "publish": true,
+      "company": 5,
+      "id": 2
+    },
+    {
+      "title": "Full-Stack Developer",
+      "desc": "Designing both the Frontend & Backend of the Website",
+      "skills": "Frontend & Backend Tools",
+      "salary": 120000,
+      "experience": "2.5",
+      "location": "Hyderabad",
+      "type": "Full-Time",
+      "publish": true,
+      "company": 5,
+      "id": 3
+    },
+    {
+      "title": "Frontend Developer",
+      "desc": "Designing the Frontend of the Website",
+      "skills": "HTML, CSS, BootStrap, ReactJS",
+      "salary": "80000",
+      "experience": "2.5",
+      "location": "Hyderabad",
+      "type": "Full-Time",
+      "publish": true,
+      "company": 6,
+      "id": 4
+    },
+    {
+      "title": "Backend Developer",
+      "desc": "Designing the Backend of the Website",
+      "skills": "HTML, CSS, BootStrap, ReactJS, NodeJS",
+      "salary": 100000,
+      "experience": 3.5,
+      "location": "Bengaluru ",
+      "type": "Full-Time",
+      "publish": true,
+      "company": 6,
+      "id": 5
+    }
+  ],
+  "applications": [
+    {
+      "sid": 3,
+      "jid": 1,
+      "status": "Pending",
+      "id": 1
+    },
+    {
+      "sid": 3,
+      "jid": 2,
+      "status": "Pending",
+      "id": 2
+    },
+    {
+      "sid": 4,
+      "jid": 1,
+      "status": "Pending",
+      "id": 3
+    }
+  ]
+}

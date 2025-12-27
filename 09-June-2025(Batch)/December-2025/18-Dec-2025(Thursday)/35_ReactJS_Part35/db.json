@@ -1,0 +1,11 @@
+{
+    "users": [
+        {
+            "name": "Shreya Vinod Barad",
+            "email": "shreyavbarad72@gmail.com",
+            "password": "123",
+            "cpassword": "123",
+            "id": 1
+        }
+    ]
+}
