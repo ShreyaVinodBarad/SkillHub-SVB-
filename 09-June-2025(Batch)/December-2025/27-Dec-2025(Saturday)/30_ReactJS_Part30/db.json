@@ -49,7 +49,7 @@
       "password": "123",
       "role": "company",
       "id": 5,
-      "active": false
+      "active": true
     },
     {
       "name": "Google",
@@ -60,6 +60,17 @@
       "password": "123",
       "role": "company",
       "id": 6,
+      "active": true
+    },
+    {
+      "name": "Padma",
+      "email": "padma@gmail.com",
+      "mobile": 9325893090,
+      "education": "BDS",
+      "skills": "Teaching",
+      "role": "student",
+      "password": "Padma@123",
+      "id": 7,
       "active": true
     }
   ],
@@ -129,13 +140,13 @@
     {
       "sid": 3,
       "jid": 1,
-      "status": "Pending",
+      "status": "Hire",
       "id": 1
     },
     {
       "sid": 3,
       "jid": 2,
-      "status": "Pending",
+      "status": "Reject",
       "id": 2
     },
     {
@@ -143,6 +154,84 @@
       "jid": 1,
       "status": "Pending",
       "id": 3
+    },
+    {
+      "sid": 3,
+      "jid": 3,
+      "status": "Hire",
+      "id": 4
+    },
+    {
+      "sid": 3,
+      "jid": 4,
+      "status": "Hire",
+      "id": 5
+    },
+    {
+      "sid": 3,
+      "jid": 5,
+      "status": "Reject",
+      "id": 6
+    },
+    {
+      "sid": 4,
+      "jid": 2,
+      "status": "Pending",
+      "id": 7
+    },
+    {
+      "sid": 4,
+      "jid": 3,
+      "status": "Pending",
+      "id": 8
+    },
+    {
+      "sid": 4,
+      "jid": 4,
+      "status": "Hire",
+      "id": 9
+    },
+    {
+      "sid": 4,
+      "jid": 5,
+      "status": "Hire",
+      "id": 10
+    },
+    {
+      "sid": 2,
+      "jid": 1,
+      "status": "Reject",
+      "id": 11
+    },
+    {
+      "sid": 2,
+      "jid": 2,
+      "status": "Pending",
+      "id": 12
+    },
+    {
+      "sid": 2,
+      "jid": 3,
+      "status": "Pending",
+      "id": 13
+    },
+    {
+      "sid": 2,
+      "jid": 4,
+      "status": "Pending",
+      "id": 14
+    },
+    {
+      "sid": 2,
+      "jid": 5,
+      "status": "Pending",
+      "id": 15
+    },
+    {
+      "sid": 7,
+      "jid": 1,
+      "status": "Hire",
+      "id": 16
     }
   ]
 }

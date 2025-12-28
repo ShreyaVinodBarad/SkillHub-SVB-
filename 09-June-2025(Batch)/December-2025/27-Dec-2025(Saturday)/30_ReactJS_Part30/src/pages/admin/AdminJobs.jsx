@@ -1,16 +1,38 @@
 import React from 'react'
-import { useGetCompaniesQuery, useTpoJobsQuery } from "../../redux/apis/tpo.api"
+import { useGetCompaniesQuery, useGetStudentsQuery, useTpoApplicationsQuery, useTpoJobsQuery } from "../../redux/apis/tpo.api"
 import Card from "../../components/UI/Card"
 const AdminJobs = () => {
     const { data } = useTpoJobsQuery()
     const { data: companyData } = useGetCompaniesQuery()
-
+    const { data: applicationData } = useTpoApplicationsQuery()
+    const { data: studentData } = useGetStudentsQuery()
     const getCompanyById = id => companyData.find(item => item.id === id)
+
+    const getStudentInfo = jobId => {
+        return applicationData
+            .filter(app => app.jid === jobId)
+            .map(app => app.sid)
+            .map(i => studentData.find(stud => stud.id === i))
+    }
+
+    const getStatus = status => {
+        switch (status) {
+            case "Hire":
+                return <span class="badge text-bg-success">Hire</span>
+            case "Pending":
+                return <span class="badge text-bg-warning">Pending</span>
+            case "Reject":
+                return <span class="badge text-bg-danger">Rejected</span>
+            default:
+                break;
+        }
+    }
+
     return (
         <div className='container'>
             <div className="row">
                 {
-                    data && companyData && data.map(item => <div className='col-sm-12 my-3'>
+                    data && studentData && applicationData && companyData && data.map(item => <div className='col-sm-12 my-3'>
                         <Card showFooter={false} showHeader={false}>
                             <div className="row">
                                 <div className="col-sm-4">
@@ -47,6 +69,23 @@ const AdminJobs = () => {
                                 </div>
                                 <div className="col-sm-4 text-center">
                                     <h6>Applications</h6>
+                                    {
+                                        getStudentInfo(item.id).map(stud => <div>
+                                            <div class="card mt-3">
+                                                <div class="card-body d-flex justify-content-between">
+                                                    {stud.name}
+                                                    {
+                                                        getStatus(
+                                                            applicationData
+                                                                .find(app => app.sid === stud.id && app.jid === item.id)
+                                                                .status
+                                                        )
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                        )
+                                    }
                                 </div>
                             </div>
                         </Card>

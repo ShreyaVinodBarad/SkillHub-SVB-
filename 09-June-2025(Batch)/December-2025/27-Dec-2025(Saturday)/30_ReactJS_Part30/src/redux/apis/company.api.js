@@ -44,6 +44,35 @@ export const companyApi = createApi({
                     }
                 },
                 invalidatesTags: ["job"]
+            }),
+            getCompanyApplication: builder.query({
+                query: id => {
+                    return {
+                        url: "/applications",
+                        method: "GET",
+                    }
+                },
+                providesTags: []
+            }),
+            getCompanyStudents: builder.query({
+                query: id => {
+                    return {
+                        url: "/users",
+                        method: "GET",
+                        params: { role: "student" }
+                    }
+                },
+                providesTags: []
+            }),
+            updateApplication: builder.mutation({
+                query: applicationData => {
+                    return {
+                        url: "/applications/" + applicationData.id,
+                        method: "PATCH",
+                        body: applicationData
+                    }
+                },
+                providesTags: []
             })
         }
     }
@@ -53,5 +82,8 @@ export const {
     useCompanyJobQuery,
     useCreateJobMutation,
     useUpdateJobMutation,
-    useDeleteJobMutation
+    useDeleteJobMutation,
+    useGetCompanyApplicationQuery,
+    useGetCompanyStudentsQuery,
+    useUpdateApplicationMutation
 } = companyApi

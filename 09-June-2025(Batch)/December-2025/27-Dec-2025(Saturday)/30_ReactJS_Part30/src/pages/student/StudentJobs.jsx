@@ -19,6 +19,20 @@ const StudentJobs = () => {
             error ? error.message : "Unable to Apply Job!"
         }
     }
+
+    const getStatus = status => {
+        switch (status) {
+            case "Hire":
+                return <span class="badge text-bg-success">Hire</span>
+            case "Pending":
+                return <span class="badge text-bg-warning">Pending</span>
+            case "Reject":
+                return <span class="badge text-bg-danger">Rejected</span>
+            default:
+                break;
+        }
+    }
+
     return (
         <>
             {/* 
@@ -45,9 +59,7 @@ const StudentJobs = () => {
 
                                     {
                                         applicationData.find(app => app.sid === student.id && app.jid === item.id)
-                                            ? <h5 class="alert alert-primary">
-                                                Already Applied!
-                                            </h5>
+                                            ? getStatus(applicationData.find(app => app.sid === student.id && app.jid === item.id).status)
                                             : <button
                                                 type="button"
                                                 class="btn btn-primary"

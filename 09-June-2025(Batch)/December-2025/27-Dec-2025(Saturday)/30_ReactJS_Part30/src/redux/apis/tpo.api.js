@@ -78,6 +78,15 @@ export const tpoApi = createApi({
                     }
                 },
             }),
+
+            tpoApplications: builder.query({
+                query: companyData => {
+                    return {
+                        url: "/applications",
+                        method: "GET"
+                    }
+                },
+            }),
         }
     }
 })
@@ -89,5 +98,6 @@ export const {
     useUpdateStudentMutation,
     useGetCompaniesQuery,
     useHandleCompanyMutation,
-    useTpoJobsQuery
+    useTpoJobsQuery,
+    useTpoApplicationsQuery
 } = tpoApi
