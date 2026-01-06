@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const LearnuseStateHook = () => {
+    const [count, setCount] = useState(1)
+
+    let x = 10
+    const normalInc = () => {
+        x++
+        console.log(x)
+    } // It increases the value in console but not on screen
+
+
     return (
         <div>
+            <h1>{x}</h1>
+            <button onClick={normalInc}>+1 Normal Increase</button>
 
+            <h1>{count}</h1>
+            <button onClick={() => setCount(count + 1)}>
+                +1 Using useState Hook
+            </button>
         </div>
     )
 }

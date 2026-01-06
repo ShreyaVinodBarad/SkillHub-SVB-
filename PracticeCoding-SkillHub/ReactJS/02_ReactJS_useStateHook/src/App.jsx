@@ -1,9 +1,14 @@
 import React from 'react'
+import LearnuseStateHook from './components/LearnuseStateHook'
+import UsinguseStateForInputField from './components/UsinguseStateForInputField'
+import Calculator from './components/Calculator'
 
 const App = () => {
   return (
     <div>
-
+      <LearnuseStateHook />
+      <UsinguseStateForInputField />
+      <Calculator />
     </div>
   )
 }

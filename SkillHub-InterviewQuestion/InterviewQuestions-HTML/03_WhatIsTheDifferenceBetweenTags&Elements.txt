@@ -1,8 +1,0 @@
-1) What is the difference between HTML tags and elements?
-- An HTML tag is just the code that you write inside angle brackets like <p>, </p>, <h1>, etc.
-- An HTML element is the complete set — it includes the opening tag, the content inside, and the closing tag.
-- Example:
-<p>Hello</p>
-- Here, <p> is the opening tag, </p> is the closing tag.
-- Together with the text "Hello", it becomes a paragraph element.
-So, tag is part of an element, and element is the full structure.

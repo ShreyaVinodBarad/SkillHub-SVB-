@@ -1,9 +1,0 @@
-1) Difference between <ol>, <ul>, and <li>?
-- The difference between <ol>, <ul>, and <li> is:
-a) <ol> stands for ordered list. It shows a list with numbers (1, 2, 3...).
-b) <ul> stands for unordered list. It shows a list with bullet points (•).
-c) <li> stands for list item. It is used inside <ol> or <ul> to define each item in the list.
-- In short:
-a) Use <ol> when the order matters (like steps).
-b) Use <ul> when the order doesn’t matter (like a shopping list).
-c) Use <li> for each item in the list.

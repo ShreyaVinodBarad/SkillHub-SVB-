@@ -1,5 +1,0 @@
-1) What are tags in HTML?
-- Tags in HTML are like building blocks used to create a webpage. They tell the browser what each part of the content is — like a heading, a paragraph, an image, or a link. 
-- They are written inside angle brackets, like <p> for a paragraph or <h1> for a heading. 
-- Most tags come in pairs – an opening tag like <p> and a closing tag like </p>. The content goes between them. 
-- Tags help organize and format the web page.

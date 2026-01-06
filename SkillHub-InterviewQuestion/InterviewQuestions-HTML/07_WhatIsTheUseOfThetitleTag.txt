@@ -1,9 +1,0 @@
-1) What is the use of the <title> tag?
-- The <title> tag is used to set the title of a web page.
-- It appears in two main places:
-a) At the top of the browser tab
-b) As the title in search engine results (like Google)
-- It helps users know what the page is about and also helps in SEO (Search Engine Optimization).
-- Example:
-<title>My To-Do List App</title>
-This will show "My To-Do List App" on the browser tab.

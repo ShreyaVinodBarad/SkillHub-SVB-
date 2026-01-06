@@ -1,5 +1,0 @@
-1) What is HTML?
-- HTML stands for HyperText Markup Language. It is the basic language used to create webpages.
-- It tells the web browser what to show and how to show it.
-- For example, we use HTML to add headings, paragraphs, images, links, and other content to a website.
-- Think of it like the skeleton of a webpage – it gives structure to everything you see online.
