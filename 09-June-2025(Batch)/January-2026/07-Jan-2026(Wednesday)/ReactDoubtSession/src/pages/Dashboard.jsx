@@ -56,6 +56,22 @@ const Dashboard = () => {
         }
     })
 
+    const handlePagination = useCallback(() => {
+        if (data) {
+            return Array
+                .from({ length: Math.ceil(data.total / pagi.limit) })
+                .map((_, i) =>
+                    <button
+                        type="button"
+                        className="btn mx-1 btn-outline-primary"
+                        onClick={() => setPagi({ ...pagi, page: i + 1 })}
+                    >
+                        {i + 1}
+                    </button>
+                )
+        }
+    }, [pagi, data])
+
     return (
         <div>
             <form onSubmit={formik.handleSubmit}>
@@ -88,6 +104,8 @@ const Dashboard = () => {
                 <option value="8">8</option>
                 <option value="10">10</option>
             </select>
+
+            {handlePagination()}
 
             {
                 data && <table class="table table-bordered">

@@ -1,0 +1,1 @@
+const nums: [string, number] = ["Shreya", 23]

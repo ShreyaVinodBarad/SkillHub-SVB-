@@ -1,0 +1,40 @@
+npm init -y
+👆 Automatically creates a package.json file with default settings.
+
+npm i express
+👆 Installs Express.js and adds it to your project’s dependencies.
+
+npm i mongoose
+👆 Installs Mongoose, a library used to connect Node.js with MongoDB and work with data using schemas and models.
+
+📌 STEP-BY-STEP: HOW BACKEND WORKS
+=> Server Start
+1) You run:
+nodemon index.js
+2) index.js starts running (top to bottom)
+3) Express and Mongoose are loaded
+4) MongoDB connection starts
+5) Express app is created
+6) Middleware runs:
+app.use(express.json())
+7) Routes are registered:
+app.use("/notes", todoRoutes)
+8) MongoDB connects successfully
+9) Server starts on port 5000
+=> API Request Flow
+10) Client sends request (Postman / Frontend)
+11) Middleware reads JSON → req.body
+12) Route matches (/notes/create)
+13) Controller function runs
+14) Model is called
+15) MongoDB performs action (CRUD)
+16) Response sent back to client
+
+📌 Explained by Akash Sir
+1) Index file runs first.
+2) It finds that the route /notes is registered and goes to the route file.
+3) In the route file, it checks which method (GET / POST / PATCH / DELETE) is used and, according to that method, it calls the function written in the route file.
+4) That function is defined in the controller file.
+5) The controller uses the Note model, which has the schema and validations.
+6) If validation succeeds, the create function runs and the data from req.body is saved from backend to the database.
+7) Finally, res.json() runs and sends the response back to the frontend.

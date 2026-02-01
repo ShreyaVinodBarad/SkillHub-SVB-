@@ -11,7 +11,7 @@ export const adminApi = createApi({
                     return {
                         url: "/notes",
                         method: "GET",
-                        params: { _limit: filter.limit } // 👈 only valid for json-server
+                        params: { _limit: filter.limit, _page: filter.page } // 👈 only valid for json-server
                     }
                 },
                 transformResponse: (data, { response }) => {

@@ -1,0 +1,15 @@
+npm init -y
+👆 Automatically creates a package.json file with default settings.
+
+npm i express
+👆 
+- Installs the Express framework
+- Adds it to node_modules
+- Updates package.json and package-lock.json
+
+Install nodemon globally
+👆 To run server
+Run this in Command Prompt / Terminal to install nodemon:
+npm install -g nodemon
+- Then try again:
+nodemon OldServer.js
