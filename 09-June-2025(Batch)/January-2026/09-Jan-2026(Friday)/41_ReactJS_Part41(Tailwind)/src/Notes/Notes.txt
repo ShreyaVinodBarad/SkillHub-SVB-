@@ -1,0 +1,108 @@
+1) Monolithic Application
+a) Meaning:
+- Everything is built together as ONE big application.
+b) UI Example
+- Imagine one single website/app where:
+- Login page, Dashboard, Profile page, Payments page, all these screens are tightly connected and run as one unit
+c) How UI works
+One UI codebase
+One build
+One deployment
+- If you change one button color, the whole app needs to be rebuilt and deployed
+d) Pros (UI side)
+- Easy to build initially
+- Simple for small projects
+e) Cons (UI side)
+- UI becomes heavy
+- Hard to scale
+- One UI bug can break entire app
+- Slow updates
+---------------------------------------------------------
+2) Microservices Application 
+a) Meaning:
+- Application is broken into many small independent parts.
+b) UI Example
+- Same app, but split:
+Login UI → Team A
+Dashboard UI → Team B
+Payments UI → Team C
+- Each UI part is separate
+c) How UI works
+- Multiple small UI apps
+- Each has its own build & deploy
+- One UI can update without touching others
+d) Pros (UI side)
+- Faster UI updates
+- Teams work independently
+- Easy to scale
+- Safer changes
+e) Cons (UI side)
+- More setup
+- Needs good coordination
+---------------------------------------------------------
+3) Module Federation 
+a) Meaning (easy):
+- Different UI apps share and load parts of UI from each other at runtime.
+- It is mainly used with Microservices in frontend
+b) UI Example
+- Main App (Shell):
+Header, Sidebar
+- Other Apps:
+Dashboard (from another project)
+Profile (from another project)
+Payments (from another project)
+- Main app fetches UI pieces dynamically
+c) How UI works
+Header UI from App A
+Dashboard UI from App B
+Payments UI from App C
+- All appear like one single app to the user 
+---------------------------------------------------------
+4) Install Tailwind CSS in React (Vite)
+a) Create a React app using Vite (if not already created)
+npm create vite@latest my-app
+cd my-app
+npm install
+b) Go to Tailwind CSS website
+- Open tailwindcss.com
+- Click Get Started
+- Select Framework Guides
+- Choose Vite
+c) Install Tailwind CSS
+- Run this command in your project terminal:
+npm install tailwindcss @tailwindcss/vite
+- This installs Tailwind and the Vite plugin.
+d) Configure vite.config.js
+- Open vite.config.js and update it with this:
+import tailwindcss from '@tailwindcss/vite'
+export default defineConfig({
+  plugins: [
+    react(),
+    tailwindcss()
+    👆 Add this
+  ],
+})
+- Meaning:
+tailwindcss() tells Vite to use Tailwind while building your app.
+e) Add Tailwind to CSS file
+- Open src/index.css and paste this line:
+@import "tailwindcss";
+- This loads all Tailwind utility classes.
+f) Use Tailwind in your app
+- Open src/App.jsx and test it:
+function App() {
+  return (
+    <h1 className="text-3xl font-bold text-blue-600">
+      Tailwind CSS is working.
+    </h1>
+  )
+}
+export default App
+g) Run the project
+npm run dev
+📌 Summary
+- Install Tailwind → npm install tailwindcss @tailwindcss/vite
+- Add plugin in vite.config.js
+- Import Tailwind in index.css
+- Run → npm run dev
+---------------------------------------------------------

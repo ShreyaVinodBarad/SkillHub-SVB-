@@ -1,0 +1,21 @@
+1) What is DaisyUI?
+DaisyUI = component library built on Tailwind
+a) Gives ready-made UI components:
+buttons, cards, navbar, modal, form, alerts
+b) You write classes, not CSS
+Works on top of Tailwind
+c) Think:
+Tailwind = raw materials
+DaisyUI = ready furniture
+------------------------------------------------------------
+2) DaisyUI Setup (React + Vite)
+a) Make sure Tailwind is already installed
+b) Install DaisyUI
+- Run this in terminal:
+npm install daisyui
+- This adds DaisyUI to node_modules.
+c) Add this to index.css
+@plugin "daisyui";
+d) Restart the dev server
+npm run dev
+------------------------------------------------------------

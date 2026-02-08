@@ -1,0 +1,12 @@
+1) FrontEnd(Postman): Data goes from Postman to index.js
+2) Index File 
+3) Route -> From index.js it finds on which route I have to go
+4) Controller -> Then it finds on which controller I have to go
+5) Model -> Then it finds on which Model I have to go
+6) MongoDB -> And then create functions sends data to the Database
+7) MongoDB Compass -> To check what data has been saved in the Database. Works as GUI for Database
+
+Postman -> NodeJS(Backend) -> Database
+
+📌 What is MongoDB Compass?
+- MongoDB Compass is a GUI (Graphical User Interface) tool used to view, manage, and interact with MongoDB databases visually—without writing commands.

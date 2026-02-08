@@ -8,10 +8,13 @@ require("dotenv").config() // 👉 Loads .env file when it is in the same folder
 // require("dotenv").config({ path: "./" }) 👉 Loads .env file from another folder by giving its path.
 // 👆 This code is when the .env file is in another folder we have to pass .env file path as value of path key.
 
-mongoose.connect("mongodb+srv://ShreyaVinodBarad:YGnHd6PtXGOD4jZ9@cluster0.zayylg6.mongodb.net/task-manager")
+// mongoose.connect("mongodb+srv://ShreyaVinodBarad:YGnHd6PtXGOD4jZ9@cluster0.zayylg6.mongodb.net/task-manager")
 // 👆 Here, task-manager is the name of the Database.
+mongoose.connect(process.env.MONGO_URL)
 
 const app = express()
+
+app.use(express.json()) //👉 It's work is to put data inside req.body known as Body Parser
 
 app.use("/api/todo", require("./routes/todo.routes.js"))
 /*
@@ -23,9 +26,14 @@ app.use("/api/todo", require("./routes/todo.routes.js"))
 - All routes written inside todo.routes.js will start with /api/todo
 */
 
-console.log(process.env.PORT)
+mongoose.connection.once("open", () => {
+    console.log("DB is Connected Successfully!")
+    app.listen(process.env.PORT, console.log("App Running..."))
+})
+// 👆 When my Database is connected, than on my Server.
 
-app.listen(5000, console.log("App Running..."))
+// console.log(process.env.PORT) 👉 Gives port number 
+
 /*
 📌 Middleware
 - Middleware is a helper that works in between request and response.

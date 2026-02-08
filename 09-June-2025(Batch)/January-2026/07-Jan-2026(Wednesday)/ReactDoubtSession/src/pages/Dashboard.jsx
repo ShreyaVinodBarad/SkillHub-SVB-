@@ -58,17 +58,45 @@ const Dashboard = () => {
 
     const handlePagination = useCallback(() => {
         if (data) {
-            return Array
-                .from({ length: Math.ceil(data.total / pagi.limit) })
+
+            const numberOfBtns = Math.ceil(data.total / pagi.limit)
+
+            const preBtn = pagi.page !== 1 &&
+                <button
+                    type="button"
+                    key={"pre"}
+                    onClick={() => setPagi({ ...pagi, page: pagi.page - 1 })}
+                    class="btn btn-outline-primary btn-sm"
+                >
+                    Pre
+                </button >
+
+            const nextBtn = pagi.page !== numberOfBtns &&
+                < button
+                    type="button"
+                    key={"next"}
+                    onClick={() => setPagi({ ...pagi, page: pagi.page + 1 })}
+                    class="btn btn-outline-primary btn-sm"
+                >
+                    Next
+                </ button>
+
+            const allBtn = Array
+                .from({ length: numberOfBtns })
                 .map((_, i) =>
                     <button
+                        key={`page-${i}`}
                         type="button"
-                        className="btn mx-1 btn-outline-primary"
+                        className={`btn btn-sm ${pagi.page === i + 1 ? "btn-primary" : "btn-outline-primary"} mx-1`}
                         onClick={() => setPagi({ ...pagi, page: i + 1 })}
                     >
                         {i + 1}
                     </button>
                 )
+            allBtn.unshift(preBtn)
+            allBtn.push(nextBtn)
+
+            return allBtn
         }
     }, [pagi, data])
 
@@ -96,7 +124,7 @@ const Dashboard = () => {
                 <button type="submit">Add</button>
             </form>
             {pagi.limit}
-            <select onChange={event => setPagi({ ...pagi, limit: event.target.value })} value={pagi.limit}>
+            <select onChange={event => setPagi({ page: 1, limit: event.target.value })} value={pagi.limit}>
                 <option value="2">2</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
@@ -105,7 +133,9 @@ const Dashboard = () => {
                 <option value="10">10</option>
             </select>
 
-            {handlePagination()}
+            <div className="d-flex justify-content-center my-2">
+                {handlePagination()}
+            </div>
 
             {
                 data && <table class="table table-bordered">
@@ -136,6 +166,10 @@ const Dashboard = () => {
                     </tbody>
                 </table>
             }
+
+            <div className="d-flex justify-content-center">
+                {handlePagination()}
+            </div>
         </div>
     )
 }
