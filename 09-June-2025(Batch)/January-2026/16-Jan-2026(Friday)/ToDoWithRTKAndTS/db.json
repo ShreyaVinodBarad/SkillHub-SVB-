@@ -1,0 +1,18 @@
+{
+  "notes": [
+    {
+      "task": "Learn Python",
+      "desc": "Main Topics!",
+      "priority": "Medium",
+      "complete": true,
+      "id": 2
+    },
+    {
+      "task": "Learn Tailwind",
+      "desc": "Main Topics!",
+      "priority": "Low",
+      "complete": true,
+      "id": 3
+    }
+  ]
+}
