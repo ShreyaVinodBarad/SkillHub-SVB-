@@ -1,0 +1,21 @@
+1) Create 2 folders:
+- server
+- client
+
+2) Open Terminal: cd server
+a) Fire 1st command:
+npm init -y
+b) Fire 2nd command:
+npm i mongoose express cors 
+c) Fire 3rd command:
+npm i dotenv
+
+3) When someone gets register than it will pass Name, Email, Mobile and Password to the server ie; data goes from frontend to backend.
+- With the help of server we will Register and the email which the person used we will send a welcome email and SMS.
+
+Client                     Server      
+   |                         |
+Register Form    -->       Register     -->    Welcome Mail and SMS
+                  👆 
+            Name, Email, Mobile 
+            and Password

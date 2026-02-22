@@ -1,0 +1,72 @@
+1) Make 2 folders:
+a) client
+b) server
+
+2) Open terminal:
+a) Frontend Setup:
+- First command:
+cd client
+- Second command:
+npx create-next-app@latest
+b) Backend Setup:
+- First command:
+cd server
+- Second command:
+npm init -y
+👆
+Creating package.json file
+- Third command:
+npm i express mongoose dotenv
+
+3) First we will create Backend and after that accordingly will create Frontend.
+
+4) Work to be done on server folder:
+a) Folders structure in server Folder:
+models
+    ToDo.js
+controllers
+    todo.controller.js
+routes
+    todo.routes.js
+index.js
+.env
+b) Add Mongo URL and Port to the .env file.
+c) Code ToDo.js file.
+d) Code in todo.controller.js file.
+e) Code in todo.routes.js file.
+f)Code in index.js file.
+g) Checking if the code written for server folder is running properly. Fire the below command in the terminal:
+- 1st command
+cd server
+- 2nd command
+nodemon index.js
+
+5) Work to be done on client folder:
+a) Install following:
+- Go to client folder:
+cd client
+- Then install:
+npm install @reduxjs/toolkit react-redux
+b) Folders structure in client Folder:
+types
+    ToDo.ts
+redux
+    store.ts
+    ReduxProvider.tsx
+    apis
+        todo.api.ts
+app 
+    admin
+        page.tsx
+c) Write the code of ToDo.ts => types folder
+d) Write code for files in redux Folder:
+1st - todo.api.ts
+2nd - store.ts
+3rd -  ReduxProvider.tsx
+e) Write code for file page.tsx in admin folder.
+- Install zod:
+npm install zod
+- Install react-hook-form
+npm install react-hook-form
+- Install zodResolver
+npm install @hookform/resolvers
