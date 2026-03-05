@@ -1,0 +1,94 @@
+📌 Notes: SkillHub Project - 7
+a) HTML Structure:  
+1) <!DOCTYPE html> 
+→ Declares this as an HTML5 document.  
+2) <html lang="en"> 
+→ Defines the language as English.  
+3) <head>
+→ Contains metadata and external resources.  
+4) <meta charset="UTF-8"> 
+→ Ensures proper character encoding.  
+5) <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+→ Makes the site responsive.  
+6) <title>08 Feb 2025 - SkillHub Project - 7</title> 
+→ Sets the page title.  
+--------------------------------------------------------------------------------
+b) External Scripts:  
+1) <script src="https://unpkg.com/@tailwindcss/browser@4"></script> 
+→ Loads TailwindCSS in the browser.  
+2) <script src="./tailwind.config.js"></script> 
+→ Custom Tailwind configuration (if modified).  
+--------------------------------------------------------------------------------
+c) Body & Tailwind Classes:  
+=> <body class => "h-screen bg-slate-300 flex justify-center items-center">  
+1) h-screen 
+→ Full height of the screen.  
+2) bg-slate-300 
+→ Light gray background.  
+3) flex 
+→ Uses Flexbox for alignment.  
+4) justify-center
+→ Centers content horizontally.  
+5) items-center 
+→ Centers content vertically.  
+--------------------------------------------------------------------------------
+d) <div class => "bg-white text-center w-[700px] md:flex md:p-0 md:items-center md:w-auto">  
+1) bg-white 
+→ White background.  
+2) text-center 
+→ Centers text inside it.  
+3) w-[700px] 
+→ Width of 700px (fixed).  
+4) md:flex 
+→ Flexbox applied on medium screens (`md`).  
+5) md:p-0 
+→ Removes padding on medium screens.  
+6) md:items-center 
+→ Aligns items vertically on medium screens.  
+7) md:w-auto 
+→ Makes width auto on medium screens.  
+--------------------------------------------------------------------------------
+e) <img src="./WomenImg.avif" alt="WomenImg" class => "size-40 rounded-full mx-auto p-2 md:rounded-none md:size-80 md:p-0">  
+1) size-40 
+→ Image size 40x40 (square).  
+2) rounded-full 
+→ Makes the image fully round.  
+3) mx-auto 
+→ Centers image horizontally.  
+4) p-2 
+→ Adds small padding.  
+5) md:rounded-none 
+→ Removes rounding on medium screens.  
+6) md:size-80 
+→ Increases size on medium screens.  
+7) md:p-0 
+→ Removes padding on medium screens.  
+--------------------------------------------------------------------------------
+f) <div class => "md:text-start md:p-5">  
+1) md:text-start 
+→ Aligns text to the left on medium screens.  
+2) md:p-5 
+→ Adds padding on medium screens.  
+--------------------------------------------------------------------------------
+g) <h1 class => "text-2xl">My Name is Kate!</h1>  
+1) text-2xl 
+→ Increases font size (large).  
+--------------------------------------------------------------------------------
+h) <p class => "text-gray-400 text-xl">Lorem ipsum...</p>  
+1) text-gray-400 
+→ Light gray text color.  
+2) text-xl 
+→ Slightly large font.  
+--------------------------------------------------------------------------------
+i) <button class => "p-4 rounded bg-red-300 m-2 md:mx-0">Hire Me</button>  
+1) p-4 
+→ Adds padding inside the button.  
+2) rounded 
+→ Makes corners rounded.  
+3) bg-red-300 
+→ Light red background.  
+4) m-2 
+→ Adds margin (spacing) around the button.  
+5) md:mx-0 
+→ Removes horizontal margin on medium screens.  
+--------------------------------------------------------------------------------

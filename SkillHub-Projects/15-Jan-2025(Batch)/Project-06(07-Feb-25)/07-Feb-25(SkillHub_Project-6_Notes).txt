@@ -1,0 +1,95 @@
+📌SkillHub Project - 6 Notes
+a) HTML Structure
+1) <!DOCTYPE html> 
+→ Declares the document type as HTML5.  
+2) <html lang => "en" id => "theme" class => "dark">  
+    a) Sets the language to English.  
+    b) id="theme" 
+        → Used to apply dark mode dynamically.  
+    c) class="dark" 
+        → The page loads in dark mode by default.  
+3) <head> 
+→ Contains metadata and links to external files.  
+4) <meta charset="UTF-8"> 
+→ Supports special characters.  
+5) <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+→ Ensures mobile responsiveness.  
+6) <title> 
+→ Sets the page title.  
+--------------------------------------------------------------------------------
+b) Tailwind and JavaScript Setup
+1) <script src="https://cdn.tailwindcss.com"></script> 
+→ Loads Tailwind CSS.  
+2) <script src="./tailwind.config.js"></script> 
+→ Loads your custom Tailwind config (if any).  
+3) tailwind.config = { darkMode: "class" }
+- Enables class-based dark mode in Tailwind.  
+--------------------------------------------------------------------------------
+c) Body Structure
+- <body class => "h-screen flex justify-center items-center dark:bg-black">`
+1) h-screen 
+→ Sets the height to 100% of the screen.  
+2) flex 
+→ Enables Flexbox.  
+3) justify-center 
+→ Centers content horizontally.  
+4) items-center 
+→ Centers content vertically.  
+5) dark:bg-black 
+→ Sets background to black in dark mode.  
+--------------------------------------------------------------------------------
+d) Content Box
+- <div class => "bg-green-300 p-10 dark:bg-green-950 dark:text-white">
+1) bg-green-300 
+→ Light mode background (green).  
+2) p-10 
+→ Adds padding (40px).  
+3) dark:bg-green-950 
+→ Dark mode background.  
+4) dark:text-white 
+→ White text in dark mode.  
+--------------------------------------------------------------------------------
+e) Text Elements
+=> <h1 class => "text-3xl">Hello! My name is Shreya.</h1>
+1) text-3xl 
+→ Large font size.  
+=> <p class => "text-xl">Lorem ipsum dolor sit amet.</p>
+1) text-xl 
+→ Medium font size.  
+--------------------------------------------------------------------------------
+f) Toggle Button
+<button id => "btn" class => "bg-green-800 px-5 py-2 text-white rounded dark:bg-green-400">
+    Toggle
+</button>
+1) bg-green-800 
+→ Dark green background in light mode.  
+2) px-5 py-2 
+→ Padding (x-axis: 20px, y-axis: 8px).  
+3) text-white 
+→ White text.  
+4) rounded 
+→ Slightly rounded corners.  
+5) dark:bg-green-400 
+→ Light green background in dark mode.  
+--------------------------------------------------------------------------------
+g) JavaScript for Dark Mode Toggle
+    const btn = document.getElementById("btn")
+    const doc = document.getElementById("theme")
+=> Selects the button (`btn`) and `html` tag (`doc`).  
+    btn.addEventListener("click", () => {
+=> Adds a click event to the button.    
+    if (doc.classList.contains("dark")) {
+        doc.classList.remove("dark")
+    }
+    else {
+        doc.classList.add("dark")
+    }
+=> Checks if dark mode (`class="dark"`) is active.  
+=> If yes → Removes dark mode.  
+=> If no → Adds dark mode.  
+================================================================================
+==> Final Summary
+- Uses Tailwind CSS to style the page.  
+- Supports Dark & Light Mode using JavaScript.  
+- Clicking the Toggle Button switches between modes.  
+================================================================================

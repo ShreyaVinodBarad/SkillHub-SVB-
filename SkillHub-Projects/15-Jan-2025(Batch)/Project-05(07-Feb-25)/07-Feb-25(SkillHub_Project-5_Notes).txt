@@ -1,0 +1,60 @@
+📌 SkillHub Project - 5 => Notes
+1) Body (<body>):
+a) h-screen 
+→ Sets height to full screen.
+b) bg-gray-300 
+→ Light gray background.
+c) flex justify-center items-center 
+→ Centers content both horizontally and vertically.
+--------------------------------------------------------------------------------
+2) Main Container <div class => bg-white w-[400px]>:
+a) bg-white 
+→ White background.
+b) w-[400px] 
+→ Width set to 400 pixels.
+--------------------------------------------------------------------------------
+3) Grid Layout (<div class => "grid grid-rows-5 h-96">):
+a) grid 
+→ Enables CSS grid.
+b) grid-rows-5 
+→ Divides into 5 equal rows.
+c) h-96 
+→ Sets height to 24rem (384px).
+--------------------------------------------------------------------------------
+4) Hoverable Item (<div class => "flex hover:bg-teal-300 items-center">):
+a) flex 
+→ Aligns content in a row.
+b) hover:bg-teal-300 
+→ Changes background to teal when hovered.
+c) items-center 
+→ Vertically centers items.
+--------------------------------------------------------------------------------
+5) Icon (<i class => "bi bi-alarm rounded bg-gray-50 m-6 p-4 hover:bg-white">
+</i>):
+a) rounded 
+→ Rounds corners slightly.
+b) bg-gray-50 
+→ Light gray background.
+c) m-6 
+→ Margin of 1.5rem (24px).
+d) p-4 
+→ Padding of 1rem (16px).
+e) hover:bg-white 
+→ Changes background to white on hover.
+--------------------------------------------------------------------------------
+6) Text Container (<div class => "flex-1 p-4">):
+a) flex-1 
+→ Makes it take up the remaining space.
+b) p-4 
+→ Padding of 1rem (16px).
+--------------------------------------------------------------------------------
+7) Text (<b class => "text-gray-600 text-xl">):
+a) text-gray-600 
+→ Medium-dark gray text.
+b) text-xl 
+→ Sets font size to 1.25rem (20px).
+--------------------------------------------------------------------------------
+8) Paragraph (<p class => "text-[15px]">):
+a) text-[15px] 
+→ Sets font size to 15px.
+--------------------------------------------------------------------------------

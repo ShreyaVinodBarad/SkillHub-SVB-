@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        25 Jan 25 - CSS Project 2
+    </title>
+    <style>
+        /*  
+        👇 Universal Selector - Resetting Browsers CSS => Starts
+        */
+        * {
+            /*  
+            👇
+            Resetting Browsers CSS
+            */
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /*  
+        👆 Universal Selector - Resetting Browsers CSS => Ends 
+        */
+
+        /*  
+        👇 Background Color to body!  => Starts
+        */
+        body {
+            background-color: #eee;
+        }
+
+        /*  
+        👆 Background Color to body!  => Ends
+        */
+
+        /*  
+        👇 Designing Background => Starts
+        */
+        .backgroung-img {
+            height: calc(100vh - 80px);
+            background-image: url(./25-Jan-25_Assets_SkillHub_Project-2/background-image.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left bottom;
+            display: flex;
+            position: relative;
+        }
+
+        .user-image {
+            height: calc(100vh - 80px);
+            position: absolute;
+            right: 0;
+        }
+
+        /*  
+        👆 Designing Background => Ends
+        */
+
+        /*  
+        👇 Content on Web Page => Starts
+        */
+        .user-data {
+            padding: 50px 100px;
+            /* border: 3px solid wheat; */
+            max-width: 70%;
+        }
+
+        h1 {
+            color: white;
+            font-size: 50px;
+            /* border: 3px solid wheat; */
+        }
+
+        p {
+            color: white;
+            font-size: 20px;
+            font-weight: normal;
+            /* border: 3px solid wheat; */
+        }
+
+        button {
+            margin-top: 40px;
+            color: coral;
+            font-size: 30px;
+            font-weight: normal;
+            border: 5px solid coral;
+            padding: 20px;
+            background-color: transparent;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: coral;
+            color: white;
+            border-radius: 30px;
+        }
+
+        /*  
+        👆 Content on Web Page => Ends
+        */
+
+        /*  
+        👇 Navigation Bar => Starts
+        */
+        .Nav-Bar {
+            background-color: coral;
+            height: 80px;
+            color: #000080;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            /* border: 3px solid wheat; */
+        }
+
+        span {
+            padding: 20px 20px;
+            margin: 30px;
+            /* border: 3px solid wheat; */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .Nav-Bar>span>a {
+            text-decoration: none;
+        }
+
+        /*  
+        👆 Navigation Bar => Ends
+        */
+
+        /*  
+        👇 From here, Skills Progress Bar => Starts!📌
+        */
+        .skills {
+            /*  
+            👇 Parent Contanier for Progress Bar for different Skills!
+            */
+            display: flex;
+            justify-content: space-between;
+            /* border: 3px solid black; */
+            margin: 10px 30px;
+            font-size: 20px;
+        }
+
+        .viewport {
+            width: 50vw;
+        }
+
+        .progress-bar-deco {
+            display: flex;
+            align-items: center;
+            height: 20px;
+        }
+
+        /*  
+        👇 First Row for Skills Progress Bar!   ==> Starts
+        */
+        .HTML {
+            /* border: 3px solid black; */
+            background: linear-gradient(to right,
+                    coral 80%,
+                    #ddd 80%);
+        }
+
+        .NodeJS {
+            background: linear-gradient(to right,
+                    coral 60%,
+                    #ddd 60%);
+        }
+
+        /*  
+        👆 First Row for Skills Progress Bar!   ==> Ends
+        */
+
+        /*  
+        👇 Second Row for Skills Progress Bar!   ==> Starts
+        */
+        .CSS {
+            /* border: 3px solid black; */
+            background: linear-gradient(to right,
+                    coral 35%,
+                    #ddd 35%);
+        }
+
+        .MongoDB {
+            background: linear-gradient(to right,
+                    coral 35%,
+                    #ddd 35%);
+        }
+
+        /*  
+        👆 Second Row for Skills Progress Bar!   ==> Ends
+        */
+
+        /*  
+        👇 Third Row for Skills Progress Bar!   ==> Starts
+        */
+        .JS {
+            /* border: 3px solid black; */
+            background: linear-gradient(to right,
+                    coral 15%,
+                    #ddd 15%);
+        }
+
+        .SQL {
+            /* border: 3px solid black; */
+            background: linear-gradient(to right,
+                    coral 25%,
+                    #ddd 25%);
+        }
+
+        /*  
+        👆 Third Row for Skills Progress Bar!   ==> Ends
+        */
+
+        /*  
+        👇 Fourth Row for Skills Progress Bar!   ==> Starts
+        */
+        .React {
+            /* border: 3px solid black; */
+            background: linear-gradient(to right,
+                    coral 10%,
+                    #ddd 10%);
+        }
+
+        .Express_JS {
+            /* border: 3px solid black; */
+            background: linear-gradient(to right,
+                    coral 90%,
+                    #ddd 90%);
+            text-align: center;
+        }
+
+        /*  
+        👆 Fourth Row for Skills Progress Bar!   ==> Ends
+        */
+        /*  
+        👆 Skills Progress Bar Ends!📌
+        */
+
+        /*  
+        👇 From here, Projects Row => Start 
+        */
+        .projects {
+            /* border: 3px solid black; */
+            display: flex;
+            justify-content: space-between;
+            margin: 70px;
+        }
+
+        .project {
+            border: 3px solid black;
+            padding-bottom: 40px;
+            margin-left: 30px;
+            font-family: sans-serif;
+        }
+
+        .project img {
+            width: 230px;
+            height: 165px;
+        }
+
+        .project h1 {
+            font-size: 30px;
+            color: black;
+            margin: 30px;
+        }
+
+        .project p {
+            font-size: 18px;
+            color: grey;
+            margin: 30px;
+        }
+
+        .project a {
+            font-size: 25px;
+            color: #000080;
+            padding-left: 60px;
+            text-decoration: none;
+        }
+
+        /*  
+        👆 Projects Row => Ends!😉 
+        */
+    </style>
+</head>
+
+<body>
+    <div class="backgroung-img">
+        <img src="./25-Jan-25_Assets_SkillHub_Project-2/backgroundImage-For-userImage.svg"
+            alt="BackgroundImage-For-UserImage" class="user-image">
+        <img src="./25-Jan-25_Assets_SkillHub_Project-2/user-image.png" alt="User-Image" class="user-image">
+        <div class="user-data">
+            <h1>
+                Hi! My name is Jhon.
+            </h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus accusantium deserunt ducimus sit
+                ad, reprehenderit laudantium facere incidunt culpa omnis placeat illum animi natus optio accusamus
+                dolores corporis. Explicabo soluta tempora pariatur animi debitis, iure quaerat hic perferendis
+                molestias iusto?
+            </p>
+            <button>
+                Hire Me!
+            </button>
+        </div>
+    </div>
+
+    <div class="Nav-Bar">
+        <span>
+            <a href="#">
+                John
+            </a>
+        </span>
+        <span>
+            <a href="#">
+                Home
+            </a>
+        </span>
+        <span>
+            <a href="#">
+                Education
+            </a>
+        </span>
+        <span>
+            <a href="#">
+                Projects
+            </a>
+        </span>
+        <span>
+            <a href="#">
+                Experience
+            </a>
+        </span>
+        <span>
+            <a href="#">
+                Contact
+            </a>
+        </span>
+    </div>
+
+    <div class="skills">
+        <span class="HTML viewport progress-bar-deco">
+            HTML
+        </span>
+        <span class="NodeJS viewport progress-bar-deco">
+            Node JS
+        </span>
+    </div>
+    <div class="skills">
+        <span class="CSS viewport progress-bar-deco">
+            CSS
+        </span>
+        <span class="MongoDB viewport progress-bar-deco">
+            Mongo DB
+        </span>
+    </div>
+    <div class="skills">
+        <span class="JS viewport progress-bar-deco">
+            JS
+        </span>
+        <span class="SQL viewport progress-bar-deco">
+            SQL
+        </span>
+    </div>
+    <div class="skills">
+        <span class="React viewport progress-bar-deco">
+            React
+        </span>
+        <span class="Express_JS viewport progress-bar-deco">
+            Express JS
+        </span>
+    </div>
+
+    <div class="projects">
+        <div class="project-1 project body">
+            <img src="./25-Jan-25_Assets_SkillHub_Project-2/Project-Img.avif" alt="Project-Img">
+            <h1>
+                To - Do Project
+            </h1>
+            <p>
+                Lorem ipsum dolor sit amet.
+            </p>
+            <a href="#">
+                Visit
+            </a>
+        </div>
+        <div class="project-2 project">
+            <img src="./25-Jan-25_Assets_SkillHub_Project-2/Project-Img.avif" alt="Project-Img">
+            <h1>
+                Tic - Tac - Toe Game
+            </h1>
+            <p>
+                Lorem ipsum dolor sit amet.
+            </p>
+            <a href="#">
+                Visit
+            </a>
+        </div>
+        <div class="project-3 project">
+            <img src="./25-Jan-25_Assets_SkillHub_Project-2/Project-Img.avif" alt="Project-Img">
+            <h1>
+                Currency Converter
+            </h1>
+            <p>
+                Lorem ipsum dolor sit amet.
+            </p>
+            <a href="#">
+                Visit
+            </a>
+        </div>
+        <div class="project-4 project">
+            <img src="./25-Jan-25_Assets_SkillHub_Project-2/Project-Img.avif" alt="Project-Img">
+            <h1>
+                Red Bus Clone
+            </h1>
+            <p>
+                Lorem ipsum dolor sit amet.
+            </p>
+            <a href="#">
+                Visit
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
