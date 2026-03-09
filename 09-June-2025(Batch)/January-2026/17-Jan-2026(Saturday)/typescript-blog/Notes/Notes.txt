@@ -1,0 +1,42 @@
+1) Packages to Install:
+npm i react-router-dom formik clsx yup @reduxjs/toolkit react-redux react-toastify bootstrap react-bootstrap
+
+2) Folder & File Structure 
+components
+    PublicNavBar.tsx
+    AdminNavBar.tsx
+pages
+    Home.tsx
+    Register.tsx
+    Login.tsx
+    Dashboard.tsx
+types
+    Blog.ts
+redux
+    store.ts
+    apis
+        blog.api.ts
+
+3) Changing the file name App.tsx to App.jsx so that I can get some part of code with SkillHub shortcuts. After completing the work changing the file name with default.
+
+4) Steps:
+a) App.tsx
+- Routing code
+- Importing toastify
+- Importing bootstrap
+b) PublicNavBar.tsx
+- Go on react-bootstrap website.
+- Copy and paste code for NavBar in PublicNavBar.tsx.
+- You can make changes according to you and add links for Home, Register and Login.
+c) AdminNavBar.tsx
+- Go on react-bootstrap website.
+- Copy and paste code for NavBar in AdminNavBar.tsx.
+- You can make changes according to you and add link for Dashboard.
+d) Blog.ts
+- Creating our Custom Types - Blog & User(for signup).
+e) Dashboard.tsx
+- Creating a form.
+- Convert file name to Dashboard.jsx to use shortcuts for form and after using changing the file name back to Dashboard.tsx.
+- Write the code for Formik.
+f) blog.api.ts
+- 
