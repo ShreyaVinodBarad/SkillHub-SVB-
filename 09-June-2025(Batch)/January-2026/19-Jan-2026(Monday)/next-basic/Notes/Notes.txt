@@ -1,0 +1,93 @@
+1) Create Next.js Project
+- Open VS Code Terminal and run:
+npx create-next-app@latest project-name
+- It will ask some questions:
+Answer like this (recommended based on your project):
+✔ TypeScript? → Yes
+✔ ESLint? → Yes
+✔ Tailwind CSS? → Yes
+✔ src/ folder? → No
+✔ App Router? → Yes
+✔ Import alias? → No
+- Then:
+cd project-name
+npm run dev
+
+2) Folder & File Structure:
+app
+    (public) -> Create Public Pages
+        page.tsx(Home Page)
+        about
+            page.tsx(About Page)
+        contact
+            page.tsx(Contact Page)
+        details
+            [id]
+                page.tsx(Details Page)
+        register
+            page.tsx(Register Page)
+        layout.tsx(Create Layout for Public Pages)
+    admin -> Admin Section
+        layout.tsx
+        page.tsx(Admin Dashboard Page)
+        todo
+            page.tsx(Admin ToDo)
+    employee -> Employee Section
+        layout.tsx
+        page.tsx(Employee Dashboard Page)
+        profile
+            page.tsx(Employee Profile Page)
+    components -> Create Navbar Components
+        Navbar.tsx
+        AdminNavbar.tsx
+        EmployeeNavbar.tsx
+
+2) Why page.tsx (not home.tsx, about.tsx, etc.)?
+- In Next.js App Router, routing is file-based with special names.
+👉 page.tsx is a reserved file name.
+- Meaning:
+page.tsx = this file represents the UI of that route
+- Example:
+a) app/page.tsx
+URL: /
+b) app/about/page.tsx
+URL: /about
+c) Simple Understanding:
+Folder = Route
+page.tsx = Page content
+
+3) What is [id] folder? (Dynamic Routing)
+app/(public)/details/[id]/page.tsx
+👉 This is called Dynamic Route
+a) Meaning:
+[id] = variable / dynamic value
+b) Why extra folder [id] instead of direct file?
+- Static file = fixed route
+- [id] = dynamic route (multiple values)
+- Difference:
+Type	    Structure	                URL
+--------------------------------------------------------------
+Static	    details/page.tsx	        /details
+Dynamic	    details/[id]/page.tsx	    /details/1, /details/2
+
+4) What is layout.tsx ?
+- layout.tsx is another special file
+a) Purpose:
+- Wraps all pages inside that folder
+
+5) Simple Rule to Remember
+a) File name → page.tsx (fixed)
+b) Function name → anything (but prefer Page)
+c) Export → must be default
+
+6) What is the default page.tsx (app/page.tsx)?
+- This is your Home Page (/)
+a) Move Home Page to (public)
+- If your project uses this structure:
+app
+    (public)
+        page.tsx
+- Then you can delete this:
+app/page.tsx ❌
+✔️ Because now home page is here:
+app/(public)/page.tsx

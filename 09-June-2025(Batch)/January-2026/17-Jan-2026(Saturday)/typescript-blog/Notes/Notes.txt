@@ -16,6 +16,7 @@ redux
     store.ts
     apis
         blog.api.ts
+db.json
 
 3) Changing the file name App.tsx to App.jsx so that I can get some part of code with SkillHub shortcuts. After completing the work changing the file name with default.
 
@@ -39,4 +40,24 @@ e) Dashboard.tsx
 - Convert file name to Dashboard.jsx to use shortcuts for form and after using changing the file name back to Dashboard.tsx.
 - Write the code for Formik.
 f) blog.api.ts
-- 
+- Code with it's meaning written in the respective file.
+g) store.ts
+- Code with it's meaning written in the respective file.
+h) main.tsx
+- Adding this line of code in main.tsx
+<Provider store={reduxStore}>
+   <App />
+</Provider>
+- Code with it's meaning written in the respective file.
+i) Go to the browser tab where your app is running and press Ctrl + Shift + I. Then open the Redux tab and, after clicking INIT, check whether the Redux code has no errors.
+j) Dashboard.tsx
+- Coding over Auto - Generated API Hooks from Redux Toolkit Query.
+- Code with it's meaning written in the respective file.
+k) db.json
+- Adding this lines of code in the file:
+{
+    "blogs": []
+}
+- Open another terminal and hit the below given command:
+json-server --w db.json --p 5000
+l) Now add details in the input fields. You can now update and delete data through table.

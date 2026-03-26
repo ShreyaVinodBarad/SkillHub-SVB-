@@ -1,0 +1,34 @@
+1) Create React Project in Typescript
+- Follow allow steps.
+
+2) Folders and Files:
+components
+    AdminNavBar.tsx
+    EmployeeNavBar.tsx
+    Navbar.tsx
+pages
+    About.tsx
+    AdminToDo.tsx
+    Contact.tsx
+    Dashboard.tsx
+    Details.tsx
+    EmployeeDashboard.tsx
+    Home.tsx
+    Profile.tsx
+
+3) Install:
+a) Install react-router-dom
+npm i react-router-dom
+b) Run Project
+npm run dev
+
+4) Steps:
+1) App.tsx
+- Change name of App.tsx to App.jsx and using SkillHub Shortcut srrouting get a boilerplate code for Routing and then change the name of file back to App.tsx
+- Created Routing further by using files in pages folder.
+2) AdminNavBar.tsx
+- Written code for AdminNavBar.
+3) EmployeeNavBar.tsx
+- Written code for EmployeeNavBar.
+4) Navbar.tsx
+- Written code for Navbar.

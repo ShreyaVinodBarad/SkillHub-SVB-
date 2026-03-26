@@ -1,12 +1,104 @@
+a) Steps to design this project:
+1) Create the project folder and open it in VS Code.
+2) Create package.json file:
+npm init -y
+3) Install packages:
+npm i express mongoose
+4) Create a file for server:
+index.js
+5) Start Server:
+nodemon index.js
+6) Flow:
+- Whenever any request comes to server than index.js file will run .
+- From index.js file it goes to route file. Here, it will understand which function to call.
+- Than it will go to controller, here in controller file we will write logic to add data to Database. To add data in database we use create() frunction.
+- Then from controller it goes to model file. Here we will have our validations
+7) Steps to create and write code of files:
+- Basic flow is:
+  index.js
+    |
+  route
+    |
+controller
+    |
+  model
+- Flow to writing Code:
+  model
+    |
+controller
+    |
+  route
+    |
+ index.js
+
+b) ToDo:
+1) Write the code of model:
+- The code and it's meaning is in the respective file.
+2) Write the code of controller:
+- The code and it's meaning is in the respective file.
+3) Write the code of index.js:
+- The code and it's meaning is in the respective file.
+- Run server:
+nodemon index.js
+4) Write the code of .env file:
+- The code and it's meaning is in the respective file.
+- Install package:
+npm i dotenv
+5) Open Postman
+a) Click on + icon to Create New Collection. Give your Collection a name.
+b) Than create new request. 
+c) From dropdown select GET, POST, PATCH, DELETE based on Method you want.
+d) Give base URL: /api/todo/ or /create or /update or /delete.
+e) Then click "Send" Button. 
+f) While Creating ToDo:
+- Go Body
+- From dropdown select: raw
+- And in raw from dropdown select: JSON
+- Pass an object with all the keys and it's value for creating a ToDo.
+- Then click "Send" Button. 
+6) Open MongoDB Compass:
+a) Click on + icon in Connections.
+b) It will open a pop up for "New Connections".
+- Paste the value of MONGO_URL in the option of URL.
+- And in Name option write "live"
+c) Click "Save & Connect" Button.
+7) When you create ToDo a database is created in MongoDB and you can see created ToDo list there.
+8) todo.controller.js & todo.routes.js
+- Writing code for getAllToDos, createToDo, updateToDo and deleteToDo function.
+- Writing code in todo.routes.js file(passing id through API routes)
+
+c) Auth:
+1) Creating a new file UserModel.js in model folder
+- Copy data from ToDoModel.js file to UserModel.js
+2) Creating a new file auth.controller.js in controller folder
+- Required code is written in the file named auth.controller.js
+3) Creating a new file auth.routes.js in routes folder
+- Copy data from todo.routes.js file to auth.routes.js
+4) Going back to file index.js
+- Required code is written in the file named index.js
+5) Verify it using Postman & check if the data is added in Database usign MongoDB. 
+
+d) Folder and File Structure:
+ProjectName
+    index.js
+    model
+        ToDoModel.js
+        UserModel.js
+    controller
+        todo.controller.js
+        auth.controller.js
+    routes
+        todo.routes.js
+        auth.routes.js
+
+e) Main Points:
 1) FrontEnd(Postman): Data goes from Postman to index.js
 2) Index File 
 3) Route -> From index.js it finds on which route I have to go
 4) Controller -> Then it finds on which controller I have to go
 5) Model -> Then it finds on which Model I have to go
-6) MongoDB -> And then create functions sends data to the Database
+6) MongoDB -> And then "create" functions sends data to the Database
 7) MongoDB Compass -> To check what data has been saved in the Database. Works as GUI for Database
-
-Postman -> NodeJS(Backend) -> Database
-
-📌 What is MongoDB Compass?
+8) Postman(Send Data to Backend) -> NodeJS(Backend sends data to MongoDB Database) -> Database -> MongoDB Compass (We can view data in MongoDB Compass)
+9) What is MongoDB Compass?
 - MongoDB Compass is a GUI (Graphical User Interface) tool used to view, manage, and interact with MongoDB databases visually—without writing commands.
