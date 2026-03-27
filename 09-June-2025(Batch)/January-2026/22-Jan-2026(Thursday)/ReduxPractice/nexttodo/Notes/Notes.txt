@@ -1,0 +1,72 @@
+1) Create Project:
+npx create-next-app@latest next-todo
+cd next-todo
+npm run dev
+- First make sure project runs
+Open: http://localhost:3000
+
+2) Create Folder Structure:
+app
+    (public)
+        page.tsx
+        layout.tsx
+        todos
+            page.tsx
+    components
+        Navbar.tsx
+    redux
+        store.ts
+        Provider.tsx
+        apis
+          todo.api.ts
+    types
+        Note.ts
+db.json
+
+3) Installing Packages:
+a) Install Redux:
+npm install @reduxjs/toolkit react-redux
+@reduxjs/toolkit → easier Redux setup
+react-redux → connect Redux with React
+b) Install React Hook Form
+npm install react-hook-form
+- For handling forms
+c) Install Zod
+npm install zod
+- For validation
+d) Zod Resolver
+npm install @hookform/resolvers
+- Connects Zod with React Hook Form
+e) In one line:
+npm install @reduxjs/toolkit react-redux react-hook-form zod @hookform/resolvers
+
+4) Write code of Navbar.tsx file.
+
+5) Write code of types/Notes.ts
+
+6) Write code of redux/apis/todo.api.ts
+
+7) Write code of redux/store.ts
+
+8) Write code of redux/Provider.tsx
+
+9) Write code of (public)/layout.tsx
+
+10) Write code of (public)/todos/page.tsx
+
+11) Write code of app/layout.tsx
+import ReduxProvider from "./redux/Provider";
+<ReduxProvider>
+    {children}
+</ReduxProvider>
+
+12) Update db.json file with this code:
+{
+    "notes": []
+}
+
+13) Run project:
+1) 1st terminal:
+npm run dev
+2) 2nd terminal:
+json-server --w db.json --p 5000
