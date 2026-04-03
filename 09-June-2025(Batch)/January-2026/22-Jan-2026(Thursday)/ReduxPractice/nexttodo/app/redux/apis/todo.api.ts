@@ -3,11 +3,11 @@ import { Note } from "@/app/types/Note"
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 
 export const toDoApi = createApi({
-    reducerPath: "toDoApi", // 👉 Change the codenge the code here
+    reducerPath: "toDoApi", // 👉 Change the code here
     // 👆 Name used in Redux store
     baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000" }),
     // 👆 Base URL of your backend API
-    tagTypes: ["todo"], // 👉 Change the codenge the code here 
+    tagTypes: ["todo"], // 👉 Change the code here 
     // 👆 Used for caching & auto-refreshing data
     endpoints: (builder) => {
         // 👆 Here you define all API operations

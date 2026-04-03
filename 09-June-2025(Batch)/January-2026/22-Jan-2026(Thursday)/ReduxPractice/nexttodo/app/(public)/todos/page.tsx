@@ -1,5 +1,5 @@
 "use client"
-// 👆 Makes this a client component (runs in browser)
+// 👆 Makes this a client component (runs in browser) => We can't use hook directly
 
 import { useAddToDoMutation, useGetToDosQuery } from "@/app/redux/apis/todo.api"
 // 👆 Hooks to get todos and add todo
@@ -37,6 +37,7 @@ const ToDos = () => {
     */
 
     const { register, reset, formState: { errors }, handleSubmit } =
+        // 👆 Text with Yellow color are Functions and in red color is an Object
         useForm<Note>({
             /*
             👆
@@ -58,7 +59,7 @@ const ToDos = () => {
             Initial empty values
             */
             resolver: zodResolver(noteSchema)
-            // 👆 Apply Zod validation
+            // 👆 Apply Zod validation => Same as validationSchema
         })
 
     const createToDo = async (data: Note) => {
@@ -93,6 +94,7 @@ const ToDos = () => {
                     {...register("task")}
                     /*
                     👆
+                    register is just like getFieldProps
                     1) register("task")
                     - Registers this input with name "task"
                     - So form knows:

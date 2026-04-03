@@ -1,0 +1,52 @@
+1) Folder & Files Structure:
+components
+    Navbar.tsx
+pages
+    Home.tsx
+    ToDos.tsx
+redux
+    store.ts
+    apis
+        todo.api.ts
+types
+    ToDoNote.ts
+db.json
+
+2) Install packages:
+npm i react-router-dom formik yup react-toastify @reduxjs/toolkit react-redux
+
+3) Write code one-by-one:
+a) Navbar.tsx
+- Code is written with it's explanation if required. 
+b) App.tsx
+- Code is written with it's explanation if required. 
+c) redux/apis/todo.api.ts
+- Code is written with it's explanation if required. 
+d) types/ToDoNote.ts
+- Code is written with it's explanation if required. 
+- Copying this part of code form ToDo.tsx to ToDoNote.ts
+type Note = {
+    id?: number,
+    task: string,
+    desc: string,
+    priority: string
+}
+e) redux/store.ts
+- Code is written with it's explanation if required. 
+f) main.tsx
+- Code is written with it's explanation if required.
+- This part of code is added to main.tsx file:
+<Provider store={reduxStore}>
+    <App />
+</Provider>
+g) redux/apis/todo.api.ts
+- Code is written with it's explanation if required.
+- Getting all ToDos and adding ToDo.
+h) Update db.json file with this code:
+{
+    "notes": []
+}
+i) Run the app:
+npm run dev
+- Start server:
+json-server --w --p 5000 db.json

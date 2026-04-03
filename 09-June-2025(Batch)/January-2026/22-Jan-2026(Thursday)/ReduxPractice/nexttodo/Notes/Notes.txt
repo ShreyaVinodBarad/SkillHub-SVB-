@@ -59,6 +59,13 @@ import ReduxProvider from "./redux/Provider";
 <ReduxProvider>
     {children}
 </ReduxProvider>
+- Redux runs on Client Side.
+- But the this file i.e.; app/layout.tsx runs on server. So, we create a component in redux folder redux/Provider.tsx and we write "use client" on the top so it runs at client side.
+- Here to to provide Redux Store to the app we need to:
+a) Create new component in redux folder: redux/Provider.tsx
+- Create a functional component name ReduxProvider
+- Write the required code there.
+b) And in app/layout.tsx pass the children prop inside the component ReduxProvider.
 
 12) Update db.json file with this code:
 {

@@ -1,16 +1,22 @@
 {
-    "notes": [
-        {
-            "task": "Learn BootStrap",
-            "desc": "fake desc",
-            "priority": "High",
-            "id": 1
-        },
-        {
-            "task": "Learn Python",
-            "desc": "Learning...",
-            "priority": "Low",
-            "id": 2
-        }
-    ]
+  "notes": [
+    {
+      "task": "Learn BootStrap",
+      "desc": "fake desc",
+      "priority": "High",
+      "id": 1
+    },
+    {
+      "task": "Learn Python",
+      "desc": "Learning...",
+      "priority": "Low",
+      "id": 2
+    },
+    {
+      "task": "Learn Pagination",
+      "desc": "Learning Imp Topics",
+      "priority": "Medium",
+      "id": 3
+    }
+  ]
 }
