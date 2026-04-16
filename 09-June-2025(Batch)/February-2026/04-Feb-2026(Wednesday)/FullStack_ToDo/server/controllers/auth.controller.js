@@ -1,5 +1,6 @@
 const User = require("../models/User.js")
 const bcrypt = require("bcryptjs")
+const jwt = require("jsonwebtoken")
 
 exports.register = async (req, res) => {
     try {
@@ -33,6 +34,7 @@ exports.register = async (req, res) => {
 
         res.status(201).json({ message: "User Register Success!" })
         // 👆 Then we will give a response
+        console.log(req.body)
     } catch (error) {
         console.log(error)
         res.status(500).json({ message: error.message, success: false })
@@ -65,6 +67,7 @@ exports.login = async (req, res) => {
             return res.status(401).json({ message: "Account blocked by Admin!", success: false })
         }
 
+        // Step 06: If password matches then Login success
         /*
         📌 JWT Token => JSON Web Token
         1) It is like a ID Card that is given by every college and before entering the college it is checked and if verified than only the person is allowed to enter the college. 
@@ -77,13 +80,46 @@ exports.login = async (req, res) => {
         - In simple words:
         JWT token is a proof that you are logged in and authorized to use the application.
         */
+        // 📌 const token = jwt.sign({ _id: data._id, name: data.name }, "jwtsecurepassword") => We are storing the JWT password in env file  
+        const token = jwt.sign({ _id: data._id, name: data.name }, process.env.JWT_KEY, { expiresIn: "1d" })
+        /*
+        👆
+        - It creates a JWT token (a secure login token)
+        a) jwt.sign()
+        - Function used to create a token
+        b) { _id: data._id, name: data.name } 
+        - This is the payload (data inside token)
+        c) process.env.JWT_KEY 
+        - This is the secret key (from .env)
+        - Used to secure/sign the token
+        - Only server knows this
+        d) { expiresIn: "1d" } 
+        - Token will expire in 1 day
+        */
 
-        // Step 06: If password matches then Login success
+        //  👇 Sending secure cookie to pass token to frontend. 
+        res.cookie("ADMIN", token, { maxAge: 1000 * 60 })
+        /*
+        👆
+        a) res.cookie()
+        - Used to send/save a cookie in the browser
+        b) "ADMIN"
+        - Name of the cookie
+        c) token
+        - Value stored in the cookie (your login token)
+        d) { maxAge: 1000 * 60 }
+        - Cookie will expire after:
+        1000 ms = 1 sec
+        1000 * 60 = 60 sec = 1 minute
+        */
+
         res.status(200).json(
             {
                 message: "User Login Success!",
-                data: { name: data.name, email: data.email }
+                data: { name: data.name, email: data.email },
                 // 👆 As it is not correct to send password to frontend which is there is data object, so we will manually send what data should be given to frontend
+                // token
+                // 👆 It is not secure to pass token to frontend in this way. So, we use cookie to a pass token to frontend
             }
         )
         // 👆 Passed data to Frontend

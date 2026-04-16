@@ -20,14 +20,18 @@ const cors = require("cors")
 const app = express()
 // 👆 Creating server
 
-app.use(cors())
+app.use(cors({ origin: "http://localhost:3000", credentials: true }))
 /*
 👆
 app → Your Express server
 use() → Tells the server to use something
 cors() → Allow requests from other websites (like your frontend)
+credentials: true → Tells server: “I allow this frontend to send cookies and receive cookies.”
 -> It tells your backend:
 “Allow frontend (localhost:3000) to send requests here.”
+-> In short: 
+credentials: "include" (frontend) → send cookies => redux -> apis -> auth.api.ts
+credentials: true (backend) → allow cookies
 */
 
 app.use(express.json()) // 👉 The work of this function is to put data in req.body

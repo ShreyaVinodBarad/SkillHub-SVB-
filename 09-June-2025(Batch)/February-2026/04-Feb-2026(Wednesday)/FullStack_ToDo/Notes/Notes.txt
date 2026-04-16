@@ -53,14 +53,19 @@ npm install @reduxjs/toolkit react-redux
 b) Folders structure in client Folder:
 types
     ToDo.ts
+    User.ts
 redux
     store.ts
     ReduxProvider.tsx
     apis
         todo.api.ts
+        auth.api.ts
 app 
     admin
         page.tsx
+    (public)
+        register
+            page.tsx
 c) Write the code of ToDo.ts => types folder
 
 d) Write code for files in redux Folder:
@@ -81,7 +86,7 @@ f) To run the project and start Backend we have to use below command in the term
 - 1st command:
 cd server
 - 2nd command:
-npm run dev
+nodemon index.js
 2) To run Frontend:
 - 1st command:
 cd client
@@ -135,4 +140,50 @@ npm i bcryptjs => auth.controller.js
 cd server
 npm i jsonwebtoken
 👆 JWT token is a proof that you are logged in and authorized to use the application.
+------------------------------------------------------------------
+7) client Folder
+1) New Folder Structure:
+app
+    (public)
+        register
+            page.tsx
+redux
+    apis
+        auth.api.ts
+types
+    User.ts
+📌 Move your page.tsx file from app folder to (public) folder. And this page.tsx file will be out Login page.
+2) Coding steps:
+a) Login Page
+- I have written code for Login Page, with required code explanation.
+b) Register Page
+- I have written code for Register Page, with required code explanation.
+c) User.ts
+- I have written code for User.ts file, with required code explanation.
+d) auth.api.ts
+- I have written code in auth.api.ts file, with required code explanation.
+e) store.ts
+- I have written code in store.ts file, with required code explanation.
+f) Register Page
+- I have written code for Register Page which is required after updating redux store with authApi, with required code explanation. 
+g) Install react-toastify
+cd client
+npm install react-toastify
+h) Code in client -> app -> layout.tsx file
+- Import react-toastify
+import "react-toastify/ReactToastify.css"
+- Add the <ToastContainer/> here:
+<ToastContainer />
+<ReduxProvider>
+  {children}
+</ReduxProvider>
+i) Login Page
+- I have written code for Login Page, with required code explanation.
+j) You can check if Register and Login Functionality is working properly.
+- Start Server:
+cd server
+nodemon index.js
+- Frontend
+cd client 
+npm run dev
 ------------------------------------------------------------------
